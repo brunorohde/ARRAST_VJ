@@ -1,0 +1,15 @@
+#N canvas 578 300 355 270 16;
+#X obj 48 204 s;
+#X obj 48 45 inlet;
+#X obj 48 79 t b f;
+#X obj 198 45 inlet;
+#X obj 198 142 symbol \$2;
+#X obj 48 142 pack \$1 f;
+#X obj 228 89 loadbang;
+#X connect 1 0 2 0;
+#X connect 2 0 5 0;
+#X connect 2 1 5 1;
+#X connect 3 0 4 0;
+#X connect 4 0 0 1;
+#X connect 5 0 0 0;
+#X connect 6 0 4 0;
