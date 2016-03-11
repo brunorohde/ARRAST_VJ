@@ -1,8 +1,8 @@
-#N canvas 0 140 274 379 16;
+#N canvas 2 168 274 379 16;
 #X declare -path abstract -stdlib Gem -stdpath list-abs -stdpath hcs
 -stdpath zexy -stdpath iemlib -stdpath ggee -stdpath maxlib -stdpath
 cyclone;
-#N canvas 307 190 452 422 INIT 0;
+#N canvas 306 190 452 422 INIT 0;
 #X msg 287 203 1;
 #X obj 287 144 loadbang;
 #X obj 287 262 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 1
@@ -394,7 +394,7 @@ cyclone;
 #X connect 27 0 25 0;
 #X connect 28 0 7 0;
 #X restore 60 156 pd CAM_IN;
-#N canvas 278 112 891 654 GUI 1;
+#N canvas 277 112 891 654 GUI 1;
 #X obj 2 1 cnv 15 884 650 empty empty empty 20 12 0 14 -66577 -66577
 0;
 #X obj 17 16 cnv 15 205 621 empty empty empty 20 12 0 14 -1 -66577
@@ -426,29 +426,29 @@ cyclone;
 #X obj 459 237 arrast_iint 3;
 #X obj 675 237 arrast_iint 4;
 #X restore 60 190 pd GUI;
-#N canvas 586 440 669 211 RUN_MOTOR 0;
+#N canvas 585 440 669 211 RUN_MOTOR 0;
 #X obj 31 155 shell;
 #X obj 31 22 loadbang;
 #X obj 31 54 getdir;
 #X msg 31 96 pd -open \$1/abstract/Motor_Arrast.pd -noaudio -nomidi
-;
+-nogui;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 0 0;
 #X restore 60 122 pd RUN_MOTOR;
-#N canvas 764 489 534 371 MAP_GUI 1;
+#N canvas 763 489 534 371 MAP_GUI 0;
 #X obj 1 0 cnv 15 531 367 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 14 44 cnv 15 505 310 empty empty empty 20 12 0 14 -191407 -262144
 0;
 #X obj 34 54 hradio 35 1 0 3 \$0-click_m1 \$0-click_m1_in empty 0 0
-0 15 -262144 -1 -1 1;
+0 15 -262144 -1 -1 0;
 #X obj 154 54 hradio 35 1 0 3 \$0-click_m2 \$0-click_m2_in empty 0
--8 0 10 -262144 -1 -1 1;
+-8 0 10 -262144 -1 -1 0;
 #X obj 274 54 hradio 35 1 0 3 \$0-click_m3 \$0-click_m3_in empty 0
--8 0 10 -262144 -1 -1 2;
+-8 0 10 -262144 -1 -1 0;
 #X obj 394 54 hradio 35 1 0 3 \$0-click_m4 \$0-click_m4_in empty 0
--8 0 10 -262144 -1 -1 1;
+-8 0 10 -262144 -1 -1 0;
 #X obj 34 54 cnv 15 105 35 empty \$0-m1_color CANAL_1 18 18 0 16 -258699
 -1 0;
 #X obj 154 54 cnv 15 105 35 empty \$0-m2_color CANAL_2 18 18 0 16 -241291
@@ -460,7 +460,7 @@ cyclone;
 #X obj 24 90 cnv 15 485 183 empty \$0-map_sel_color empty 20 12 0 14
 -250685 -262144 0;
 #X obj 85 235 hradio 30 1 0 8 \$0-click_mask_open \$0-click_mask_open_in
-empty 0 -8 0 10 -262144 -1 -1 1;
+empty 0 -8 0 10 -262144 -1 -1 0;
 #X obj 44 235 tgl 30 0 \$0-on_mask_map \$0-on_mask_map_in MASK 3 -8
 0 10 -1 -262144 -1 0 1;
 #X obj 34 100 cnv 15 465 112 empty empty empty 20 12 0 14 -191407 -262144
@@ -474,7 +474,7 @@ empty 0 -8 0 10 -262144 -1 -1 1;
 #X floatatom 307 180 8 0 0 0 x #0-bdx_in #0-bdx;
 #X floatatom 407 180 8 0 0 0 y #0-bdy_in #0-bdy;
 #X obj 252 139 tgl 35 0 \$0-edit_map \$0-edit_map_in empty 17 7 0 10
--1 -262144 -1 1 1;
+-1 -262144 -1 0 1;
 #X obj 357 235 bng 30 250 50 0 \$0-reset_act_map \$0-reset_act_map_in
 RESET 1 -8 0 10 -1 -262144 -1;
 #X obj 397 235 bng 30 250 50 0 \$0-full_act_map \$0-full_act_map_in
@@ -490,7 +490,7 @@ SAVE_AS -5 -8 0 10 -1 -262144 -1;
 #X obj 114 301 bng 30 250 50 0 \$0-save_map_preset \$0-save_map_preset_in
 SAVE 3 -8 0 10 -1 -262144 -1;
 #X obj 26 13 hradio 30 1 0 16 \$0-close_map_config \$0-close_map_config_in
-empty 0 -8 0 10 -262144 -1 -1 5;
+empty 0 -8 0 10 -262144 -1 -1 0;
 #X obj 14 13 cnv 15 505 30 empty empty FECHAR_JANELA 198 14 0 14 -128992
 -262144 0;
 #X obj 459 235 bng 30 250 50 0 \$0-master_act_map \$0-master_act_map_in
@@ -2793,13 +2793,13 @@ cyclone;
 #X obj 12 72 cnv 15 247 55 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 22 82 hradio 35 1 0 2 \$0-click_vj \$0-click_vj_in empty 0 12
-0 15 -262144 -1 -1 1;
+0 15 -262144 -1 -1 0;
 #X obj 109 82 hradio 35 1 0 4 \$0-click_map \$0-click_map_in empty
-0 12 0 15 -262144 -1 -1 3;
-#X obj 22 82 cnv 15 70 35 morto \$0-vj_color VJ 21 18 0 25 -1 -262144
-0;
+0 12 0 15 -262144 -1 -1 0;
+#X obj 22 82 cnv 15 70 35 morto \$0-vj_color VJ 21 18 0 25 -260818
+-1 0;
 #X obj 109 82 cnv 15 140 35 morto \$0-map_color MAPPING 18 18 0 25
--260818 -1 0;
+-1 -262144 0;
 #X obj 12 11 cnv 15 247 50 empty empty [ARRAST_VJ] 14 24 0 34 -159808
 -1 0;
 #X obj 12 138 cnv 15 247 55 empty empty empty 20 12 0 14 -128992 -66577
