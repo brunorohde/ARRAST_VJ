@@ -425,9 +425,9 @@
 #X text 487 247 play;
 #X text 557 247 pause;
 #X text 637 247 stop;
-#X obj 112 418 prepend cursor;
+#X obj 112 418 list prepend cursor;
 #X obj 112 471 s CANAL_V;
-#X obj 112 444 prepend V\$1;
+#X obj 112 444 list prepend V\$1;
 #X connect 0 0 2 0;
 #X connect 1 0 0 1;
 #X connect 2 0 1 0;

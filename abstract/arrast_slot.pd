@@ -4,7 +4,7 @@
 #X obj 44 17 r \$1-active_slot;
 #X obj 313 17 r \$1-slot_flush;
 #X obj 313 219 del \$3;
-#X obj 313 445 prepend \$3;
+#X obj 313 445 list prepend \$3;
 #X obj 313 488 s \$1-slot_list;
 #N canvas 147 151 794 460 slot_color 0;
 #X obj 104 128 sel;
@@ -59,7 +59,7 @@
 #X obj 44 54 t f f;
 #X obj 91 337 s \$1-active_file;
 #X obj 313 298 t s b;
-#X obj 313 409 prepend;
+#X obj 313 409 list prepend;
 #X obj 380 376 tabread \$1-slot_state;
 #X obj 380 321 f \$3;
 #X obj 380 348 - 1;

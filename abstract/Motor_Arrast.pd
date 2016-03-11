@@ -1,9 +1,11 @@
-#N canvas 39 207 1211 470 10;
+#N canvas 153 270 1211 470 10;
 #X declare -path abstract;
+#X declare -stdlib Gem -stdpath list-abs -stdpath hcs -stdpath zexy
+-stdpath iemlib -stdpath ggee -stdpath maxlib -stdpath cyclone;
 #X obj 125 23 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X floatatom 125 60 5 0 0 0 - - -;
-#N canvas 315 472 849 228 CONNECTS 0;
+#X floatatom 125 60 5 0 0 0 - - -, f 5;
+#N canvas 311 472 849 228 CONNECTS 0;
 #X obj 25 18 netreceive 7777;
 #X obj 475 185 outlet;
 #X obj 25 95 s \$0-canal_gemwin;
@@ -20,19 +22,21 @@
 #X msg 535 90 connect localhost 8888;
 #X obj 535 185 outlet;
 #X msg 535 110 disconnect;
-#X obj 708 129 prepend send;
+#X obj 708 129 list prepend send;
 #X obj 281 196 s CANAL_MODE;
 #X obj 708 107 spigot 0;
 #X obj 339 166 s CANAL_MAP;
 #X obj 708 33 r CANAL_MAP_FB;
-#X obj 708 53 prepend map_fb;
+#X obj 708 53 list prepend map_fb;
 #X obj 25 54 route gemwin video imagem camera transf fx plot ch_sel
 mode_sel map;
 #X obj 371 54 route quit;
 #X obj 371 77 t b b;
 #X obj 371 123 s pd;
 #X msg 371 100 quit;
+#X obj 25 132 print;
 #X connect 0 0 22 0;
+#X connect 0 0 27 0;
 #X connect 0 1 10 0;
 #X connect 10 0 1 0;
 #X connect 10 1 11 0;
@@ -61,8 +65,8 @@ mode_sel map;
 #X connect 24 0 26 0;
 #X connect 24 1 15 0;
 #X connect 26 0 25 0;
-#X restore 248 50 pd CONNECTS;
-#X obj 248 70 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 1
+#X restore 248 51 pd CONNECTS;
+#X obj 248 71 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 1
 1;
 #X obj 248 15 declare -path abstract;
 #X obj 125 40 arrast_realfps;
@@ -209,13 +213,13 @@ mode_sel map;
 -1 -1 0;
 #N canvas 670 307 434 223 select_source 0;
 #X obj 42 128 spigot;
-#X obj 75 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 75 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 333 38 inlet;
 #X obj 75 79 == 0;
 #X obj 42 38 inlet;
 #X obj 142 128 spigot;
-#X obj 175 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 175 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 142 38 inlet;
 #X obj 242 128 spigot;
@@ -244,7 +248,7 @@ mode_sel map;
 #X connect 13 0 9 0;
 #X restore 905 215 pd select_source;
 #X obj 1079 190 hradio 25 1 0 3 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 0;
 #X obj 65 272 arrast_tmotor 1;
 #X obj 65 327 arrast_fxmotor 1;
 #X obj 861 20 r CANAL_SEL;
@@ -264,7 +268,7 @@ mode_sel map;
 #X obj 407 178 arrast_cmotor 2;
 #X obj 687 178 arrast_cmotor 3;
 #X obj 967 178 arrast_cmotor 4;
-#X obj 311 70 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 1
+#X obj 311 71 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 1
 1;
 #N canvas 853 370 323 219 select_source 0;
 #X obj 42 128 spigot;
@@ -396,6 +400,9 @@ mode_sel map;
 #X obj 96 155 arrast_imotor 1;
 #X obj 376 155 arrast_imotor 2;
 #X obj 656 155 arrast_imotor 3;
+#X obj 412 15 declare -stdlib Gem -stdpath list-abs -stdpath hcs -stdpath
+zexy -stdpath iemlib -stdpath ggee -stdpath maxlib -stdpath cyclone
+;
 #X connect 0 0 5 0;
 #X connect 2 0 3 0;
 #X connect 2 1 37 0;
