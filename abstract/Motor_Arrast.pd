@@ -1,11 +1,11 @@
-#N canvas 153 270 1211 470 10;
+#N canvas 124 296 1211 470 10;
 #X declare -path abstract;
 #X declare -stdlib Gem -stdpath list-abs -stdpath hcs -stdpath zexy
 -stdpath iemlib -stdpath ggee -stdpath maxlib -stdpath cyclone;
 #X obj 125 23 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X floatatom 125 60 5 0 0 0 - - -, f 5;
-#N canvas 311 472 849 228 CONNECTS 0;
+#N canvas 320 492 849 228 CONNECTS 0;
 #X obj 25 18 netreceive 7777;
 #X obj 475 185 outlet;
 #X obj 25 95 s \$0-canal_gemwin;
@@ -34,9 +34,7 @@ mode_sel map;
 #X obj 371 77 t b b;
 #X obj 371 123 s pd;
 #X msg 371 100 quit;
-#X obj 25 132 print;
 #X connect 0 0 22 0;
-#X connect 0 0 27 0;
 #X connect 0 1 10 0;
 #X connect 10 0 1 0;
 #X connect 10 1 11 0;
@@ -66,7 +64,7 @@ mode_sel map;
 #X connect 24 1 15 0;
 #X connect 26 0 25 0;
 #X restore 248 51 pd CONNECTS;
-#X obj 248 71 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 1
+#X obj 248 71 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 0
 1;
 #X obj 248 15 declare -path abstract;
 #X obj 125 40 arrast_realfps;
@@ -98,7 +96,7 @@ mode_sel map;
 #X obj 127 178 arrast_cmotor 1;
 #N canvas 670 307 434 223 select_source 0;
 #X obj 42 128 spigot;
-#X obj 75 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 75 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 333 38 inlet;
 #X obj 75 79 == 0;
@@ -108,7 +106,7 @@ mode_sel map;
 1;
 #X obj 142 38 inlet;
 #X obj 242 128 spigot;
-#X obj 275 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 275 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 242 38 inlet;
 #X obj 333 62 clip 0 2;
@@ -133,7 +131,7 @@ mode_sel map;
 #X connect 13 0 9 0;
 #X restore 65 215 pd select_source;
 #X obj 239 190 hradio 25 1 0 3 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 2;
 #X obj 65 132 arrast_vmotor 1;
 #N canvas 670 307 434 223 select_source 0;
 #X obj 42 128 spigot;
@@ -268,7 +266,7 @@ mode_sel map;
 #X obj 407 178 arrast_cmotor 2;
 #X obj 687 178 arrast_cmotor 3;
 #X obj 967 178 arrast_cmotor 4;
-#X obj 311 71 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 1
+#X obj 311 71 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 0
 1;
 #N canvas 853 370 323 219 select_source 0;
 #X obj 42 128 spigot;

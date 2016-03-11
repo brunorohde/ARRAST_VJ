@@ -1,8 +1,8 @@
-#N canvas 13 179 274 379 16;
+#N canvas 11 235 274 379 16;
 #X declare -path abstract -stdlib Gem -stdpath list-abs -stdpath hcs
 -stdpath zexy -stdpath iemlib -stdpath ggee -stdpath maxlib -stdpath
 cyclone;
-#N canvas 314 260 452 422 INIT 0;
+#N canvas 312 260 452 422 INIT 0;
 #X msg 287 203 1;
 #X obj 287 144 loadbang;
 #X obj 287 262 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 1
@@ -394,7 +394,7 @@ cyclone;
 #X connect 27 0 25 0;
 #X connect 28 0 7 0;
 #X restore 60 156 pd CAM_IN;
-#N canvas 308 116 891 654 GUI 1;
+#N canvas 306 116 891 654 GUI 1;
 #X obj 2 1 cnv 15 884 650 empty empty empty 20 12 0 14 -66577 -66577
 0;
 #X obj 17 16 cnv 15 205 621 empty empty empty 20 12 0 14 -1 -66577
@@ -426,7 +426,7 @@ cyclone;
 #X obj 459 237 arrast_iint 3;
 #X obj 675 237 arrast_iint 4;
 #X restore 60 190 pd GUI;
-#N canvas 587 440 669 211 RUN_MOTOR 0;
+#N canvas 585 440 676 216 RUN_MOTOR 0;
 #X obj 31 155 shell;
 #X obj 31 22 loadbang;
 #X obj 31 54 getdir;
@@ -2774,7 +2774,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 ;
 #X text 33 27 [ARRAST_VJ] v.0.1;
 #X restore 253 24 pd --INFO--;
-#N canvas 64 336 652 166 DECLARE 0;
+#N canvas 68 334 647 168 DECLARE 0;
 #X obj 31 41 declare -path abstract -stdlib Gem -stdpath list-abs -stdpath
 hcs -stdpath zexy -stdpath iemlib -stdpath ggee -stdpath maxlib -stdpath
 cyclone;
