@@ -1,10 +1,10 @@
-#N canvas 19 56 1343 708 10;
+#N canvas 18 56 1343 708 10;
 #X obj 996 402 cnv 15 100 150 empty empty empty 20 12 0 14 -258113
 -66577 0;
 #N canvas 698 287 556 429 comparing 0;
 #X obj 97 39 inlet;
 #X obj 182 482 outlet;
-#X floatatom 66 180 5 0 0 0 - - -;
+#X floatatom 66 180 5 0 0 0 - - -, f 5;
 #X obj 100 66 t l l;
 #X obj 200 287 change;
 #X obj 233 310 change;
@@ -131,7 +131,7 @@
 #X obj 736 -334 sel 1;
 #X obj 541 -341 r reset;
 #X obj 631 -359 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 224 87 < 0.3;
 #X obj 1105 -88 r \$0-sel;
 #X obj 1105 9 f;
@@ -263,7 +263,7 @@
 #X obj 738 -14 r \$0-init-Y-HD;
 #X obj 860 19 r \$0-init-X-BD;
 #X obj 896 -8 r \$0-init-Y-BD;
-#X obj 62 -247 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 62 -247 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #N canvas 391 199 677 502 mousposition 0;
 #X obj 443 300 translateXYZ;
@@ -299,7 +299,7 @@
 control cursor in different way;
 #X obj 193 443 s \$0-gmouse;
 #X obj 193 338 spigot 1;
-#X obj 13 145 tgl 30 0 empty empty empty 17 7 0 10 -232576 -1 -1 0
+#X obj 13 145 tgl 30 0 empty empty empty 17 7 0 10 -232576 -1 -1 1
 1;
 #X obj 108 338 sel 0 1;
 #X msg 108 367 0;
@@ -403,36 +403,37 @@ control cursor in different way;
 #X obj 755 78 armoire/vertex 0 0 \$1 \$0;
 #X obj 277 501 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#N canvas 120 179 743 404 COMUNICA_INTERFACE 0;
-#X obj -9524 122 s \$0-init-X-BG;
-#X obj -9524 145 s \$0-init-Y-BG;
-#X obj -9422 122 s \$0-init-X-HG;
-#X obj -9422 145 s \$0-init-Y-HG;
-#X obj -9320 122 s \$0-init-X-HD;
-#X obj -9320 145 s \$0-init-Y-HD;
-#X obj -9218 122 s \$0-init-X-BD;
-#X obj -9218 145 s \$0-init-Y-BD;
-#X obj -9524 28 r CANAL_MAP;
-#X obj -9524 58 route map\$1;
-#X obj -9524 88 route bex bey aex aey adx ady bdx bdy;
-#X obj -9525 213 r \$0-BG;
-#X obj -9355 213 r \$0-HG;
-#X obj -9185 213 r \$0-HD;
-#X obj -9015 213 r \$0-BD;
-#X obj -9525 237 unpack f f;
-#X obj -9525 267 list prepend bex;
-#X obj -9445 267 list prepend bey;
-#X obj -9355 237 unpack f f;
-#X obj -9185 237 unpack f f;
-#X obj -9015 237 unpack f f;
-#X obj -9355 267 list prepend aex;
-#X obj -9275 267 list prepend aey;
-#X obj -9185 267 list prepend adx;
-#X obj -9105 267 list prepend ady;
-#X obj -9015 267 list prepend bdx;
-#X obj -8935 267 list prepend bdy;
-#X obj -9525 328 list prepend map\$1;
-#X obj -9525 358 s CANAL_MAP_FB;
+#N canvas 378 185 743 404 COMUNICA_INTERFACE 0;
+#X obj 23 126 s \$0-init-X-BG;
+#X obj 23 149 s \$0-init-Y-BG;
+#X obj 125 126 s \$0-init-X-HG;
+#X obj 125 149 s \$0-init-Y-HG;
+#X obj 227 126 s \$0-init-X-HD;
+#X obj 227 149 s \$0-init-Y-HD;
+#X obj 329 126 s \$0-init-X-BD;
+#X obj 329 149 s \$0-init-Y-BD;
+#X obj 23 32 r CANAL_MAP;
+#X obj 23 62 route map\$1;
+#X obj 23 92 route bex bey aex aey adx ady bdx bdy;
+#X obj 22 217 r \$0-BG;
+#X obj 192 217 r \$0-HG;
+#X obj 362 217 r \$0-HD;
+#X obj 532 217 r \$0-BD;
+#X obj 22 241 unpack f f;
+#X obj 22 271 list prepend bex;
+#X obj 102 271 list prepend bey;
+#X obj 192 241 unpack f f;
+#X obj 362 241 unpack f f;
+#X obj 532 241 unpack f f;
+#X obj 192 271 list prepend aex;
+#X obj 272 271 list prepend aey;
+#X obj 362 271 list prepend adx;
+#X obj 442 271 list prepend ady;
+#X obj 532 271 list prepend bdx;
+#X obj 612 271 list prepend bdy;
+#X obj 22 312 list prepend map\$1;
+#X obj 22 362 s CANAL_MAP_FB;
+#X obj 22 332 list trim;
 #X connect 8 0 9 0;
 #X connect 9 0 10 0;
 #X connect 10 0 0 0;
@@ -463,7 +464,8 @@ control cursor in different way;
 #X connect 24 0 27 0;
 #X connect 25 0 27 0;
 #X connect 26 0 27 0;
-#X connect 27 0 28 0;
+#X connect 27 0 29 0;
+#X connect 29 0 28 0;
 #X restore 62 -367 pd COMUNICA_INTERFACE;
 #X connect 1 0 20 0;
 #X connect 7 0 2 0;
