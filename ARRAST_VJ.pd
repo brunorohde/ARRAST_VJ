@@ -1,4 +1,4 @@
-#N canvas 2 168 274 379 16;
+#N canvas 19 213 272 377 16;
 #X declare -path abstract -stdlib Gem -stdpath list-abs -stdpath hcs
 -stdpath zexy -stdpath iemlib -stdpath ggee -stdpath maxlib -stdpath
 cyclone;
@@ -200,7 +200,7 @@ cyclone;
 #X obj 214 254 loadbang;
 #X obj 214 315 v ACT_CAMS;
 #X msg 214 284 0;
-#X floatatom 214 347 5 0 0 0 - - -;
+#X floatatom 214 347 5 0 0 0 - - -, f 5;
 #X obj 189 300 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 54 28 r ON_CAM1;
@@ -394,7 +394,7 @@ cyclone;
 #X connect 27 0 25 0;
 #X connect 28 0 7 0;
 #X restore 60 156 pd CAM_IN;
-#N canvas 277 112 891 654 GUI 1;
+#N canvas 295 103 891 654 GUI 1;
 #X obj 2 1 cnv 15 884 650 empty empty empty 20 12 0 14 -66577 -66577
 0;
 #X obj 17 16 cnv 15 205 621 empty empty empty 20 12 0 14 -1 -66577
@@ -419,12 +419,12 @@ cyclone;
 #X obj 243 401 arrast_transf 2 \$0;
 #X obj 459 401 arrast_transf 3 \$0;
 #X obj 675 401 arrast_transf 4 \$0;
-#X obj 675 26 arrast_vint 4;
-#X obj 243 26 arrast_vint 2;
-#X obj 459 26 arrast_vint 3;
 #X obj 243 237 arrast_iint 2;
 #X obj 459 237 arrast_iint 3;
 #X obj 675 237 arrast_iint 4;
+#X obj 675 26 arrast_vint 4;
+#X obj 243 26 arrast_vint 2;
+#X obj 459 26 arrast_vint 3;
 #X restore 60 190 pd GUI;
 #N canvas 585 440 669 211 RUN_MOTOR 0;
 #X obj 31 155 shell;
@@ -465,14 +465,14 @@ empty 0 -8 0 10 -262144 -1 -1 0;
 0 10 -1 -262144 -1 0 1;
 #X obj 34 100 cnv 15 465 112 empty empty empty 20 12 0 14 -191407 -262144
 0;
-#X floatatom 57 110 8 0 0 0 x #0-aex_in #0-aex;
-#X floatatom 157 110 8 0 0 0 y #0-aey_in #0-aey;
-#X floatatom 57 180 8 0 0 0 x #0-bex_in #0-bex;
-#X floatatom 157 180 8 0 0 0 y #0-bey_in #0-bey;
-#X floatatom 307 110 8 0 0 0 x #0-adx_in #0-adx;
-#X floatatom 407 110 8 0 0 0 y #0-ady_in #0-ady;
-#X floatatom 307 180 8 0 0 0 x #0-bdx_in #0-bdx;
-#X floatatom 407 180 8 0 0 0 y #0-bdy_in #0-bdy;
+#X floatatom 57 110 8 0 0 0 x #0-aex_in #0-aex, f 8;
+#X floatatom 157 110 8 0 0 0 y #0-aey_in #0-aey, f 8;
+#X floatatom 57 180 8 0 0 0 x #0-bex_in #0-bex, f 8;
+#X floatatom 157 180 8 0 0 0 y #0-bey_in #0-bey, f 8;
+#X floatatom 307 110 8 0 0 0 x #0-adx_in #0-adx, f 8;
+#X floatatom 407 110 8 0 0 0 y #0-ady_in #0-ady, f 8;
+#X floatatom 307 180 8 0 0 0 x #0-bdx_in #0-bdx, f 8;
+#X floatatom 407 180 8 0 0 0 y #0-bdy_in #0-bdy, f 8;
 #X obj 252 139 tgl 35 0 \$0-edit_map \$0-edit_map_in empty 17 7 0 10
 -1 -262144 -1 0 1;
 #X obj 357 235 bng 30 250 50 0 \$0-reset_act_map \$0-reset_act_map_in
@@ -549,7 +549,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X coords 0 10 8 -10 200 140 1 0 0;
 #X restore 59 183 graph;
 #X obj 806 42 r \$0-active_map;
-#X floatatom 806 72 5 0 0 0 - - -;
+#X floatatom 806 72 5 0 0 0 - - -, f 5;
 #N canvas 120 142 1030 372 SEND_MAPS 0;
 #X obj 58 51 r \$0-bex;
 #X obj 148 51 r \$0-bey;
@@ -1074,7 +1074,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X restore 59 62 pd RECEIVE_MAPS;
 #N canvas 50 220 1059 370 LOAD_ACTIVE 0;
 #X obj 52 41 r \$0-active_map;
-#X floatatom 52 71 5 0 0 0 - - -;
+#X floatatom 52 71 5 0 0 0 - - -, f 5;
 #X obj 52 327 s \$0-bex_in;
 #X obj 172 327 s \$0-bey_in;
 #X obj 292 327 s \$0-aex_in;
@@ -1307,7 +1307,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X obj 48 39 r \$0-edit_map;
 #X obj 48 437 s CANAL_MAP;
 #X obj 895 135 r \$0-active_map;
-#X floatatom 895 163 5 0 0 0 - - -;
+#X floatatom 895 163 5 0 0 0 - - -, f 5;
 #X obj 48 397 list prepend map1;
 #X obj 268 437 s CANAL_MAP;
 #X obj 488 437 s CANAL_MAP;
