@@ -1,4 +1,4 @@
-#N canvas 33 244 501 227 16;
+#N canvas 32 244 501 227 16;
 #X obj 80 60 cnv 15 185 98 empty empty empty 20 12 0 14 -128992 -66577
 0;
 #X obj 90 85 vsl 12 60 0 1 0 0 \$0-red \$0-red_in empty 0 -9 0 10 -258113
@@ -23,25 +23,25 @@
 0 10 -262144 -1 -1;
 #X obj 224 128 bng 8 250 50 0 \$0-reset_s \$0-reset_s_in empty 17 7
 0 10 -262144 -1 -1;
-#N canvas 147 177 689 489 links 0;
+#N canvas 145 177 796 489 links 0;
 #X obj 64 374 list prepend FX\$1;
 #X obj 64 414 s CANAL_FX;
 #X obj 64 49 r \$0-red;
-#X obj 234 49 r \$0-green;
-#X obj 444 49 r \$0-blue;
+#X obj 264 49 r \$0-green;
+#X obj 514 49 r \$0-blue;
 #X obj 64 80 list prepend red;
-#X obj 234 80 list prepend green;
-#X obj 444 80 list prepend blue;
+#X obj 264 80 list prepend green;
+#X obj 514 80 list prepend blue;
 #X obj 64 239 r \$0-gain;
 #X obj 64 270 list prepend gain;
-#X obj 234 239 r \$0-contrast;
-#X obj 234 270 list prepend contrast;
-#X obj 444 239 r \$0-saturate;
-#X obj 444 270 list prepend saturate;
-#X obj 234 319 r \$0-color_inv;
-#X obj 234 351 list prepend color_inv;
-#X obj 444 320 r \$0-motionblur;
-#X obj 444 351 list prepend motionblur;
+#X obj 264 239 r \$0-contrast;
+#X obj 264 270 list prepend contrast;
+#X obj 514 239 r \$0-saturate;
+#X obj 514 270 list prepend saturate;
+#X obj 264 317 r \$0-color_inv;
+#X obj 264 349 list prepend color_inv;
+#X obj 514 318 r \$0-motionblur;
+#X obj 514 349 list prepend motionblur;
 #X obj 64 134 list prepend T\$1;
 #X obj 64 174 s CANAL_T;
 #X connect 0 0 1 0;
@@ -63,7 +63,7 @@
 #X connect 17 0 0 0;
 #X connect 18 0 19 0;
 #X restore 333 117 pd links;
-#N canvas 43 291 689 292 init 0;
+#N canvas 42 291 689 292 init 0;
 #X obj 68 49 loadbang;
 #X msg 68 95 1;
 #X msg 448 95 0;
@@ -92,8 +92,8 @@
 7 0 10 -262144 -1 -1;
 #X obj 138 129 tgl 18 0 \$0-color_inv \$0-color_inv_in INV 1 -7 0 10
 -1 -262144 -262144 0 1;
-#N canvas 64 89 652 581 mem 0;
-#N canvas 571 176 314 499 flush_mem 0;
+#N canvas 63 89 652 581 mem 0;
+#N canvas 570 204 314 499 flush_mem 0;
 #X obj 51 39 r CH\$1_FLUSH;
 #X obj 51 422 s CH\$1_PRESET;
 #X obj 88 206 f;
@@ -130,7 +130,7 @@
 #N canvas 2 53 450 300 (subpatch) 0;
 #X array \$0-fx_mem 8 float 2;
 #X coords 0 2 8 -1 200 140 1 0 0;
-#X restore 373 397 graph;
+#X restore 373 403 graph;
 #X obj 55 75 arrast_2tab 0 \$0-fx_mem;
 #X obj 55 155 arrast_2tab 1 \$0-fx_mem;
 #X obj 55 235 arrast_2tab 2 \$0-fx_mem;
@@ -147,14 +147,14 @@
 #X obj 355 122 r \$0-saturate;
 #X obj 355 202 r \$0-color_inv;
 #X obj 355 282 r \$0-motionblur;
-#N canvas 333 257 688 305 receive_preset 0;
+#N canvas 332 257 688 305 receive_preset 0;
 #X obj 55 33 r MAIN_PRESET_SEND;
 #X obj 55 73 route \$1;
 #X obj 55 145 list prepend 0;
 #X obj 55 179 t b l;
 #X obj 55 248 s \$0-mem_flush;
 #X obj 284 33 r \$0-mem_flush;
-#N canvas 824 222 291 208 mem_0 0;
+#N canvas 823 250 291 208 mem_0 0;
 #X msg 43 72 0;
 #X obj 43 32 inlet;
 #X obj 43 101 tabread \$0-fx_mem;
@@ -210,7 +210,7 @@
 #X connect 1 0 3 0;
 #X connect 2 0 1 0;
 #X restore 374 130 pd mem_5;
-#N canvas 823 250 291 208 mem_6 0;
+#N canvas 822 278 291 208 mem_6 0;
 #X obj 43 32 inlet;
 #X obj 43 101 tabread \$0-fx_mem;
 #X msg 43 72 6;
@@ -254,7 +254,7 @@
 #X connect 16 0 8 0;
 #X connect 17 0 9 0;
 #X restore 333 152 pd mem;
-#N canvas 183 210 977 274 reset 0;
+#N canvas 181 210 977 274 reset 0;
 #X obj 54 49 r \$0-reset_rgb;
 #X msg 54 98 1;
 #X msg 233 98 0.2;

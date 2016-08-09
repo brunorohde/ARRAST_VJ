@@ -1,4 +1,4 @@
-#N canvas 845 195 463 587 10;
+#N canvas 844 195 463 587 10;
 #X obj 53 498 pix_texture;
 #X obj 53 25 inlet;
 #X msg 356 200 open \$1;
@@ -8,10 +8,10 @@
 #X obj 212 66 loadbang;
 #X msg 212 106 0;
 #X obj 212 240 pix_separator;
-#X floatatom 297 349 5 0 0 0 - - -;
-#X floatatom 335 349 5 0 0 0 - - -;
+#X floatatom 297 351 5 0 0 0 - - -, f 5;
+#X floatatom 335 351 5 0 0 0 - - -, f 5;
 #X obj 212 342 pix_gain;
-#X floatatom 234 323 5 0 0 0 - - -;
+#X floatatom 234 323 5 0 0 0 - - -, f 5;
 #X obj 212 217 pix_image;
 #X obj 212 365 pix_contrast;
 #X msg 137 481 quality \$1;
@@ -26,8 +26,8 @@
 #X obj 212 179 gemhead 50;
 #X obj 53 102 t a a;
 #X obj 80 130 pix_info -------;
-#X floatatom 93 177 5 0 0 0 - - -;
-#X floatatom 139 177 5 0 0 0 - - -;
+#X floatatom 93 177 5 0 0 0 - - -, f 5;
+#X floatatom 139 177 5 0 0 0 - - -, f 5;
 #X obj 212 294 pix_resize;
 #X msg 313 277 dimen 640 480;
 #X obj 313 256 loadbang;

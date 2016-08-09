@@ -1,4 +1,4 @@
-#N canvas 110 253 1211 470 10;
+#N canvas 109 253 1211 470 10;
 #X declare -path abstract;
 #X declare -stdlib Gem -stdpath list-abs -stdpath hcs -stdpath zexy
 -stdpath iemlib -stdpath ggee -stdpath maxlib -stdpath cyclone;
@@ -36,7 +36,6 @@ mode_sel map;
 #X msg 371 100 quit;
 #X obj 708 129 list trim;
 #X connect 0 0 22 0;
-#X connect 0 1 10 0;
 #X connect 10 0 1 0;
 #X connect 10 1 11 0;
 #X connect 11 0 13 0;
@@ -66,12 +65,12 @@ mode_sel map;
 #X connect 26 0 25 0;
 #X connect 27 0 12 0;
 #X restore 248 51 pd CONNECTS;
-#X obj 248 71 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 1
+#X obj 248 71 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 0
 1;
 #X obj 248 15 declare -path abstract;
 #X obj 125 40 arrast_realfps;
 #X obj 25 23 arrast_cpu;
-#N canvas 148 250 371 170 GEMWIN 1;
+#N canvas 147 250 371 170 GEMWIN 0;
 #X msg 218 117 reset;
 #X msg 173 117 print;
 #X obj 31 16 r \$0-canal_gemwin;
@@ -98,7 +97,7 @@ mode_sel map;
 #X obj 127 178 arrast_cmotor 1;
 #N canvas 670 307 434 223 select_source 0;
 #X obj 42 128 spigot;
-#X obj 75 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 75 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 333 38 inlet;
 #X obj 75 79 == 0;
@@ -108,7 +107,7 @@ mode_sel map;
 1;
 #X obj 142 38 inlet;
 #X obj 242 128 spigot;
-#X obj 275 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 275 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 242 38 inlet;
 #X obj 333 62 clip 0 2;
@@ -133,11 +132,11 @@ mode_sel map;
 #X connect 13 0 9 0;
 #X restore 65 215 pd select_source;
 #X obj 239 190 hradio 25 1 0 3 empty empty empty 0 -8 0 10 -262144
--1 -1 2;
+-1 -1 0;
 #X obj 65 132 arrast_vmotor 1;
 #N canvas 670 307 434 223 select_source 0;
 #X obj 42 128 spigot;
-#X obj 75 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 75 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 333 38 inlet;
 #X obj 75 79 == 0;
@@ -147,7 +146,7 @@ mode_sel map;
 1;
 #X obj 142 38 inlet;
 #X obj 242 128 spigot;
-#X obj 275 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 275 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 242 38 inlet;
 #X obj 333 62 clip 0 2;
@@ -172,10 +171,10 @@ mode_sel map;
 #X connect 13 0 9 0;
 #X restore 345 215 pd select_source;
 #X obj 519 190 hradio 25 1 0 3 empty empty empty 0 -8 0 10 -262144
--1 -1 2;
+-1 -1 0;
 #N canvas 670 307 434 223 select_source 0;
 #X obj 42 128 spigot;
-#X obj 75 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 75 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 333 38 inlet;
 #X obj 75 79 == 0;
@@ -185,7 +184,7 @@ mode_sel map;
 1;
 #X obj 142 38 inlet;
 #X obj 242 128 spigot;
-#X obj 275 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 275 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 242 38 inlet;
 #X obj 333 62 clip 0 2;
@@ -210,10 +209,10 @@ mode_sel map;
 #X connect 13 0 9 0;
 #X restore 625 215 pd select_source;
 #X obj 799 190 hradio 25 1 0 3 empty empty empty 0 -8 0 10 -262144
--1 -1 2;
+-1 -1 0;
 #N canvas 670 307 434 223 select_source 0;
 #X obj 42 128 spigot;
-#X obj 75 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 75 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 333 38 inlet;
 #X obj 75 79 == 0;
@@ -223,7 +222,7 @@ mode_sel map;
 1;
 #X obj 142 38 inlet;
 #X obj 242 128 spigot;
-#X obj 275 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 275 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 242 38 inlet;
 #X obj 333 62 clip 0 2;
@@ -248,7 +247,7 @@ mode_sel map;
 #X connect 13 0 9 0;
 #X restore 905 215 pd select_source;
 #X obj 1079 190 hradio 25 1 0 3 empty empty empty 0 -8 0 10 -262144
--1 -1 2;
+-1 -1 0;
 #X obj 65 272 arrast_tmotor 1;
 #X obj 65 327 arrast_fxmotor 1;
 #X obj 861 20 r CANAL_SEL;
@@ -268,17 +267,17 @@ mode_sel map;
 #X obj 407 178 arrast_cmotor 2;
 #X obj 687 178 arrast_cmotor 3;
 #X obj 967 178 arrast_cmotor 4;
-#X obj 311 71 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 1
+#X obj 311 71 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 0
 1;
 #N canvas 853 370 323 219 select_source 0;
 #X obj 42 128 spigot;
-#X obj 75 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 75 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 233 38 inlet;
 #X obj 75 79 == 0;
 #X obj 42 38 inlet;
 #X obj 142 128 spigot;
-#X obj 175 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 175 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 175 79 == 1;
 #X obj 42 183 outlet;
@@ -298,18 +297,18 @@ mode_sel map;
 #X restore 65 380 pd select_source;
 #X obj 174 415 arrast_mapmotor 1;
 #X obj 239 355 hradio 25 1 0 2 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 0;
 #X obj 239 288 loadbang;
 #X msg 239 308 0;
 #N canvas 853 370 323 219 select_source 0;
 #X obj 42 128 spigot;
-#X obj 75 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 75 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 233 38 inlet;
 #X obj 75 79 == 0;
 #X obj 42 38 inlet;
 #X obj 142 128 spigot;
-#X obj 175 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 175 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 175 79 == 1;
 #X obj 42 183 outlet;
@@ -329,13 +328,13 @@ mode_sel map;
 #X restore 345 380 pd select_source;
 #N canvas 853 370 323 219 select_source 0;
 #X obj 42 128 spigot;
-#X obj 75 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 75 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 233 38 inlet;
 #X obj 75 79 == 0;
 #X obj 42 38 inlet;
 #X obj 142 128 spigot;
-#X obj 175 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 175 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 175 79 == 1;
 #X obj 42 183 outlet;
@@ -355,13 +354,13 @@ mode_sel map;
 #X restore 625 380 pd select_source;
 #N canvas 853 370 323 219 select_source 0;
 #X obj 42 128 spigot;
-#X obj 75 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 75 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 233 38 inlet;
 #X obj 75 79 == 0;
 #X obj 42 38 inlet;
 #X obj 142 128 spigot;
-#X obj 175 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 175 108 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 175 79 == 1;
 #X obj 42 183 outlet;
