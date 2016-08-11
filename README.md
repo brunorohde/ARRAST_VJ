@@ -26,7 +26,7 @@
     
     Licença:
     
-    - Copyright 2015-2016 Bruno Rohde - licença GPLV3 - http://www.gnu.org/licenses/gpl.txt
+    - Copyleft 2015-2016 Bruno Rohde - licença GPLV3 - http://www.gnu.org/licenses/gpl.txt
     
     Este programa é um software livre; você pode redistribuí-lo e/ou 
     modificá-lo dentro dos termos da Licença Pública Geral GNU como 
