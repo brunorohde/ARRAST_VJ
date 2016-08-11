@@ -1,13 +1,13 @@
-#N canvas 33 116 272 377 16;
+#N canvas 32 144 272 377 16;
 #X declare -path abstract -stdlib Gem -stdpath list-abs -stdpath hcs
 -stdpath zexy -stdpath iemlib -stdpath ggee -stdpath maxlib -stdpath
 cyclone;
-#N canvas 61 209 452 422 INIT 0;
+#N canvas 278 298 452 422 INIT 0;
 #X msg 287 203 1;
 #X obj 287 144 loadbang;
-#X obj 287 262 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 1
+#X obj 287 262 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 0
 1;
-#X obj 384 262 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 1
+#X obj 384 262 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 0
 1;
 #X msg 337 203 0;
 #X obj 287 88 arrast_cpu;
@@ -394,7 +394,7 @@ cyclone;
 #X connect 27 0 25 0;
 #X connect 28 0 7 0;
 #X restore 60 156 pd CAM_IN;
-#N canvas 309 88 888 652 GUI 1;
+#N canvas 308 88 888 652 GUI 1;
 #X obj 2 1 cnv 15 884 650 empty empty empty 20 12 0 14 -66577 -66577
 0;
 #X obj 17 16 cnv 15 205 621 empty empty empty 20 12 0 14 -1 -66577
@@ -474,7 +474,7 @@ empty 0 -8 0 10 -262144 -1 -1 2;
 #X floatatom 307 180 8 0 0 0 x #0-bdx_in #0-bdx, f 8;
 #X floatatom 407 180 8 0 0 0 y #0-bdy_in #0-bdy, f 8;
 #X obj 252 139 tgl 35 0 \$0-edit_map \$0-edit_map_in empty 17 7 0 10
--1 -262144 -1 1 1;
+-1 -262144 -1 0 1;
 #X obj 357 235 bng 30 250 50 0 \$0-reset_act_map \$0-reset_act_map_in
 RESET 1 -8 0 10 -1 -262144 -1;
 #X obj 397 235 bng 30 250 50 0 \$0-full_act_map \$0-full_act_map_in
@@ -2703,7 +2703,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X msg 37 137 disconnect;
 #X obj 37 62 sel 1 0;
 #X obj 37 326 outlet;
-#X obj 37 296 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 37 296 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #N canvas 247 266 1021 445 SENDS 0;
 #X obj 52 63 list prepend gemwin;
@@ -2757,7 +2757,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 24 0 23 0;
 #X restore 72 179 pd SENDS;
 #X obj 477 101 outlet;
-#X obj 477 71 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 477 71 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 330 32 netreceive 8888;
 #X obj 72 209 spigot 0;
@@ -2780,25 +2780,29 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 12 0 13 0;
 #X connect 14 0 4 0;
 #X restore 287 233 pd CONNECT;
-#N canvas 727 247 636 353 --INFO-- 0;
-#X text 33 125 Projeto iniciado por brunorohde - https://github.com/brunorohde
+#N canvas 726 247 640 482 --INFO-- 0;
+#X text 33 75 Projeto iniciado por brunorohde - https://github.com/brunorohde
 / brunorohde.wordpress.com;
-#X text 33 227 [4corners] - Papatchs Party - http://yamatierea.org/papatchs/
+#X text 33 177 [4corners] - Papatchs Party - http://yamatierea.org/papatchs/
 ;
-#X text 33 277 [hrslider.mmb] [browser.mmb] - Mike Moser-Booth - https://github.com/dotmmb/mmb
+#X text 33 227 [hrslider.mmb] [browser.mmb] - Mike Moser-Booth - https://github.com/dotmmb/mmb
 ;
-#X text 33 196 As seguintes abstrações são utilizadas no [ARRAST_VJ]:
+#X text 33 146 As seguintes abstrações são utilizadas no [ARRAST_VJ]:
 ;
 #X text 33 27 [ARRAST_VJ] v.0.2;
-#X text 33 75 Copyleft 2015-2016 - Licença GPLV3 http://www.gnu.org/licenses/gpl-3.0.html
-;
 #N canvas 24 514 1248 277 Versions 0;
 #X text 38 94 0.1 - versão inicial;
 #X text 38 34 0.2 - versão para vanilla + deken - bugfix na memória
 dos slots de vídeo e outros detalhes;
 #X restore 483 26 pd Versions;
+#X text 33 296 As seguintes bibliotecas são utilizadas no [ARRAST_VJ]:
+;
+#X text 33 327 Gem - cyclone - zexy - ggee - iemlib - list-abs - hcs
+- maxlib;
+#X text 33 405 Copyleft 2015-2016 - Licença GPLV3 http://www.gnu.org/licenses/gpl-3.0.html
+;
 #X restore 253 24 pd --INFO--;
-#N canvas 61 336 652 166 DECLARE 0;
+#N canvas 356 490 652 166 DECLARE 0;
 #X obj 31 41 declare -path abstract -stdlib Gem -stdpath list-abs -stdpath
 hcs -stdpath zexy -stdpath iemlib -stdpath ggee -stdpath maxlib -stdpath
 cyclone;

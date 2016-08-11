@@ -1,6 +1,6 @@
 
 
-    [ARRAST_VJ] v.1.0
+    [ARRAST_VJ] v.0.2
     
 
     Pd/GEM video mixer/mapper
@@ -13,9 +13,11 @@
 
     Requisitos mínimos recomendados:
     
-    - Sistema operacional GNU/Linux - desenvolvido e testado no KXStudio Ubuntu 14.04 (em breve versão para Mac OSX)
+    - Sistema operacional GNU/Linux - desenvolvido e testado no KXStudio Ubuntu 14.04
+      (também compatível com MacOSX)
     
-    - Pd-Extended 0.43.4 (ou posterior) / GEM (biblioteca inclusa) - http://puredata.info/downloads/pd-extended
+    - Pd 0.43.4 (Vanilla) ou posterior, mais bibliotecas externas (download via Deken):
+      Gem - cyclone - zexy - ggee - iemlib - list-abs - hcs - maxlib
     
     - Processador dual core 1GHz (melhor 2GHz)
     
@@ -24,7 +26,7 @@
     
     Licença:
     
-    - Copyright 2015 Bruno Rohde - licença GPLV3 - http://www.gnu.org/licenses/gpl.txt
+    - Copyright 2015-2016 Bruno Rohde - licença GPLV3 - http://www.gnu.org/licenses/gpl.txt
     
     Este programa é um software livre; você pode redistribuí-lo e/ou 
     modificá-lo dentro dos termos da Licença Pública Geral GNU como 
