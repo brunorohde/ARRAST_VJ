@@ -1,13 +1,13 @@
-#N canvas 32 144 272 377 16;
+#N canvas 0 81 272 377 16;
 #X declare -path abstract -stdlib Gem -stdpath list-abs -stdpath hcs
 -stdpath zexy -stdpath iemlib -stdpath ggee -stdpath maxlib -stdpath
 cyclone;
-#N canvas 278 298 452 422 INIT 0;
+#N canvas 51 646 452 422 INIT 0;
 #X msg 287 203 1;
 #X obj 287 144 loadbang;
-#X obj 287 262 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 0
+#X obj 287 262 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 1
 1;
-#X obj 384 262 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 0
+#X obj 384 262 tgl 15 0 empty empty empty 17 7 0 10 -257985 -1 -1 1
 1;
 #X msg 337 203 0;
 #X obj 287 88 arrast_cpu;
@@ -157,7 +157,7 @@ cyclone;
 #X msg 415 114 1;
 #X msg 465 114 0;
 #X obj 415 79 loadbang;
-#X obj 415 151 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 415 151 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 755 114 1;
 #X msg 805 114 0;
@@ -394,7 +394,7 @@ cyclone;
 #X connect 27 0 25 0;
 #X connect 28 0 7 0;
 #X restore 60 156 pd CAM_IN;
-#N canvas 308 88 888 652 GUI 1;
+#N canvas 274 53 888 652 GUI 1;
 #X obj 2 1 cnv 15 884 650 empty empty empty 20 12 0 14 -66577 -66577
 0;
 #X obj 17 16 cnv 15 205 621 empty empty empty 20 12 0 14 -1 -66577
@@ -426,77 +426,77 @@ cyclone;
 #X obj 459 529 arrast_fx 3;
 #X obj 675 529 arrast_fx 4;
 #X restore 60 190 pd GUI;
-#N canvas 579 440 669 211 RUN_MOTOR 0;
+#N canvas 577 440 669 211 RUN_MOTOR 0;
 #X obj 31 155 shell;
 #X obj 31 22 loadbang;
+#X obj 31 54 ggee/getdir;
 #X msg 31 96 pd -open \$1/abstract/Motor_Arrast.pd -noaudio -nomidi
 -nogui;
-#X obj 31 54 ggee/getdir;
-#X connect 1 0 3 0;
-#X connect 2 0 0 0;
-#X connect 3 0 2 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 0 0;
 #X restore 60 122 pd RUN_MOTOR;
-#N canvas 498 268 535 370 MAP_GUI 0;
-#X obj 1 0 cnv 15 531 367 empty empty empty 20 12 0 14 -1 -66577 0
+#N canvas 63 273 538 373 MAP_GUI 0;
+#X obj 4 3 cnv 15 531 367 empty empty empty 20 12 0 14 -1 -66577 0
 ;
-#X obj 14 44 cnv 15 505 310 empty empty empty 20 12 0 14 -191407 -262144
+#X obj 17 47 cnv 15 505 310 empty empty empty 20 12 0 14 -191407 -262144
 0;
-#X obj 34 54 hradio 35 1 0 3 \$0-click_m1 \$0-click_m1_in empty 0 0
+#X obj 37 57 hradio 35 1 0 3 \$0-click_m1 \$0-click_m1_in empty 0 0
 0 15 -262144 -1 -1 1;
-#X obj 154 54 hradio 35 1 0 3 \$0-click_m2 \$0-click_m2_in empty 0
+#X obj 157 57 hradio 35 1 0 3 \$0-click_m2 \$0-click_m2_in empty 0
 -8 0 10 -262144 -1 -1 1;
-#X obj 274 54 hradio 35 1 0 3 \$0-click_m3 \$0-click_m3_in empty 0
+#X obj 277 57 hradio 35 1 0 3 \$0-click_m3 \$0-click_m3_in empty 0
+-8 0 10 -262144 -1 -1 2;
+#X obj 397 57 hradio 35 1 0 3 \$0-click_m4 \$0-click_m4_in empty 0
 -8 0 10 -262144 -1 -1 1;
-#X obj 394 54 hradio 35 1 0 3 \$0-click_m4 \$0-click_m4_in empty 0
--8 0 10 -262144 -1 -1 1;
-#X obj 34 54 cnv 15 105 35 empty \$0-m1_color CANAL_1 18 18 0 16 -258699
+#X obj 37 57 cnv 15 105 35 empty \$0-m1_color CANAL_1 18 18 0 16 -258699
 -1 0;
-#X obj 154 54 cnv 15 105 35 empty \$0-m2_color CANAL_2 18 18 0 16 -241291
+#X obj 157 57 cnv 15 105 35 empty \$0-m2_color CANAL_2 18 18 0 16 -241291
 -1 0;
-#X obj 274 54 cnv 15 105 35 empty \$0-m3_color CANAL_3 18 18 0 16 -250685
+#X obj 277 57 cnv 15 105 35 empty \$0-m3_color CANAL_3 18 18 0 16 -250685
 -1 0;
-#X obj 394 54 cnv 15 105 35 empty \$0-m4_color CANAL_4 18 18 0 16 -24198
+#X obj 397 57 cnv 15 105 35 empty \$0-m4_color CANAL_4 18 18 0 16 -24198
 -1 0;
-#X obj 24 90 cnv 15 485 183 empty \$0-map_sel_color empty 20 12 0 14
+#X obj 27 93 cnv 15 485 183 empty \$0-map_sel_color empty 20 12 0 14
 -258699 -262144 0;
-#X obj 85 235 hradio 30 1 0 8 \$0-click_mask_open \$0-click_mask_open_in
-empty 0 -8 0 10 -262144 -1 -1 2;
-#X obj 44 235 tgl 30 0 \$0-on_mask_map \$0-on_mask_map_in MASK 3 -8
+#X obj 88 238 hradio 30 1 0 8 \$0-click_mask_open \$0-click_mask_open_in
+empty 0 -8 0 10 -262144 -1 -1 5;
+#X obj 47 238 tgl 30 0 \$0-on_mask_map \$0-on_mask_map_in MASK 3 -8
 0 10 -1 -262144 -1 0 1;
-#X obj 34 100 cnv 15 465 112 empty empty empty 20 12 0 14 -191407 -262144
+#X obj 37 103 cnv 15 465 112 empty empty empty 20 12 0 14 -191407 -262144
 0;
-#X floatatom 57 110 8 0 0 0 x #0-aex_in #0-aex, f 8;
-#X floatatom 157 110 8 0 0 0 y #0-aey_in #0-aey, f 8;
-#X floatatom 57 180 8 0 0 0 x #0-bex_in #0-bex, f 8;
-#X floatatom 157 180 8 0 0 0 y #0-bey_in #0-bey, f 8;
-#X floatatom 307 110 8 0 0 0 x #0-adx_in #0-adx, f 8;
-#X floatatom 407 110 8 0 0 0 y #0-ady_in #0-ady, f 8;
-#X floatatom 307 180 8 0 0 0 x #0-bdx_in #0-bdx, f 8;
-#X floatatom 407 180 8 0 0 0 y #0-bdy_in #0-bdy, f 8;
-#X obj 252 139 tgl 35 0 \$0-edit_map \$0-edit_map_in empty 17 7 0 10
+#X floatatom 60 113 8 0 0 0 x #0-aex_in #0-aex, f 8;
+#X floatatom 160 113 8 0 0 0 y #0-aey_in #0-aey, f 8;
+#X floatatom 60 183 8 0 0 0 x #0-bex_in #0-bex, f 8;
+#X floatatom 160 183 8 0 0 0 y #0-bey_in #0-bey, f 8;
+#X floatatom 310 113 8 0 0 0 x #0-adx_in #0-adx, f 8;
+#X floatatom 410 113 8 0 0 0 y #0-ady_in #0-ady, f 8;
+#X floatatom 310 183 8 0 0 0 x #0-bdx_in #0-bdx, f 8;
+#X floatatom 410 183 8 0 0 0 y #0-bdy_in #0-bdy, f 8;
+#X obj 255 142 tgl 35 0 \$0-edit_map \$0-edit_map_in empty 17 7 0 10
 -1 -262144 -1 0 1;
-#X obj 357 235 bng 30 250 50 0 \$0-reset_act_map \$0-reset_act_map_in
+#X obj 360 238 bng 30 250 50 0 \$0-reset_act_map \$0-reset_act_map_in
 RESET 1 -8 0 10 -1 -262144 -1;
-#X obj 397 235 bng 30 250 50 0 \$0-full_act_map \$0-full_act_map_in
+#X obj 400 238 bng 30 250 50 0 \$0-full_act_map \$0-full_act_map_in
 FULL 4 -8 0 10 -1 -262144 -1;
-#X obj 85 235 cnv 15 240 30 empty \$0-mask_visor abrir_máscara 10
+#X obj 88 238 cnv 15 240 30 empty \$0-mask_visor abrir_máscara 10
 15 0 14 -1 -262144 0;
-#X obj 169 301 hradio 30 1 0 10 \$0-click_map_open \$0-click_map_open_in
+#X obj 172 304 hradio 30 1 0 10 \$0-click_map_open \$0-click_map_open_in
 PRESET 0 -8 0 10 -262144 -1 -1 2;
-#X obj 169 301 cnv 15 300 30 empty \$0-map_preset_visor abrir_preset
+#X obj 172 304 cnv 15 300 30 empty \$0-map_preset_visor teste_mapping.txt
 10 15 0 14 -1 -262144 0;
-#X obj 64 301 bng 30 250 50 0 \$0-save_as_map_preset \$0-save_as_map_preset_in
+#X obj 67 304 bng 30 250 50 0 \$0-save_as_map_preset \$0-save_as_map_preset_in
 SAVE_AS -5 -8 0 10 -1 -262144 -1;
-#X obj 114 301 bng 30 250 50 0 \$0-save_map_preset \$0-save_map_preset_in
+#X obj 117 304 bng 30 250 50 0 \$0-save_map_preset \$0-save_map_preset_in
 SAVE 3 -8 0 10 -1 -262144 -1;
-#X obj 26 13 hradio 30 1 0 16 \$0-close_map_config \$0-close_map_config_in
-empty 0 -8 0 10 -262144 -1 -1 4;
-#X obj 14 13 cnv 15 505 30 empty empty FECHAR_JANELA 198 14 0 14 -128992
+#X obj 29 16 hradio 30 1 0 16 \$0-close_map_config \$0-close_map_config_in
+empty 0 -8 0 10 -262144 -1 -1 6;
+#X obj 17 16 cnv 15 505 30 empty empty FECHAR_JANELA 198 14 0 14 -128992
 -262144 0;
-#X obj 459 235 bng 30 250 50 0 \$0-master_act_map \$0-master_act_map_in
+#X obj 462 238 bng 30 250 50 0 \$0-master_act_map \$0-master_act_map_in
 MASTER -2 -8 0 10 -1 -262144 -1;
 #X restore 60 260 pd MAP_GUI;
-#N canvas 70 352 285 423 MAP_CONFIG 0;
+#N canvas 16 473 285 423 MAP_CONFIG 0;
 #N canvas 230 369 318 213 VISIB 0;
 #X obj 49 45 r \$0-close_map_config;
 #X obj 49 75 t b;
@@ -506,7 +506,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X restore 49 39 pd VISIB;
-#N canvas 78 163 722 267 ACTIVE_MAP 0;
+#N canvas 76 163 722 267 ACTIVE_MAP 0;
 #X obj 58 39 r \$0-click_m1;
 #X obj 218 39 r \$0-click_m2;
 #X obj 378 39 r \$0-click_m3;
@@ -531,7 +531,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 10 0 11 0;
 #X connect 11 0 8 0;
 #X restore 49 123 pd ACTIVE_MAP;
-#N canvas 345 114 1046 370 VERTICES 0;
+#N canvas 305 70 1046 370 VERTICES 0;
 #N canvas 0 50 450 300 (subpatch) 0;
 #X array \$0-vert_map2 8 float 2;
 #X coords 0 10 8 -10 200 140 1 0 0;
@@ -550,7 +550,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X restore 59 183 graph;
 #X obj 806 42 r \$0-active_map;
 #X floatatom 806 72 5 0 0 0 - - -, f 5;
-#N canvas 118 142 1030 372 SEND_MAPS 0;
+#N canvas 217 85 1030 372 SEND_MAPS 0;
 #X obj 58 51 r \$0-bex;
 #X obj 148 51 r \$0-bey;
 #X obj 258 51 r \$0-aex;
@@ -560,7 +560,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X obj 658 51 r \$0-bdx;
 #X obj 748 51 r \$0-bdy;
 #X obj 58 192 arrast_2tab 0;
-#N canvas 385 409 334 240 set_tab 0;
+#N canvas 278 190 334 240 set_tab 0;
 #X msg 56 113 symbol \$2-vert_map\$1;
 #X obj 56 83 pack f \$0;
 #X obj 56 53 r \$0-active_map;
@@ -569,7 +569,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;
 #X restore 185 162 pd set_tab;
-#N canvas 388 325 334 240 set_tab 0;
+#N canvas 292 179 334 240 set_tab 0;
 #X msg 56 113 symbol \$2-vert_map\$1;
 #X obj 56 83 pack f \$0;
 #X obj 56 53 r \$0-active_map;
@@ -724,7 +724,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 5 1 7 0;
 #X connect 7 0 2 0;
 #X restore 458 110 pd send;
-#N canvas 503 259 481 256 send 0;
+#N canvas 533 134 481 256 send 0;
 #X obj 44 27 inlet;
 #X obj 44 188 outlet;
 #X obj 151 146 list prepend;
@@ -758,7 +758,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 5 1 7 0;
 #X connect 7 0 2 0;
 #X restore 658 110 pd send;
-#N canvas 505 259 481 256 send 0;
+#N canvas 640 163 481 256 send 0;
 #X obj 44 27 inlet;
 #X obj 44 188 outlet;
 #X obj 151 146 list prepend;
@@ -800,10 +800,10 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 30 0 22 0;
 #X connect 31 0 23 0;
 #X restore 59 24 pd SEND_MAPS;
-#N canvas 119 447 677 367 RECEIVE_MAPS 0;
+#N canvas 692 103 677 367 RECEIVE_MAPS 0;
 #X obj 63 50 r CANAL_MAP_FB;
 #X obj 63 90 route map1 map2 map3 map4;
-#N canvas 322 445 686 406 map1_2tab 0;
+#N canvas 469 78 686 406 map1_2tab 0;
 #X obj 51 90 route bex bey aex aey adx ady bdx bdy;
 #X obj 51 131 arrast_2tab 0 \$0-vert_map1;
 #X obj 96 161 arrast_2tab 1 \$0-vert_map1;
@@ -824,7 +824,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 0 7 8 0;
 #X connect 9 0 0 0;
 #X restore 63 132 pd map1_2tab;
-#N canvas 108 147 686 406 map2_2tab 0;
+#N canvas 452 121 686 406 map2_2tab 0;
 #X obj 51 90 route bex bey aex aey adx ady bdx bdy;
 #X obj 51 41 inlet;
 #X obj 52 131 arrast_2tab 0 \$0-vert_map2;
@@ -866,7 +866,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 0 7 9 0;
 #X connect 1 0 0 0;
 #X restore 343 132 pd map3_2tab;
-#N canvas 109 147 686 406 map4_2tab 0;
+#N canvas 433 64 686 406 map4_2tab 0;
 #X obj 51 90 route bex bey aex aey adx ady bdx bdy;
 #X obj 51 41 inlet;
 #X obj 51 131 arrast_2tab 0 \$0-vert_map4;
@@ -889,7 +889,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X restore 483 132 pd map4_2tab;
 #X obj 63 210 r CANAL_MAP_FB;
 #X obj 63 250 route map1 map2 map3 map4;
-#N canvas 37 238 1058 306 map1_fb 0;
+#N canvas 102 87 1058 306 map1_fb 0;
 #X obj 51 150 route bex bey aex aey adx ady bdx bdy;
 #X obj 51 41 inlet;
 #X obj 51 236 s \$0-bex_in;
@@ -1018,7 +1018,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 17 0 19 0;
 #X connect 20 0 5 1;
 #X restore 303 292 pd map3_fb;
-#N canvas 45 238 1058 306 map4_fb 0;
+#N canvas 63 113 1058 306 map4_fb 0;
 #X obj 51 150 route bex bey aex aey adx ady bdx bdy;
 #X obj 51 41 inlet;
 #X obj 51 236 s \$0-bex_in;
@@ -1072,7 +1072,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 7 2 10 0;
 #X connect 7 3 11 0;
 #X restore 59 62 pd RECEIVE_MAPS;
-#N canvas 49 220 1059 370 LOAD_ACTIVE 0;
+#N canvas 190 53 1059 370 LOAD_ACTIVE 0;
 #X obj 52 41 r \$0-active_map;
 #X floatatom 52 71 5 0 0 0 - - -, f 5;
 #X obj 52 327 s \$0-bex_in;
@@ -1155,11 +1155,11 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 35 0 8 0;
 #X connect 36 0 9 0;
 #X restore 59 101 pd LOAD_ACTIVE;
-#N canvas 302 334 577 336 PRESET_LOAD 0;
+#N canvas 633 123 577 336 PRESET_LOAD 0;
 #X obj 59 51 r \$0-map_preset_send;
 #X obj 186 107 route 1 2 3 4;
 #X obj 59 82 t b l;
-#N canvas 570 152 606 265 CH_1 0;
+#N canvas 568 152 606 265 CH_1 0;
 #X obj 51 80 list split 8;
 #X obj 51 161 list prepend 0;
 #X obj 51 193 s \$0-vert_map1;
@@ -1181,7 +1181,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 7 0 8 0;
 #X connect 9 0 0 0;
 #X restore 186 149 pd CH_1;
-#N canvas 654 225 606 265 CH_2 0;
+#N canvas 653 225 606 265 CH_2 0;
 #X obj 51 78 list split 8;
 #X obj 51 161 list prepend 0;
 #X obj 221 103 list split 1;
@@ -1203,7 +1203,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 6 0 0 0;
 #X connect 8 0 3 1;
 #X restore 276 149 pd CH_2;
-#N canvas 652 225 606 265 CH_3 0;
+#N canvas 650 225 606 265 CH_3 0;
 #X obj 51 79 list split 8;
 #X obj 51 161 list prepend 0;
 #X obj 221 105 list split 1;
@@ -1225,7 +1225,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 6 0 0 0;
 #X connect 8 0 3 1;
 #X restore 366 149 pd CH_3;
-#N canvas 649 225 606 264 CH_4 0;
+#N canvas 647 225 606 264 CH_4 0;
 #X obj 51 80 list split 8;
 #X obj 51 161 list prepend 0;
 #X obj 221 105 list split 1;
@@ -1264,7 +1264,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X restore 365 72 pd PRESET_LOAD;
 #X connect 4 0 5 0;
 #X restore 49 158 pd VERTICES;
-#N canvas 202 234 878 300 MAP_GUI_COLORS 0;
+#N canvas 201 234 878 300 MAP_GUI_COLORS 0;
 #X obj 45 176 r \$0-click_m1;
 #X msg 45 205 color 13;
 #X obj 45 236 s \$0-map_sel_color;
@@ -1303,7 +1303,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 19 0 15 0;
 #X connect 20 0 16 0;
 #X restore 49 75 pd MAP_GUI_COLORS;
-#N canvas 189 159 1098 530 EDIT_MAP 0;
+#N canvas 85 72 1098 530 EDIT_MAP 0;
 #X obj 48 39 r \$0-edit_map;
 #X obj 48 477 s CANAL_MAP;
 #X obj 895 135 r \$0-active_map;
@@ -1383,6 +1383,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 4 0 1 0;
 #X connect 8 0 5 0;
 #X connect 9 0 6 0;
+#X connect 10 0 7 0;
 #X connect 11 0 14 0;
 #X connect 12 0 14 0;
 #X connect 13 0 4 0;
@@ -1577,7 +1578,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 24 0 25 0;
 #X connect 24 1 23 0;
 #X restore 49 263 pd INIT_RESET_FULL;
-#N canvas 398 140 473 628 MASTER 0;
+#N canvas 397 140 473 628 MASTER 0;
 #X obj 53 46 r \$0-master_act_map;
 #X obj 241 187 r \$0-active_map;
 #X obj 137 271 tabread;
@@ -1625,7 +1626,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 19 0 20 0;
 #X connect 19 1 13 0;
 #X restore 49 298 pd MASTER;
-#N canvas 305 243 938 576 MASK 0;
+#N canvas 479 127 938 576 MASK 0;
 #X obj 56 48 r \$0-click_mask_open;
 #X obj 267 507 s \$0-mask_visor;
 #X obj 56 208 openpanel;
@@ -2696,16 +2697,16 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 6 0 5 0;
 #X restore 60 366 pd QUIT;
 #X obj 287 174 del 1000;
-#N canvas 337 258 595 392 CONNECT 0;
+#N canvas 336 258 595 392 CONNECT 0;
 #X obj 37 257 netsend;
 #X msg 37 104 connect localhost 7777;
 #X obj 37 32 inlet;
 #X msg 37 137 disconnect;
 #X obj 37 62 sel 1 0;
 #X obj 37 326 outlet;
-#X obj 37 296 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 37 296 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#N canvas 247 266 1021 445 SENDS 0;
+#N canvas 245 266 1021 445 SENDS 0;
 #X obj 52 63 list prepend gemwin;
 #X obj 52 118 r CANAL_V;
 #X obj 52 33 r \$0-CANAL_GEMWIN;
@@ -2757,7 +2758,7 @@ MASTER -2 -8 0 10 -1 -262144 -1;
 #X connect 24 0 23 0;
 #X restore 72 179 pd SENDS;
 #X obj 477 101 outlet;
-#X obj 477 71 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 477 71 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 330 32 netreceive 8888;
 #X obj 72 209 spigot 0;
@@ -2802,7 +2803,7 @@ dos slots de vídeo e outros detalhes;
 #X text 33 405 Copyleft 2015-2016 - Licença GPLV3 http://www.gnu.org/licenses/gpl-3.0.html
 ;
 #X restore 253 24 pd --INFO--;
-#N canvas 356 490 652 166 DECLARE 0;
+#N canvas 355 490 652 166 DECLARE 0;
 #X obj 31 41 declare -path abstract -stdlib Gem -stdpath list-abs -stdpath
 hcs -stdpath zexy -stdpath iemlib -stdpath ggee -stdpath maxlib -stdpath
 cyclone;
@@ -2821,10 +2822,10 @@ cyclone;
 #X obj 12 72 cnv 15 247 55 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 22 82 hradio 35 1 0 2 \$0-click_vj \$0-click_vj_in empty 0 12
-0 15 -262144 -1 -1 0;
+0 15 -262144 -1 -1 1;
 #X obj 109 82 hradio 35 1 0 4 \$0-click_map \$0-click_map_in empty
-0 12 0 15 -262144 -1 -1 2;
-#X obj 22 82 cnv 15 70 35 morto \$0-vj_color VJ 21 18 0 25 -260818
+0 12 0 15 -262144 -1 -1 1;
+#X obj 22 82 cnv 15 70 35 morto \$0-vj_color MIX 13 18 0 25 -260818
 -1 0;
 #X obj 109 82 cnv 15 140 35 morto \$0-map_color MAPPING 18 18 0 25
 -1 -262144 0;
@@ -2838,7 +2839,7 @@ PRESET 0 -8 0 8 -262144 -1 -1 2;
 SAVE_AS -7 -8 0 8 -1 -262144 -1;
 #X obj 56 160 bng 20 250 50 0 \$0-save_main_preset \$0-save_main_preset_in
 SAVE 0 -8 0 8 -1 -262144 -1;
-#X obj 89 160 cnv 15 160 20 empty \$0-main_preset_visor abrir_preset
+#X obj 89 160 cnv 15 160 20 empty \$0-main_preset_visor teste_main.txt
 7 10 0 12 -1 -262144 0;
 #X obj 23 340 hradio 25 1 0 9 \$0-quit_arrast \$0-quit_arrast_in empty
 0 -8 0 10 -262144 -1 -1 0;

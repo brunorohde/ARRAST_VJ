@@ -1,4 +1,4 @@
-#N canvas 844 195 463 587 10;
+#N canvas 276 495 463 587 10;
 #X obj 53 498 pix_texture;
 #X obj 53 25 inlet;
 #X msg 356 200 open \$1;
