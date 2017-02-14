@@ -8,7 +8,7 @@
 
     Download - https://github.com/brunorohde/ARRAST_VJ
 
-    Documentação completa - https://brunorohde.wordpress.com/2015/09/19/arrast_vj/
+    Documentação completa - https://brunorohde.wordpress.com/2015/07/20/arrast_vj/
 
 
     Requisitos mínimos recomendados:
@@ -26,7 +26,7 @@
     
     Licença:
     
-    - Copyleft 2015-2016 Bruno Rohde - licença GPLV3 - http://www.gnu.org/licenses/gpl.txt
+    - Copyleft 2015-2017 Bruno Rohde - licença GPLV3 - http://www.gnu.org/licenses/gpl.txt
     
     Este programa é um software livre; você pode redistribuí-lo e/ou 
     modificá-lo dentro dos termos da Licença Pública Geral GNU como 
