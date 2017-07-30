@@ -1,7 +1,7 @@
-#N canvas 59 119 1343 708 10;
+#N canvas 57 119 1343 708 10;
 #X obj 996 402 cnv 15 100 150 empty empty empty 20 12 0 14 -258113
 -66577 0;
-#N canvas 696 287 556 429 comparing 0;
+#N canvas 694 287 556 429 comparing 0;
 #X obj 97 39 inlet;
 #X obj 182 482 outlet;
 #X floatatom 66 180 5 0 0 0 - - -, f 5;
@@ -40,7 +40,31 @@
 #X obj 259 256 == 1;
 #X obj 290 260 == 1;
 #X obj 330 261 == 1;
-#X obj 101 132 minmax;
+#N canvas 2 53 404 292 min 0;
+#X obj 49 27 inlet LIST;
+#X obj 49 99 list split 1;
+#X obj 83 122 list;
+#X text 132 99 SEPARA ELEMENTO POR ELEMENTO DA LISTA;
+#X obj 49 59 t l b;
+#X obj 49 199 t f f;
+#X text 119 178 MECANISMO PARA ENCONTRAR MENOR NÚMERO;
+#X text 154 156 RESETA MECANISMO DE BUSCA;
+#X obj 49 241 outlet FLOAT;
+#X text 145 29 - ENCONTRA MENOR NÚMERO NUM FLUXO - SUBSTITUI [minmax]
+DA LIB ZEXY, f 35;
+#X obj 49 177 min 1e+09;
+#X msg 106 156 1e+09;
+#X connect 0 0 4 0;
+#X connect 1 0 10 0;
+#X connect 1 1 2 0;
+#X connect 2 0 1 0;
+#X connect 4 0 1 0;
+#X connect 4 1 11 0;
+#X connect 5 0 8 0;
+#X connect 5 1 10 1;
+#X connect 10 0 5 0;
+#X connect 11 0 10 1;
+#X restore 100 131 pd min;
 #X connect 0 0 3 0;
 #X connect 3 0 33 0;
 #X connect 3 1 22 0;
@@ -84,12 +108,12 @@
 #X connect 30 0 6 0;
 #X connect 31 0 7 0;
 #X connect 32 0 23 0;
-#X connect 33 0 2 0;
 #X connect 33 0 28 0;
 #X connect 33 0 29 0;
 #X connect 33 0 30 0;
 #X connect 33 0 31 0;
 #X connect 33 0 32 0;
+#X connect 33 0 2 0;
 #X restore 283 -199 pd comparing;
 #X obj 1105 181 polygon 4;
 #X obj 426 -154 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1

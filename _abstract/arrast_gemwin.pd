@@ -1,0 +1,256 @@
+#N canvas 450 79 562 230 16;
+#X obj 50 30 cnv 15 247 160 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 255 85 hsl 30 8 0 1 0 0 \$0-redBg_gui \$0-redBg_gui_set empty
+-2 -8 0 10 -258113 -1 -1 0 1;
+#X obj 255 95 hsl 30 8 0 1 0 0 \$0-greenBg_gui \$0-greenBg_gui_set
+empty -2 -8 0 10 -4034 -1 -1 0 1;
+#X obj 255 105 hsl 30 8 0 1 0 0 \$0-blueBg_gui \$0-blueBg_gui_set empty
+-2 -8 0 10 -4160 -1 -1 0 1;
+#X obj 172 50 tgl 20 0 \$0-master_gui \$0-master_gui_set MASTER -4
+-8 0 8 -1 -262144 -1 0 1;
+#X obj 253 50 nbx 2 20 1 99 0 0 \$0-fps_gui \$0-fps_gui_set empty 5
+-8 0 12 -1 -262144 -1 24 256;
+#X obj 60 50 vradio 20 1 0 4 \$0-dimen_gui \$0-dimen_gui_set empty
+0 -8 0 10 -1 -262144 -1 1;
+#X obj 212 50 tgl 20 0 \$0-preview_gui \$0-preview_gui_set PREVIEW
+-7 -8 0 8 -1 -262144 -1 0 1;
+#X obj 172 93 tgl 20 0 \$0-cursor_gui \$0-cursor_gui_set CURSOR -4
+-8 0 8 -99865 -1 -1 1 1;
+#X obj 212 93 tgl 20 0 \$0-border_gui \$0-border_gui_set BORDER -4
+-8 0 8 -99865 -1 -1 1 1;
+#X obj 86 53 cnv 15 65 15 empty empty 320x240 0 8 0 10 -128992 -1 0
+;
+#X obj 86 73 cnv 15 65 15 empty empty 640x480 0 8 0 10 -128992 -1 0
+;
+#X obj 86 93 cnv 15 65 15 empty empty 1024x768 0 8 0 10 -128992 -1
+0;
+#X obj 86 113 cnv 15 65 15 empty empty 1280x720 0 8 0 10 -128992 -1
+0;
+#X obj 60 136 nbx 4 12 -1e+37 1e+37 0 0 \$0-dimX_gui \$0-dimX_gui_set
+empty 0 -8 0 10 -1 -262144 -1 640 256;
+#X obj 110 136 nbx 4 12 -1e+37 1e+37 0 0 \$0-dimY_gui \$0-dimY_gui_set
+empty 0 -8 0 10 -1 -262144 -1 480 256;
+#X obj 60 168 nbx 4 12 -1e+37 1e+37 0 0 \$0-offsetX_gui \$0-offsetX_gui_set
+empty 0 -8 0 10 -1 -262144 -1 0 256;
+#X obj 110 168 nbx 4 12 -1e+37 1e+37 0 0 \$0-offsetY_gui \$0-offsetY_gui_set
+empty 0 -8 0 10 -1 -262144 -1 0 256;
+#X obj 60 152 cnv 15 65 15 empty empty OFFSET_X_Y 0 8 0 8 -128992 -1
+0;
+#X obj 262 34 cnv 15 15 15 empty empty FPS 0 8 0 8 -128992 -1 0;
+#N canvas 71 315 659 255 PREVIEW_GEMWIN 0;
+#X msg 42 129 0 \, destroy;
+#X obj 42 95 sel 0 1;
+#X obj 42 197 gemwin 6;
+#X msg 62 163 reset \, dimen 200 600 \, frame 6 \, title PREVIEW \,
+create \, 1;
+#X obj 42 61 r \$0-preview;
+#X text 137 197 6 FPS PARA REDUZIR PROCESSAMENTO;
+#X text 39 18 ** GESTÃO DA JANELA DE PREVIEW;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 1 1 3 0;
+#X connect 3 0 2 0;
+#X connect 4 0 1 0;
+#X restore 340 64 pd PREVIEW_GEMWIN;
+#N canvas 91 140 1234 598 LINKS 0;
+#X msg 631 158 cursor \$1;
+#X msg 631 192 border \$1;
+#X msg 813 226 offset \$1 \$2;
+#X obj 813 192 pack f f;
+#X obj 913 158 t b f;
+#X msg 631 416 color \$1 \$2 \$3;
+#X obj 631 382 pack f f f;
+#X obj 745 358 t b f;
+#X obj 879 358 t b f;
+#X obj 1009 90 r \$0-fps;
+#X obj 631 90 r \$0-cursor;
+#X obj 43 124 sel 0 1 2 3;
+#X msg 43 192 640 480;
+#X obj 177 192 pack 640 480;
+#X msg 1009 124 frame \$1;
+#X msg 446 244 0 \, destroy;
+#X obj 1009 193 s MASTER_FPS;
+#X msg 43 158 320 240;
+#X msg 43 226 1024 768;
+#X msg 43 260 1280 720;
+#X obj 43 383 s \$0-dimX_gui_set;
+#X obj 122 412 s \$0-dimY_gui_set;
+#X text 410 62 CRIAÇÃO DA JANELA;
+#X obj 256 318 t a;
+#X obj 207 124 r \$0-dimY_gui;
+#X text 40 62 DIMENSÃO DA JANELA;
+#X obj 413 90 r \$0-master;
+#X obj 43 90 r \$0-dimen;
+#X obj 177 90 r \$0-dimX_gui;
+#X obj 1009 159 t a a;
+#X text 1006 223 ENVIA FPS PARA INSTÂNCIA LOCAL, f 15;
+#X text 1006 62 FRAMES POR SEGUNDO;
+#X text 784 541 ENVIA DADOS PARA 2 INSTÂNCIA;
+#X obj 813 260 t a;
+#X obj 813 90 r \$0-offsetX;
+#X obj 843 124 r \$0-offsetY;
+#X text 811 62 OFFSET;
+#X obj 631 450 t a;
+#X obj 631 324 r \$0-redBg;
+#X obj 745 324 r \$0-greenBg;
+#X obj 879 324 r \$0-blueBg;
+#X obj 631 124 r \$0-border;
+#X obj 631 226 t a;
+#X text 147 20 ** CONEXÕES LOCAIS DA INTERFACE E SAÍDA DE DADOS DE
+CONTROLE DA JANELA MASTER NA 2 INSTÂNCIA, f 92;
+#X text 628 62 CURSOR E BORDA;
+#X text 628 296 COR DO FUNDO;
+#X obj 631 540 s CANAL_GEMWIN;
+#X obj 43 511 r \$0-debug;
+#X obj 43 540 s DEBUG;
+#X text 40 463 REPASSA MODO DEBUG PARA CONTROLE DA 2 INSTÂNCIA, f
+23;
+#X obj 413 119 t f f;
+#X obj 177 220 spigot;
+#X obj 413 148 sel 1 0;
+#X msg 256 244 0 \, destroy \, dimen \$1 \$2 \, create \, 1, f 12
+;
+#X msg 43 353 set \$1;
+#X msg 123 353 set \$1;
+#X obj 207 153 t b f;
+#X obj 43 323 unpack;
+#X obj 43 294 t l l;
+#X obj 308 511 r \$0-cameraDev_gui;
+#X obj 308 540 s CAMERA_DEVICE;
+#X text 306 463 REPASSA DISPOSITIVO ESCOLHIDO COMO FONTE DA CÂMERA
+, f 29;
+#X connect 0 0 42 0;
+#X connect 1 0 42 0;
+#X connect 2 0 33 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 4 1 3 1;
+#X connect 5 0 37 0;
+#X connect 6 0 5 0;
+#X connect 7 0 6 0;
+#X connect 7 1 6 1;
+#X connect 8 0 6 0;
+#X connect 8 1 6 2;
+#X connect 9 0 14 0;
+#X connect 10 0 0 0;
+#X connect 11 0 17 0;
+#X connect 11 1 12 0;
+#X connect 11 2 18 0;
+#X connect 11 3 19 0;
+#X connect 12 0 58 0;
+#X connect 13 0 51 0;
+#X connect 14 0 29 0;
+#X connect 15 0 23 0;
+#X connect 17 0 58 0;
+#X connect 18 0 58 0;
+#X connect 19 0 58 0;
+#X connect 23 0 46 0;
+#X connect 24 0 56 0;
+#X connect 26 0 50 0;
+#X connect 27 0 11 0;
+#X connect 28 0 13 0;
+#X connect 29 0 16 0;
+#X connect 29 1 46 0;
+#X connect 33 0 46 0;
+#X connect 34 0 3 0;
+#X connect 35 0 4 0;
+#X connect 37 0 46 0;
+#X connect 38 0 6 0;
+#X connect 39 0 7 0;
+#X connect 40 0 8 0;
+#X connect 41 0 1 0;
+#X connect 42 0 46 0;
+#X connect 47 0 48 0;
+#X connect 50 0 52 0;
+#X connect 50 1 51 1;
+#X connect 51 0 53 0;
+#X connect 52 0 13 0;
+#X connect 52 1 15 0;
+#X connect 53 0 23 0;
+#X connect 54 0 20 0;
+#X connect 55 0 21 0;
+#X connect 56 0 13 0;
+#X connect 56 1 13 1;
+#X connect 57 0 54 0;
+#X connect 57 1 55 0;
+#X connect 58 0 57 0;
+#X connect 58 1 13 0;
+#X connect 59 0 60 0;
+#X restore 340 98 pd LINKS;
+#N canvas 207 196 967 549 CONTROL_MEMORY 0;
+#X obj 51 29 r OSC;
+#X obj 51 72 route dimen master preview fps cursor border redBg greenBg
+blueBg offsetX offsetY debug cameraDev;
+#X text 509 133 ARRAY DE MEMÓRIA LOCAL - 13 PARÂMETROS;
+#X obj 511 161 array define \$0-memo 13;
+#X obj 51 137 arrast_param \$0 dimen \$0-memo 0 1 9;
+#X obj 51 227 arrast_param \$0 fps \$0-memo 3 24 9;
+#X obj 51 287 arrast_param \$0 border \$0-memo 5 1 9;
+#X obj 51 167 arrast_param \$0 master \$0-memo 1 0 9;
+#X obj 51 197 arrast_param \$0 preview \$0-memo 2 0 9;
+#X obj 51 257 arrast_param \$0 cursor \$0-memo 4 1 9;
+#X obj 51 317 arrast_param \$0 redBg \$0-memo 6 0 9;
+#X obj 51 347 arrast_param \$0 greenBg \$0-memo 7 0 9;
+#X obj 51 377 arrast_param \$0 blueBg \$0-memo 8 0 9;
+#X obj 51 407 arrast_param \$0 offsetX \$0-memo 9 0 9;
+#X obj 51 437 arrast_param \$0 offsetY \$0-memo 10 0 9;
+#X obj 51 467 arrast_param \$0 debug \$0-memo 11 0 9;
+#X obj 51 497 arrast_param \$0 cameraDev \$0-memo 12 0 9;
+#X obj 511 213 loadbang;
+#X text 583 252 AGUARDA RODAR MOTOR;
+#X obj 511 281 s \$0-memo-load;
+#X text 663 282 ENVIA VALORES;
+#X obj 511 252 del 20;
+#X obj 606 213 r RESTART_MOTOR;
+#X text 306 19 ** GESTÃO DA MEMÓRIA LOCAL;
+#X obj 511 355 r GEMWIN_FLUSH;
+#X obj 511 457 s GEMWIN_PRESET;
+#X obj 511 423 array get \$0-memo;
+#X obj 511 389 t b;
+#X text 508 327 SISTEMA DE PRESET;
+#X obj 711 355 r MAIN_PRESET_SEND;
+#X obj 711 389 route gemwin;
+#X obj 758 457 array set \$0-memo;
+#X obj 711 423 t b a;
+#X obj 711 491 s \$0-memo-load;
+#X connect 0 0 1 0;
+#X connect 1 0 4 0;
+#X connect 1 1 7 0;
+#X connect 1 2 8 0;
+#X connect 1 3 5 0;
+#X connect 1 4 9 0;
+#X connect 1 5 6 0;
+#X connect 1 6 10 0;
+#X connect 1 7 11 0;
+#X connect 1 8 12 0;
+#X connect 1 9 13 0;
+#X connect 1 10 14 0;
+#X connect 1 11 15 0;
+#X connect 1 12 16 0;
+#X connect 17 0 21 0;
+#X connect 21 0 19 0;
+#X connect 22 0 21 0;
+#X connect 24 0 27 0;
+#X connect 26 0 25 0;
+#X connect 27 0 26 0;
+#X connect 29 0 30 0;
+#X connect 30 0 32 0;
+#X connect 32 0 33 0;
+#X connect 32 1 31 0;
+#X restore 340 30 pd CONTROL_MEMORY;
+#X obj 253 144 nbx 2 20 0 99 0 0 \$0-cameraDev_gui \$0-cameraDev_gui_set
+empty 5 -8 0 12 -1 -262144 -1 0 256;
+#X obj 255 128 cnv 15 15 15 empty empty CAMERA 0 8 0 8 -128992 -1 0
+;
+#X obj 172 124 cnv 15 60 56 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 176 141 bng 15 250 50 0 RESTART_MOTOR RESTART_MOTOR_set RESTART
+20 8 0 8 -128992 -1 -128992;
+#X obj 176 161 tgl 15 0 \$0-debug_gui \$0-debug_gui_set DEBUG 20 8
+0 8 -128992 -1 -128992 0 1;
+#X obj 176 124 cnv 15 15 15 empty empty 2_INSTANCE 0 8 0 8 -1 -128992
+0;
+#X obj 60 34 cnv 15 15 15 empty empty DIMENSION 0 8 0 8 -128992 -1
+0;
+#X coords 0 -1 1 1 247 160 2 50 30;

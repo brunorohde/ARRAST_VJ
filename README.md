@@ -1,6 +1,6 @@
 
 
-    [ARRAST_VJ] v.0.2
+    [ARRAST_VJ] v.1.0 - VERSÃO EM DESENVOLVIMENTO
 
 
     Pd/GEM video mixer/mapper
@@ -11,11 +11,11 @@
     Documentação completa - https://brunorohde.wordpress.com/2015/07/20/arrast_vj/
 
 
-    Requisitos mínimos recomendados:
+    Requisitos mínimos:
 
-    - Sistema operacional GNU/Linux x86_64 (64 BITS)- desenvolvido e testado no KXStudio Ubuntu 14.04
+    - Pd 0.47.1 (Vanilla) ou posterior
 
-    - Pd 0.43.4 (Vanilla) ou posterior - As bibliotecas externas necessárias estão incluídas no pacote do [ARRAST_VJ] por conveniência (Gem - cyclone - zexy - ggee - iemlib - list-abs - hcs - maxlib)
+    - GEM 0.93.3 - biblioteca externa - download via Deken
 
     - Processador dual core 1GHz (melhor 2GHz)
 
