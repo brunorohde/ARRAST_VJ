@@ -1,26 +1,26 @@
-#N canvas 832 73 510 272 16;
+#N canvas 834 74 510 272 16;
 #X obj 50 30 cnv 15 185 200 empty empty empty 20 12 0 14 -228856 -66577
 0;
 #X obj 61 61 hradio 18 1 0 9 \$0-openBrowser \$0-openBrowser_in empty
 0 -8 0 10 -262144 -1 -1 1;
 #X obj 63 153 hsl 160 8 0 728 0 0 \$0-morto \$0-timeline empty -2 -8
-0 10 -1 -262144 -1 6312 1;
+0 10 -1 -262144 -1 22 1;
 #X obj 181 110 nbx 4 12 -1e+37 1e+37 0 0 \$0-morto \$0-visorSec empty
-0 -8 0 10 -1 -262144 -1 0.833333 256;
+0 -8 0 10 -1 -262144 -1 0 256;
 #X obj 63 166 hsl 160 10 1 0 0 0 \$0-speed_gui \$0-speed_gui_set empty
 -2 -8 0 10 -262144 -1 -1 7950 1;
 #X obj 141 191 bng 25 250 50 0 \$0-stop_gui \$0-stop_gui_set S 8 13
 0 18 -143491 -258113 -262144;
 #X obj 210 191 vradio 12 1 0 2 \$0-loopMode_gui \$0-loopMode_gui_set
-empty 0 -8 0 10 -355 -262144 -262144 1;
+empty 0 -8 0 10 -355 -262144 -262144 0;
 #X obj 95 189 bng 12 250 50 0 \$0-rw_gui \$0-rw_gui_set RW 16 6 0 10
 -13381 -4034 -1;
 #X obj 95 206 tgl 12 0 \$0-inv_gui \$0-inv_gui_set INV 16 6 0 10 -13381
 -4034 -1 0 1;
 #X obj 139 176 bng 8 250 50 0 \$0-resetSpeed \$0-resetSpeed_in empty
 17 7 0 10 -162280 -1 -1;
-#X obj 60 61 cnv 15 165 18 empty \$0-nameVisor butoh-teatro.mov 5 9
-0 12 -355 -262144 0;
+#X obj 60 61 cnv 15 165 18 empty \$0-nameVisor OPEN_VIDEO 5 9 0 12
+-355 -262144 0;
 #X text 97 170 ';
 #X text 177 170 ';
 #N canvas 286 207 692 141 select_slot 0;
@@ -163,9 +163,9 @@ PRESETS;
 #X obj 50 30 cnv 15 185 20 \$0-enable \$0-enable_in empty 20 12 0 14
 -24198 -262144 0;
 #X obj 63 128 hsl 160 10 0 1 0 0 \$0-inSet_gui \$0-inSet_gui_set empty
--2 -8 0 10 -262144 -1 -1 5792 1;
+-2 -8 0 10 -262144 -1 -1 0 1;
 #X obj 63 138 hsl 160 10 0 1 0 0 \$0-outSet_gui \$0-outSet_gui_set
-empty -2 -8 0 10 -262144 -1 -1 6344 1;
+empty -2 -8 0 10 -262144 -1 -1 15900 1;
 #N canvas 189 56 1172 707 VIDEO_UNIT 0;
 #X obj 44 591 rectangle 4 3;
 #X obj 44 301 pix_film;
@@ -1609,7 +1609,7 @@ ATIVO, f 32;
 #X obj 122 37 cnv 15 35 20 empty empty (kHz) 3 11 0 12 -228856 -66577
 0;
 #X obj 63 58 hradio 20 1 0 4 \$0-samplerate_gui \$0-samplerate_gui_set
-empty 0 -8 0 10 -262144 -1 -1 1;
+empty 0 -8 0 10 -262144 -1 -1 2;
 #X obj 69 79 cnv 15 20 15 empty empty 22 0 8 0 10 -228856 -66577 0
 ;
 #X obj 89 79 cnv 15 20 15 empty empty 44 0 8 0 10 -228856 -66577 0
@@ -2519,7 +2519,7 @@ MAIOR DO QUE PONTO DE SAÍDA, f 40;
 #X connect 15 0 16 0;
 #X connect 16 0 8 0;
 #X restore 280 30 pd EXTERNAL_CONTROL;
-#N canvas 111 308 586 382 CONTROL_MEMORY 0;
+#N canvas 113 309 586 382 CONTROL_MEMORY 0;
 #X obj 48 84 arrast_videoslot \$0 \$1 1;
 #N canvas 134 118 990 470 PRESET_MANAGER 0;
 #X obj 42 310 list prepend video;
@@ -2590,9 +2590,7 @@ DE TRANSFORMAÇÕES E EFEITOS, f 39;
 #X connect 4 1 2 1;
 #X restore 329 152 pd SEND_ACTIVE_SLOT;
 #X text 145 17 ** GESTÃO DA MEMÓRIA LOCAL;
-#N canvas 57 76 1220 441 AUTOMATION_MANAGER 0;
-#X obj 458 89 r \$1-rw_gui;
-#X obj 458 219 r \$1-stop_gui;
+#N canvas 59 77 1220 441 AUTOMATION_MANAGER 0;
 #X msg 458 119 1;
 #X msg 458 249 1;
 #X text 502 121 CONVERTE BANG EM VALOR 1;
@@ -2621,12 +2619,14 @@ DE TRANSFORMAÇÕES E EFEITOS, f 39;
 #X obj 803 209 arrast_automato \$0 avLop \$1 0 17;
 #X obj 803 239 arrast_automato \$0 avHip \$1 0 18;
 #X obj 38 249 arrast_automato \$0 ioLink \$1 0 3;
-#X connect 0 0 2 0;
-#X connect 1 0 3 0;
-#X connect 2 0 18 0;
-#X connect 3 0 20 0;
-#X connect 7 0 10 0;
-#X connect 10 0 8 0;
+#X obj 458 89 r \$0-rw_gui;
+#X obj 458 219 r \$0-stop_gui;
+#X connect 0 0 16 0;
+#X connect 1 0 18 0;
+#X connect 5 0 8 0;
+#X connect 8 0 6 0;
+#X connect 28 0 0 0;
+#X connect 29 0 1 0;
 #X restore 329 118 pd AUTOMATION_MANAGER;
 #X obj 328 288 s \$0-resetSlot;
 #X floatatom 328 259 5 0 0 0 - - -, f 5;
@@ -2643,5 +2643,5 @@ DE TRANSFORMAÇÕES E EFEITOS, f 39;
 #X connect 8 0 6 0;
 #X restore 280 64 pd CONTROL_MEMORY;
 #X obj 90 110 tgl 12 0 \$0-ioLink_gui \$0-ioLink_gui_set empty 17 7
-0 10 -262144 -1 -1 1 1;
+0 10 -262144 -1 -1 0 1;
 #X coords 0 -1 1 1 185 200 2 50 30;
