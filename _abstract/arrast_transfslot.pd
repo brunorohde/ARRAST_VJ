@@ -1,4 +1,4 @@
-#N canvas 126 170 1028 389 16;
+#N canvas 132 173 1028 389 16;
 #X obj 44 60 r \$1-to_arrast_slot;
 #X text 252 60 RECEBE CONTROLES EXTERNOS;
 #N canvas 44 244 1317 418 BRAIN 0;
@@ -57,10 +57,6 @@ DE TRANSFORMAÇÃO, f 65;
 #X connect 32 0 25 0;
 #X restore 564 80 pd BRAIN;
 #X text 660 80 GERENCIA MEMÓRIA E AÇÕES DO SLOT;
-#X obj 44 148 route transp white black fadeIn fadeOut flipH flipV size
-posX posY;
-#X text 172 19 ** GERENCIA ENTRADA DE PARÂMETROS \, MEMÓRIA E AUTOMAÇÕES
-DE CADA SLOT, f 68;
 #X obj 44 267 arrast_param \$1 black \$0-memo 2 0 \$3;
 #X obj 44 207 arrast_param \$1 transp \$0-memo 0 1 \$3;
 #X obj 44 237 arrast_param \$1 white \$0-memo 1 1 \$3;
@@ -68,17 +64,21 @@ DE CADA SLOT, f 68;
 #X obj 44 327 arrast_param \$1 fadeOut \$0-memo 4 1 \$3;
 #X obj 464 207 arrast_param \$1 flipH \$0-memo 5 0 \$3;
 #X obj 464 237 arrast_param \$1 flipV \$0-memo 6 0 \$3;
-#X obj 464 267 arrast_param \$1 size \$0-memo 7 1 \$3;
 #X obj 464 297 arrast_param \$1 posX \$0-memo 8 0 \$3;
 #X obj 464 327 arrast_param \$1 posY \$0-memo 9 0 \$3;
-#X connect 0 0 4 0;
-#X connect 4 0 7 0;
-#X connect 4 1 8 0;
-#X connect 4 2 6 0;
-#X connect 4 3 9 0;
-#X connect 4 4 10 0;
-#X connect 4 5 11 0;
-#X connect 4 6 12 0;
-#X connect 4 7 13 0;
-#X connect 4 8 14 0;
-#X connect 4 9 15 0;
+#X obj 44 148 route transp white black fadeIn fadeOut flipH flipV scale
+posX posY;
+#X obj 464 267 arrast_param \$1 scale \$0-memo 7 1 \$3;
+#X text 224 19 ** GERENCIA ENTRADA DE PARÂMETROS E MEMÓRIA DE CADA
+SLOT;
+#X connect 0 0 13 0;
+#X connect 13 0 5 0;
+#X connect 13 1 6 0;
+#X connect 13 2 4 0;
+#X connect 13 3 7 0;
+#X connect 13 4 8 0;
+#X connect 13 5 9 0;
+#X connect 13 6 10 0;
+#X connect 13 7 14 0;
+#X connect 13 8 11 0;
+#X connect 13 9 12 0;

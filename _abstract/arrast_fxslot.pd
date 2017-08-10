@@ -1,4 +1,4 @@
-#N canvas 213 162 1033 356 16;
+#N canvas 215 163 1033 356 16;
 #X obj 44 60 r \$1-to_arrast_slot;
 #X text 252 60 RECEBE CONTROLES EXTERNOS;
 #N canvas 18 183 1330 419 BRAIN 0;
@@ -57,8 +57,6 @@ DOS EFEITOS;
 #X text 660 80 GERENCIA MEMÓRIA E AÇÕES DO SLOT;
 #X obj 44 148 route red green blue colorInv gain contrast saturation
 motionBlur;
-#X text 168 19 ** GERENCIA ENTRADA DE PARÂMETROS \, MEMÓRIA E AUTOMAÇÕES
-DE CADA SLOT, f 68;
 #X obj 44 207 arrast_param \$1 red \$0-memo 0 1 \$3;
 #X obj 44 237 arrast_param \$1 green \$0-memo 1 1 \$3;
 #X obj 44 297 arrast_param \$1 colorInv \$0-memo 3 0 \$3;
@@ -67,12 +65,14 @@ DE CADA SLOT, f 68;
 #X obj 454 237 arrast_param \$1 contrast \$0-memo 5 0.2 \$3;
 #X obj 454 267 arrast_param \$1 saturation \$0-memo 6 0.2 \$3;
 #X obj 454 297 arrast_param \$1 motionBlur \$0-memo 7 0 \$3;
+#X text 208 19 ** GERENCIA ENTRADA DE PARÂMETROS E MEMÓRIA DE CADA
+SLOT;
 #X connect 0 0 4 0;
-#X connect 4 0 6 0;
-#X connect 4 1 7 0;
-#X connect 4 2 9 0;
-#X connect 4 3 8 0;
-#X connect 4 4 10 0;
-#X connect 4 5 11 0;
-#X connect 4 6 12 0;
-#X connect 4 7 13 0;
+#X connect 4 0 5 0;
+#X connect 4 1 6 0;
+#X connect 4 2 8 0;
+#X connect 4 3 7 0;
+#X connect 4 4 9 0;
+#X connect 4 5 10 0;
+#X connect 4 6 11 0;
+#X connect 4 7 12 0;

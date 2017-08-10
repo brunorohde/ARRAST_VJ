@@ -1,4 +1,4 @@
-#N canvas 45 105 1290 597 16;
+#N canvas 47 106 1290 597 16;
 #X obj 919 232 del \$3;
 #X obj 976 167 f \$3;
 #X obj 919 133 t b b;
@@ -66,8 +66,6 @@
 #X text 1043 323 ARQUIVO;
 #X text 203 323 ARQUIVO;
 #X text 916 533 ENVIA PARA GERENCIADOR;
-#X text 346 18 ** GERENCIA MEMÓRIA DE CADA SLOT COM CAMINHO DO ARQUIVO
-;
 #X text 79 505 ARRAY DE MEMÓRIA LOCAL - 1 PARÂMETRO - ESTADO DO SLOT
 ;
 #X obj 919 359 t s b;
@@ -106,6 +104,8 @@
 #X obj 725 125 t s s;
 #X text 723 67 REINICIA VALORES;
 #X text 917 67 SAÍDA PARA GERENCIADOR DE PRESETS;
+#X text 306 18 ** GERENCIA MEMÓRIA DE CADA SLOT DE IMAGEM COM CAMINHO
+DO ARQUIVO, f 65;
 #X connect 0 0 20 0;
 #X connect 1 0 9 0;
 #X connect 2 0 0 0;
@@ -118,14 +118,14 @@
 #X connect 8 0 11 0;
 #X connect 8 1 5 0;
 #X connect 9 0 0 1;
-#X connect 10 0 44 0;
+#X connect 10 0 43 0;
 #X connect 13 0 8 0;
 #X connect 14 0 4 0;
 #X connect 16 0 3 0;
 #X connect 17 0 10 0;
 #X connect 18 0 2 0;
-#X connect 20 0 39 0;
-#X connect 21 0 47 0;
+#X connect 20 0 38 0;
+#X connect 21 0 46 0;
 #X connect 25 0 21 0;
 #X connect 25 1 20 1;
 #X connect 25 2 26 0;
@@ -135,15 +135,15 @@
 #X connect 29 0 21 0;
 #X connect 29 1 20 1;
 #X connect 29 2 28 0;
-#X connect 39 0 41 0;
-#X connect 39 1 40 0;
-#X connect 40 0 41 1;
-#X connect 41 0 27 0;
-#X connect 44 0 29 0;
-#X connect 44 1 45 0;
-#X connect 47 0 50 0;
-#X connect 50 0 15 0;
-#X connect 51 0 52 0;
-#X connect 51 1 45 0;
-#X connect 52 0 21 0;
-#X connect 52 1 20 1;
+#X connect 38 0 40 0;
+#X connect 38 1 39 0;
+#X connect 39 0 40 1;
+#X connect 40 0 27 0;
+#X connect 43 0 29 0;
+#X connect 43 1 44 0;
+#X connect 46 0 49 0;
+#X connect 49 0 15 0;
+#X connect 50 0 51 0;
+#X connect 50 1 44 0;
+#X connect 51 0 21 0;
+#X connect 51 1 20 1;
