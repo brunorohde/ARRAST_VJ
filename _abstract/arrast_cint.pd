@@ -1,8 +1,8 @@
-#N canvas 199 105 550 228 16;
+#N canvas 203 107 553 255 16;
 #X obj 50 30 cnv 15 185 62 empty empty CAMERA 71 42 0 12 -228856 -66577
 0;
 #X obj 52 30 hradio 20 1 0 9 \$0-click_enable \$0-click_enable_in empty
-0 -8 0 10 -262144 -1 -1 3;
+0 -8 0 10 -262144 -1 -1 4;
 #X obj 50 30 cnv 15 185 20 \$0-enable \$0-enable_in empty 20 12 0 14
 -128992 -262144 0;
 #N canvas 124 149 777 544 CAMERA 0;
@@ -122,7 +122,7 @@
 #X connect 13 1 0 2;
 #X connect 17 0 7 0;
 #X connect 17 0 9 0;
-#X restore 284 30 pd CAMERA;
+#X restore 284 64 pd CAMERA;
 #N canvas 626 219 701 275 CHANNEL_COLOR 0;
 #X obj 69 71 f \$1;
 #X obj 69 107 sel 1 2 3 4;
@@ -150,8 +150,8 @@
 #X connect 9 0 8 0;
 #X connect 10 0 7 0;
 #X connect 11 0 6 0;
-#X restore 284 166 pd CHANNEL_COLOR;
-#N canvas 731 236 500 467 ENABLE_BUTTON 0;
+#X restore 284 200 pd CHANNEL_COLOR;
+#N canvas 424 377 785 467 ENABLE_BUTTON 0;
 #X obj 50 62 t b;
 #X obj 50 153 f;
 #X obj 90 153 + 1;
@@ -191,6 +191,9 @@
 #X obj 307 336 s \$0-render;
 #X obj 208 191 t b;
 #X obj 208 162 r REFRESH_SOURCE;
+#X obj 501 52 r \$0-externalControl;
+#X obj 501 129 route enable;
+#X text 498 24 RECEBE CONTROLE EXTERNO;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 1;
@@ -215,7 +218,9 @@
 #X connect 20 1 8 0;
 #X connect 22 0 4 0;
 #X connect 23 0 22 0;
-#X restore 284 64 pd ENABLE_BUTTON;
+#X connect 24 0 25 0;
+#X connect 25 0 1 0;
+#X restore 284 98 pd ENABLE_BUTTON;
 #N canvas 450 211 633 273 BYPASS_ACTIVE_SLOT 0;
 #X obj 46 97 r C\$1_ACTIVE_SLOT;
 #X text 44 26 ** RECEBE SLOT ATIVO DOS MÓDULOS DE VÍDEO E IMAGEM
@@ -228,7 +233,7 @@ E ENVIA PARA MÓDULOS DE TRANSFORMAÇÃO E EFEITOS, f 50;
 #X connect 0 0 2 0;
 #X connect 2 0 4 0;
 #X connect 6 0 2 1;
-#X restore 284 132 pd BYPASS_ACTIVE_SLOT;
+#X restore 284 166 pd BYPASS_ACTIVE_SLOT;
 #N canvas 87 122 489 231 AUTOMATION_MANAGER 0;
 #X text 169 110 BOTÃO DE HABILITAR UNIDADE;
 #X text 43 20 ** GESTÃO LOCAL DA MEMÓRIA DE AUTOMAÇÕES;
@@ -238,5 +243,20 @@ E ENVIA PARA MÓDULOS DE TRANSFORMAÇÃO E EFEITOS, f 50;
 #X obj 49 136 arrast_automato \$0 enableButton \$1 0 20;
 #X connect 2 0 5 0;
 #X connect 5 0 3 0;
-#X restore 284 98 pd AUTOMATION_MANAGER;
+#X restore 284 132 pd AUTOMATION_MANAGER;
+#N canvas 371 175 599 304 EXTERNAL_CONTROL 0;
+#X text 213 137 FILTRA POR CANAL;
+#X text 183 170 FILTRA POR MÓDULO;
+#X obj 48 234 s \$0-externalControl;
+#X text 265 235 ENVIA CONTROLES LOCALMENTE;
+#X obj 48 136 route channel\$1;
+#X obj 48 72 r OSC_BUS;
+#X text 43 19 ** ROTEAMENTO DE CONTROLE EXTERNO VIA MENSAGENS OSC;
+#X text 153 69 RECEBE OSC DESEMPACOTADO PELO PATCH PRINCIPAL, f 29
+;
+#X obj 48 170 route camera;
+#X connect 4 0 8 0;
+#X connect 5 0 4 0;
+#X connect 8 0 2 0;
+#X restore 284 30 pd EXTERNAL_CONTROL;
 #X coords 0 -1 1 1 185 62 2 50 30;
