@@ -1,4 +1,4 @@
-#N canvas 64 155 1154 595 16;
+#N canvas 76 161 1154 595 16;
 #X obj 687 477 s \$3;
 #X obj 687 413 t b f;
 #X obj 687 445 pack \$4 0;
@@ -11,24 +11,24 @@
 #X obj 50 534 outlet VALUE;
 #X obj 50 287 f;
 #X obj 337 477 s \$1-\$2_gui_set;
-#X obj 243 167 r \$1-\$2_gui;
+#X obj 243 196 r \$1-\$2_gui;
 #X obj 687 167 r \$3-load;
 #X obj 687 199 t b;
 #X obj 687 231 f \$4;
 #X obj 687 263 array get \$3 \$4 1;
-#X text 370 168 RECEBE VALOR DO GUI;
+#X text 370 197 RECEBE VALOR DO GUI;
 #X text 685 138 CARREGA VALOR DO ARRAY;
 #X text 166 477 ENVIA P/ PATCH;
 #X text 504 477 ENVIA P/GUI;
 #X text 794 445 INDEX / VALOR;
 #X text 747 478 ENVIA P/ ARRAY DE MEMÓRIA;
-#X text 241 24 ** GERENCIA PARÂMETROS NO PATCH \, NA INTERFACE (GUI)
+#X text 441 24 ** GERENCIA PARÂMETROS NO PATCH \, NA INTERFACE (GUI)
 E NUM ARRAY DE MEMÓRIA;
-#X obj 243 234 t b;
-#X obj 243 205 r \$1-\$2_bang;
-#X text 378 206 BANG PARA REENVIAR VALOR;
+#X obj 243 263 t b;
+#X obj 243 234 r \$1-\$2_bang;
+#X text 378 235 BANG PARA REENVIAR VALOR;
 #X text 781 347 INICIALIZA MEMÓRIA COM 5 ARGUMENTO;
-#X text 241 74 ARGUMENTOS: ID GERAL (\$0) \, NOME DO PARÂMETRO \,
+#X text 441 74 ARGUMENTOS: ID GERAL (\$0) \, NOME DO PARÂMETRO \,
 ARRAY DE MEMÓRIA \, INDEX NO ARRAY \, VALOR DE INICIALIZAÇÃO \,
 SLOT DE MEMÓRIA, f 63;
 #N canvas 116 295 655 310 GATE 0;
@@ -65,6 +65,10 @@ SLOT DE MEMÓRIA, f 63;
 #X obj 815 179 r \$3-reset;
 #X obj 815 207 t b b;
 #X text 928 180 REINICIA VALOR;
+#X obj 194 28 inlet VALUE_SET;
+#X obj 194 62 t f f f;
+#X text 191 92 ENTRA VALOR PARA MEMÓRIA E SAÍDA LOCAL \, SEM ENVIAR
+PARA PATCH E INTERFACE, f 22;
 #X connect 1 0 2 0;
 #X connect 1 1 2 1;
 #X connect 2 0 0 0;
@@ -88,3 +92,7 @@ SLOT DE MEMÓRIA, f 63;
 #X connect 31 0 32 0;
 #X connect 32 0 15 0;
 #X connect 32 1 6 0;
+#X connect 34 0 35 0;
+#X connect 35 0 10 1;
+#X connect 35 1 9 0;
+#X connect 35 2 1 0;

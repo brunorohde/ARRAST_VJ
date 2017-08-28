@@ -1,4 +1,4 @@
-#N canvas 829 558 509 223 16;
+#N canvas 831 540 509 223 16;
 #X obj 50 30 cnv 15 185 80 empty empty empty 20 12 0 14 -228856 -66577
 0;
 #X obj 52 30 hradio 20 1 0 9 \$0-click_enable \$0-click_enable_in empty
@@ -610,7 +610,7 @@ DE PROPORÇÃO, f 21;
 #X connect 6 0 10 0;
 #X connect 7 0 9 0;
 #X restore 280 164 pd CHANNEL_COLOR;
-#N canvas 89 185 692 141 select_slot 0;
+#N canvas 91 186 692 141 select_slot 0;
 #X obj 500 84 s \$0-slots_bg;
 #X msg 500 53 color \$1;
 #X obj 500 21 r \$0-bgColor;
@@ -689,7 +689,7 @@ DE PROPORÇÃO, f 21;
 #X connect 11 0 5 0;
 #X connect 12 0 13 0;
 #X restore 304 84 pd FILE_DISPLAY;
-#N canvas 31 125 1253 428 CLICKS 0;
+#N canvas 33 126 1253 428 CLICKS 0;
 #X msg 18 247 1;
 #X msg 188 247 2;
 #X msg 358 247 3;
@@ -721,8 +721,8 @@ DE PROPORÇÃO, f 21;
 #X text 211 14 ** GERENCIA MUDANÇA DE SLOT ATIVO PELA INTERFACE \,
 PRESETS E CONTROLE EXTERNO OSC, f 80;
 #X obj 374 89 r \$0-externalControl;
-#X obj 374 123 route slot;
 #X text 371 61 CONTROLE EXTERNO;
+#X obj 374 123 route activeSlot;
 #X connect 0 0 9 0;
 #X connect 1 0 9 0;
 #X connect 2 0 9 0;
@@ -747,8 +747,8 @@ PRESETS E CONTROLE EXTERNO OSC, f 80;
 #X connect 25 0 0 0;
 #X connect 26 0 9 0;
 #X connect 27 0 26 0;
-#X connect 29 0 30 0;
-#X connect 30 0 9 0;
+#X connect 29 0 31 0;
+#X connect 31 0 9 0;
 #X restore 304 22 pd CLICKS;
 #X connect 1 0 0 0;
 #X connect 2 0 1 0;

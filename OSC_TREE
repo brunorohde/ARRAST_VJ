@@ -1,0 +1,156 @@
+[ARRAST_VJ] - OSC TREE
+
+() = Value type/range
+  (X / X) = X or X
+  (X - X) = X to X (float)
+* = Comments
+
+/channel(1 / 2 / 3 / 4)   * No space = /channelX
+  /video
+    /enable (0 / 1)
+    /activeSlot (1 / 2 / 3 / 4 / 5 / 6 / 7 / 8)
+    /file (symbol)   * Video path
+    /ioMode (0 / 1)
+    /ioLink (0 / 1)
+    /inSet (0 - 1)
+    /outSet (0 - 1)
+    /speed (0 - 1)
+    /play (0 / 1)
+    /rw
+    /inv (0 / 1)
+    /stop
+    /loop (0 / 1)
+    /loopMode (0 / 1)
+    /audio (0 / 1)
+    /samplerate (0 / 1 / 2 / 3)   * 22KHz / 44.1KHz / 48KHz / 96KHz
+    /boost (1 / 2 / 3 / 4 / 5 / 6)   * -12dB / -6dB / -3dB / 0dB / 3dB / 6dB / 12dB
+    /avAmp (0 / 1 / 2 / 3)   * Amplitude to - Off / Transparency / White_Threshold / Black_Threshold
+    /avLop (0 / 1 / 2 / 3)   * LowPass to - Off / Transparency / White_Threshold / Black_Threshold
+    /avHip (0 / 1 / 2 / 3)   * HiPass to - Off / Transparency / White_Threshold / Black_Threshold
+  /image
+    /enable (0 / 1)
+    /activeSlot (1 / 2 / 3 / 4 / 5 / 6 / 7 / 8)
+    /file (symbol)   * Image path
+  /camera
+    /enable (0 / 1)
+  /transform
+    /transp (0 - 1)
+    /white (0 - 1)
+    /black (0 - 1)
+    /fadeIn (0 - 1)
+    /fadeOut (0 - 1)
+    /flipH (0 / 1)
+    /flipV (0 / 1)
+    /scale (float)
+    /posX (float)
+    /posY (float)
+  /fx
+    /red (0 - 1)
+    /green (0 - 1)
+    /blue (0 - 1)
+    /colorInv (0 / 1)
+    /gain (0 - 1)
+    /contrast (0 - 1)
+    /saturation (0 - 1)
+    /motionBlur (0 - 1)
+
+/main
+  /mode (0 / 1)
+  /preset
+    /save
+    /file (symbol)   * File path
+
+/map
+  /preset
+    /save
+    /file (symbol)   * File path
+  /channel(1 / 2 / 3 / 4)   * No space = /channelX
+    /blx (float)   * Botton Left X vertice
+    /bly (float)   * Botton Left Y vertice
+    /tlx (float)   * Top Left X vertice
+    /tly (float)   * Top Left Y vertice
+    /trx (float)   * Top Right X vertice
+    /try (float)   * Top Right Y vertice
+    /brx (float)   * Botton Right X vertice
+    /bry (float)   * Botton Right Y vertice
+    /maskState (0 / 1)
+    /maskPath (symbol)   * File path
+    /reset
+    /full
+    /master
+
+/automation
+  /preset
+    /save
+    /file (symbol)   * File path
+  /rec (0 / 1)
+  /play (0 / 1)
+  /rw
+  /loop (0 / 1)
+  /timeline (0 - 1)
+  /clear
+  /channel(1 / 2 / 3 / 4)   * No space = /channelX
+    /setAll (0 / 1 / 2)
+    /video
+      /enable (0 / 1 / 2)
+      /activeSlot (0 / 1 / 2)
+      /ioMode (0 / 1 / 2)
+      /inSet (0 / 1 / 2)
+      /outSet (0 / 1 / 2)
+      /speed (0 / 1 / 2)
+      /play (0 / 1 / 2)
+      /rw (0 / 1 / 2)
+      /inv (0 / 1 / 2)
+      /stop (0 / 1 / 2)
+      /loop (0 / 1 / 2)
+      /loopMode (0 / 1 / 2)
+      /audio (0 / 1 / 2)
+      /samplerate (0 / 1 / 2)
+      /boost (0 / 1 / 2)
+      /avAmp (0 / 1 / 2)
+      /avLop (0 / 1 / 2)
+      /avHip (0 / 1 / 2)
+    /image
+      /enable (0 / 1 / 2)
+      /activeSlot (0 / 1 / 2)
+    /camera
+      /enable (0 / 1 / 2)
+    /transform
+      /transp (0 / 1 / 2)
+      /white (0 / 1 / 2)
+      /black (0 / 1 / 2)
+      /fadeIn (0 / 1 / 2)
+      /fadeOut (0 / 1 / 2)
+      /flipH (0 / 1 / 2)
+      /flipV (0 / 1 / 2)
+      /scale (0 / 1 / 2)
+      /posX (0 / 1 / 2)
+      /posY (0 / 1 / 2)
+    /fx
+      /red (0 / 1 / 2)
+      /green (0 / 1 / 2)
+      /blue (0 / 1 / 2)
+      /colorInv (0 / 1 / 2)
+      /gain (0 / 1 / 2)
+      /contrast (0 / 1 / 2)
+      /saturation (0 / 1 / 2)
+      /motionBlur (0 / 1 / 2)
+
+/output
+  /dimen (0 / 1 / 2 / 3)   * 320x240 / 640x480 / 1024x768 / 1280x720
+  /dimX (int)
+  /dimY (int)
+  /master (0 / 1)
+  /preview (0 / 1)
+  /fps (int)
+  /cursor (0 / 1)
+  /border (0 / 1)
+  /redBg (0 - 1)
+  /greenBg (0 - 1)
+  /blueBg (0 - 1)
+  /offsetX (int)
+  /offsetY (int)
+  /debug (0 / 1)
+  /restart
+  /cameraDev (int)
+  /preset (0 / 1)
