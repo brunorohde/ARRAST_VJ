@@ -1,6 +1,6 @@
-#N canvas 11 120 272 527 16;
+#N canvas 13 148 272 527 16;
 #X declare -path _abstract -stdlib Gem;
-#N canvas 37 214 458 503 INIT 0;
+#N canvas 39 215 458 503 INIT 0;
 #X obj 299 84 arrast_cpu;
 #N canvas 5 155 1356 527 MODE_SELECTOR 0;
 #X msg 438 216 0;
@@ -721,7 +721,7 @@ dos slots de vídeo e outros detalhes;
 #X text 37 25 ** DECLARA ABSTRAÇÕES E BIBLIOTECA EXTERNA GEM;
 #X obj 82 67 declare -path _abstract -stdlib Gem;
 #X restore 60 93 pd DECLARE;
-#N canvas 279 65 1016 698 AUTOMATION_GUI 0;
+#N canvas 285 65 1016 698 AUTOMATION_GUI 0;
 #X obj 1 1 cnv 15 1013 695 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 764 32 arrast_automenu \$0 4;
@@ -1115,7 +1115,7 @@ EM CADA CANAL, f 62;
 #X connect 36 0 0 0;
 #X restore 57 173 pd MANUAL_EDIT_MAP;
 #X restore 60 365 pd MAP_CONTROL;
-#N canvas 357 163 623 214 AUTOMATION_CONTROL 0;
+#N canvas 359 164 623 214 AUTOMATION_CONTROL 0;
 #N canvas 230 241 338 271 GUI_STATE 0;
 #X obj 44 148 t b;
 #X msg 44 179 vis 1;
@@ -1390,7 +1390,7 @@ BOTÃO DA INTERFACE, f 25;
 #X restore 48 114 pd INDEX;
 #X text 182 81 GESTÃO DA JANELA DE CONFIGURAÇÃO;
 #X text 143 115 MECANISMO DE ÍNDICE GLOBAL PARA AUTOMAÇÕES;
-#N canvas 0 570 1318 631 AUTOMATION_PRESET 0;
+#N canvas 5 132 1318 631 AUTOMATION_PRESET 0;
 #X obj 54 200 savepanel;
 #X obj 369 279 spigot 0;
 #X msg 446 250 1;
@@ -1595,7 +1595,7 @@ ENTRE OS 4 CANAIS E ENTRE AS 2 INSTÂNCIAS, f 39;
 #X connect 13 0 7 0;
 #X connect 14 0 13 0;
 #X restore 60 195 pd CAMERA_IN;
-#N canvas 293 70 877 644 MAIN_GUI 1;
+#N canvas 295 71 877 644 MAIN_GUI 1;
 #X obj 2 1 cnv 15 873 641 empty empty empty 20 12 0 14 -66577 -66577
 0;
 #X obj 12 11 cnv 15 205 621 empty empty empty 20 12 0 14 -1 -66577
@@ -1622,10 +1622,10 @@ ENTRE OS 4 CANAIS E ENTRE AS 2 INSTÂNCIAS, f 39;
 #X obj 22 232 arrast_iint 1;
 #X obj 238 232 arrast_iint 2;
 #X obj 454 232 arrast_iint 3;
+#X obj 238 21 arrast_vint 2;
 #X obj 670 21 arrast_vint 4;
 #X obj 454 21 arrast_vint 3;
 #X obj 22 21 arrast_vint 1;
-#X obj 238 21 arrast_vint 2;
 #X restore 60 263 pd MAIN_GUI;
 #N canvas 21 62 598 444 OSC_INLET 0;
 #X obj 288 310 oscparse;
@@ -1766,19 +1766,19 @@ PRESET 0 -8 0 8 -262144 -1 -1 3;
 SAVE_AS -7 -8 0 8 -1 -262144 -1;
 #X obj 55 158 bng 20 250 50 0 \$0-mainPresetSave_gui \$0-mainPresetSave_gui_set
 SAVE 0 -8 0 8 -1 -262144 -1;
-#X obj 88 158 cnv 15 160 20 \$0-morto \$0-mainPresetDisplay OPEN_PRESET
+#X obj 88 158 cnv 15 160 20 \$0-morto \$0-mainPresetDisplay tstebug
 7 10 0 12 -1 -262144 0;
 #X obj 12 11 cnv 15 247 50 empty empty [ARRAST_VJ] 14 24 0 34 -128992
 -1 0;
 #X obj 12 199 cnv 15 247 143 empty empty empty 20 12 0 14 -128992 -66577
 0;
 #X obj 88 219 hradio 20 1 0 8 \$0-autoPresetOpen_gui \$0-autoPresetOpen_gui_set
-AUTOMATION 0 -8 0 8 -262144 -1 -1 6;
+AUTOMATION 0 -8 0 8 -262144 -1 -1 2;
 #X obj 22 219 bng 20 250 50 0 \$0-autoPresetSaveAs_gui \$0-autoPresetSaveAs_gui_set
 SAVE_AS -7 -8 0 8 -1 -262144 -1;
 #X obj 55 219 bng 20 250 50 0 \$0-autoPresetSave_gui \$0-autoPresetSave_gui_set
 SAVE 0 -8 0 8 -1 -262144 -1;
-#X obj 88 219 cnv 15 160 20 \$0-morto \$0-autoPresetDisplay OPEN_AUTOMATION
+#X obj 88 219 cnv 15 160 20 \$0-morto \$0-autoPresetDisplay testebugness
 7 10 0 12 -1 -262144 0;
 #X obj 88 250 bng 20 250 50 0 \$0-autoRW_gui \$0-autoRW_gui_set RW
 4 10 0 10 -1 -262144 -262144;
@@ -1789,13 +1789,13 @@ SAVE 0 -8 0 8 -1 -262144 -1;
 #X obj 22 250 tgl 20 0 \$0-autoRec_gui \$0-autoRec_gui_set R 7 11 0
 12 -86277 -262144 -262144 0 1;
 #X obj 164 258 nbx 4 12 -1e+37 1e+37 0 0 \$0-morto \$0-autoFramesDisplay
-FRAMES 0 -8 0 8 -1 -262144 -1 0 256;
+FRAMES 0 -8 0 8 -1 -262144 -1 1466 256;
 #X obj 212 258 nbx 4 12 -1e+37 1e+37 0 0 \$0-morto \$0-autoSecDisplay
-SECS 0 -8 0 8 -1 -262144 -1 0 256;
+SECS 0 -8 0 8 -1 -262144 -1 48.8667 256;
 #X obj 25 281 hsl 222 20 0 1 0 0 \$0-autoTimeline_gui \$0-autoTimeline_gui_set
 .0 0 11 0 12 -1 -262144 -128992 0 1;
 #X obj 50 312 hradio 20 1 0 4 \$0-autoConfig_gui \$0-autoConfig_gui_set
-CONFIG 22 10 0 10 -1 -1 -262144 1;
+CONFIG 22 10 0 10 -1 -1 -262144 3;
 #X obj 141 312 hradio 20 1 0 4 \$0-autoClear_gui \$0-autoClear_gui_set
 CLEAR 25 10 0 10 -1 -1 -262144 3;
 #X obj 149 82 cnv 15 70 35 \$0-morto \$0-mapColor MAP 14 18 0 25 -1
