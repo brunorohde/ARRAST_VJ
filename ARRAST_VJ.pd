@@ -1,6 +1,6 @@
-#N canvas 13 148 272 527 16;
+#N canvas 15 144 272 527 16;
 #X declare -path _abstract -stdlib Gem;
-#N canvas 39 215 458 503 INIT 0;
+#N canvas 41 216 458 533 INIT 0;
 #X obj 299 84 arrast_cpu;
 #N canvas 5 155 1356 527 MODE_SELECTOR 0;
 #X msg 438 216 0;
@@ -1595,7 +1595,7 @@ ENTRE OS 4 CANAIS E ENTRE AS 2 INSTÂNCIAS, f 39;
 #X connect 13 0 7 0;
 #X connect 14 0 13 0;
 #X restore 60 195 pd CAMERA_IN;
-#N canvas 295 71 877 644 MAIN_GUI 1;
+#N canvas 297 72 877 644 MAIN_GUI 1;
 #X obj 2 1 cnv 15 873 641 empty empty empty 20 12 0 14 -66577 -66577
 0;
 #X obj 12 11 cnv 15 205 621 empty empty empty 20 12 0 14 -1 -66577
@@ -1622,8 +1622,8 @@ ENTRE OS 4 CANAIS E ENTRE AS 2 INSTÂNCIAS, f 39;
 #X obj 22 232 arrast_iint 1;
 #X obj 238 232 arrast_iint 2;
 #X obj 454 232 arrast_iint 3;
-#X obj 238 21 arrast_vint 2;
 #X obj 670 21 arrast_vint 4;
+#X obj 238 21 arrast_vint 2;
 #X obj 454 21 arrast_vint 3;
 #X obj 22 21 arrast_vint 1;
 #X restore 60 263 pd MAIN_GUI;
@@ -1748,6 +1748,30 @@ f 26;
 #X connect 13 0 4 0;
 #X connect 13 1 5 1;
 #X restore 60 127 pd OSC_INLET;
+#N canvas 5 54 1018 271 AUDIO_OUTPUT 0;
+#X obj 28 64 catch~ 1-L;
+#X obj 142 64 catch~ 1-R;
+#X text 415 19 ** SAÍDA DE ÁUDIO;
+#X obj 462 158 *~ 1;
+#X obj 539 158 *~ 1;
+#X obj 462 217 dac~ 1 2;
+#X obj 276 64 catch~ 2-L;
+#X obj 390 64 catch~ 2-R;
+#X obj 524 64 catch~ 3-L;
+#X obj 638 64 catch~ 3-R;
+#X obj 772 64 catch~ 4-L;
+#X obj 886 64 catch~ 4-R;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 3 0 5 0;
+#X connect 4 0 5 1;
+#X connect 6 0 3 0;
+#X connect 7 0 4 0;
+#X connect 8 0 3 0;
+#X connect 9 0 4 0;
+#X connect 10 0 3 0;
+#X connect 11 0 4 0;
+#X restore 60 467 pd AUDIO_OUTPUT;
 #X coords 0 -1 1 1 247 50 2 20 20;
 #X restore 12 11 pd INIT;
 #X obj 2 1 cnv 15 267 522 empty empty empty 20 12 0 14 -1 -66577 0
@@ -1766,7 +1790,7 @@ PRESET 0 -8 0 8 -262144 -1 -1 3;
 SAVE_AS -7 -8 0 8 -1 -262144 -1;
 #X obj 55 158 bng 20 250 50 0 \$0-mainPresetSave_gui \$0-mainPresetSave_gui_set
 SAVE 0 -8 0 8 -1 -262144 -1;
-#X obj 88 158 cnv 15 160 20 \$0-morto \$0-mainPresetDisplay tstebug
+#X obj 88 158 cnv 15 160 20 \$0-morto \$0-mainPresetDisplay OPEN_PRESET
 7 10 0 12 -1 -262144 0;
 #X obj 12 11 cnv 15 247 50 empty empty [ARRAST_VJ] 14 24 0 34 -128992
 -1 0;
@@ -1778,7 +1802,7 @@ AUTOMATION 0 -8 0 8 -262144 -1 -1 2;
 SAVE_AS -7 -8 0 8 -1 -262144 -1;
 #X obj 55 219 bng 20 250 50 0 \$0-autoPresetSave_gui \$0-autoPresetSave_gui_set
 SAVE 0 -8 0 8 -1 -262144 -1;
-#X obj 88 219 cnv 15 160 20 \$0-morto \$0-autoPresetDisplay testebugness
+#X obj 88 219 cnv 15 160 20 \$0-morto \$0-autoPresetDisplay OPEN_AUTOMATION
 7 10 0 12 -1 -262144 0;
 #X obj 88 250 bng 20 250 50 0 \$0-autoRW_gui \$0-autoRW_gui_set RW
 4 10 0 10 -1 -262144 -262144;
@@ -1789,9 +1813,9 @@ SAVE 0 -8 0 8 -1 -262144 -1;
 #X obj 22 250 tgl 20 0 \$0-autoRec_gui \$0-autoRec_gui_set R 7 11 0
 12 -86277 -262144 -262144 0 1;
 #X obj 164 258 nbx 4 12 -1e+37 1e+37 0 0 \$0-morto \$0-autoFramesDisplay
-FRAMES 0 -8 0 8 -1 -262144 -1 1466 256;
+FRAMES 0 -8 0 8 -1 -262144 -1 0 256;
 #X obj 212 258 nbx 4 12 -1e+37 1e+37 0 0 \$0-morto \$0-autoSecDisplay
-SECS 0 -8 0 8 -1 -262144 -1 48.8667 256;
+SECS 0 -8 0 8 -1 -262144 -1 0 256;
 #X obj 25 281 hsl 222 20 0 1 0 0 \$0-autoTimeline_gui \$0-autoTimeline_gui_set
 .0 0 11 0 12 -1 -262144 -128992 0 1;
 #X obj 50 312 hradio 20 1 0 4 \$0-autoConfig_gui \$0-autoConfig_gui_set
