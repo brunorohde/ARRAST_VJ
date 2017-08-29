@@ -1,6 +1,6 @@
-#N canvas 15 144 272 527 16;
+#N canvas 5 99 271 593 16;
 #X declare -path _abstract -stdlib Gem;
-#N canvas 41 216 458 533 INIT 0;
+#N canvas 77 133 458 533 INIT 0;
 #X obj 299 84 arrast_cpu;
 #N canvas 5 155 1356 527 MODE_SELECTOR 0;
 #X msg 438 216 0;
@@ -721,17 +721,17 @@ dos slots de vídeo e outros detalhes;
 #X text 37 25 ** DECLARA ABSTRAÇÕES E BIBLIOTECA EXTERNA GEM;
 #X obj 82 67 declare -path _abstract -stdlib Gem;
 #X restore 60 93 pd DECLARE;
-#N canvas 285 65 1016 698 AUTOMATION_GUI 0;
+#N canvas 306 65 1016 698 AUTOMATION_GUI 0;
 #X obj 1 1 cnv 15 1013 695 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 764 32 arrast_automenu \$0 4;
-#X obj 329 6 cnv 20 140 20 empty empty AUTOMATION_STATE 5 10 0 14 -1
+#X obj 325 6 cnv 20 140 20 empty empty AUTOMATION_STATE 5 10 0 14 -1
 -128992 0;
-#X obj 481 6 cnv 20 70 20 empty empty M=MANUAL 5 10 0 14 -1 -262144
+#X obj 477 6 cnv 20 70 20 empty empty M=MANUAL 5 10 0 14 -1 -262144
 0;
-#X obj 560 6 cnv 20 60 20 empty empty W=WRITE 5 10 0 14 -1 -262144
+#X obj 556 6 cnv 20 60 20 empty empty R=RECORD 5 10 0 14 -1 -262144
 0;
-#X obj 630 6 cnv 20 60 20 empty empty R=READ 5 10 0 14 -1 -262144 0
+#X obj 635 6 cnv 20 60 20 empty empty P=PLAY 5 10 0 14 -1 -262144 0
 ;
 #X obj 11 32 arrast_automenu \$0 1;
 #X obj 262 32 arrast_automenu \$0 2;
@@ -1115,8 +1115,8 @@ EM CADA CANAL, f 62;
 #X connect 36 0 0 0;
 #X restore 57 173 pd MANUAL_EDIT_MAP;
 #X restore 60 365 pd MAP_CONTROL;
-#N canvas 359 164 623 214 AUTOMATION_CONTROL 0;
-#N canvas 230 241 338 271 GUI_STATE 0;
+#N canvas 285 460 709 233 AUTOMATION_CONTROL 0;
+#N canvas 232 242 338 271 GUI_STATE 0;
 #X obj 44 148 t b;
 #X msg 44 179 vis 1;
 #X obj 44 212 s pd-AUTOMATION_GUI;
@@ -1126,21 +1126,21 @@ BOTÃO DA INTERFACE, f 25;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X connect 4 0 0 0;
-#X restore 48 80 pd GUI_STATE;
-#X text 125 24 ** GESTÃO DO MECANISMO DE AUTOMAÇÃO;
-#N canvas 132 94 1188 669 INDEX 0;
-#X obj 1015 655 moses;
-#X obj 1015 553 spigot;
-#X obj 347 553 spigot;
-#X obj 397 664 *;
-#X obj 342 366 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X restore 48 70 pd GUI_STATE;
+#X text 165 24 ** GESTÃO DO MECANISMO DE AUTOMAÇÃO;
+#N canvas 173 94 1188 669 INDEX 0;
+#X obj 1015 715 moses;
+#X obj 1015 613 spigot;
+#X obj 347 613 spigot;
+#X obj 397 724 *;
+#X obj 342 426 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 386 366 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 386 426 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 361 362 +;
-#X text 405 362 -;
-#X text 502 247 RESOLUÇÃO EM MSEC PARA GRAVAÇÃO E LEITURA;
-#N canvas 15 59 409 264 MAXIMUM 0;
+#X text 361 422 +;
+#X text 405 422 -;
+#X text 502 307 RESOLUÇÃO EM MSEC PARA GRAVAÇÃO E LEITURA;
+#N canvas 388 82 409 264 MAXIMUM 0;
 #X obj 37 69 inlet;
 #X obj 37 214 outlet;
 #X obj 37 180 t f f;
@@ -1155,16 +1155,16 @@ BOTÃO DA INTERFACE, f 25;
 #X connect 5 0 7 0;
 #X connect 6 0 2 0;
 #X connect 7 0 6 1;
-#X restore 347 592 pd MAXIMUM;
+#X restore 347 652 pd MAXIMUM;
 #X text 340 18 ** MECANISMO DE ÍNDICE GLOBAL PARA AUTOMAÇÕES;
-#X obj 803 86 r \$0-autoRec_gui;
-#X obj 542 86 r \$0-autoPlay_gui;
-#X floatatom 270 419 5 0 0 0 - - -, f 5;
-#X text 328 420 ÍNDICE GLOBAL;
-#X obj 397 693 / 1000;
-#X text 396 752 TAMANHO DA TIMELINE EM SEGUNDOS;
-#X text 371 826 TAMANHO DA TIMELINE EM FRAMES;
-#X text 418 554 APENAS DURANTE GRAVAÇÃO;
+#X obj 833 86 r \$0-autoRec_gui;
+#X obj 552 86 r \$0-autoPlay_gui;
+#X floatatom 270 479 5 0 0 0 - - -, f 5;
+#X text 328 480 ÍNDICE GLOBAL;
+#X obj 397 753 / 1000;
+#X text 396 812 TAMANHO DA TIMELINE EM SEGUNDOS;
+#X text 371 886 TAMANHO DA TIMELINE EM FRAMES;
+#X text 418 614 APENAS DURANTE GRAVAÇÃO;
 #N canvas 27 65 746 275 COUNTER 0;
 #X obj 150 160 f;
 #X obj 150 130 t f f f;
@@ -1205,87 +1205,82 @@ BOTÃO DA INTERFACE, f 25;
 #X connect 16 0 0 1;
 #X connect 16 1 2 1;
 #X connect 16 2 3 1;
-#X restore 270 389 pd COUNTER;
-#X obj 461 188 r MASTER_FPS;
-#X msg 461 217 1000 \$1;
-#X obj 461 246 /;
-#X obj 461 275 t f f;
-#X obj 334 324 metro 41.6667;
-#X text 593 189 RECEBE TAXA GLOBAL DE FPS;
-#X obj 441 365 r \$0-timeUp;
-#X obj 560 365 r \$0-timeDown;
+#X restore 270 449 pd COUNTER;
+#X obj 461 248 r MASTER_FPS;
+#X msg 461 277 1000 \$1;
+#X obj 461 306 /;
+#X obj 461 335 t f f;
+#X obj 334 384 metro 41.6667;
+#X text 593 249 RECEBE TAXA GLOBAL DE FPS;
+#X obj 441 425 r \$0-timeUp;
+#X obj 560 425 r \$0-timeDown;
 #X obj 269 86 r \$0-autoRW_gui;
-#X obj 1089 758 r \$0-autoLoop_gui;
-#X obj 1062 787 f;
-#X text 1077 656 AÇÃO AO ALCANÇAR FIM DA REPRODUÇÃO;
-#X msg 1062 845 0;
-#X obj 1062 874 s \$0-autoPlay_gui_set;
-#X text 1106 846 FIM DA REPRODUÇÃO;
-#X text 1274 759 ESTADO DO LOOP;
-#X obj 1109 715 s \$0-autoRW_gui;
-#X obj 1062 816 sel 0;
-#X obj 1062 686 t b b;
-#X text 1274 715 REINICIA ÍNDICE;
-#X obj 96 539 r \$0-autoClear_gui;
-#X msg 172 607 0;
-#X text 94 511 LIMPA AUTOMAÇÃO;
-#X msg 125 607 0;
-#X obj 759 731 s \$0-autoTimeline_gui_set;
-#X msg 893 702 set \$1;
-#X text 757 761 ENVIA ÍNDICE PARA TIMELINE;
-#X obj 96 568 t b b b b;
-#X obj 96 651 s \$0-autoRW_gui;
-#X text 93 681 REINICIA ÍNDICE;
-#X msg 759 702 label .\$1;
-#X msg 302 154 -1;
-#X msg 349 154 0;
-#X obj 893 673 / 0;
-#X text 539 60 BOTÃO PLAY DA INTERFACE;
-#X obj 270 946 s AUTOMATION_MASTER;
-#X text 475 946 ENVIA PACOTE DE AUTOMAÇÃO PARA TODAS AS UNIDADES
+#X obj 1089 818 r \$0-autoLoop_gui;
+#X obj 1062 847 f;
+#X text 1077 716 AÇÃO AO ALCANÇAR FIM DA REPRODUÇÃO;
+#X msg 1062 905 0;
+#X obj 1062 934 s \$0-autoPlay_gui_set;
+#X text 1106 906 FIM DA REPRODUÇÃO;
+#X text 1274 819 ESTADO DO LOOP;
+#X obj 1109 775 s \$0-autoRW_gui;
+#X obj 1062 876 sel 0;
+#X obj 1062 746 t b b;
+#X text 1274 775 REINICIA ÍNDICE;
+#X obj 96 599 r \$0-autoClear_gui;
+#X msg 172 667 0;
+#X text 94 571 LIMPA AUTOMAÇÃO;
+#X msg 125 667 0;
+#X obj 759 791 s \$0-autoTimeline_gui_set;
+#X msg 893 762 set \$1;
+#X text 757 821 ENVIA ÍNDICE PARA TIMELINE;
+#X obj 96 628 t b b b b;
+#X obj 96 711 s \$0-autoRW_gui;
+#X text 93 741 REINICIA ÍNDICE;
+#X msg 759 762 label .\$1;
+#X msg 302 149 -1;
+#X msg 349 149 0;
+#X obj 893 733 / 0;
+#X text 549 60 BOTÃO PLAY DA INTERFACE;
+#X obj 270 1006 s AUTOMATION_MASTER;
+#X text 475 1006 ENVIA PACOTE DE AUTOMAÇÃO PARA TODAS AS UNIDADES
 [arrast_automato], f 66;
-#X obj 347 631 t f f f f f f;
-#X obj 1031 254 *;
-#X obj 1031 283 int;
-#X obj 1031 225 r \$0-autoTimeline_gui;
-#X text 1029 197 NAVEGAÇÃO NA TIMELINE;
-#X obj 1031 323 spigot;
-#X obj 1101 299 == 0;
-#X obj 270 446 t f f f f f;
-#X obj 1031 365 t f;
-#X text 1073 255 DETERMINA POSIÇÃO DO CURSOR;
-#X text 1151 295 IGNORA SE ESTIVER GRAVANDO OU REPRODUZINDO, f 26
+#X obj 347 691 t f f f f f f;
+#X obj 1031 314 *;
+#X obj 1031 343 int;
+#X obj 1031 285 r \$0-autoTimeline_gui;
+#X text 1029 257 NAVEGAÇÃO NA TIMELINE;
+#X obj 1031 383 spigot;
+#X obj 1101 359 == 0;
+#X obj 270 506 t f f f f f;
+#X obj 1031 425 t f;
+#X text 1073 315 DETERMINA POSIÇÃO DO CURSOR;
+#X text 1151 355 IGNORA SE ESTIVER GRAVANDO OU REPRODUZINDO, f 26
 ;
-#X obj 893 470 spigot;
-#X text 967 467 APENAS SE ESTIVER GRAVANDO OU REPRODUZINDO, f 26;
-#X obj 29 393 r \$0-autoSetSize;
-#X text 27 342 RECEBE TAMANHO DA MEMÓRIA QUANDO ABRE UM PRESET, f
+#X obj 893 530 spigot;
+#X text 967 527 APENAS SE ESTIVER GRAVANDO OU REPRODUZINDO, f 26;
+#X obj 29 453 r \$0-autoSetSize;
+#X text 27 402 RECEBE TAMANHO DA MEMÓRIA QUANDO ABRE UM PRESET, f
 25;
-#X text 458 593 TAMANHO FINAL DA AUTOMAÇÃO;
-#X obj 29 422 t b f b;
+#X text 458 653 TAMANHO FINAL DA AUTOMAÇÃO;
+#X obj 29 482 t b f b;
 #X obj 269 115 t b b b;
-#X obj 121 164 s AUTO_RW;
-#X text 118 193 SINCRONIZA RW DOS VÍDEOS;
-#X obj 397 722 s \$0-autoSecDisplay;
-#X obj 372 796 s \$0-autoFramesDisplay;
-#X obj 334 275 t f f f f;
-#X obj 270 867 pack f f;
-#X text 365 866 ÍNDICE E TAMANHO PARA REDIMENSIONAMENTO DOS ARRAYS
+#X obj 151 149 s AUTO_RW;
+#X text 148 178 SINCRONIZA RW DOS VÍDEOS, f 13;
+#X obj 397 782 s \$0-autoSecDisplay;
+#X obj 372 856 s \$0-autoFramesDisplay;
+#X obj 270 927 pack f f;
+#X text 365 926 ÍNDICE E TAMANHO PARA REDIMENSIONAMENTO DOS ARRAYS
 , f 28;
-#X obj 562 319 s AUTOMATION_STATE;
-#X text 755 316 ENVIA ESTADO DO ÍNDICE PARA [arrast_automato], f
+#X obj 619 149 s AUTOMATION_STATE;
+#X text 616 179 ENVIA ESTADO DO ÍNDICE PARA [arrast_automato], f
 22;
-#X obj 542 115 t f f;
 #X text 267 60 BOTÃO RESET DA INTERFACE;
-#X obj 1015 621 spigot;
-#X text 1128 573 APENAS DURANTE REPRODUÇÃO SEM REC ARMADO, f 25
-;
-#X obj 1072 587 == 0;
-#X obj 803 115 t f f f;
-#X text 801 60 BOTÃO REC DA INTERFACE;
-#X obj 870 149 s AUTOMATION_REC;
-#X text 1041 151 ARMA GRAVAÇÃO NOS [arrast_automato];
-#N canvas 124 377 989 319 EXTERNAL_CONTROL 0;
+#X obj 1092 647 == 0;
+#X obj 833 115 t f f f;
+#X text 831 60 BOTÃO REC DA INTERFACE;
+#X obj 900 149 s AUTOMATION_REC;
+#X text 899 179 ARMA GRAVAÇÃO NOS [arrast_automato], f 17;
+#N canvas 126 378 989 319 EXTERNAL_CONTROL 0;
 #X obj 48 160 route rec play rw loop timeline clear;
 #X obj 48 214 s \$0-autoRec_gui_set;
 #X obj 268 214 s \$0-autoPlay_gui_set;
@@ -1308,17 +1303,22 @@ BOTÃO DA INTERFACE, f 25;
 #X connect 0 5 6 0;
 #X connect 7 0 10 0;
 #X connect 10 0 0 0;
-#X restore 1073 86 pd EXTERNAL_CONTROL;
-#X text 1071 60 CONTROLES EXTERNOS DE TRANSPORTE;
+#X restore 1093 86 pd EXTERNAL_CONTROL;
+#X text 1091 60 CONTROLES EXTERNOS DE TRANSPORTE;
+#X obj 334 335 t f f f;
+#X obj 552 115 t f f f;
+#X text 1088 614 APENAS DURANTE REPRODUÇÃO;
+#X text 1145 648 COM REC DESARMADO;
+#X obj 1015 681 spigot 1;
 #X connect 0 1 38 0;
-#X connect 1 0 86 0;
+#X connect 1 0 95 0;
 #X connect 2 0 9 0;
 #X connect 3 0 15 0;
 #X connect 4 0 19 2;
 #X connect 5 0 19 3;
 #X connect 9 0 57 0;
-#X connect 11 0 89 0;
-#X connect 12 0 84 0;
+#X connect 11 0 85 0;
+#X connect 12 0 92 0;
 #X connect 13 0 64 0;
 #X connect 15 0 77 0;
 #X connect 19 0 13 0;
@@ -1339,7 +1339,7 @@ BOTÃO DA INTERFACE, f 25;
 #X connect 38 1 36 0;
 #X connect 40 0 47 0;
 #X connect 41 0 57 0;
-#X connect 43 0 80 0;
+#X connect 43 0 79 0;
 #X connect 45 0 44 0;
 #X connect 47 0 48 0;
 #X connect 47 1 43 0;
@@ -1350,7 +1350,7 @@ BOTÃO DA INTERFACE, f 25;
 #X connect 52 0 53 0;
 #X connect 52 0 50 0;
 #X connect 53 0 45 0;
-#X connect 57 0 80 1;
+#X connect 57 0 79 1;
 #X connect 57 1 78 0;
 #X connect 57 2 3 0;
 #X connect 57 3 0 1;
@@ -1361,7 +1361,7 @@ BOTÃO DA INTERFACE, f 25;
 #X connect 60 0 58 0;
 #X connect 62 0 65 0;
 #X connect 63 0 62 1;
-#X connect 64 0 80 0;
+#X connect 64 0 79 0;
 #X connect 64 1 2 0;
 #X connect 64 2 50 0;
 #X connect 64 3 68 0;
@@ -1369,27 +1369,27 @@ BOTÃO DA INTERFACE, f 25;
 #X connect 65 0 19 0;
 #X connect 68 0 53 0;
 #X connect 70 0 73 0;
-#X connect 73 0 80 0;
+#X connect 73 0 79 0;
 #X connect 73 1 9 0;
 #X connect 73 2 47 0;
 #X connect 74 0 75 0;
 #X connect 74 1 51 0;
 #X connect 74 2 52 0;
-#X connect 79 0 24 0;
-#X connect 79 1 68 1;
-#X connect 79 2 63 0;
-#X connect 79 3 82 0;
-#X connect 80 0 55 0;
-#X connect 84 0 79 0;
-#X connect 84 1 1 1;
-#X connect 86 0 0 0;
-#X connect 88 0 86 1;
-#X connect 89 0 2 1;
-#X connect 89 1 88 0;
-#X connect 89 2 91 0;
-#X restore 48 114 pd INDEX;
-#X text 182 81 GESTÃO DA JANELA DE CONFIGURAÇÃO;
-#X text 143 115 MECANISMO DE ÍNDICE GLOBAL PARA AUTOMAÇÕES;
+#X connect 79 0 55 0;
+#X connect 84 0 95 1;
+#X connect 85 0 2 1;
+#X connect 85 1 84 0;
+#X connect 85 2 87 0;
+#X connect 91 0 24 0;
+#X connect 91 1 68 1;
+#X connect 91 2 63 0;
+#X connect 92 0 91 0;
+#X connect 92 1 1 1;
+#X connect 92 2 81 0;
+#X connect 95 0 0 0;
+#X restore 48 104 pd INDEX;
+#X text 182 71 GESTÃO DA JANELA DE CONFIGURAÇÃO;
+#X text 143 105 MECANISMO DE ÍNDICE GLOBAL PARA AUTOMAÇÕES;
 #N canvas 5 132 1318 631 AUTOMATION_PRESET 0;
 #X obj 54 200 savepanel;
 #X obj 369 279 spigot 0;
@@ -1555,8 +1555,30 @@ JÁ EXISTIR UM PRESET ATIVO SOBRESCREVE O ATUAL, f 27;
 #X connect 50 0 47 0;
 #X connect 51 0 41 0;
 #X connect 51 1 48 0;
-#X restore 48 148 pd AUTOMATION_PRESET;
-#X text 262 149 GESTÃO DE PRESETS DE AUTOMAÇÃO;
+#X restore 48 138 pd AUTOMATION_PRESET;
+#X text 262 139 GESTÃO DE PRESETS DE AUTOMAÇÃO;
+#X text 240 172 SELETORES DE ESTADO DA INTERFACE PRINCIPAL;
+#N canvas 268 385 1074 190 STATE_SELECTORS 0;
+#X obj 36 56 loadbang;
+#X obj 36 134 s \$0-autoSetAll1_gui_set;
+#X obj 290 134 s \$0-autoSetAll2_gui_set;
+#X obj 544 134 s \$0-autoSetAll3_gui_set;
+#X obj 798 134 s \$0-autoSetAll4_gui_set;
+#X text 92 18 ** INICIALIZAÇÃO DAS CORES E VALORES DOS SELETORES
+DE ESTADO DA AUTOMAÇÃO EM CADA CANAL, f 87;
+#X msg 36 100 color 13 \, 0;
+#X msg 290 100 color 15 \, 0;
+#X msg 544 100 color 19 \, 0;
+#X msg 798 100 color 16 \, 0;
+#X connect 0 0 6 0;
+#X connect 0 0 7 0;
+#X connect 0 0 8 0;
+#X connect 0 0 9 0;
+#X connect 6 0 1 0;
+#X connect 7 0 2 0;
+#X connect 8 0 3 0;
+#X connect 9 0 4 0;
+#X restore 48 172 pd STATE_SELECTORS;
 #X restore 60 433 pd AUTOMATION_CONTROL;
 #N canvas 503 159 660 408 CAMERA_IN 0;
 #X msg 49 107 1;
@@ -1595,7 +1617,7 @@ ENTRE OS 4 CANAIS E ENTRE AS 2 INSTÂNCIAS, f 39;
 #X connect 13 0 7 0;
 #X connect 14 0 13 0;
 #X restore 60 195 pd CAMERA_IN;
-#N canvas 297 72 877 644 MAIN_GUI 1;
+#N canvas 286 74 877 644 MAIN_GUI 1;
 #X obj 2 1 cnv 15 873 641 empty empty empty 20 12 0 14 -66577 -66577
 0;
 #X obj 12 11 cnv 15 205 621 empty empty empty 20 12 0 14 -1 -66577
@@ -1774,7 +1796,7 @@ f 26;
 #X restore 60 467 pd AUDIO_OUTPUT;
 #X coords 0 -1 1 1 247 50 2 20 20;
 #X restore 12 11 pd INIT;
-#X obj 2 1 cnv 15 267 522 empty empty empty 20 12 0 14 -1 -66577 0
+#X obj 2 1 cnv 15 267 590 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 52 82 hradio 35 1 0 2 \$0-mixClick_gui \$0-mixClick_gui_set
 empty 0 12 0 15 -262144 -1 -1 1;
@@ -1782,46 +1804,76 @@ empty 0 12 0 15 -262144 -1 -1 1;
 empty 0 12 0 15 -262144 -1 -1 1;
 #X obj 52 82 cnv 15 70 35 \$0-morto \$0-mixColor MIX 13 18 0 25 -260818
 -1 0;
-#X obj 12 138 cnv 15 247 50 empty empty empty 20 12 0 14 -128992 -66577
+#X obj 12 139 cnv 15 247 50 empty empty empty 20 12 0 14 -128992 -66577
 0;
-#X obj 88 158 hradio 20 1 0 8 \$0-mainPresetOpen_gui \$0-mainPresetOpen_gui_set
-PRESET 0 -8 0 8 -262144 -1 -1 3;
-#X obj 22 158 bng 20 250 50 0 \$0-mainPresetSaveAs_gui \$0-mainPresetSaveAs_gui_set
+#X obj 88 159 hradio 20 1 0 8 \$0-mainPresetOpen_gui \$0-mainPresetOpen_gui_set
+PRESET 0 -8 0 8 -262144 -1 -1 2;
+#X obj 22 159 bng 20 250 50 0 \$0-mainPresetSaveAs_gui \$0-mainPresetSaveAs_gui_set
 SAVE_AS -7 -8 0 8 -1 -262144 -1;
-#X obj 55 158 bng 20 250 50 0 \$0-mainPresetSave_gui \$0-mainPresetSave_gui_set
+#X obj 55 159 bng 20 250 50 0 \$0-mainPresetSave_gui \$0-mainPresetSave_gui_set
 SAVE 0 -8 0 8 -1 -262144 -1;
-#X obj 88 158 cnv 15 160 20 \$0-morto \$0-mainPresetDisplay OPEN_PRESET
+#X obj 88 159 cnv 15 160 20 \$0-morto \$0-mainPresetDisplay OPEN_PRESET
 7 10 0 12 -1 -262144 0;
 #X obj 12 11 cnv 15 247 50 empty empty [ARRAST_VJ] 14 24 0 34 -128992
 -1 0;
-#X obj 12 199 cnv 15 247 143 empty empty empty 20 12 0 14 -128992 -66577
+#X obj 12 200 cnv 15 247 210 empty empty empty 20 12 0 14 -128992 -66577
 0;
-#X obj 88 219 hradio 20 1 0 8 \$0-autoPresetOpen_gui \$0-autoPresetOpen_gui_set
-AUTOMATION 0 -8 0 8 -262144 -1 -1 2;
-#X obj 22 219 bng 20 250 50 0 \$0-autoPresetSaveAs_gui \$0-autoPresetSaveAs_gui_set
+#X obj 88 220 hradio 20 1 0 8 \$0-autoPresetOpen_gui \$0-autoPresetOpen_gui_set
+AUTOMATION 0 -8 0 8 -262144 -1 -1 1;
+#X obj 22 220 bng 20 250 50 0 \$0-autoPresetSaveAs_gui \$0-autoPresetSaveAs_gui_set
 SAVE_AS -7 -8 0 8 -1 -262144 -1;
-#X obj 55 219 bng 20 250 50 0 \$0-autoPresetSave_gui \$0-autoPresetSave_gui_set
+#X obj 55 220 bng 20 250 50 0 \$0-autoPresetSave_gui \$0-autoPresetSave_gui_set
 SAVE 0 -8 0 8 -1 -262144 -1;
-#X obj 88 219 cnv 15 160 20 \$0-morto \$0-autoPresetDisplay OPEN_AUTOMATION
+#X obj 88 220 cnv 15 160 20 \$0-morto \$0-autoPresetDisplay OPEN_AUTOMATION
 7 10 0 12 -1 -262144 0;
-#X obj 88 250 bng 20 250 50 0 \$0-autoRW_gui \$0-autoRW_gui_set RW
+#X obj 88 251 bng 20 250 50 0 \$0-autoRW_gui \$0-autoRW_gui_set RW
 4 10 0 10 -1 -262144 -262144;
-#X obj 121 250 tgl 20 0 \$0-autoLoop_gui \$0-autoLoop_gui_set L 7 11
+#X obj 121 251 tgl 20 0 \$0-autoLoop_gui \$0-autoLoop_gui_set L 7 11
 0 12 -1 -262144 -262144 0 1;
-#X obj 55 250 tgl 20 0 \$0-autoPlay_gui \$0-autoPlay_gui_set P 7 11
+#X obj 55 251 tgl 20 0 \$0-autoPlay_gui \$0-autoPlay_gui_set P 7 11
 0 12 -1 -262144 -262144 0 1;
-#X obj 22 250 tgl 20 0 \$0-autoRec_gui \$0-autoRec_gui_set R 7 11 0
+#X obj 22 251 tgl 20 0 \$0-autoRec_gui \$0-autoRec_gui_set R 7 11 0
 12 -86277 -262144 -262144 0 1;
-#X obj 164 258 nbx 4 12 -1e+37 1e+37 0 0 \$0-morto \$0-autoFramesDisplay
+#X obj 164 259 nbx 4 12 -1e+37 1e+37 0 0 \$0-morto \$0-autoFramesDisplay
 FRAMES 0 -8 0 8 -1 -262144 -1 0 256;
-#X obj 212 258 nbx 4 12 -1e+37 1e+37 0 0 \$0-morto \$0-autoSecDisplay
+#X obj 212 259 nbx 4 12 -1e+37 1e+37 0 0 \$0-morto \$0-autoSecDisplay
 SECS 0 -8 0 8 -1 -262144 -1 0 256;
-#X obj 25 281 hsl 222 20 0 1 0 0 \$0-autoTimeline_gui \$0-autoTimeline_gui_set
+#X obj 25 282 hsl 222 20 0 1 0 0 \$0-autoTimeline_gui \$0-autoTimeline_gui_set
 .0 0 11 0 12 -1 -262144 -128992 0 1;
-#X obj 50 312 hradio 20 1 0 4 \$0-autoConfig_gui \$0-autoConfig_gui_set
-CONFIG 22 10 0 10 -1 -1 -262144 3;
-#X obj 141 312 hradio 20 1 0 4 \$0-autoClear_gui \$0-autoClear_gui_set
-CLEAR 25 10 0 10 -1 -1 -262144 3;
+#X obj 50 380 hradio 20 1 0 4 \$0-autoConfig_gui \$0-autoConfig_gui_set
+CONFIG 22 10 0 10 -1 -1 -262144 2;
+#X obj 141 380 hradio 20 1 0 4 \$0-autoClear_gui \$0-autoClear_gui_set
+CLEAR 25 10 0 10 -1 -1 -262144 2;
 #X obj 149 82 cnv 15 70 35 \$0-morto \$0-mapColor MAP 14 18 0 25 -1
 -262144 0;
-#X obj 12 353 arrast_gemwin;
+#X obj 12 421 arrast_gemwin;
+#X obj 22 313 cnv 15 227 56 empty empty empty 20 12 0 14 -1 -128992
+0;
+#X obj 32 332 hradio 15 1 0 3 \$0-autoSetAll1_gui \$0-autoSetAll1_gui_set
+empty 50 8 0 10 -258699 -1 -1 0;
+#X obj 86 332 hradio 15 1 0 3 \$0-autoSetAll2_gui \$0-autoSetAll2_gui_set
+empty 50 8 0 10 -241291 -1 -1 0;
+#X obj 140 332 hradio 15 1 0 3 \$0-autoSetAll3_gui \$0-autoSetAll3_gui_set
+empty 50 8 0 10 -250685 -1 -1 0;
+#X obj 194 332 hradio 15 1 0 3 \$0-autoSetAll4_gui \$0-autoSetAll4_gui_set
+empty 50 8 0 10 -24198 -1 -1 0;
+#X obj 34 318 cnv 10 12 12 empty empty M 3 7 0 10 -1 -128992 0;
+#X obj 49 318 cnv 10 12 12 empty empty R 3 7 0 10 -1 -128992 0;
+#X obj 64 318 cnv 10 12 12 empty empty P 3 7 0 10 -1 -128992 0;
+#X obj 115 352 cnv 12 45 12 empty empty M=MANUAL 5 7 0 8 -1 -262144
+0;
+#X obj 161 352 cnv 12 45 12 empty empty R=RECORD 5 7 0 8 -1 -262144
+0;
+#X obj 207 352 cnv 12 35 12 empty empty P=PLAY 5 7 0 8 -1 -262144 0
+;
+#X obj 24 352 cnv 12 85 12 empty empty AUTOMATION_STATE 5 7 0 8 -1
+-128992 0;
+#X obj 88 318 cnv 10 12 12 empty empty M 3 7 0 10 -1 -128992 0;
+#X obj 103 318 cnv 10 12 12 empty empty R 3 7 0 10 -1 -128992 0;
+#X obj 118 318 cnv 10 12 12 empty empty P 3 7 0 10 -1 -128992 0;
+#X obj 142 318 cnv 10 12 12 empty empty M 3 7 0 10 -1 -128992 0;
+#X obj 157 318 cnv 10 12 12 empty empty R 3 7 0 10 -1 -128992 0;
+#X obj 172 318 cnv 10 12 12 empty empty P 3 7 0 10 -1 -128992 0;
+#X obj 196 318 cnv 10 12 12 empty empty M 3 7 0 10 -1 -128992 0;
+#X obj 211 318 cnv 10 12 12 empty empty R 3 7 0 10 -1 -128992 0;
+#X obj 226 318 cnv 10 12 12 empty empty P 3 7 0 10 -1 -128992 0;

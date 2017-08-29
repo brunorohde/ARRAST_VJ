@@ -1,4 +1,4 @@
-#N canvas 256 64 514 699 16;
+#N canvas 268 64 514 699 16;
 #X obj 20 43 cnv 15 240 631 empty empty empty 20 12 0 14 -228856 -66577
 0;
 #X obj 30 63 hradio 15 1 0 3 \$0-enableV_gui \$0-enableV_gui_set enable
@@ -90,56 +90,8 @@ colorInv 50 8 0 10 -262144 -1 -1 0;
 #X obj 20 546 cnv 15 240 22 empty \$0-channelColor FX 30 11 0 14 -24198
 -66577 0;
 #X obj 32 49 cnv 10 12 12 empty empty M 3 7 0 10 -233017 -66577 0;
-#X obj 47 49 cnv 10 12 12 empty empty W 3 7 0 10 -233017 -66577 0;
-#X obj 62 49 cnv 10 12 12 empty empty R 3 7 0 10 -233017 -66577 0;
-#X obj 140 49 cnv 10 12 12 empty empty M 3 7 0 10 -233017 -66577 0
-;
-#X obj 155 49 cnv 10 12 12 empty empty W 3 7 0 10 -233017 -66577 0
-;
-#X obj 170 49 cnv 10 12 12 empty empty R 3 7 0 10 -233017 -66577 0
-;
-#X obj 32 288 cnv 10 12 12 empty empty M 3 7 0 10 -233017 -66577 0
-;
-#X obj 47 288 cnv 10 12 12 empty empty W 3 7 0 10 -233017 -66577 0
-;
-#X obj 62 288 cnv 10 12 12 empty empty R 3 7 0 10 -233017 -66577 0
-;
-#X obj 140 288 cnv 10 12 12 empty empty M 3 7 0 10 -233017 -66577 0
-;
-#X obj 155 288 cnv 10 12 12 empty empty W 3 7 0 10 -233017 -66577 0
-;
-#X obj 170 288 cnv 10 12 12 empty empty R 3 7 0 10 -233017 -66577 0
-;
-#X obj 32 357 cnv 10 12 12 empty empty M 3 7 0 10 -233017 -66577 0
-;
-#X obj 47 357 cnv 10 12 12 empty empty W 3 7 0 10 -233017 -66577 0
-;
-#X obj 62 357 cnv 10 12 12 empty empty R 3 7 0 10 -233017 -66577 0
-;
-#X obj 32 426 cnv 10 12 12 empty empty M 3 7 0 10 -233017 -66577 0
-;
-#X obj 47 426 cnv 10 12 12 empty empty W 3 7 0 10 -233017 -66577 0
-;
-#X obj 62 426 cnv 10 12 12 empty empty R 3 7 0 10 -233017 -66577 0
-;
-#X obj 140 426 cnv 10 12 12 empty empty M 3 7 0 10 -233017 -66577 0
-;
-#X obj 155 426 cnv 10 12 12 empty empty W 3 7 0 10 -233017 -66577 0
-;
-#X obj 170 426 cnv 10 12 12 empty empty R 3 7 0 10 -233017 -66577 0
-;
-#X obj 32 575 cnv 10 12 12 empty empty M 3 7 0 10 -233017 -66577 0
-;
-#X obj 47 575 cnv 10 12 12 empty empty W 3 7 0 10 -233017 -66577 0
-;
-#X obj 62 575 cnv 10 12 12 empty empty R 3 7 0 10 -233017 -66577 0
-;
-#X obj 140 575 cnv 10 12 12 empty empty M 3 7 0 10 -233017 -66577 0
-;
-#X obj 155 575 cnv 10 12 12 empty empty W 3 7 0 10 -233017 -66577 0
-;
-#X obj 170 575 cnv 10 12 12 empty empty R 3 7 0 10 -233017 -66577 0
-;
+#X obj 47 49 cnv 10 12 12 empty empty R 3 7 0 10 -233017 -66577 0;
+#X obj 62 49 cnv 10 12 12 empty empty P 3 7 0 10 -233017 -66577 0;
 #X obj 167 25 hradio 12 1 0 3 \$0-setAllVideo \$0-setAllVideo_set SET_ALL
 42 6 0 10 -1 -262144 -1 0;
 #X obj 167 264 hradio 12 1 0 3 \$0-setAllImage \$0-setAllImage_set
@@ -171,7 +123,7 @@ SET_ALL 42 6 0 10 -1 -228856 -1 0;
 #X connect 8 0 7 0;
 #X connect 9 0 0 0;
 #X restore 290 232 pd CHANNEL_COLOR;
-#N canvas 10 495 1351 709 CONTROL_MEMORY 0;
+#N canvas 10 54 1351 709 CONTROL_MEMORY 0;
 #X text 513 15 ** GESTÃO DA MEMÓRIA LOCAL;
 #X text 106 296 PARÂMETROS DE VÍDEO;
 #X text 566 296 PARÂMETROS DE IMAGEM;
@@ -191,7 +143,7 @@ SET_ALL 42 6 0 10 -1 -228856 -1 0;
 #X obj 482 430 t f;
 #X obj 482 401 r \$0-setAllCamera;
 #X obj 22 270 t f;
-#N canvas 396 119 695 644 GLOBAL_LINK 0;
+#N canvas 285 55 695 693 GLOBAL_LINK 0;
 #X obj 103 117 r \$0-setAllLink;
 #X obj 46 146 spigot;
 #X text 119 148 LINK GLOBAL;
@@ -207,14 +159,16 @@ SET_ALL 42 6 0 10 -1 -228856 -1 0;
 #X obj 46 190 t f f f f;
 #X text 60 24 ** LINK ENTRE BOTÃO SET_ALL VIDEO PARA TODAS AS UNIDADES
 ;
-#X obj 126 488 s \$0-setAllImage_set;
-#X obj 99 522 s \$0-setAllCamera_set;
-#X obj 72 556 s \$0-setAllTransform_set;
-#X obj 46 590 s \$0-setAllFx_set;
-#X obj 46 420 t f f f f f;
-#X obj 153 454 s \$0-setAllVideo_set;
+#X obj 126 542 s \$0-setAllImage_set;
+#X obj 99 576 s \$0-setAllCamera_set;
+#X obj 72 610 s \$0-setAllTransform_set;
+#X obj 46 644 s \$0-setAllFx_set;
+#X obj 46 474 t f f f f f;
+#X obj 153 508 s \$0-setAllVideo_set;
 #X obj 46 386 r \$0-externalSetAll;
 #X text 250 387 MECANISMO DE SETAR TUDO VIA CONTROLE OSC;
+#X text 270 432 BOTÃO DA INTERFACE PRINCIPAL;
+#X obj 46 430 r \$1-autoSetAll\$2_gui;
 #X connect 0 0 1 1;
 #X connect 1 0 12 0;
 #X connect 3 0 4 0;
@@ -230,6 +184,7 @@ SET_ALL 42 6 0 10 -1 -228856 -1 0;
 #X connect 18 3 14 0;
 #X connect 18 4 19 0;
 #X connect 20 0 18 0;
+#X connect 23 0 18 0;
 #X restore 952 641 pd GLOBAL_LINK;
 #X obj 952 241 r \$0-setAllFx;
 #X text 949 613 LINK GLOBAL DE EDICÃO DOS ESTADOS;
@@ -375,7 +330,7 @@ scale posX posY, f 39;
 #X connect 68 8 48 0;
 #X connect 68 9 49 0;
 #X restore 290 164 pd CONTROL_MEMORY;
-#N canvas 27 70 1075 593 SEND_CONTROL 0;
+#N canvas 31 72 1075 593 SEND_CONTROL 0;
 #X obj 45 70 r \$0-enableV;
 #X obj 45 99 pack 0 0;
 #X text 42 23 ** ENVIA ESTADO DE CADA PARÂMETRO DO CANAL PARA AUTÔMATOS
@@ -578,7 +533,7 @@ USANDO COMO ID O 2 ELEMENTO DA LISTA, f 95;
 SET_ALL 42 6 0 10 -1 -262144 -1 0;
 #X obj 149 25 tgl 12 0 \$0-setAllLink \$0-setAllLink_set empty 17 7
 0 10 -1 -262144 -1 1 1;
-#N canvas 397 188 637 282 EXTERNAL_CONTROL 0;
+#N canvas 401 190 637 282 EXTERNAL_CONTROL 0;
 #X obj 48 72 r OSC_BUS;
 #X text 43 19 ** ROTEAMENTO DE CONTROLE EXTERNO VIA MENSAGENS OSC;
 #X text 153 69 RECEBE OSC DESEMPACOTADO PELO PATCH PRINCIPAL, f 29
@@ -593,4 +548,52 @@ SET_ALL 42 6 0 10 -1 -262144 -1 0;
 #X connect 3 0 7 0;
 #X connect 7 0 5 0;
 #X restore 290 130 pd EXTERNAL_CONTROL;
+#X obj 140 49 cnv 10 12 12 empty empty M 3 7 0 10 -233017 -66577 0
+;
+#X obj 155 49 cnv 10 12 12 empty empty R 3 7 0 10 -233017 -66577 0
+;
+#X obj 170 49 cnv 10 12 12 empty empty P 3 7 0 10 -233017 -66577 0
+;
+#X obj 32 288 cnv 10 12 12 empty empty M 3 7 0 10 -233017 -66577 0
+;
+#X obj 47 288 cnv 10 12 12 empty empty R 3 7 0 10 -233017 -66577 0
+;
+#X obj 62 288 cnv 10 12 12 empty empty P 3 7 0 10 -233017 -66577 0
+;
+#X obj 140 288 cnv 10 12 12 empty empty M 3 7 0 10 -233017 -66577 0
+;
+#X obj 155 288 cnv 10 12 12 empty empty R 3 7 0 10 -233017 -66577 0
+;
+#X obj 170 288 cnv 10 12 12 empty empty P 3 7 0 10 -233017 -66577 0
+;
+#X obj 32 357 cnv 10 12 12 empty empty M 3 7 0 10 -233017 -66577 0
+;
+#X obj 47 357 cnv 10 12 12 empty empty R 3 7 0 10 -233017 -66577 0
+;
+#X obj 62 357 cnv 10 12 12 empty empty P 3 7 0 10 -233017 -66577 0
+;
+#X obj 32 426 cnv 10 12 12 empty empty M 3 7 0 10 -233017 -66577 0
+;
+#X obj 47 426 cnv 10 12 12 empty empty R 3 7 0 10 -233017 -66577 0
+;
+#X obj 62 426 cnv 10 12 12 empty empty P 3 7 0 10 -233017 -66577 0
+;
+#X obj 140 426 cnv 10 12 12 empty empty M 3 7 0 10 -233017 -66577 0
+;
+#X obj 155 426 cnv 10 12 12 empty empty R 3 7 0 10 -233017 -66577 0
+;
+#X obj 170 426 cnv 10 12 12 empty empty P 3 7 0 10 -233017 -66577 0
+;
+#X obj 32 575 cnv 10 12 12 empty empty M 3 7 0 10 -233017 -66577 0
+;
+#X obj 47 575 cnv 10 12 12 empty empty R 3 7 0 10 -233017 -66577 0
+;
+#X obj 62 575 cnv 10 12 12 empty empty P 3 7 0 10 -233017 -66577 0
+;
+#X obj 140 575 cnv 10 12 12 empty empty M 3 7 0 10 -233017 -66577 0
+;
+#X obj 155 575 cnv 10 12 12 empty empty R 3 7 0 10 -233017 -66577 0
+;
+#X obj 170 575 cnv 10 12 12 empty empty P 3 7 0 10 -233017 -66577 0
+;
 #X coords 0 -1 1 1 240 654 2 20 20;
