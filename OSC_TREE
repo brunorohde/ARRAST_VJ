@@ -23,7 +23,7 @@
     /loopMode (0 / 1)
     /audio (0 / 1)
     /samplerate (0 / 1 / 2 / 3)   * 22KHz / 44.1KHz / 48KHz / 96KHz
-    /boost (1 / 2 / 3 / 4 / 5 / 6)   * -12dB / -6dB / -3dB / 0dB / 3dB / 6dB / 12dB
+    /boost (0 / 1 / 2 / 3 / 4 / 5 / 6)   * -12dB / -6dB / -3dB / 0dB / 3dB / 6dB / 12dB
     /avAmp (0 / 1 / 2 / 3)   * Amplitude to - Off / Transparency / White_Threshold / Black_Threshold
     /avLop (0 / 1 / 2 / 3)   * LowPass to - Off / Transparency / White_Threshold / Black_Threshold
     /avHip (0 / 1 / 2 / 3)   * HiPass to - Off / Transparency / White_Threshold / Black_Threshold
@@ -92,6 +92,7 @@
   /channel(1 / 2 / 3 / 4)   * No space = /channelX
     /setAll (0 / 1 / 2)
     /video
+      /setAll (0 / 1 / 2)
       /enable (0 / 1 / 2)
       /activeSlot (0 / 1 / 2)
       /ioMode (0 / 1 / 2)
@@ -111,11 +112,14 @@
       /avLop (0 / 1 / 2)
       /avHip (0 / 1 / 2)
     /image
+      /setAll (0 / 1 / 2)
       /enable (0 / 1 / 2)
       /activeSlot (0 / 1 / 2)
     /camera
+      /setAll (0 / 1 / 2)
       /enable (0 / 1 / 2)
     /transform
+      /setAll (0 / 1 / 2)
       /transp (0 / 1 / 2)
       /white (0 / 1 / 2)
       /black (0 / 1 / 2)
@@ -127,6 +131,7 @@
       /posX (0 / 1 / 2)
       /posY (0 / 1 / 2)
     /fx
+      /setAll (0 / 1 / 2)
       /red (0 / 1 / 2)
       /green (0 / 1 / 2)
       /blue (0 / 1 / 2)

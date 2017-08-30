@@ -1,6 +1,6 @@
-#N canvas 7 127 271 593 16;
+#N canvas 17 110 271 593 16;
 #X declare -path _abstract -stdlib Gem;
-#N canvas 81 135 458 533 INIT 0;
+#N canvas 360 177 458 533 INIT 0;
 #X obj 299 84 arrast_cpu;
 #N canvas 7 157 1351 527 MODE_SELECTOR 0;
 #X msg 438 216 0;
@@ -721,7 +721,7 @@ dos slots de vídeo e outros detalhes;
 #X text 37 25 ** DECLARA ABSTRAÇÕES E BIBLIOTECA EXTERNA GEM;
 #X obj 82 67 declare -path _abstract -stdlib Gem;
 #X restore 60 93 pd DECLARE;
-#N canvas 306 65 1016 698 AUTOMATION_GUI 0;
+#N canvas 184 399 1016 698 AUTOMATION_GUI 0;
 #X obj 1 1 cnv 15 1013 695 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 764 32 arrast_automenu \$0 4;
@@ -1126,7 +1126,7 @@ EM CADA CANAL, f 62;
 #X connect 50 0 48 0;
 #X restore 57 173 pd MANUAL_EDIT_MAP;
 #X restore 60 365 pd MAP_CONTROL;
-#N canvas 285 460 709 233 AUTOMATION_CONTROL 0;
+#N canvas 602 87 709 233 AUTOMATION_CONTROL 0;
 #N canvas 232 242 338 271 GUI_STATE 0;
 #X obj 44 148 t b;
 #X msg 44 179 vis 1;
@@ -1238,13 +1238,12 @@ BOTÃO DA INTERFACE, f 25;
 #X obj 1062 746 t b b;
 #X text 1274 775 REINICIA ÍNDICE;
 #X obj 96 599 r \$0-autoClear_gui;
-#X msg 172 667 0;
+#X msg 169 667 0;
 #X text 94 571 LIMPA AUTOMAÇÃO;
-#X msg 125 667 0;
+#X msg 122 667 0;
 #X obj 759 791 s \$0-autoTimeline_gui_set;
 #X msg 893 762 set \$1;
 #X text 757 821 ENVIA ÍNDICE PARA TIMELINE;
-#X obj 96 628 t b b b b;
 #X obj 96 711 s \$0-autoRW_gui;
 #X text 93 741 REINICIA ÍNDICE;
 #X msg 759 762 label .\$1;
@@ -1321,17 +1320,22 @@ BOTÃO DA INTERFACE, f 25;
 #X text 1088 614 APENAS DURANTE REPRODUÇÃO;
 #X text 1145 648 COM REC DESARMADO;
 #X obj 1015 681 spigot 1;
+#X obj 96 628 t b b b b b;
+#X msg 216 667 0;
+#X obj 96 781 s \$0-autoRec_gui_set;
+#X obj 96 811 s \$0-autoPlay_gui_set;
+#X text 94 841 DESLIGA REC E PLAY;
 #X connect 0 1 38 0;
-#X connect 1 0 95 0;
+#X connect 1 0 94 0;
 #X connect 2 0 9 0;
 #X connect 3 0 15 0;
 #X connect 4 0 19 2;
 #X connect 5 0 19 3;
-#X connect 9 0 57 0;
-#X connect 11 0 85 0;
-#X connect 12 0 92 0;
-#X connect 13 0 64 0;
-#X connect 15 0 77 0;
+#X connect 9 0 56 0;
+#X connect 11 0 84 0;
+#X connect 12 0 91 0;
+#X connect 13 0 63 0;
+#X connect 15 0 76 0;
 #X connect 19 0 13 0;
 #X connect 20 0 21 0;
 #X connect 21 0 22 0;
@@ -1341,63 +1345,66 @@ BOTÃO DA INTERFACE, f 25;
 #X connect 24 0 19 2;
 #X connect 26 0 19 2;
 #X connect 27 0 19 3;
-#X connect 28 0 74 0;
+#X connect 28 0 73 0;
 #X connect 29 0 30 1;
 #X connect 30 0 37 0;
 #X connect 32 0 33 0;
 #X connect 37 0 32 0;
 #X connect 38 0 30 0;
 #X connect 38 1 36 0;
-#X connect 40 0 47 0;
-#X connect 41 0 57 0;
-#X connect 43 0 79 0;
+#X connect 40 0 95 0;
+#X connect 41 0 56 0;
+#X connect 43 0 78 0;
 #X connect 45 0 44 0;
-#X connect 47 0 48 0;
-#X connect 47 1 43 0;
-#X connect 47 2 41 0;
-#X connect 47 3 9 1;
-#X connect 50 0 44 0;
-#X connect 51 0 19 1;
-#X connect 52 0 53 0;
-#X connect 52 0 50 0;
-#X connect 53 0 45 0;
-#X connect 57 0 79 1;
-#X connect 57 1 78 0;
-#X connect 57 2 3 0;
-#X connect 57 3 0 1;
-#X connect 57 4 53 1;
-#X connect 57 5 58 1;
-#X connect 58 0 59 0;
-#X connect 59 0 62 0;
-#X connect 60 0 58 0;
-#X connect 62 0 65 0;
-#X connect 63 0 62 1;
-#X connect 64 0 79 0;
-#X connect 64 1 2 0;
-#X connect 64 2 50 0;
-#X connect 64 3 68 0;
-#X connect 64 4 1 0;
-#X connect 65 0 19 0;
-#X connect 68 0 53 0;
-#X connect 70 0 73 0;
-#X connect 73 0 79 0;
-#X connect 73 1 9 0;
-#X connect 73 2 47 0;
-#X connect 74 0 75 0;
-#X connect 74 1 51 0;
-#X connect 74 2 52 0;
-#X connect 79 0 55 0;
-#X connect 84 0 95 1;
-#X connect 85 0 2 1;
-#X connect 85 1 84 0;
-#X connect 85 2 87 0;
-#X connect 91 0 24 0;
-#X connect 91 1 68 1;
-#X connect 91 2 63 0;
-#X connect 92 0 91 0;
-#X connect 92 1 1 1;
-#X connect 92 2 81 0;
-#X connect 95 0 0 0;
+#X connect 49 0 44 0;
+#X connect 50 0 19 1;
+#X connect 51 0 52 0;
+#X connect 51 0 49 0;
+#X connect 52 0 45 0;
+#X connect 56 0 78 1;
+#X connect 56 1 77 0;
+#X connect 56 2 3 0;
+#X connect 56 3 0 1;
+#X connect 56 4 52 1;
+#X connect 56 5 57 1;
+#X connect 57 0 58 0;
+#X connect 58 0 61 0;
+#X connect 59 0 57 0;
+#X connect 61 0 64 0;
+#X connect 62 0 61 1;
+#X connect 63 0 78 0;
+#X connect 63 1 2 0;
+#X connect 63 2 49 0;
+#X connect 63 3 67 0;
+#X connect 63 4 1 0;
+#X connect 64 0 19 0;
+#X connect 67 0 52 0;
+#X connect 69 0 72 0;
+#X connect 72 0 78 0;
+#X connect 72 1 9 0;
+#X connect 72 2 95 0;
+#X connect 73 0 74 0;
+#X connect 73 1 50 0;
+#X connect 73 2 51 0;
+#X connect 78 0 54 0;
+#X connect 83 0 94 1;
+#X connect 84 0 2 1;
+#X connect 84 1 83 0;
+#X connect 84 2 86 0;
+#X connect 90 0 24 0;
+#X connect 90 1 67 1;
+#X connect 90 2 62 0;
+#X connect 91 0 90 0;
+#X connect 91 1 1 1;
+#X connect 91 2 80 0;
+#X connect 94 0 0 0;
+#X connect 95 0 47 0;
+#X connect 95 1 43 0;
+#X connect 95 2 41 0;
+#X connect 95 3 9 1;
+#X connect 95 4 96 0;
+#X connect 96 0 97 0;
+#X connect 96 0 98 0;
 #X restore 48 104 pd INDEX;
 #X text 182 71 GESTÃO DA JANELA DE CONFIGURAÇÃO;
 #X text 143 105 MECANISMO DE ÍNDICE GLOBAL PARA AUTOMAÇÕES;
@@ -1569,7 +1576,7 @@ JÁ EXISTIR UM PRESET ATIVO SOBRESCREVE O ATUAL, f 27;
 #X restore 48 138 pd AUTOMATION_PRESET;
 #X text 262 139 GESTÃO DE PRESETS DE AUTOMAÇÃO;
 #X text 240 172 SELETORES DE ESTADO DA INTERFACE PRINCIPAL;
-#N canvas 268 385 1074 190 STATE_SELECTORS 0;
+#N canvas 270 386 1074 190 STATE_SELECTORS 0;
 #X obj 36 56 loadbang;
 #X obj 36 134 s \$0-autoSetAll1_gui_set;
 #X obj 290 134 s \$0-autoSetAll2_gui_set;
@@ -1628,7 +1635,7 @@ ENTRE OS 4 CANAIS E ENTRE AS 2 INSTÂNCIAS, f 39;
 #X connect 13 0 7 0;
 #X connect 14 0 13 0;
 #X restore 60 195 pd CAMERA_IN;
-#N canvas 288 75 877 644 MAIN_GUI 1;
+#N canvas 298 70 877 644 MAIN_GUI 1;
 #X obj 2 1 cnv 15 873 641 empty empty empty 20 12 0 14 -66577 -66577
 0;
 #X obj 12 11 cnv 15 205 621 empty empty empty 20 12 0 14 -1 -66577
@@ -1813,24 +1820,24 @@ f 26;
 empty 0 12 0 15 -262144 -1 -1 0;
 #X obj 149 82 hradio 35 1 0 2 \$0-mapClick_gui \$0-mapClick_gui_set
 empty 0 12 0 15 -262144 -1 -1 0;
-#X obj 52 82 cnv 15 70 35 \$0-morto \$0-mixColor MIX 13 18 0 25 -1
--262144 0;
+#X obj 52 82 cnv 15 70 35 \$0-morto \$0-mixColor MIX 13 18 0 25 -260818
+-1 0;
 #X obj 12 139 cnv 15 247 50 empty empty empty 20 12 0 14 -128992 -66577
 0;
 #X obj 88 159 hradio 20 1 0 8 \$0-mainPresetOpen_gui \$0-mainPresetOpen_gui_set
-PRESET 0 -8 0 8 -262144 -1 -1 4;
+PRESET 0 -8 0 8 -262144 -1 -1 3;
 #X obj 22 159 bng 20 250 50 0 \$0-mainPresetSaveAs_gui \$0-mainPresetSaveAs_gui_set
 SAVE_AS -7 -8 0 8 -1 -262144 -1;
 #X obj 55 159 bng 20 250 50 0 \$0-mainPresetSave_gui \$0-mainPresetSave_gui_set
 SAVE 0 -8 0 8 -1 -262144 -1;
-#X obj 88 159 cnv 15 160 20 \$0-morto \$0-mainPresetDisplay work5 7
-10 0 12 -1 -262144 0;
+#X obj 88 159 cnv 15 160 20 \$0-morto \$0-mainPresetDisplay RECINE_ARRAST_1
+7 10 0 12 -1 -262144 0;
 #X obj 12 11 cnv 15 247 50 empty empty [ARRAST_VJ] 14 24 0 34 -128992
 -1 0;
 #X obj 12 200 cnv 15 247 210 empty empty empty 20 12 0 14 -128992 -66577
 0;
 #X obj 88 220 hradio 20 1 0 8 \$0-autoPresetOpen_gui \$0-autoPresetOpen_gui_set
-AUTOMATION 0 -8 0 8 -262144 -1 -1 1;
+AUTOMATION 0 -8 0 8 -262144 -1 -1 5;
 #X obj 22 220 bng 20 250 50 0 \$0-autoPresetSaveAs_gui \$0-autoPresetSaveAs_gui_set
 SAVE_AS -7 -8 0 8 -1 -262144 -1;
 #X obj 55 220 bng 20 250 50 0 \$0-autoPresetSave_gui \$0-autoPresetSave_gui_set
@@ -1846,17 +1853,17 @@ SAVE 0 -8 0 8 -1 -262144 -1;
 #X obj 22 251 tgl 20 0 \$0-autoRec_gui \$0-autoRec_gui_set R 7 11 0
 12 -86277 -262144 -262144 0 1;
 #X obj 164 259 nbx 4 12 -1e+37 1e+37 0 0 \$0-morto \$0-autoFramesDisplay
-FRAMES 0 -8 0 8 -1 -262144 -1 0 256;
+FRAMES 0 -8 0 8 -1 -262144 -1 185 256;
 #X obj 212 259 nbx 4 12 -1e+37 1e+37 0 0 \$0-morto \$0-autoSecDisplay
-SECS 0 -8 0 8 -1 -262144 -1 0 256;
+SECS 0 -8 0 8 -1 -262144 -1 6.16667 256;
 #X obj 25 282 hsl 222 20 0 1 0 0 \$0-autoTimeline_gui \$0-autoTimeline_gui_set
-.0 0 11 0 12 -1 -262144 -128992 0 1;
+.185 0 11 0 12 -1 -262144 -128992 22100 1;
 #X obj 50 380 hradio 20 1 0 4 \$0-autoConfig_gui \$0-autoConfig_gui_set
 CONFIG 22 10 0 10 -1 -1 -262144 2;
 #X obj 141 380 hradio 20 1 0 4 \$0-autoClear_gui \$0-autoClear_gui_set
 CLEAR 25 10 0 10 -1 -1 -262144 2;
-#X obj 149 82 cnv 15 70 35 \$0-morto \$0-mapColor MAP 14 18 0 25 -260818
--1 0;
+#X obj 149 82 cnv 15 70 35 \$0-morto \$0-mapColor MAP 14 18 0 25 -1
+-262144 0;
 #X obj 12 421 arrast_gemwin;
 #X obj 22 313 cnv 15 227 56 empty empty empty 20 12 0 14 -1 -128992
 0;
@@ -1867,7 +1874,7 @@ empty 50 8 0 10 -241291 -1 -1 0;
 #X obj 140 332 hradio 15 1 0 3 \$0-autoSetAll3_gui \$0-autoSetAll3_gui_set
 empty 50 8 0 10 -250685 -1 -1 0;
 #X obj 194 332 hradio 15 1 0 3 \$0-autoSetAll4_gui \$0-autoSetAll4_gui_set
-empty 50 8 0 10 -24198 -1 -1 0;
+empty 50 8 0 10 -24198 -1 -1 1;
 #X obj 34 318 cnv 10 12 12 empty empty M 3 7 0 10 -1 -128992 0;
 #X obj 49 318 cnv 10 12 12 empty empty R 3 7 0 10 -1 -128992 0;
 #X obj 64 318 cnv 10 12 12 empty empty P 3 7 0 10 -1 -128992 0;

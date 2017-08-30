@@ -1,9 +1,9 @@
 #N canvas 40 114 1321 649 16;
 #X declare -stdlib Gem;
-#X obj 33 15 arrast_cpu;
+#X obj 1133 15 arrast_cpu;
 #X obj 137 349 arrast_cmotor 1;
 #X obj 311 368 hradio 25 1 0 3 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 0;
 #X obj 33 281 arrast_vmotor 1;
 #X obj 33 481 arrast_fxmotor 1;
 #X obj 592 227 - 1;
@@ -12,7 +12,7 @@
 #X obj 1077 227 - 1;
 #X obj 222 579 arrast_mapmotor 1;
 #X obj 311 500 hradio 25 1 0 2 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 0;
 #N canvas 36 155 1242 351 COMMUNICATION 0;
 #X text 745 293 ENVIA MENSAGENS PARA 1 INSTÂNCIA;
 #X obj 35 63 r RECEIVE_FROM_1;
@@ -106,9 +106,9 @@ map;
 #X connect 7 0 5 0;
 #X restore 33 525 pd SELECT_MODE;
 #X obj 724 368 hradio 25 1 0 3 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 0;
 #X obj 724 500 hradio 25 1 0 2 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 0;
 #N canvas 676 310 509 314 SELECT_SOURCE 0;
 #X obj 39 187 spigot;
 #X obj 389 65 inlet;
@@ -161,7 +161,7 @@ map;
 #X obj 1137 368 hradio 25 1 0 3 empty empty empty 0 -8 0 10 -262144
 -1 -1 1;
 #X obj 1137 500 hradio 25 1 0 2 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 0;
 #N canvas 676 310 509 314 SELECT_SOURCE 0;
 #X obj 39 187 spigot;
 #X obj 389 65 inlet;
@@ -214,7 +214,7 @@ map;
 #X obj 1550 368 hradio 25 1 0 3 empty empty empty 0 -8 0 10 -262144
 -1 -1 1;
 #X obj 1550 500 hradio 25 1 0 2 empty empty empty 0 -8 0 10 -262144
--1 -1 1;
+-1 -1 0;
 #N canvas 676 310 509 314 SELECT_SOURCE 0;
 #X obj 39 187 spigot;
 #X obj 389 65 inlet;
@@ -298,6 +298,16 @@ map;
 #X obj 85 315 arrast_imotor 1;
 #X obj 498 315 arrast_imotor 2;
 #X obj 911 315 arrast_imotor 3;
+#X obj 1487 160 r GEMWIN_BUS;
+#X obj 1487 194 route dimen;
+#X obj 1280 228 pix_write 0 0 640 480;
+#X obj 1280 91 gemhead 100;
+#X msg 1308 125 bang;
+#X obj 1280 70 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 1344 17 loadbang;
+#X msg 1344 46 0;
+#X msg 1377 125 file Export/FRAME_ 90;
 #X connect 1 0 15 2;
 #X connect 2 0 15 3;
 #X connect 3 0 15 0;
@@ -352,3 +362,11 @@ map;
 #X connect 59 0 15 1;
 #X connect 60 0 19 1;
 #X connect 61 0 23 1;
+#X connect 62 0 63 0;
+#X connect 63 0 64 2;
+#X connect 65 0 64 0;
+#X connect 66 0 64 0;
+#X connect 67 0 65 0;
+#X connect 68 0 69 0;
+#X connect 69 0 67 0;
+#X connect 70 0 64 0;
