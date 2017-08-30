@@ -1,8 +1,8 @@
-#N canvas 5 99 271 593 16;
+#N canvas 7 127 271 593 16;
 #X declare -path _abstract -stdlib Gem;
-#N canvas 77 133 458 533 INIT 0;
+#N canvas 81 135 458 533 INIT 0;
 #X obj 299 84 arrast_cpu;
-#N canvas 5 155 1356 527 MODE_SELECTOR 0;
+#N canvas 7 157 1351 527 MODE_SELECTOR 0;
 #X msg 438 216 0;
 #X msg 488 216 1;
 #X obj 84 122 loadbang;
@@ -245,7 +245,7 @@ COM GUI, f 34;
 #X connect 31 2 2 0;
 #X connect 31 3 7 2;
 #X restore 60 161 pd RUN_MOTOR;
-#N canvas 113 391 508 303 MAP_GUI 0;
+#N canvas 117 393 508 303 MAP_GUI 0;
 #X obj 1 3 cnv 15 505 297 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 22 13 hradio 20 1 0 5 \$0-mapClick1_gui \$0-mapClick1_gui_set
@@ -255,8 +255,8 @@ empty 0 -8 0 10 -262144 -1 -1 4;
 #X obj 264 13 hradio 20 1 0 5 \$0-mapClick3_gui \$0-mapClick3_gui_set
 empty 0 -8 0 10 -262144 -1 -1 3;
 #X obj 385 13 hradio 20 1 0 5 \$0-mapClick4_gui \$0-mapClick4_gui_set
-empty 0 -8 0 10 -262144 -1 -1 0;
-#X obj 11 34 cnv 15 485 183 empty \$0-mapBgColor empty 20 12 0 14 -258699
+empty 0 -8 0 10 -262144 -1 -1 2;
+#X obj 11 34 cnv 15 485 183 empty \$0-mapBgColor empty 20 12 0 14 -250685
 -262144 0;
 #X obj 72 179 hradio 30 1 0 8 \$0-maskOpen_gui \$0-maskOpen_gui_set
 empty 0 -8 0 10 -262144 -1 -1 2;
@@ -737,7 +737,7 @@ dos slots de vídeo e outros detalhes;
 #X obj 262 32 arrast_automenu \$0 2;
 #X obj 513 32 arrast_automenu \$0 3;
 #X restore 60 399 pd AUTOMATION_GUI;
-#N canvas 85 425 437 234 MAP_CONTROL 0;
+#N canvas 89 427 437 234 MAP_CONTROL 0;
 #N canvas 258 292 891 316 ACTIVE_MAP 0;
 #X msg 52 118 1;
 #X msg 256 118 2;
@@ -984,34 +984,34 @@ JÁ EXISTIR UM PRESET ATIVO SOBRESCREVE O ATUAL, f 27;
 #X obj 44 154 arrast_mapslot \$0 3;
 #X obj 44 188 arrast_mapslot \$0 4;
 #X restore 57 139 pd CONTROL_MEMORY;
-#N canvas 124 92 968 521 MANUAL_EDIT_MAP 0;
-#X floatatom 595 140 5 0 0 0 - - -, f 5;
-#X obj 48 385 list prepend map1;
-#X msg 48 239 0;
-#X msg 98 239 1;
-#X obj 48 351 list prepend edit;
-#X obj 48 273 t f f;
-#X msg 268 239 0;
-#X msg 318 239 1;
-#X obj 268 273 t f f;
-#X msg 488 239 0;
-#X msg 538 239 1;
-#X obj 488 273 t f f;
-#X msg 708 239 0;
-#X msg 758 239 1;
-#X obj 708 273 t f f;
-#X obj 98 205 spigot;
-#X obj 155 171 == 1;
-#X obj 318 205 spigot;
-#X obj 538 205 spigot;
-#X obj 758 205 spigot;
-#X obj 375 171 == 2;
-#X obj 595 171 == 3;
-#X obj 815 181 == 4;
-#X obj 48 93 sel 0 1;
-#X obj 98 127 t b b;
-#X obj 48 127 t b;
-#N canvas 200 281 786 293 LOAD_ACTIVE 0;
+#N canvas 166 54 968 651 MANUAL_EDIT_MAP 0;
+#X floatatom 595 270 5 0 0 0 - - -, f 5;
+#X obj 48 515 list prepend map1;
+#X msg 48 369 0;
+#X msg 98 369 1;
+#X obj 48 481 list prepend edit;
+#X obj 48 403 t f f;
+#X msg 268 369 0;
+#X msg 318 369 1;
+#X obj 268 403 t f f;
+#X msg 488 369 0;
+#X msg 538 369 1;
+#X obj 488 403 t f f;
+#X msg 708 369 0;
+#X msg 758 369 1;
+#X obj 708 403 t f f;
+#X obj 98 335 spigot;
+#X obj 155 301 == 1;
+#X obj 318 335 spigot;
+#X obj 538 335 spigot;
+#X obj 758 335 spigot;
+#X obj 375 301 == 2;
+#X obj 595 301 == 3;
+#X obj 815 311 == 4;
+#X obj 48 123 sel 0 1;
+#X obj 98 187 t b b;
+#X obj 48 187 t b;
+#N canvas 510 364 786 293 LOAD_ACTIVE 0;
 #X obj 47 171 f;
 #X obj 217 171 f;
 #X obj 387 171 f;
@@ -1041,25 +1041,31 @@ INTERFACE, f 61;
 #X connect 10 0 2 1;
 #X connect 11 0 3 1;
 #X restore 443 61 pd LOAD_ACTIVE;
-#X obj 48 419 list trim;
-#X obj 48 463 s MAP_BUS;
-#X obj 268 351 list prepend edit;
-#X obj 488 351 list prepend edit;
-#X obj 708 351 list prepend edit;
-#X obj 268 385 list prepend map2;
-#X obj 488 385 list prepend map3;
-#X obj 708 385 list prepend map4;
+#X obj 48 549 list trim;
+#X obj 48 593 s MAP_BUS;
+#X obj 268 481 list prepend edit;
+#X obj 488 481 list prepend edit;
+#X obj 708 481 list prepend edit;
+#X obj 268 515 list prepend map2;
+#X obj 488 515 list prepend map3;
+#X obj 708 515 list prepend map4;
 #X obj 48 59 r \$0-mapEdit_gui;
-#X obj 595 112 r \$0-activeSlot;
-#X obj 95 307 s \$0-editState1;
-#X obj 315 307 s \$0-editState2;
-#X obj 535 307 s \$0-editState3;
-#X obj 755 307 s \$0-editState4;
-#X text 152 464 ENVIA ESTADO DA EDIÇÃO MANUAL PARA 2 INSTÂNCIA;
+#X obj 595 242 r \$0-activeSlot;
+#X obj 95 437 s \$0-editState1;
+#X obj 315 437 s \$0-editState2;
+#X obj 535 437 s \$0-editState3;
+#X obj 755 437 s \$0-editState4;
+#X text 152 594 ENVIA ESTADO DA EDIÇÃO MANUAL PARA 2 INSTÂNCIA;
 #X text 165 15 ** GERENCIA ESTADO DA EDIÇÃO MANUAL DOS VÉRTICES
 EM CADA CANAL, f 62;
 #X text 222 60 BOTÃO DA INTERFACE;
 #X text 596 62 CARREGA ESTADO DO MAPA ATIVO;
+#X obj 278 105 r MODE_BUS;
+#X obj 278 134 sel 0;
+#X text 392 106 DESLIGA NO MODO MIX;
+#X obj 325 221 s \$0-mapEdit_gui_set;
+#X obj 278 163 t b b;
+#X msg 325 192 0;
 #X connect 0 0 16 0;
 #X connect 0 0 20 0;
 #X connect 0 0 21 0;
@@ -1113,6 +1119,11 @@ EM CADA CANAL, f 62;
 #X connect 34 0 27 0;
 #X connect 35 0 23 0;
 #X connect 36 0 0 0;
+#X connect 45 0 46 0;
+#X connect 46 0 49 0;
+#X connect 49 0 25 0;
+#X connect 49 1 50 0;
+#X connect 50 0 48 0;
 #X restore 57 173 pd MANUAL_EDIT_MAP;
 #X restore 60 365 pd MAP_CONTROL;
 #N canvas 285 460 709 233 AUTOMATION_CONTROL 0;
@@ -1617,7 +1628,7 @@ ENTRE OS 4 CANAIS E ENTRE AS 2 INSTÂNCIAS, f 39;
 #X connect 13 0 7 0;
 #X connect 14 0 13 0;
 #X restore 60 195 pd CAMERA_IN;
-#N canvas 286 74 877 644 MAIN_GUI 1;
+#N canvas 288 75 877 644 MAIN_GUI 1;
 #X obj 2 1 cnv 15 873 641 empty empty empty 20 12 0 14 -66577 -66577
 0;
 #X obj 12 11 cnv 15 205 621 empty empty empty 20 12 0 14 -1 -66577
@@ -1799,21 +1810,21 @@ f 26;
 #X obj 2 1 cnv 15 267 590 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 52 82 hradio 35 1 0 2 \$0-mixClick_gui \$0-mixClick_gui_set
-empty 0 12 0 15 -262144 -1 -1 1;
+empty 0 12 0 15 -262144 -1 -1 0;
 #X obj 149 82 hradio 35 1 0 2 \$0-mapClick_gui \$0-mapClick_gui_set
-empty 0 12 0 15 -262144 -1 -1 1;
-#X obj 52 82 cnv 15 70 35 \$0-morto \$0-mixColor MIX 13 18 0 25 -260818
--1 0;
+empty 0 12 0 15 -262144 -1 -1 0;
+#X obj 52 82 cnv 15 70 35 \$0-morto \$0-mixColor MIX 13 18 0 25 -1
+-262144 0;
 #X obj 12 139 cnv 15 247 50 empty empty empty 20 12 0 14 -128992 -66577
 0;
 #X obj 88 159 hradio 20 1 0 8 \$0-mainPresetOpen_gui \$0-mainPresetOpen_gui_set
-PRESET 0 -8 0 8 -262144 -1 -1 2;
+PRESET 0 -8 0 8 -262144 -1 -1 4;
 #X obj 22 159 bng 20 250 50 0 \$0-mainPresetSaveAs_gui \$0-mainPresetSaveAs_gui_set
 SAVE_AS -7 -8 0 8 -1 -262144 -1;
 #X obj 55 159 bng 20 250 50 0 \$0-mainPresetSave_gui \$0-mainPresetSave_gui_set
 SAVE 0 -8 0 8 -1 -262144 -1;
-#X obj 88 159 cnv 15 160 20 \$0-morto \$0-mainPresetDisplay OPEN_PRESET
-7 10 0 12 -1 -262144 0;
+#X obj 88 159 cnv 15 160 20 \$0-morto \$0-mainPresetDisplay work5 7
+10 0 12 -1 -262144 0;
 #X obj 12 11 cnv 15 247 50 empty empty [ARRAST_VJ] 14 24 0 34 -128992
 -1 0;
 #X obj 12 200 cnv 15 247 210 empty empty empty 20 12 0 14 -128992 -66577
@@ -1844,8 +1855,8 @@ SECS 0 -8 0 8 -1 -262144 -1 0 256;
 CONFIG 22 10 0 10 -1 -1 -262144 2;
 #X obj 141 380 hradio 20 1 0 4 \$0-autoClear_gui \$0-autoClear_gui_set
 CLEAR 25 10 0 10 -1 -1 -262144 2;
-#X obj 149 82 cnv 15 70 35 \$0-morto \$0-mapColor MAP 14 18 0 25 -1
--262144 0;
+#X obj 149 82 cnv 15 70 35 \$0-morto \$0-mapColor MAP 14 18 0 25 -260818
+-1 0;
 #X obj 12 421 arrast_gemwin;
 #X obj 22 313 cnv 15 227 56 empty empty empty 20 12 0 14 -1 -128992
 0;
