@@ -1,6 +1,8 @@
-#N canvas 47 170 271 593 16;
-#X declare -path _abstract -stdlib Gem;
-#N canvas 599 138 458 598 INIT 0;
+#N canvas 23 152 271 593 16;
+#X declare -path _abstract -path Videos -path Images -path Masks -path
+Presets/Main -path Presets/Map -path Presets/Automation -path Export
+-lib Gem;
+#N canvas 605 141 458 598 INIT 0;
 #X obj 299 84 arrast_cpu;
 #N canvas 7 157 1351 527 MODE_SELECTOR 0;
 #X msg 438 216 0;
@@ -249,7 +251,7 @@ COM GUI, f 34;
 #X connect 31 2 2 0;
 #X connect 31 3 7 2;
 #X restore 60 161 pd RUN_MOTOR;
-#N canvas 129 399 508 303 MAP_GUI 0;
+#N canvas 131 400 508 303 MAP_GUI 0;
 #X obj 1 3 cnv 15 505 297 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 22 13 hradio 20 1 0 5 \$0-mapClick1_gui \$0-mapClick1_gui_set
@@ -721,9 +723,12 @@ dos slots de vídeo e outros detalhes;
 #X text 33 145 Copyleft 2015-2017 - Licença GPLV3 http://www.gnu.org/licenses/gpl-3.0.html
 ;
 #X restore 284 34 pd --INFO--;
-#N canvas 71 569 546 128 DECLARE 0;
-#X text 37 25 ** DECLARA ABSTRAÇÕES E BIBLIOTECA EXTERNA GEM;
-#X obj 82 67 declare -path _abstract -stdlib Gem;
+#N canvas 51 252 648 180 DECLARE 0;
+#X text 37 25 ** DECLARA ABSTRAÇÕES \, CAMINHOS E BIBLIOTECA EXTERNA
+GEM;
+#X obj 42 67 declare -path _abstract -path Videos -path Images -path
+Masks -path Presets/Main -path Presets/Map -path Presets/Automation
+-path Export -lib Gem;
 #X restore 60 93 pd DECLARE;
 #N canvas 188 65 1016 698 AUTOMATION_GUI 0;
 #X obj 1 1 cnv 15 1013 695 empty empty empty 20 12 0 14 -1 -66577 0
@@ -1644,7 +1649,7 @@ ENTRE OS 4 CANAIS E ENTRE AS 2 INSTÂNCIAS, f 39;
 #X connect 13 0 7 0;
 #X connect 14 0 13 0;
 #X restore 60 195 pd CAMERA_IN;
-#N canvas 328 119 877 644 MAIN_GUI 1;
+#N canvas 304 103 877 644 MAIN_GUI 1;
 #X obj 2 1 cnv 15 873 641 empty empty empty 20 12 0 14 -66577 -66577
 0;
 #X obj 12 11 cnv 15 205 621 empty empty empty 20 12 0 14 -1 -66577
@@ -2096,7 +2101,7 @@ f 26;
 #X connect 96 3 95 0;
 #X connect 98 0 89 0;
 #X restore 60 535 pd AUDIO_OUTPUT;
-#N canvas 39 71 570 202 EXPORT_CONTROL 0;
+#N canvas 41 72 570 202 EXPORT_CONTROL 0;
 #N canvas 234 243 338 271 GUI_STATE 0;
 #X obj 44 148 t b;
 #X msg 44 179 vis 1;
@@ -2110,7 +2115,7 @@ BOTÃO DA INTERFACE, f 25;
 #X restore 48 70 pd GUI_STATE;
 #X text 35 24 ** GESTÃO DO MECANISMO DE EXPORTAR ÁUDIO E VÍDEO;
 #X text 182 71 GESTÃO DA JANELA EXPORT;
-#N canvas 33 54 1312 709 EXPORT_VIDEO 0;
+#N canvas 35 54 1312 709 EXPORT_VIDEO 0;
 #X obj 131 443 s \$0-autoRW_gui_set;
 #X text 336 443 SINCRONIZA REPRODUÇÃO;
 #X msg 48 59 bang;
@@ -2302,7 +2307,7 @@ separateAudio, f 69;
 #X restore 48 104 pd EXTERNAL_CONTROL;
 #X text 253 105 ENTRADA DE CONTROLES;
 #X restore 60 501 pd EXPORT_CONTROL;
-#N canvas 210 310 235 246 EXPORT_GUI 0;
+#N canvas 334 444 235 246 EXPORT_GUI 0;
 #X obj 2 1 cnv 15 230 241 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 12 11 cnv 15 210 120 empty empty empty 20 12 0 14 -128992 -66577
@@ -2335,13 +2340,13 @@ EXPORT_AUDIO 26 10 0 10 -1 -262144 -1;
 #X obj 52 82 hradio 35 1 0 2 \$0-mixClick_gui \$0-mixClick_gui_set
 empty 0 12 0 15 -262144 -1 -1 1;
 #X obj 149 82 hradio 35 1 0 2 \$0-mapClick_gui \$0-mapClick_gui_set
-empty 0 12 0 15 -262144 -1 -1 1;
+empty 0 12 0 15 -262144 -1 -1 0;
 #X obj 52 82 cnv 15 70 35 \$0-morto \$0-mixColor MIX 13 18 0 25 -260818
 -1 0;
 #X obj 12 139 cnv 15 247 50 empty empty empty 20 12 0 14 -128992 -66577
 0;
 #X obj 88 159 hradio 20 1 0 8 \$0-mainPresetOpen_gui \$0-mainPresetOpen_gui_set
-PRESET 0 -8 0 8 -262144 -1 -1 5;
+PRESET 0 -8 0 8 -262144 -1 -1 4;
 #X obj 22 159 bng 20 250 50 0 \$0-mainPresetSaveAs_gui \$0-mainPresetSaveAs_gui_set
 SAVE_AS -7 -8 0 8 -1 -262144 -1;
 #X obj 55 159 bng 20 250 50 0 \$0-mainPresetSave_gui \$0-mainPresetSave_gui_set
