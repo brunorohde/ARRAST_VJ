@@ -1,12 +1,12 @@
-#N canvas 523 118 510 272 16;
+#N canvas 793 123 510 272 16;
 #X obj 50 30 cnv 15 185 200 empty empty empty 20 12 0 14 -228856 -66577
 0;
 #X obj 61 61 hradio 18 1 0 9 \$0-openBrowser \$0-openBrowser_in empty
 0 -8 0 10 -262144 -1 -1 1;
-#X obj 63 153 hsl 160 8 0 139 0 0 \$0-morto \$0-timeline empty -2 -8
-0 10 -1 -262144 -1 10066 1;
+#X obj 63 153 hsl 160 8 0 728 0 0 \$0-morto \$0-timeline empty -2 -8
+0 10 -1 -262144 -1 6006 1;
 #X obj 181 110 nbx 4 12 -1e+37 1e+37 0 0 \$0-morto \$0-secDisplay empty
-0 -8 0 10 -1 -262144 -1 0.233333 256;
+0 -8 0 10 -1 -262144 -1 0.9 256;
 #X obj 63 166 hsl 160 10 1 0 0 0 \$0-speed_gui \$0-speed_gui_set empty
 -2 -8 0 10 -262144 -1 -1 7950 1;
 #X obj 141 191 bng 25 250 50 0 \$0-stop_gui \$0-stop_gui_set S 8 13
@@ -19,75 +19,14 @@ empty 0 -8 0 10 -355 -262144 -262144 0;
 -4034 -1 0 1;
 #X obj 139 176 bng 8 250 50 0 \$0-resetSpeed \$0-resetSpeed_in empty
 17 7 0 10 -162280 -1 -1;
-#X obj 60 61 cnv 15 165 18 \$0-morto \$0-fileDisplay tetsuo-ca...inhoca.mov
+#X obj 60 61 cnv 15 165 18 \$0-morto \$0-fileDisplay butoh-teatro.mov
 5 9 0 12 -355 -262144 0;
 #X text 97 170 ';
 #X text 177 170 ';
-#N canvas 304 216 692 141 select_slot 0;
+#N canvas 308 218 692 141 select_slot 0;
 #X obj 105 53 bng 15 250 50 0 \$0-clickSlot1 \$0-clickSlot1_set empty
 17 7 0 10 -262144 -1 -1;
 #X msg 500 53 color \$1;
-#N canvas 33 126 1253 428 CLICKS 0;
-#X msg 18 247 1;
-#X msg 188 247 2;
-#X msg 358 247 3;
-#X msg 528 247 4;
-#X msg 698 247 5;
-#X msg 868 247 6;
-#X msg 1038 247 7;
-#X msg 1208 247 8;
-#X obj 18 120 loadbang;
-#X obj 616 307 f 1;
-#X obj 18 149 del 5;
-#X obj 616 89 r \$0-flushActiveSlot;
-#X obj 616 367 s \$0-activeSlot;
-#X text 830 90 ATUALIZA SLOT ATIVO;
-#X obj 696 133 r \$0-activeSlot_gui_set;
-#X text 941 133 RECEBE DO GESTOR DE PRESETS E DA AUTOMAÇÃO;
-#X obj 696 167 int;
-#X text 186 188 CLIQUES NO SELETOR DE SLOTS;
-#X obj 1208 216 r \$0-clickSlot8;
-#X obj 1038 216 r \$0-clickSlot7;
-#X obj 868 216 r \$0-clickSlot6;
-#X obj 698 216 r \$0-clickSlot5;
-#X obj 528 216 r \$0-clickSlot4;
-#X obj 358 216 r \$0-clickSlot3;
-#X obj 188 216 r \$0-clickSlot2;
-#X obj 18 216 r \$0-clickSlot1;
-#X obj 616 123 t b;
-#X obj 616 55 r REFRESH_ACTIVE_SLOT;
-#X text 211 14 ** GERENCIA MUDANÇA DE SLOT ATIVO PELA INTERFACE \,
-PRESETS E CONTROLE EXTERNO OSC, f 80;
-#X obj 374 89 r \$0-externalControl;
-#X text 371 61 CONTROLE EXTERNO;
-#X obj 374 123 route activeSlot;
-#X connect 0 0 9 0;
-#X connect 1 0 9 0;
-#X connect 2 0 9 0;
-#X connect 3 0 9 0;
-#X connect 4 0 9 0;
-#X connect 5 0 9 0;
-#X connect 6 0 9 0;
-#X connect 7 0 9 0;
-#X connect 8 0 10 0;
-#X connect 9 0 12 0;
-#X connect 10 0 0 0;
-#X connect 11 0 26 0;
-#X connect 14 0 16 0;
-#X connect 16 0 9 0;
-#X connect 18 0 7 0;
-#X connect 19 0 6 0;
-#X connect 20 0 5 0;
-#X connect 21 0 4 0;
-#X connect 22 0 3 0;
-#X connect 23 0 2 0;
-#X connect 24 0 1 0;
-#X connect 25 0 0 0;
-#X connect 26 0 9 0;
-#X connect 27 0 26 0;
-#X connect 29 0 31 0;
-#X connect 31 0 9 0;
-#X restore 304 22 pd CLICKS;
 #N canvas 108 190 411 304 BROWSE_FILE 0;
 #X obj 44 121 t b;
 #X obj 44 187 openpanel;
@@ -120,11 +59,11 @@ PRESETS E CONTROLE EXTERNO OSC, f 80;
 17 7 0 10 -262144 -1 -1;
 #X obj 100 50 cnv 15 165 21 empty \$0-slotsBG empty 20 12 0 14 -355
 -262144 0;
-#X obj 105 53 cnv 15 15 15 empty \$0-colorSlot1 1 4 8 0 12 -166441
--1 0;
+#X obj 105 53 cnv 15 15 15 empty \$0-colorSlot1 1 4 8 0 12 -24198 -1
+0;
 #X obj 125 53 cnv 15 15 15 empty \$0-colorSlot2 2 4 8 0 12 -166441
 -1 0;
-#X obj 145 53 cnv 15 15 15 empty \$0-colorSlot3 3 4 8 0 12 -250685
+#X obj 145 53 cnv 15 15 15 empty \$0-colorSlot3 3 4 8 0 12 -262144
 -1 0;
 #X obj 165 53 cnv 15 15 15 empty \$0-colorSlot4 4 4 8 0 12 -262144
 -1 0;
@@ -161,18 +100,81 @@ PRESETS E CONTROLE EXTERNO OSC, f 80;
 #X connect 6 0 1 0;
 #X connect 7 0 12 0;
 #X restore 304 84 pd FILE_DISPLAY;
-#X connect 1 0 5 0;
-#X connect 4 0 1 0;
+#N canvas 54 171 1253 453 ACTIVE_SLOT 0;
+#X msg 18 277 1;
+#X msg 188 277 2;
+#X msg 358 277 3;
+#X msg 528 277 4;
+#X msg 698 277 5;
+#X msg 868 277 6;
+#X msg 1038 277 7;
+#X msg 1208 277 8;
+#X obj 18 120 loadbang;
+#X obj 616 337 f 1;
+#X obj 18 149 del 5;
+#X obj 616 89 r \$0-flushActiveSlot;
+#X obj 616 397 s \$0-activeSlot;
+#X text 830 90 ATUALIZA SLOT ATIVO;
+#X obj 696 133 r \$0-activeSlot_gui_set;
+#X text 941 133 RECEBE DO GESTOR DE PRESETS E DA AUTOMAÇÃO;
+#X obj 616 206 int;
+#X text 186 218 CLIQUES NO SELETOR DE SLOTS;
+#X obj 1208 246 r \$0-clickSlot8;
+#X obj 1038 246 r \$0-clickSlot7;
+#X obj 868 246 r \$0-clickSlot6;
+#X obj 698 246 r \$0-clickSlot5;
+#X obj 528 246 r \$0-clickSlot4;
+#X obj 358 246 r \$0-clickSlot3;
+#X obj 188 246 r \$0-clickSlot2;
+#X obj 18 246 r \$0-clickSlot1;
+#X obj 616 123 t b;
+#X obj 616 55 r REFRESH_ACTIVE_SLOT;
+#X text 211 14 ** GERENCIA MUDANÇA DE SLOT ATIVO PELA INTERFACE \,
+PRESETS E CONTROLE EXTERNO OSC, f 80;
+#X obj 374 89 r \$0-externalControl;
+#X text 371 61 CONTROLE EXTERNO;
+#X obj 374 123 route activeSlot;
+#X obj 616 177 clip 1 8;
+#X connect 0 0 9 0;
+#X connect 1 0 9 0;
+#X connect 2 0 9 0;
+#X connect 3 0 9 0;
+#X connect 4 0 9 0;
+#X connect 5 0 9 0;
+#X connect 6 0 9 0;
+#X connect 7 0 9 0;
+#X connect 8 0 10 0;
+#X connect 9 0 12 0;
+#X connect 10 0 0 0;
+#X connect 11 0 26 0;
+#X connect 14 0 32 0;
+#X connect 16 0 9 0;
+#X connect 18 0 7 0;
+#X connect 19 0 6 0;
+#X connect 20 0 5 0;
+#X connect 21 0 4 0;
+#X connect 22 0 3 0;
+#X connect 23 0 2 0;
+#X connect 24 0 1 0;
+#X connect 25 0 0 0;
+#X connect 26 0 9 0;
+#X connect 27 0 26 0;
+#X connect 29 0 31 0;
+#X connect 31 0 32 0;
+#X connect 32 0 16 0;
+#X restore 304 22 pd ACTIVE_SLOT;
+#X connect 1 0 4 0;
+#X connect 3 0 1 0;
 #X coords 0 -1 1 1 165 21 2 100 50;
 #X restore 60 79 pd select_slot;
 #X obj 52 30 hradio 20 1 0 9 \$0-click_enable \$0-click_enable_in empty
 0 -8 0 10 -262144 -1 -1 1;
 #X obj 50 30 cnv 15 185 20 \$0-enable \$0-enable_in empty 20 12 0 14
--250685 -262144 0;
+-24198 -262144 0;
 #X obj 63 128 hsl 160 10 0 1 0 0 \$0-inSet_gui \$0-inSet_gui_set empty
--2 -8 0 10 -262144 -1 -1 9800 1;
+-2 -8 0 10 -262144 -1 -1 3500 1;
 #X obj 63 138 hsl 160 10 0 1 0 0 \$0-outSet_gui \$0-outSet_gui_set
-empty -2 -8 0 10 -262144 -1 -1 10533 1;
+empty -2 -8 0 10 -262144 -1 -1 4100 1;
 #N canvas 189 76 1172 685 VIDEO_UNIT 0;
 #X obj 44 591 rectangle 4 3;
 #X obj 44 301 pix_film;
@@ -1427,7 +1429,7 @@ DE ÁUDIO, f 42;
 #X text 452 484 CALCULA FREQUÊNCIA DA FASE;
 #X text 544 1130 OFFSET EM SAMPLES;
 #X text 544 1052 MÓDULO EM SAMPLES;
-#N canvas 149 114 392 389 AUDIO_BANK 0;
+#N canvas 151 115 392 389 AUDIO_BANK 0;
 #X obj 85 110 arrast_audioslot \$0 1;
 #X text 53 29 ** BANCO DE ÁUDIOS RELATIVOS A CADA SLOT DE VÍDEO,
 f 28;
@@ -1441,29 +1443,30 @@ f 28;
 #X restore 27 75 pd AUDIO_BANK;
 #X obj 298 1255 tabread4~;
 #X obj 518 1255 tabread4~;
-#N canvas 413 142 758 432 ARRAY_SET 0;
-#X obj 104 377 outlet ARRAY_L;
-#X msg 104 333 set \$2-\$1_L;
-#X obj 104 248 pack f \$0;
-#X msg 304 333 set \$2-\$1_R;
-#X obj 304 377 outlet ARRAY_R;
+#N canvas 415 143 604 437 ARRAY_SET 0;
+#X obj 104 397 outlet ARRAY_L;
+#X msg 104 353 set \$2-\$1_L;
+#X obj 104 268 pack f \$0;
+#X msg 304 353 set \$2-\$1_R;
+#X obj 304 397 outlet ARRAY_R;
 #X floatatom 57 69 5 0 0 0 - - -, f 5;
 #X text 116 68 SLOT ATUAL;
 #X text 253 21 ** DETERMINA ARRAYS PARA LEITURA DE ACORDO COM SLOT
 ATIVO, f 32;
 #X obj 57 34 r \$0-activeSlot;
-#X obj 57 117 t b f b;
-#X obj 104 282 t l l;
-#X obj 57 175 t b b;
-#X obj 104 214 f 1;
-#X msg 232 199 1;
-#X msg 279 199 0;
-#X obj 232 233 s \$0-cut5;
-#X obj 57 146 del 50;
+#X obj 57 137 t b f b;
+#X obj 104 302 t l l;
+#X obj 57 195 t b b;
+#X obj 104 234 f 1;
+#X msg 232 219 1;
+#X msg 279 219 0;
+#X obj 232 253 s \$0-cut5;
+#X obj 57 166 del 50;
+#X obj 57 108 clip 1 8;
 #X connect 1 0 0 0;
 #X connect 2 0 10 0;
 #X connect 3 0 4 0;
-#X connect 5 0 9 0;
+#X connect 5 0 17 0;
 #X connect 8 0 5 0;
 #X connect 9 0 16 0;
 #X connect 9 1 12 1;
@@ -1476,6 +1479,7 @@ ATIVO, f 32;
 #X connect 13 0 15 0;
 #X connect 14 0 15 0;
 #X connect 16 0 11 0;
+#X connect 17 0 9 0;
 #X restore 488 1199 pd ARRAY_SET;
 #X obj 384 688 r \$0-stop;
 #X msg 404 355 1 \$1;
@@ -1613,7 +1617,7 @@ DO ÁUDIO, f 62;
 #X obj 52 99 cnv 15 75 20 empty empty CUT/BOOST 8 11 0 12 -233017 -66577
 0;
 #X obj 34 120 hradio 20 1 0 7 \$0-boost_gui \$0-boost_gui_set empty
-0 -8 0 10 -262144 -1 -1 1;
+0 -8 0 10 -262144 -1 -1 3;
 #X obj 122 99 cnv 15 35 20 empty empty (dB) 3 11 0 12 -228856 -66577
 0;
 #X obj 34 141 cnv 15 20 15 empty empty -12 -1 8 0 10 -228856 -66577
@@ -1635,7 +1639,7 @@ DO ÁUDIO, f 62;
 #X obj 122 37 cnv 15 35 20 empty empty (kHz) 3 11 0 12 -228856 -66577
 0;
 #X obj 63 58 hradio 20 1 0 4 \$0-samplerate_gui \$0-samplerate_gui_set
-empty 0 -8 0 10 -262144 -1 -1 1;
+empty 0 -8 0 10 -262144 -1 -1 2;
 #X obj 69 79 cnv 15 20 15 empty empty 22 0 8 0 10 -228856 -66577 0
 ;
 #X obj 89 79 cnv 15 20 15 empty empty 44 0 8 0 10 -228856 -66577 0
@@ -1667,7 +1671,7 @@ empty 0 -8 0 10 -262144 -1 -1 1;
 #X obj 31 262 cnv 15 20 15 empty empty BLK_THR 0 8 0 10 -228856 -66577
 0;
 #X obj 12 11 cnv 15 185 20 empty \$0-audioWinBar AUDIO_CONFIG 43 10
-0 14 -250685 -1 0;
+0 14 -24198 -1 0;
 #X restore 46 67 pd \$0-audioGUI;
 #X obj 46 117 r \$0-click_audioGUI;
 #X obj 46 175 s pd-\$0-audioGUI;
@@ -2675,7 +2679,7 @@ DE ACORDO COM CADA AÇÃO, f 48;
 #X connect 5 0 4 0;
 #X connect 8 0 2 0;
 #X restore 280 30 pd EXTERNAL_CONTROL;
-#N canvas 125 315 586 382 CONTROL_MEMORY 0;
+#N canvas 131 318 586 382 CONTROL_MEMORY 0;
 #N canvas 136 119 990 470 PRESET_MANAGER 0;
 #X obj 42 310 list prepend video;
 #X obj 42 343 list trim;
@@ -2745,7 +2749,7 @@ DE TRANSFORMAÇÕES E EFEITOS, f 39;
 #X connect 4 1 2 1;
 #X restore 329 152 pd SEND_ACTIVE_SLOT;
 #X text 145 17 ** GESTÃO DA MEMÓRIA LOCAL;
-#N canvas 69 82 1220 397 AUTOMATION_MANAGER 0;
+#N canvas 73 84 1220 397 AUTOMATION_MANAGER 0;
 #X msg 458 119 1;
 #X msg 458 249 1;
 #X text 502 121 CONVERTE BANG EM VALOR 1;
