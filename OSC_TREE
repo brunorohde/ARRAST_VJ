@@ -89,6 +89,12 @@
   /loop (0 / 1)
   /timeline (0 - 1)
   /clear
+  /export
+    /exportVideo
+    /renderSpeed (0 / 1 / 2 / 3 / 4)   * Render speed - 1 / 4 / 8 / 12 / 16 FPS
+    /renderQuality (0 / 1 / 2 / 3 / 4)   * Render quality - 4 = best
+    /exportAudio
+    /separateAudio (0 / 1)   * Export separate audio channels
   /channel(1 / 2 / 3 / 4)   * No space = /channelX
     /setAll (0 / 1 / 2)
     /video

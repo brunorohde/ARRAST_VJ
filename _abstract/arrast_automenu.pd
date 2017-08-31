@@ -1,105 +1,105 @@
-#N canvas 212 135 514 699 16;
+#N canvas 214 64 514 699 16;
 #X obj 20 43 cnv 15 240 631 empty empty empty 20 12 0 14 -228856 -66577
 0;
 #X obj 30 63 hradio 15 1 0 3 \$0-enableV_gui \$0-enableV_gui_set enable
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 138 63 hradio 15 1 0 3 \$0-activeSlotV_gui \$0-activeSlotV_gui_set
-activeSlot 50 8 0 10 -262144 -1 -1 0;
+activeSlot 50 8 0 10 -262144 -1 -1 2;
 #X obj 30 93 hradio 15 1 0 3 \$0-ioMode_gui \$0-ioMode_gui_set ioMode
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 30 113 hradio 15 1 0 3 \$0-inSet_gui \$0-inSet_gui_set inSet
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 30 133 hradio 15 1 0 3 \$0-outSet_gui \$0-outSet_gui_set outSet
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 30 153 hradio 15 1 0 3 \$0-speed_gui \$0-speed_gui_set speed
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 30 173 hradio 15 1 0 3 \$0-play_gui \$0-play_gui_set play 50
-8 0 10 -262144 -1 -1 0;
+8 0 10 -262144 -1 -1 2;
 #X obj 30 193 hradio 15 1 0 3 \$0-rw_gui \$0-rw_gui_set rw 50 8 0 10
--262144 -1 -1 0;
+-262144 -1 -1 2;
 #X obj 30 213 hradio 15 1 0 3 \$0-inv_gui \$0-inv_gui_set inv 50 8
-0 10 -262144 -1 -1 0;
+0 10 -262144 -1 -1 2;
 #X obj 30 233 hradio 15 1 0 3 \$0-stop_gui \$0-stop_gui_set stop 50
-8 0 10 -262144 -1 -1 0;
+8 0 10 -262144 -1 -1 2;
 #X obj 138 93 hradio 15 1 0 3 \$0-loop_gui \$0-loop_gui_set loop 50
-8 0 10 -262144 -1 -1 0;
+8 0 10 -262144 -1 -1 2;
 #X obj 138 113 hradio 15 1 0 3 \$0-loopMode_gui \$0-loopMode_gui_set
-loopMode 50 8 0 10 -262144 -1 -1 0;
+loopMode 50 8 0 10 -262144 -1 -1 2;
 #X obj 138 133 hradio 15 1 0 3 \$0-audio_gui \$0-audio_gui_set audio
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 138 153 hradio 15 1 0 3 \$0-samplerate_gui \$0-samplerate_gui_set
-samplerate 50 8 0 10 -262144 -1 -1 0;
+samplerate 50 8 0 10 -262144 -1 -1 2;
 #X obj 138 173 hradio 15 1 0 3 \$0-boost_gui \$0-boost_gui_set boost
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 138 193 hradio 15 1 0 3 \$0-avAmp_gui \$0-avAmp_gui_set avAmp
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 138 213 hradio 15 1 0 3 \$0-avLop_gui \$0-avLop_gui_set avLop
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 138 233 hradio 15 1 0 3 \$0-avHip_gui \$0-avHip_gui_set avHip
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 30 302 hradio 15 1 0 3 \$0-enableI_gui \$0-enableI_gui_set enable
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 138 302 hradio 15 1 0 3 \$0-activeSlotI_gui \$0-activeSlotI_gui_set
-activeSlot 50 8 0 10 -262144 -1 -1 0;
+activeSlot 50 8 0 10 -262144 -1 -1 2;
 #X obj 30 371 hradio 15 1 0 3 \$0-enableC_gui \$0-enableC_gui_set enable
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 30 440 hradio 15 1 0 3 \$0-transp_gui \$0-transp_gui_set transp
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 30 460 hradio 15 1 0 3 \$0-white_gui \$0-white_gui_set white
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 30 480 hradio 15 1 0 3 \$0-black_gui \$0-black_gui_set black
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 30 500 hradio 15 1 0 3 \$0-fadeIn_gui \$0-fadeIn_gui_set fadeIn
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 30 520 hradio 15 1 0 3 \$0-fadeOut_gui \$0-fadeOut_gui_set fadeOut
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 138 440 hradio 15 1 0 3 \$0-flipH_gui \$0-flipH_gui_set flipH
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 138 460 hradio 15 1 0 3 \$0-flipV_gui \$0-flipV_gui_set flipV
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 138 480 hradio 15 1 0 3 \$0-scale_gui \$0-scale_gui_set scale
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 138 500 hradio 15 1 0 3 \$0-posX_gui \$0-posX_gui_set posX 50
-8 0 10 -262144 -1 -1 0;
+8 0 10 -262144 -1 -1 2;
 #X obj 138 520 hradio 15 1 0 3 \$0-posY_gui \$0-posY_gui_set posY 50
-8 0 10 -262144 -1 -1 0;
+8 0 10 -262144 -1 -1 2;
 #X obj 30 589 hradio 15 1 0 3 \$0-red_gui \$0-red_gui_set red 50 8
-0 10 -262144 -1 -1 0;
+0 10 -262144 -1 -1 2;
 #X obj 30 609 hradio 15 1 0 3 \$0-green_gui \$0-green_gui_set green
-50 8 0 10 -262144 -1 -1 0;
+50 8 0 10 -262144 -1 -1 2;
 #X obj 30 629 hradio 15 1 0 3 \$0-blue_gui \$0-blue_gui_set blue 50
-8 0 10 -262144 -1 -1 0;
+8 0 10 -262144 -1 -1 2;
 #X obj 138 589 hradio 15 1 0 3 \$0-gain_gui \$0-gain_gui_set gain 50
-8 0 10 -262144 -1 -1 0;
+8 0 10 -262144 -1 -1 2;
 #X obj 138 609 hradio 15 1 0 3 \$0-contrast_gui \$0-contrast_gui_set
-contrast 50 8 0 10 -262144 -1 -1 0;
+contrast 50 8 0 10 -262144 -1 -1 2;
 #X obj 138 629 hradio 15 1 0 3 \$0-saturation_gui \$0-saturation_gui_set
-saturation 50 8 0 10 -262144 -1 -1 0;
+saturation 50 8 0 10 -262144 -1 -1 2;
 #X obj 138 649 hradio 15 1 0 3 \$0-motionBlur_gui \$0-motionBlur_gui_set
-motionBlur 50 8 0 10 -262144 -1 -1 0;
+motionBlur 50 8 0 10 -262144 -1 -1 2;
 #X obj 30 649 hradio 15 1 0 3 \$0-colorInv_gui \$0-colorInv_gui_set
-colorInv 50 8 0 10 -262144 -1 -1 0;
+colorInv 50 8 0 10 -262144 -1 -1 2;
 #X obj 20 20 cnv 15 240 22 empty \$0-channelColor VIDEO 30 11 0 14
--24198 -66577 0;
+-258699 -66577 0;
 #X obj 20 259 cnv 15 240 22 empty \$0-channelColor IMAGE 30 11 0 14
--24198 -66577 0;
+-258699 -66577 0;
 #X obj 20 328 cnv 15 240 22 empty \$0-channelColor CAMERA 30 11 0 14
--24198 -66577 0;
+-258699 -66577 0;
 #X obj 20 397 cnv 15 240 22 empty \$0-channelColor TRANSFORM 30 11
-0 14 -24198 -66577 0;
-#X obj 20 546 cnv 15 240 22 empty \$0-channelColor FX 30 11 0 14 -24198
+0 14 -258699 -66577 0;
+#X obj 20 546 cnv 15 240 22 empty \$0-channelColor FX 30 11 0 14 -258699
 -66577 0;
 #X obj 32 49 cnv 10 12 12 empty empty M 3 7 0 10 -233017 -66577 0;
 #X obj 47 49 cnv 10 12 12 empty empty R 3 7 0 10 -233017 -66577 0;
 #X obj 62 49 cnv 10 12 12 empty empty P 3 7 0 10 -233017 -66577 0;
 #X obj 167 25 hradio 12 1 0 3 \$0-setAllVideo \$0-setAllVideo_set SET_ALL
-42 6 0 10 -1 -262144 -1 0;
+42 6 0 10 -1 -262144 -1 2;
 #X obj 167 264 hradio 12 1 0 3 \$0-setAllImage \$0-setAllImage_set
-SET_ALL 42 6 0 10 -1 -262144 -1 0;
+SET_ALL 42 6 0 10 -1 -262144 -1 2;
 #X obj 167 403 hradio 12 1 0 3 \$0-setAllTransform \$0-setAllTransform_set
-SET_ALL 42 6 0 10 -1 -228856 -1 0;
+SET_ALL 42 6 0 10 -1 -228856 -1 2;
 #X obj 167 551 hradio 12 1 0 3 \$0-setAllFx \$0-setAllFx_set SET_ALL
-42 6 0 10 -1 -262144 -1 0;
+42 6 0 10 -1 -262144 -1 2;
 #N canvas 441 370 411 307 CHANNEL_COLOR 0;
 #X obj 45 140 sel 1 2 3 4;
 #X msg 45 177 13;
@@ -123,7 +123,7 @@ SET_ALL 42 6 0 10 -1 -228856 -1 0;
 #X connect 8 0 7 0;
 #X connect 9 0 0 0;
 #X restore 290 232 pd CHANNEL_COLOR;
-#N canvas 5 54 1351 709 CONTROL_MEMORY 0;
+#N canvas 7 54 1351 709 CONTROL_MEMORY 0;
 #X text 513 15 ** GESTÃO DA MEMÓRIA LOCAL;
 #X text 106 296 PARÂMETROS DE VÍDEO;
 #X text 556 337 PARÂMETROS DE IMAGEM;
@@ -143,7 +143,7 @@ SET_ALL 42 6 0 10 -1 -228856 -1 0;
 #X obj 472 471 t f;
 #X obj 472 442 r \$0-setAllCamera;
 #X obj 22 270 t f;
-#N canvas 203 54 650 648 GLOBAL_LINK 0;
+#N canvas 205 55 650 697 GLOBAL_LINK 0;
 #X obj 103 107 r \$0-setAllLink;
 #X obj 46 136 spigot;
 #X text 119 138 LINK GLOBAL;
@@ -152,37 +152,42 @@ SET_ALL 42 6 0 10 -1 -228856 -1 0;
 #X obj 318 121 s \$0-setAllLink_set;
 #X text 315 151 INICIALIZA LINK GLOBAL;
 #X obj 46 63 r \$0-setAllVideo;
-#X obj 133 214 s \$0-setAllImage_set;
-#X obj 104 248 s \$0-setAllCamera_set;
-#X obj 75 282 s \$0-setAllTransform_set;
-#X obj 46 316 s \$0-setAllFx_set;
-#X obj 46 180 t f f f f;
+#X obj 126 282 s \$0-setAllImage_set;
+#X obj 99 316 s \$0-setAllCamera_set;
+#X obj 72 350 s \$0-setAllTransform_set;
+#X obj 46 384 s \$0-setAllFx_set;
 #X text 40 14 ** LINK ENTRE BOTÃO SET_ALL VIDEO PARA TODAS AS UNIDADES
 ;
-#X obj 126 492 s \$0-setAllImage_set;
-#X obj 99 526 s \$0-setAllCamera_set;
-#X obj 72 560 s \$0-setAllTransform_set;
-#X obj 46 594 s \$0-setAllFx_set;
-#X obj 46 424 t f f f f f;
-#X obj 153 458 s \$0-setAllVideo_set;
-#X obj 46 380 r \$1-autoSetAll\$2_gui;
-#X text 270 376 SETA TUDO ATRAVÉS DO SELETOR DA INTERFACE PRINCIPAL
+#X obj 126 552 s \$0-setAllImage_set;
+#X obj 99 586 s \$0-setAllCamera_set;
+#X obj 72 620 s \$0-setAllTransform_set;
+#X obj 46 654 s \$0-setAllFx_set;
+#X obj 46 484 t f f f f f;
+#X obj 153 518 s \$0-setAllVideo_set;
+#X obj 46 440 r \$1-autoSetAll\$2_gui;
+#X text 270 436 SETA TUDO ATRAVÉS DO SELETOR DA INTERFACE PRINCIPAL
 , f 28;
+#X obj 173 238 s \$1-autoSetAll\$2_gui_set;
+#X msg 173 204 set \$1;
+#X obj 46 180 t f f f f f;
+#X text 246 204 ATUALIZA INTERFACE PRINCIPAL;
 #X connect 0 0 1 1;
-#X connect 1 0 12 0;
+#X connect 1 0 23 0;
 #X connect 3 0 4 0;
 #X connect 4 0 5 0;
 #X connect 7 0 1 0;
-#X connect 12 0 11 0;
-#X connect 12 1 10 0;
-#X connect 12 2 9 0;
-#X connect 12 3 8 0;
-#X connect 18 0 17 0;
-#X connect 18 1 16 0;
-#X connect 18 2 15 0;
-#X connect 18 3 14 0;
-#X connect 18 4 19 0;
-#X connect 20 0 18 0;
+#X connect 17 0 16 0;
+#X connect 17 1 15 0;
+#X connect 17 2 14 0;
+#X connect 17 3 13 0;
+#X connect 17 4 18 0;
+#X connect 19 0 17 0;
+#X connect 22 0 21 0;
+#X connect 23 0 11 0;
+#X connect 23 1 10 0;
+#X connect 23 2 9 0;
+#X connect 23 3 8 0;
+#X connect 23 4 22 0;
 #X restore 932 776 pd GLOBAL_LINK;
 #X obj 932 282 r \$0-setAllFx;
 #X text 929 748 LINK GLOBAL DE EDICÃO DOS ESTADOS;
@@ -334,7 +339,7 @@ motionBlur setAll, f 37;
 #X connect 68 7 57 0;
 #X connect 68 8 10 0;
 #X restore 290 164 pd CONTROL_MEMORY;
-#N canvas 31 72 1075 593 SEND_CONTROL 0;
+#N canvas 33 73 1075 593 SEND_CONTROL 0;
 #X obj 45 70 r \$0-enableV;
 #X obj 45 99 pack 0 0;
 #X text 42 23 ** ENVIA ESTADO DE CADA PARÂMETRO DO CANAL PARA AUTÔMATOS
@@ -534,7 +539,7 @@ USANDO COMO ID O 2 ELEMENTO DA LISTA, f 95;
 #X connect 117 0 76 0;
 #X restore 290 198 pd SEND_CONTROL;
 #X obj 167 334 hradio 12 1 0 3 \$0-setAllCamera \$0-setAllCamera_set
-SET_ALL 42 6 0 10 -1 -262144 -1 0;
+SET_ALL 42 6 0 10 -1 -262144 -1 2;
 #X obj 149 25 tgl 12 0 \$0-setAllLink \$0-setAllLink_set empty 17 7
 0 10 -1 -262144 -1 1 1;
 #N canvas 403 191 637 282 EXTERNAL_CONTROL 0;
