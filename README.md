@@ -1,14 +1,12 @@
 
 
-    [ARRAST_VJ] v.1.0 - VERSÃO EM DESENVOLVIMENTO
+    [ARRAST_VJ] v.1.0
 
 
-    Pd/GEM video mixer/mapper
+    Pd/GEM VJ/Mapping - arrastvj.org
 
+    por Bruno Rohde - brunorohde.wordpress.com / github.com/brunorohde
 
-    Download - https://github.com/brunorohde/ARRAST_VJ
-
-    Documentação completa - https://brunorohde.wordpress.com/2015/07/20/arrast_vj/
 
 
     Requisitos mínimos:
@@ -20,6 +18,7 @@
     - Processador dual core 1GHz (melhor 2GHz)
 
     - Memória RAM 1GB (melhor 2GB)
+
 
 
     Licença:
@@ -35,3 +34,4 @@
     mas SEM NENHUMA GARANTIA, inclusive de ADEQUAÇÃO
     a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR.
     Veja a Licença Pública Geral GNU para maiores detalhes.
+

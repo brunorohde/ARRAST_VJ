@@ -1,6 +1,6 @@
-#N canvas 136 175 1028 389 16;
+#N canvas 138 176 1028 389 16;
 #X text 260 60 RECEBE CONTROLES EXTERNOS;
-#N canvas 44 244 1317 418 BRAIN 0;
+#N canvas 44 245 1317 418 BRAIN 0;
 #X obj 910 232 del \$3;
 #X obj 967 167 f \$3;
 #X obj 910 133 t b b;

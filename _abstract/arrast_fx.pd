@@ -1,4 +1,4 @@
-#N canvas 84 284 523 191 16;
+#N canvas 86 285 523 191 16;
 #X obj 50 30 cnv 15 185 98 empty empty empty 20 12 0 14 -128992 -66577
 0;
 #X obj 60 55 vsl 12 60 0 1 0 0 \$0-red_gui \$0-red_gui_set empty 0
@@ -27,7 +27,7 @@ empty 17 7 0 10 -262144 -1 -1;
 17 7 0 10 -262144 -1 -1;
 #X obj 108 99 tgl 18 0 \$0-colorInv_gui \$0-colorInv_gui_set INV 1
 -7 0 10 -1 -262144 -262144 0 1;
-#N canvas 53 114 1199 274 RESET 0;
+#N canvas 55 115 1199 274 RESET 0;
 #X msg 52 113 1;
 #X msg 251 113 0.2;
 #X msg 441 113 0.2;
@@ -40,7 +40,7 @@ empty 17 7 0 10 -262144 -1 -1;
 #X obj 441 157 s \$0-contrast_gui_set;
 #X obj 671 157 s \$0-saturation_gui_set;
 #X obj 921 187 s \$0-colorInv_gui_set;
-#X text 314 19 ** RESETA PARÂMETROS A PARTIR DOS BOTÕES DA INTERFACE
+#X text 309 19 ** RESETA PARÂMETROS A PARTIR DOS BOTÕES DA INTERFACE
 ;
 #X obj 921 157 s \$0-motionBlur_gui_set;
 #X obj 52 64 r \$0-resetRGB_gui;
@@ -65,7 +65,7 @@ empty 17 7 0 10 -262144 -1 -1;
 #X connect 18 0 1 0;
 #X connect 18 0 4 0;
 #X restore 280 98 pd RESET;
-#N canvas 163 186 775 456 LINKS 0;
+#N canvas 165 187 775 456 LINKS 0;
 #X obj 42 366 list prepend FX\$1;
 #X obj 42 64 r \$0-red;
 #X obj 226 64 r \$0-green;
@@ -105,8 +105,8 @@ empty 17 7 0 10 -262144 -1 -1;
 #X connect 15 0 0 0;
 #X connect 16 0 17 0;
 #X connect 17 0 0 0;
-#X restore 280 133 pd LINKS;
-#N canvas 456 389 603 296 EXTERNAL_CONTROL 0;
+#X restore 280 132 pd LINKS;
+#N canvas 458 390 603 296 EXTERNAL_CONTROL 0;
 #X text 213 137 FILTRA POR CANAL;
 #X text 144 170 FILTRA POR MÓDULO;
 #X obj 48 234 s \$0-externalControl;
@@ -121,8 +121,8 @@ empty 17 7 0 10 -262144 -1 -1;
 #X connect 5 0 4 0;
 #X connect 8 0 2 0;
 #X restore 280 30 pd EXTERNAL_CONTROL;
-#N canvas 177 63 564 381 CONTROL_MEMORY 0;
-#N canvas 295 341 1007 408 PRESET_MANAGER 0;
+#N canvas 179 64 564 381 CONTROL_MEMORY 0;
+#N canvas 297 342 1007 408 PRESET_MANAGER 0;
 #X obj 42 283 list trim;
 #X obj 42 67 r CH\$1_FLUSH;
 #X obj 42 330 s CH\$1_PRESET;
@@ -131,7 +131,7 @@ empty 17 7 0 10 -262144 -1 -1;
 #X obj 42 100 t b;
 #X text 189 216 RECEBE DADOS DOS SLOTS;
 #X text 39 359 ENVIA PARA GESTOR GLOBAL DE PRESETS;
-#X text 134 19 ** GERENCIA COMUNICAÇÃO ENTRE SLOTS E GESTOR GLOBAL
+#X text 184 19 ** GERENCIA COMUNICAÇÃO ENTRE SLOTS E GESTOR GLOBAL
 DE PRESETS, f 62;
 #X obj 461 67 r MAIN_PRESET_SEND;
 #X obj 508 134 route \$1;
@@ -159,7 +159,7 @@ DE PRESETS, f 62;
 #X connect 20 0 21 0;
 #X restore 299 84 pd PRESET_MANAGER;
 #X text 47 56 SLOTS DE MEMÓRIA LOCAL;
-#N canvas 808 286 420 326 ACTIVE_SLOT 0;
+#N canvas 810 287 420 326 ACTIVE_SLOT 0;
 #X obj 48 89 r V\$1_ACTIVE_SLOT;
 #X obj 48 129 r I\$1_ACTIVE_SLOT;
 #X obj 48 272 s \$0-activeSlot;
@@ -178,7 +178,7 @@ DE PRESETS, f 62;
 #X restore 299 152 pd ACTIVE_SLOT;
 #X obj 48 84 arrast_fxslot \$0 \$1 1;
 #X text 143 17 ** GESTÃO DA MEMÓRIA LOCAL;
-#N canvas 262 209 475 375 AUTOMATION_MANAGER 0;
+#N canvas 264 210 475 375 AUTOMATION_MANAGER 0;
 #X text 36 19 ** GESTÃO LOCAL DO SISTEMA DE AUTOMAÇÕES;
 #X text 46 59 UNIDADES DE AUTOMAÇÃO POR PARÂMETRO;
 #X obj 49 97 arrast_automato \$0 red \$1 0 31;
