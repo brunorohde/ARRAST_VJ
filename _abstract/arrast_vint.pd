@@ -1,12 +1,12 @@
-#N canvas 523 304 510 272 16;
+#N canvas 335 221 510 272 16;
 #X obj 50 30 cnv 15 185 200 empty empty empty 20 12 0 14 -228856 -66577
 0;
 #X obj 61 61 hradio 18 1 0 9 \$0-openBrowser \$0-openBrowser_in empty
 0 -8 0 10 -262144 -1 -1 3;
-#X obj 63 153 hsl 160 8 0 310 0 0 \$0-morto \$0-timeline empty -2 -8
-0 10 -1 -262144 -1 5539 1;
+#X obj 63 153 hsl 160 8 0 0 0 0 \$0-morto \$0-timeline empty -2 -8
+0 10 -1 -262144 -1 0 1;
 #X obj 181 110 nbx 4 12 -1e+37 1e+37 0 0 \$0-morto \$0-secDisplay empty
-0 -8 0 10 -1 -262144 -1 12.9167 256;
+0 -8 0 10 -1 -262144 -1 0 256;
 #X obj 63 166 hsl 160 10 1 0 0 0 \$0-speed_gui \$0-speed_gui_set empty
 -2 -8 0 10 -262144 -1 -1 7950 1;
 #X obj 141 191 bng 25 250 50 0 \$0-stop_gui \$0-stop_gui_set S 8 13
@@ -19,11 +19,11 @@ empty 0 -8 0 10 -355 -262144 -262144 0;
 -4034 -1 0 1;
 #X obj 139 176 bng 8 250 50 0 \$0-resetSpeed \$0-resetSpeed_in empty
 17 7 0 10 -162280 -1 -1;
-#X obj 60 61 cnv 15 165 18 \$0-morto \$0-fileDisplay Bags_Groove2.mov
-5 9 0 12 -355 -262144 0;
+#X obj 60 61 cnv 15 165 18 \$0-morto \$0-fileDisplay OPEN_VIDEO 5 9
+0 12 -355 -262144 0;
 #X text 97 170 ';
 #X text 177 170 ';
-#N canvas 312 220 692 141 select_slot 0;
+#N canvas 314 221 692 141 select_slot 0;
 #X obj 105 53 bng 15 250 50 0 \$0-clickSlot1 \$0-clickSlot1_set empty
 17 7 0 10 -262144 -1 -1;
 #X msg 500 53 color \$1;
@@ -59,8 +59,8 @@ empty 0 -8 0 10 -355 -262144 -262144 0;
 17 7 0 10 -262144 -1 -1;
 #X obj 100 50 cnv 15 165 21 empty \$0-slotsBG empty 20 12 0 14 -355
 -262144 0;
-#X obj 105 53 cnv 15 15 15 empty \$0-colorSlot1 1 4 8 0 12 -24198 -1
-0;
+#X obj 105 53 cnv 15 15 15 empty \$0-colorSlot1 1 4 8 0 12 -262144
+-1 0;
 #X obj 125 53 cnv 15 15 15 empty \$0-colorSlot2 2 4 8 0 12 -262144
 -1 0;
 #X obj 145 53 cnv 15 15 15 empty \$0-colorSlot3 3 4 8 0 12 -262144
@@ -75,7 +75,7 @@ empty 0 -8 0 10 -355 -262144 -262144 0;
 -1 0;
 #X obj 245 53 cnv 15 15 15 empty \$0-colorSlot8 8 4 8 0 12 -262144
 -1 0;
-#N canvas 47 127 663 307 FILE_DISPLAY 0;
+#N canvas 49 128 663 307 FILE_DISPLAY 0;
 #X msg 221 206 label \$1;
 #X msg 47 206 color \$1;
 #X obj 434 177 loadbang;
@@ -167,10 +167,10 @@ PRESETS E CONTROLE EXTERNO OSC, f 80;
 #X connect 3 0 1 0;
 #X coords 0 -1 1 1 165 21 2 100 50;
 #X restore 60 79 pd select_slot;
-#X obj 52 30 hradio 20 1 0 9 \$0-click_enable \$0-click_enable_in empty
-0 -8 0 10 -262144 -1 -1 1;
-#X obj 50 30 cnv 15 185 20 \$0-enable \$0-enable_in empty 20 12 0 14
--24198 -262144 0;
+#X obj 52 30 hradio 20 1 0 9 \$0-enableClick \$0-enableClick_set empty
+0 -8 0 10 -262144 -1 -1 4;
+#X obj 50 30 cnv 15 185 20 \$0-enable \$0-enable_set empty 20 12 0
+14 -258699 -262144 0;
 #X obj 63 128 hsl 160 10 0 1 0 0 \$0-inSet_gui \$0-inSet_gui_set empty
 -2 -8 0 10 -262144 -1 -1 0 1;
 #X obj 63 138 hsl 160 10 0 1 0 0 \$0-outSet_gui \$0-outSet_gui_set
@@ -1330,82 +1330,82 @@ DE ÁUDIO, f 42;
 #X connect 60 0 30 2;
 #X connect 63 0 20 0;
 #X restore 280 98 pd VIDEO_UNIT;
-#N canvas 89 126 806 530 ENABLE_BUTTON 0;
+#N canvas 91 127 806 530 ENABLE_BUTTON 0;
 #X obj 50 102 t b;
 #X obj 50 193 f;
 #X obj 90 193 + 1;
 #X obj 50 221 % 2;
 #X floatatom 50 255 5 0 0 0 - - -, f 5;
 #X obj 117 108 loadbang;
-#X obj 50 68 r \$0-click_enable;
 #X obj 327 103 sel 1;
-#X obj 167 323 sel 1;
-#X msg 167 353 1;
+#X obj 217 323 sel 1;
+#X msg 217 353 1;
 #X obj 327 69 r CH\$1_SELECT;
-#X obj 167 395 s CH\$1_SELECT;
+#X obj 217 395 s CH\$1_SELECT;
 #X msg 374 169 0;
 #X obj 218 276 s V\$1_ST;
 #X obj 218 169 r V\$1_SET_ST;
 #X msg 62 161 1;
 #X obj 50 299 t f f;
-#X msg 317 353 0;
-#N canvas 681 222 416 283 COLOR 0;
+#X msg 367 353 0;
+#N canvas 683 223 416 283 COLOR 0;
 #X obj 45 61 inlet;
 #X obj 45 116 sel 0 1;
-#X obj 45 227 s \$0-enable_in;
 #X obj 165 140 f 13;
 #X msg 165 177 color \$1 0;
 #X msg 45 177 color 11 0;
 #X obj 202 108 r \$0-channelColor;
 #X text 40 18 ** COR DO BOTÃO HABILITAR UNIDADE;
+#X obj 45 227 s \$0-enable_set;
 #X connect 0 0 1 0;
-#X connect 1 0 5 0;
-#X connect 1 1 3 0;
-#X connect 3 0 4 0;
-#X connect 4 0 2 0;
-#X connect 5 0 2 0;
-#X connect 6 0 3 1;
+#X connect 1 0 4 0;
+#X connect 1 1 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 7 0;
+#X connect 4 0 7 0;
+#X connect 5 0 2 1;
 #X restore 50 467 pd COLOR;
 #X text 142 22 ** GERENCIA ESTADO DO BOTÃO PARA HABILITAR UNIDADE
 ;
 #X obj 117 137 del 5;
-#X obj 167 467 s SOURCE_BUS;
-#X obj 167 437 list prepend sourceChannel\$1;
-#X obj 317 395 s \$0-render;
+#X obj 217 467 s SOURCE_BUS;
+#X obj 217 437 list prepend sourceChannel\$1;
+#X obj 367 395 s \$0-render;
 #X obj 218 231 t b;
 #X obj 218 202 r REFRESH_SOURCE;
 #X obj 501 92 r \$0-externalControl;
 #X obj 501 169 route enable;
 #X text 498 64 RECEBE CONTROLE EXTERNO;
+#X obj 50 68 r \$0-enableClick;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
 #X connect 2 0 1 1;
 #X connect 3 0 2 0;
 #X connect 3 0 4 0;
-#X connect 4 0 13 0;
-#X connect 4 0 16 0;
-#X connect 5 0 20 0;
-#X connect 6 0 0 0;
-#X connect 7 1 12 0;
-#X connect 8 0 9 0;
-#X connect 8 1 17 0;
-#X connect 9 0 11 0;
-#X connect 9 0 22 0;
-#X connect 10 0 7 0;
-#X connect 12 0 1 0;
+#X connect 4 0 12 0;
+#X connect 4 0 15 0;
+#X connect 5 0 19 0;
+#X connect 6 1 11 0;
+#X connect 7 0 8 0;
+#X connect 7 1 16 0;
+#X connect 8 0 10 0;
+#X connect 8 0 21 0;
+#X connect 9 0 6 0;
+#X connect 11 0 1 0;
+#X connect 13 0 1 0;
 #X connect 14 0 1 0;
-#X connect 15 0 1 0;
-#X connect 16 0 18 0;
-#X connect 16 1 8 0;
-#X connect 17 0 23 0;
-#X connect 20 0 15 0;
-#X connect 22 0 21 0;
-#X connect 24 0 4 0;
-#X connect 25 0 24 0;
-#X connect 26 0 27 0;
-#X connect 27 0 1 0;
+#X connect 15 0 17 0;
+#X connect 15 1 7 0;
+#X connect 16 0 22 0;
+#X connect 19 0 14 0;
+#X connect 21 0 20 0;
+#X connect 23 0 4 0;
+#X connect 24 0 23 0;
+#X connect 25 0 26 0;
+#X connect 26 0 1 0;
+#X connect 28 0 0 0;
 #X restore 280 166 pd ENABLE_BUTTON;
-#N canvas 447 373 670 276 CHANNEL_COLOR 0;
+#N canvas 449 374 670 276 CHANNEL_COLOR 0;
 #X obj 47 71 f \$1;
 #X obj 47 107 sel 1 2 3 4;
 #X msg 47 144 13;
