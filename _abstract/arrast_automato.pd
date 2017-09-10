@@ -1,4 +1,4 @@
-#N canvas 388 116 861 610 16;
+#N canvas 390 117 861 610 16;
 #N canvas 479 83 791 665 WRITE_VALUE 0;
 #X obj 63 64 inlet VALUE;
 #X obj 36 181 f 0;
@@ -231,9 +231,6 @@ f 23;
 #X obj 500 390 del \$5;
 #X obj 500 419 f \$0;
 #X msg 500 448 symbol \$1-memo;
-#X text 75 53 ARGUMENTOS: ID GERAL (\$0) \, NOME DO PARÂMETRO \, CANAL
-\, MODO DE ESCRITA \, ID DE CONTROLE EXTERNO DO ESTADO INTERNO (M/W/R)
-, f 69;
 #X text 574 388 ORDENA ENVIO PELO 5 ARGUMENTO, f 17;
 #X obj 500 477 s CH\$3_AUTOMEMOLIST;
 #X text 497 509 ENVIA NOME DO ARRAY DE MEMÓRIA LOCAL PARA LISTA NO
@@ -282,16 +279,19 @@ FOR O activeSlot, f 22;
 #X obj 500 223 array define \$0-memo 1;
 #X text 498 253 ARRAY DE MEMÓRIA DA AUTOMAÇÃO - 1o ELEMENTO É SE
 EXISTE OU NÃO ALGO GRAVADO NESSE AUTÔMATO (recState), f 31;
+#X text 75 53 ARGUMENTOS: ID GERAL (\$0) \, NOME DO PARÂMETRO \, CANAL
+\, MODO DE ESCRITA \, ID DE CONTROLE EXTERNO DO ESTADO INTERNO (M/R/P)
+, f 69;
 #X connect 1 0 9 0;
 #X connect 3 0 0 0;
 #X connect 7 0 0 0;
-#X connect 9 0 23 0;
-#X connect 10 0 26 0;
+#X connect 9 0 22 0;
+#X connect 10 0 25 0;
 #X connect 15 0 16 0;
 #X connect 16 0 17 0;
 #X connect 17 0 18 0;
-#X connect 18 0 21 0;
-#X connect 23 0 24 0;
-#X connect 24 0 8 0;
-#X connect 24 1 2 0;
+#X connect 18 0 20 0;
+#X connect 22 0 23 0;
+#X connect 23 0 8 0;
+#X connect 23 1 2 0;
 #X coords 0 610 1 609 100 75 0;
