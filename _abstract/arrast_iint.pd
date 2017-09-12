@@ -1,4 +1,4 @@
-#N canvas 234 307 527 223 16;
+#N canvas 238 309 527 223 16;
 #X obj 50 30 cnv 15 185 80 empty empty empty 20 12 0 14 -228856 -66577
 0;
 #X obj 52 30 hradio 20 1 0 9 \$0-enableClick \$0-enableClick_set empty
@@ -82,7 +82,7 @@
 #X connect 24 0 1 0;
 #X connect 27 0 0 0;
 #X restore 280 132 pd ENABLE_BUTTON;
-#N canvas 162 119 998 598 IMAGE_UNIT 0;
+#N canvas 164 120 998 598 IMAGE_UNIT 0;
 #X obj 48 542 rectangle 4 3;
 #X obj 48 356 pix_texture;
 #X obj 48 149 gemhead \$1;
@@ -636,8 +636,8 @@ DE PROPORÇÃO, f 21;
 17 7 0 10 -262144 -1 -1;
 #X obj 100 50 cnv 15 165 21 empty \$0-slotsBG empty 20 12 0 14 -355
 -262144 0;
-#X obj 105 53 cnv 15 15 15 empty \$0-colorSlot1 1 4 8 0 12 -262144
--1 0;
+#X obj 105 53 cnv 15 15 15 empty \$0-colorSlot1 1 4 8 0 12 -24198 -1
+0;
 #X obj 125 53 cnv 15 15 15 empty \$0-colorSlot2 2 4 8 0 12 -262144
 -1 0;
 #X obj 145 53 cnv 15 15 15 empty \$0-colorSlot3 3 4 8 0 12 -262144
@@ -761,8 +761,8 @@ PRESETS E CONTROLE EXTERNO OSC, f 80;
 #X connect 1 0 0 0;
 #X coords 0 -1 1 1 165 21 2 100 50;
 #X restore 60 79 pd select_slot;
-#N canvas 621 212 586 372 CONTROL_MEMORY 0;
-#N canvas 52 119 1014 478 PRESET_MANAGER 0;
+#N canvas 625 214 586 372 CONTROL_MEMORY 0;
+#N canvas 56 121 1059 480 PRESET_MANAGER 0;
 #X obj 42 346 list trim;
 #X obj 42 67 r CH\$1_FLUSH;
 #X obj 42 393 s CH\$1_PRESET;
@@ -770,17 +770,15 @@ PRESETS E CONTROLE EXTERNO OSC, f 80;
 #X obj 72 280 r \$0-slotList;
 #X text 218 279 RECEBE DADOS DOS SLOTS;
 #X text 39 422 ENVIA PARA GESTOR GLOBAL DE PRESETS;
-#X text 134 19 ** GERENCIA COMUNICAÇÃO ENTRE SLOTS E GESTOR GLOBAL
+#X text 204 19 ** GERENCIA COMUNICAÇÃO ENTRE SLOTS E GESTOR GLOBAL
 DE PRESETS, f 62;
 #X obj 541 67 r MAIN_PRESET_SEND;
 #X obj 588 204 route \$1;
 #X obj 541 100 t b a;
 #X obj 541 160 s \$0-flushActiveSlot;
 #X text 684 204 ROTEIA POR CANAL;
-#X obj 745 294 s \$0-slotFilePreset;
 #X text 736 64 RECEBE MEMÓRIA DO PRESET GLOBAL, f 17;
 #X text 755 160 ATUALIZA SLOT ATUAL;
-#X text 742 323 ENVIA DADOS PARA SLOTS;
 #X text 245 132 SOLICITA DADOS DOS SLOTS;
 #X obj 42 313 list prepend image;
 #X obj 588 234 route image;
@@ -789,27 +787,34 @@ DE PRESETS, f 62;
 #X obj 42 234 list prepend activeSlot;
 #X text 236 176 MEMÓRIA DO SLOT ATIVO NA UNIDADE, f 21;
 #X obj 588 264 route activeSlot;
-#X obj 588 354 s \$0-activeSlotSet;
-#X text 585 383 ENVIA SLOT ATIVO;
 #X obj 42 100 t b b;
 #X obj 541 132 del 5;
+#X obj 792 334 s \$0-slotFilePreset;
+#X text 789 363 ENVIA DADOS PARA SLOTS;
+#X text 558 425 ENVIA SLOT ATIVO;
+#X obj 561 362 f;
+#X obj 745 298 t b a;
+#X obj 561 396 s \$0-activeSlot_gui_set;
 #X connect 0 0 2 0;
-#X connect 1 0 27 0;
-#X connect 4 0 18 0;
+#X connect 1 0 23 0;
+#X connect 4 0 16 0;
 #X connect 8 0 10 0;
-#X connect 9 0 19 0;
-#X connect 10 0 28 0;
+#X connect 9 0 17 0;
+#X connect 10 0 24 0;
 #X connect 10 1 9 0;
-#X connect 18 0 0 0;
-#X connect 19 0 24 0;
-#X connect 20 0 21 1;
-#X connect 21 0 22 0;
-#X connect 22 0 18 0;
-#X connect 24 0 25 0;
-#X connect 24 1 13 0;
-#X connect 27 0 21 0;
-#X connect 27 1 3 0;
-#X connect 28 0 11 0;
+#X connect 16 0 0 0;
+#X connect 17 0 22 0;
+#X connect 18 0 19 1;
+#X connect 19 0 20 0;
+#X connect 20 0 16 0;
+#X connect 22 0 28 1;
+#X connect 22 1 29 0;
+#X connect 23 0 19 0;
+#X connect 23 1 3 0;
+#X connect 24 0 11 0;
+#X connect 28 0 30 0;
+#X connect 29 0 28 0;
+#X connect 29 1 25 0;
 #X restore 327 84 pd PRESET_MANAGER;
 #X text 196 17 ** MEMÓRIA LOCAL;
 #X text 47 56 SLOTS DE MEMÓRIA LOCAL;
