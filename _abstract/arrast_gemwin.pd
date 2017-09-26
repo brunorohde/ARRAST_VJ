@@ -1,4 +1,4 @@
-#N canvas 267 116 567 230 16;
+#N canvas 271 118 567 230 16;
 #X obj 50 30 cnv 15 247 160 empty empty empty 20 12 0 14 -128992 -66577
 0;
 #X obj 255 85 hsl 30 8 0 1 0 0 \$0-redBg_gui \$0-redBg_gui_set empty
@@ -8,7 +8,7 @@ empty -2 -8 0 10 -4034 -1 -1 0 1;
 #X obj 255 105 hsl 30 8 0 1 0 0 \$0-blueBg_gui \$0-blueBg_gui_set empty
 -2 -8 0 10 -4160 -1 -1 0 1;
 #X obj 172 50 tgl 20 0 \$0-master_gui \$0-master_gui_set MASTER -4
--8 0 8 -1 -262144 -1 0 1;
+-8 0 8 -1 -262144 -1 1 1;
 #X obj 253 50 nbx 2 20 1 99 0 0 \$0-fps_gui \$0-fps_gui_set empty 5
 -8 0 12 -1 -262144 -1 24 256;
 #X obj 60 50 vradio 20 1 0 4 \$0-dimen_gui \$0-dimen_gui_set empty
@@ -181,7 +181,7 @@ CONTROLE DA JANELA MASTER NA 2 INSTÂNCIA, f 92;
 #X connect 57 0 58 0;
 #X connect 60 0 23 0;
 #X restore 340 128 pd LINKS;
-#N canvas 85 66 1145 697 CONTROL_MEMORY 0;
+#N canvas 109 55 1145 697 CONTROL_MEMORY 0;
 #X text 488 213 ARRAY DE MEMÓRIA LOCAL - 13 PARÂMETROS;
 #X obj 490 241 array define \$0-memo 13;
 #X obj 51 187 arrast_param \$0 dimen \$0-memo 0 1 9;

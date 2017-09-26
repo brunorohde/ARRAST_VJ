@@ -1,4 +1,4 @@
-#N canvas 57 111 1290 597 16;
+#N canvas 59 112 1290 597 16;
 #X obj 1139 232 del \$3;
 #X obj 1196 167 f \$3;
 #X obj 1139 133 t b b;
@@ -137,7 +137,7 @@ DO ARQUIVO, f 65;
 #X connect 26 0 24 0;
 #X connect 27 0 19 0;
 #X connect 28 1 26 0;
-#X connect 29 0 21 0;
+#X connect 29 0 21 1;
 #X connect 29 1 20 1;
 #X connect 29 2 28 0;
 #X connect 38 0 40 0;

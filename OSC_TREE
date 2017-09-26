@@ -83,6 +83,7 @@
   /preset
     /save
     /file (symbol)   * File path
+  /resolution (0 / 1 / 2 / 3)   * Automation resolution - 1 / 2 / 4 / 8 samples per frame
   /rec (0 / 1)
   /play (0 / 1)
   /rw

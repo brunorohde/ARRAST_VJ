@@ -1,8 +1,8 @@
-#N canvas 335 221 510 272 16;
+#N canvas 607 128 510 272 16;
 #X obj 50 30 cnv 15 185 200 empty empty empty 20 12 0 14 -228856 -66577
 0;
 #X obj 61 61 hradio 18 1 0 9 \$0-openBrowser \$0-openBrowser_in empty
-0 -8 0 10 -262144 -1 -1 3;
+0 -8 0 10 -262144 -1 -1 4;
 #X obj 63 153 hsl 160 8 0 0 0 0 \$0-morto \$0-timeline empty -2 -8
 0 10 -1 -262144 -1 0 1;
 #X obj 181 110 nbx 4 12 -1e+37 1e+37 0 0 \$0-morto \$0-secDisplay empty
@@ -59,7 +59,7 @@ empty 0 -8 0 10 -355 -262144 -262144 0;
 17 7 0 10 -262144 -1 -1;
 #X obj 100 50 cnv 15 165 21 empty \$0-slotsBG empty 20 12 0 14 -355
 -262144 0;
-#X obj 105 53 cnv 15 15 15 empty \$0-colorSlot1 1 4 8 0 12 -262144
+#X obj 105 53 cnv 15 15 15 empty \$0-colorSlot1 1 4 8 0 12 -258699
 -1 0;
 #X obj 125 53 cnv 15 15 15 empty \$0-colorSlot2 2 4 8 0 12 -262144
 -1 0;
@@ -1456,7 +1456,7 @@ DE ÁUDIO, f 42;
 #X text 452 484 CALCULA FREQUÊNCIA DA FASE;
 #X text 544 1130 OFFSET EM SAMPLES;
 #X text 544 1052 MÓDULO EM SAMPLES;
-#N canvas 506 160 392 389 AUDIO_BANK 0;
+#N canvas 899 288 392 389 AUDIO_BANK 0;
 #X obj 85 110 arrast_audioslot \$0 1;
 #X text 53 29 ** BANCO DE ÁUDIOS RELATIVOS A CADA SLOT DE VÍDEO,
 f 28;
@@ -1514,7 +1514,7 @@ ATIVO, f 32;
 #X obj 404 320 r \$0-audioSpeed;
 #X obj 384 719 t b b;
 #X obj 384 781 t b b;
-#N canvas 498 60 737 703 MODULO_OFFSET 0;
+#N canvas 723 117 737 703 MODULO_OFFSET 0;
 #X obj 371 634 <;
 #X obj 371 597 t f f;
 #X obj 441 597 t f f;
@@ -1636,7 +1636,7 @@ DO ÁUDIO, f 62;
 #X obj 297 1103 *~;
 #N canvas 390 220 649 232 AUDIO_CONFIG_GUI 0;
 #X text 197 68 JANELA DE CONFIGURAÇÃO DE ÁUDIO;
-#N canvas 877 459 210 304 \$0-audioGUI 0;
+#N canvas 885 459 210 304 \$0-audioGUI 1;
 #X obj 2 1 cnv 15 205 300 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 12 11 cnv 15 185 280 empty empty empty 20 12 0 14 -228856 -66577
@@ -1698,7 +1698,7 @@ empty 0 -8 0 10 -262144 -1 -1 2;
 #X obj 31 262 cnv 15 20 15 empty empty BLK_THR 0 8 0 10 -228856 -66577
 0;
 #X obj 12 11 cnv 15 185 20 empty \$0-audioWinBar AUDIO_CONFIG 43 10
-0 14 -24198 -1 0;
+0 14 -258699 -1 0;
 #X restore 46 67 pd \$0-audioGUI;
 #X obj 46 117 r \$0-click_audioGUI;
 #X obj 46 175 s pd-\$0-audioGUI;
@@ -2688,13 +2688,13 @@ DE ACORDO COM CADA AÇÃO, f 48;
 28 6 0 10 -262144 -1 -1 0;
 #X obj 143 110 tgl 12 0 \$0-audio_gui \$0-audio_gui_set AUDIO -33 6
 0 10 -228856 -1 -1 1 1;
-#X obj 161 110 bng 12 250 50 0 \$0-click_audioGUI morto empty 16 6
+#X obj 161 110 bng 12 250 50 0 \$0-click_audioGUI empty empty 16 6
 0 10 -228856 -1 -1;
 #X obj 178 191 tgl 25 0 \$0-loop_gui \$0-loop_gui_set L 8 13 0 18 -62784
 -62784 -1 1 1;
 #X obj 63 191 tgl 25 0 \$0-play_gui \$0-play_gui_set P 8 13 0 18 -42246
 -42246 -262144 0 1;
-#N canvas 371 175 599 304 EXTERNAL_CONTROL 0;
+#N canvas 373 176 599 304 EXTERNAL_CONTROL 0;
 #X text 213 137 FILTRA POR CANAL;
 #X text 174 170 FILTRA POR MÓDULO;
 #X obj 48 234 s \$0-externalControl;
@@ -2709,7 +2709,7 @@ DE ACORDO COM CADA AÇÃO, f 48;
 #X connect 5 0 4 0;
 #X connect 8 0 2 0;
 #X restore 280 30 pd EXTERNAL_CONTROL;
-#N canvas 137 321 586 382 CONTROL_MEMORY 0;
+#N canvas 141 323 586 382 CONTROL_MEMORY 0;
 #N canvas 138 120 990 470 PRESET_MANAGER 0;
 #X obj 42 310 list prepend video;
 #X obj 42 343 list trim;
