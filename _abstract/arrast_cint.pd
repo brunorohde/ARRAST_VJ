@@ -1,11 +1,11 @@
-#N canvas 162 346 553 255 16;
+#N canvas 164 347 553 255 16;
 #X obj 50 30 cnv 15 185 62 empty empty CAMERA 71 42 0 12 -228856 -66577
 0;
 #X obj 52 30 hradio 20 1 0 9 \$0-enableClick \$0-enableClick_set empty
-0 -8 0 10 -262144 -1 -1 2;
+0 -8 0 10 -262144 -1 -1 1;
 #X obj 50 30 cnv 15 185 20 \$0-enable \$0-enable_set empty 20 12 0
-14 -128992 -262144 0;
-#N canvas 146 146 650 582 CAMERA 0;
+14 -24198 -262144 0;
+#N canvas 148 147 650 582 CAMERA 0;
 #X obj 55 528 rectangle 4 3;
 #X obj 55 304 pix_texture;
 #X obj 55 406 translateXYZ 0 0 0;
@@ -13,7 +13,7 @@
 #X obj 55 226 pix_share_read 10 640 480 RGBA;
 #X obj 55 338 rotateXYZ 0 0 0;
 #X obj 433 83 r CH\$1_SELECT;
-#X obj 55 124 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 55 124 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 433 115 == 3;
 #X obj 205 107 list prepend render;
@@ -55,27 +55,27 @@ DE PROPORÇÃO, f 21;
 #X connect 8 0 6 0;
 #X connect 8 1 6 1;
 #X restore 55 260 pd INFO;
-#N canvas 424 442 427 261 TRANSLATE 0;
+#N canvas 104 296 427 261 TRANSLATE 0;
 #X obj 39 36 loadbang;
 #X obj 39 72 f \$1;
 #X obj 39 204 outlet;
 #X obj 39 109 sel 1 2 3 4;
-#X msg 39 146 3;
-#X msg 90 146 1;
-#X msg 141 146 -1;
-#X msg 192 146 -3;
 #X text 158 25 ** TRANSLAÇÃO NO EIXO Y DE ACORDO COM CAMADA, f 23
 ;
+#X msg 39 146 -3;
+#X msg 90 146 -1;
+#X msg 141 146 1;
+#X msg 192 146 3;
 #X connect 0 0 1 0;
 #X connect 1 0 3 0;
-#X connect 3 0 4 0;
-#X connect 3 1 5 0;
-#X connect 3 2 6 0;
-#X connect 3 3 7 0;
-#X connect 4 0 2 0;
+#X connect 3 0 5 0;
+#X connect 3 1 6 0;
+#X connect 3 2 7 0;
+#X connect 3 3 8 0;
 #X connect 5 0 2 0;
 #X connect 6 0 2 0;
 #X connect 7 0 2 0;
+#X connect 8 0 2 0;
 #X restore 173 372 pd TRANSLATE;
 #N canvas 395 273 405 357 RATIO 0;
 #X obj 50 305 outlet;
