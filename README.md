@@ -3,7 +3,7 @@
     [ARRAST_VJ] v.1.1
 
 
-    Pd/GEM VJ/Mapping - arrastvj.org
+    Pure Data/GEM VJ/Mapping - arrastvj.org
 
     by Bruno Rohde - brunorohde.wordpress.com / github.com/brunorohde
 
@@ -11,7 +11,7 @@
 
     Hardware and software minimum requirements:
 
-    - Pd 0.48.1 (Vanilla) or later version
+    - Pure Data 0.48.1 (Vanilla) or later version
 
     - GEM 0.93.3 (Pd external library)
 
