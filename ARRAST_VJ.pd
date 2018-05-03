@@ -2416,9 +2416,9 @@ EXPORT_AUDIO 26 10 0 10 -1 -262144 -1;
 , f 64;
 #X text 42 321 [4corners] - Papatchs Party - yamatierea.org/papatchs/
 ;
-#X text 44 33 [ARRAST_VJ] - Pd/GEM VJ/Mapping;
 #X text 44 128 Copyleft 2015-2018 Bruno Rohde - GPLV3 License - www.gnu.org/licenses/gpl-3.0.html
 ;
+#X text 44 33 [ARRAST_VJ] 1.1 - Pd/GEM VJ/Mapping;
 #X restore 257 147 pd INFO;
 #X text 55 98 [ARRAST_VJ];
 #X text 217 147 ---;
@@ -2428,9 +2428,9 @@ EXPORT_AUDIO 26 10 0 10 -1 -262144 -1;
 #X obj 2 1 cnv 15 267 590 empty empty empty 20 12 0 14 -1 -66577 0
 ;
 #X obj 52 82 hradio 35 1 0 2 \$0-mixClick_gui \$0-mixClick_gui_set
-empty 0 12 0 15 -262144 -1 -1 1;
+empty 0 12 0 15 -262144 -1 -1 0;
 #X obj 149 82 hradio 35 1 0 2 \$0-mapClick_gui \$0-mapClick_gui_set
-empty 0 12 0 15 -262144 -1 -1 1;
+empty 0 12 0 15 -262144 -1 -1 0;
 #X obj 52 82 cnv 15 70 35 \$0-morto \$0-mixColor MIX 13 18 0 25 -260818
 -1 0;
 #X obj 12 139 cnv 15 247 50 empty empty empty 20 12 0 14 -128992 -66577
