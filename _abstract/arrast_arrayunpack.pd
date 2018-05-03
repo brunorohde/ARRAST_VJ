@@ -1,4 +1,4 @@
-#N canvas 426 205 666 558 16;
+#N canvas 199 134 686 568 16;
 #X obj 48 168 list split 1;
 #X obj 48 232 list;
 #X obj 48 264 list split 1;
@@ -11,18 +11,19 @@
 #X obj 69 296 list;
 #X obj 48 134 t l b;
 #X msg 192 434 symbol;
-#X text 44 31 ** RECEBE LISTA GERADA POR [arrast_arraypack] E LISTA
-DOS ARRAYS PARA ONDE MANDAR OS CONTEÚDOS DESEMPACOTADOS;
 #X obj 264 504 outlet ARRAY_SIZE;
-#X text 261 478 TAMANHO DE CADA ARRAY DESEMPACOTADO;
+#X text 261 478 SIZE OF EACH UNPACKAGED ARRAY;
 #X obj 48 336 t b l b;
 #X obj 48 200 t b f f f;
 #X obj 48 370 delay 10;
 #X obj 135 336 / 1000;
-#X connect 0 0 16 0;
+#X text 44 21 ** RECEIVES A LIST PRODUCED BY [arrast_arraypack] AND
+A LIST OF ARRAYS POINTING TO WHERE ALL UNPACKAGED CONTENTS WILL BE
+SENT;
+#X connect 0 0 15 0;
 #X connect 0 1 1 1;
 #X connect 1 0 2 0;
-#X connect 2 0 15 0;
+#X connect 2 0 14 0;
 #X connect 2 1 9 1;
 #X connect 3 0 4 1;
 #X connect 4 0 6 0;
@@ -34,12 +35,12 @@ DOS ARRAYS PARA ONDE MANDAR OS CONTEÚDOS DESEMPACOTADOS;
 #X connect 10 0 0 0;
 #X connect 10 1 11 0;
 #X connect 11 0 8 2;
-#X connect 15 0 17 0;
-#X connect 15 1 8 0;
-#X connect 15 2 4 0;
-#X connect 16 0 1 0;
-#X connect 16 1 2 1;
-#X connect 16 2 18 0;
-#X connect 16 3 13 0;
-#X connect 17 0 9 0;
-#X connect 18 0 17 1;
+#X connect 14 0 16 0;
+#X connect 14 1 8 0;
+#X connect 14 2 4 0;
+#X connect 15 0 1 0;
+#X connect 15 1 2 1;
+#X connect 15 2 17 0;
+#X connect 15 3 12 0;
+#X connect 16 0 9 0;
+#X connect 17 0 16 1;

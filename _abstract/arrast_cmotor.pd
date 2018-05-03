@@ -1,4 +1,4 @@
-#N canvas 74 164 740 352 16;
+#N canvas 261 160 738 361 16;
 #X obj 54 304 outlet;
 #X obj 54 235 pix_share_read 10 640 480 RGBA;
 #X obj 54 64 loadbang;
@@ -6,18 +6,18 @@
 #X obj 54 156 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 54 98 0;
-#X text 161 18 ** RENDERIZA IMAGENS NA JANELA DE SAÍDA;
-#X text 342 65 RECEBE CONTROLES DA 1 INSTÂNCIA;
-#X text 312 98 ROTEIA POR CANAL;
+#X text 342 65 RECEIVE CONTROLS FROM 1st INSTANCE;
+#X text 312 98 ROUTE BY CHANNEL;
 #X obj 208 64 r CAMERA_BUS;
 #X obj 208 98 route C\$1;
 #X obj 208 132 route render;
-#X text 367 236 LÊ FRAMES DO BUFFER COMPARTILHADO;
+#X text 367 236 READ FRAMES FROM SHARED BUFFER;
+#X text 161 18 ** RENDERS IMAGES IN THE OUTPUT WINDOW;
 #X connect 1 0 0 0;
 #X connect 2 0 5 0;
 #X connect 3 0 1 0;
 #X connect 4 0 3 0;
 #X connect 5 0 4 0;
+#X connect 8 0 9 0;
 #X connect 9 0 10 0;
-#X connect 10 0 11 0;
-#X connect 11 0 4 0;
+#X connect 10 0 4 0;

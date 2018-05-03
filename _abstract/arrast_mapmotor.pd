@@ -1,4 +1,4 @@
-#N canvas 35 54 762 709 16;
+#N canvas 208 64 764 805 16;
 #X obj 53 714 pix_texture;
 #X msg 476 228 open \$1;
 #X obj 332 140 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
@@ -43,7 +43,7 @@
 #X obj 53 758 4corners \$1;
 #X obj 466 82 route map\$1;
 #X obj 476 194 symbol;
-#X text 330 43 MÁSCARA;
+#X text 330 43 MASK;
 #X obj 466 48 r MAP_BUS;
 #X obj 53 25 inlet GEMLIST;
 #X obj 53 630 alpha;

@@ -1,37 +1,47 @@
 
 
-    [ARRAST_VJ] v.1.0
+    [ARRAST_VJ] v.1.1
 
 
     Pd/GEM VJ/Mapping - arrastvj.org
 
-    por Bruno Rohde - brunorohde.wordpress.com / github.com/brunorohde
+    by Bruno Rohde - brunorohde.wordpress.com / github.com/brunorohde
 
 
 
-    Requisitos mínimos:
+    Hardware and software minimum requirements:
 
-    - Pd 0.47.1 (Vanilla) ou posterior
+    - Pd 0.48.1 (Vanilla) or later version
 
-    - GEM 0.93.3 - biblioteca externa - download via Deken
+    - GEM 0.93.3 (Pd external library)
 
-    - Processador dual core 1GHz (melhor 2GHz)
+    - Dual core processor 1GHz (2 GHz better)
 
-    - Memória RAM 1GB (melhor 2GB)
+    - 1 GB RAM (2 GB better)
+
+    - Current [ARRAST_VJ] version
+    
+    
+    Version history:
+    
+    - [ARRAST_VJ] v.1.1 (2018) - Minor bug fixes
+        
+    - [ARRAST_VJ] v.1.0 (2017) - Release of version 1.0
+    
+    - [ARRAST_VJ] v.0.1 / 0.2 / 0.3 (2015) - Start of the project and bug fixes
 
 
+    License:
 
-    Licença:
+    - Copyleft 2015-2018 Bruno Rohde - GPLV3 license - http://www.gnu.org/licenses/gpl.txt
 
-    - Copyleft 2015-2017 Bruno Rohde - licença GPLV3 - http://www.gnu.org/licenses/gpl.txt
 
-    Este programa é um software livre; você pode redistribuí-lo e/ou
-    modificá-lo dentro dos termos da Licença Pública Geral GNU como
-    publicada pela Fundação do Software Livre (FSF); na versão 3 da
-    Licença, ou qualquer versão posterior.
+    This program is free software; you can either redistribute or
+    edit it under the GNU General Public License terms as published
+    by Free Software Foundation (FSF); in version 3 of
+    the License or any further version.
 
-    Este programa é distribuído na esperança de que possa ser útil,
-    mas SEM NENHUMA GARANTIA, inclusive de ADEQUAÇÃO
-    a qualquer MERCADO ou APLICAÇÃO EM PARTICULAR.
-    Veja a Licença Pública Geral GNU para maiores detalhes.
-
+    This program is distributed in the hope of being useful
+    but WITH NO GUARANTEE, including of RELEVANCE
+    to any MARKET or PRIVATE USAGE.
+    Check GNU General Public License for further details.

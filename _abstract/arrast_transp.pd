@@ -1,4 +1,4 @@
-#N canvas 179 56 584 590 16;
+#N canvas 233 145 589 582 16;
 #X obj 50 200 cnv 15 150 65 empty empty empty 20 12 0 14 -191407 -66577
 0;
 #X obj 52 132 pix_rgba;
@@ -32,7 +32,7 @@
 #X obj 194 289 pack 0 50;
 #X obj 318 289 pack 0 50;
 #X obj 442 289 pack 0 50;
-#N canvas 585 233 468 436 CONDITION 0;
+#N canvas 585 233 472 436 CONDITION 0;
 #X obj 52 82 inlet;
 #X obj 52 378 outlet;
 #X obj 116 82 inlet;
@@ -52,8 +52,8 @@
 #X obj 52 300 +;
 #X obj 52 266 f;
 #X obj 52 334 != 0;
-#X text 50 19 ** SE TODOS OS CONTROLES ESTIVEREM NA POSIÇÃO INICIAL
-O ALPHA É DESLIGADO, f 37;
+#X text 50 19 ** IF ALL CONTROLS ARE IN THE INITIAL POSITION ALPHA
+IS TURNED OFF, f 37;
 #X connect 0 0 8 0;
 #X connect 2 0 9 0;
 #X connect 3 0 7 0;
@@ -77,7 +77,7 @@ O ALPHA É DESLIGADO, f 37;
 #X connect 18 0 1 0;
 #X restore 155 358 pd CONDITION;
 #X obj 52 519 outlet GEMLIST;
-#X text 87 18 ** UNIDADE DE CONTROLE DE TRANSPARÊNCIA;
+#X text 87 18 ** TRANSPARENCY CONTROL UNIT;
 #X connect 1 0 2 0;
 #X connect 2 0 10 0;
 #X connect 3 0 23 0;

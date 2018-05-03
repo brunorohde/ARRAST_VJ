@@ -1,6 +1,5 @@
-#N canvas 138 176 1028 389 16;
-#X text 260 60 RECEBE CONTROLES EXTERNOS;
-#N canvas 44 245 1317 418 BRAIN 0;
+#N canvas 173 153 893 386 16;
+#N canvas 21 107 1275 419 BRAIN 0;
 #X obj 910 232 del \$3;
 #X obj 967 167 f \$3;
 #X obj 910 133 t b b;
@@ -10,32 +9,30 @@
 #X obj 687 98 r \$1-slotFilePreset;
 #X obj 910 96 r \$1-slotFlush;
 #X obj 910 362 s \$1-slotList;
-#X text 49 69 ATUALIZA SLOT ATUAL COM VALORES DA MEMÓRIA, f 23;
+#X text 49 69 UPDATE CURRENT SLOT WITH MEMORY VALUES, f 23;
 #X obj 51 148 sel \$3;
 #X obj 51 178 s \$0-memo-load;
 #X obj 51 118 r \$1-activeSlot;
-#X text 685 69 ENTRADA DE PRESET;
+#X text 685 69 PRESET INPUT;
 #X obj 910 277 array get \$0-memo;
 #X obj 910 319 list prepend \$3;
 #X obj 687 207 array set \$0-memo;
-#X text 1023 164 ATRASO PARA ORDENAR ESCRITA POR SLOT, f 15;
-#X text 1093 278 LÊ MEMÓRIA;
-#X text 1054 362 ENVIA PARA GERENCIADOR;
-#X text 707 181 ESCREVE MEMÓRIA;
-#X text 295 340 ARRAY DE MEMÓRIA LOCAL - CADA SLOT 10 PARÂMETROS
-;
+#X text 1023 164 DELAY TO SORT WRITING BY SLOT, f 15;
+#X text 1093 278 READ MEMORY;
+#X text 1054 362 SEND TO MANAGER;
+#X text 707 181 WRITE ON MEMORY;
+#X text 295 340 LOCAL MEMORY ARRAY - 10 PARAMETERS FOR EACH SLOT;
 #X obj 51 339 array define \$0-memo 10;
-#X text 316 20 ** GERENCIA MEMÓRIA DE CADA SLOT \, COM PARÂMETROS
-DE TRANSFORMAÇÃO, f 65;
+#X text 316 20 ** MANAGE MEMORY OF EACH SLOT \, WITH TRANSFORM PARAMETERS
+, f 65;
 #X obj 320 260 s \$0-memo-reset;
 #X obj 320 196 sel;
 #X obj 347 166 f \$3;
 #X obj 347 137 loadbang;
-#X text 318 69 REINICIA PARÂMETROS DO SLOT ATUAL;
-#X text 475 97 RECEBE COMANDO DA UNIDADE DE TRANSFORMAÇÕES, f 14
-;
+#X text 318 69 RESTART PARAMETERS IN CURRENT SLOT;
+#X text 475 97 RECEIVE COMMAND FROM TRANSFORM UNIT, f 14;
 #X obj 320 225 t b;
-#X text 908 67 SAÍDA PARA GERENCIADOR DE PRESETS;
+#X text 908 67 OUTPUT TO THE MANAGER OF PRESETS;
 #X obj 320 100 r \$1-resetSlot;
 #X connect 0 0 14 0;
 #X connect 1 0 3 0;
@@ -55,7 +52,7 @@ DE TRANSFORMAÇÃO, f 65;
 #X connect 30 0 24 0;
 #X connect 32 0 25 0;
 #X restore 564 80 pd BRAIN;
-#X text 660 80 GERENCIA MEMÓRIA E AÇÕES DO SLOT;
+#X text 660 80 MANAGE MEMORY AND ACTIONS OF THE SLOT, f 19;
 #X obj 44 267 arrast_param \$1 black \$0-memo 2 0 \$3;
 #X obj 44 207 arrast_param \$1 transp \$0-memo 0 1 \$3;
 #X obj 44 237 arrast_param \$1 white \$0-memo 1 1 \$3;
@@ -68,17 +65,18 @@ DE TRANSFORMAÇÃO, f 65;
 #X obj 44 148 route transp white black fadeIn fadeOut flipH flipV scale
 posX posY;
 #X obj 464 267 arrast_param \$1 scale \$0-memo 7 1 \$3;
-#X text 224 19 ** GERENCIA ENTRADA DE PARÂMETROS E MEMÓRIA DE CADA
-SLOT;
 #X obj 44 60 r \$1-externalControl;
-#X connect 12 0 4 0;
-#X connect 12 1 5 0;
-#X connect 12 2 3 0;
-#X connect 12 3 6 0;
-#X connect 12 4 7 0;
-#X connect 12 5 8 0;
-#X connect 12 6 9 0;
-#X connect 12 7 13 0;
-#X connect 12 8 10 0;
-#X connect 12 9 11 0;
-#X connect 15 0 12 0;
+#X text 183 19 ** MANAGES PARAMETERS INPUT AND MEMORY OF EACH SLOT
+;
+#X text 260 60 RECEIVE EXTERNAL CONTROL;
+#X connect 11 0 3 0;
+#X connect 11 1 4 0;
+#X connect 11 2 2 0;
+#X connect 11 3 5 0;
+#X connect 11 4 6 0;
+#X connect 11 5 7 0;
+#X connect 11 6 8 0;
+#X connect 11 7 12 0;
+#X connect 11 8 9 0;
+#X connect 11 9 10 0;
+#X connect 13 0 11 0;

@@ -1,4 +1,4 @@
-#N canvas 76 161 1154 595 16;
+#N canvas 41 81 1116 586 16;
 #X obj 687 477 s \$3;
 #X obj 687 413 t b f;
 #X obj 687 445 pack \$4 0;
@@ -16,22 +16,17 @@
 #X obj 687 199 t b;
 #X obj 687 231 f \$4;
 #X obj 687 263 array get \$3 \$4 1;
-#X text 370 197 RECEBE VALOR DO GUI;
-#X text 685 138 CARREGA VALOR DO ARRAY;
-#X text 166 477 ENVIA P/ PATCH;
-#X text 504 477 ENVIA P/GUI;
-#X text 794 445 INDEX / VALOR;
-#X text 747 478 ENVIA P/ ARRAY DE MEMÓRIA;
-#X text 441 24 ** GERENCIA PARÂMETROS NO PATCH \, NA INTERFACE (GUI)
-E NUM ARRAY DE MEMÓRIA;
+#X text 370 197 RECEIVE GUI VALUE;
+#X text 685 138 LOAD ARRAY VALUE;
+#X text 166 477 SEND TO PATCH;
+#X text 504 477 SEND TO GUI;
+#X text 794 445 INDEX / VALUE;
+#X text 747 478 SEND TO MEMORY ARRAY;
 #X obj 243 263 t b;
 #X obj 243 234 r \$1-\$2_bang;
-#X text 378 235 BANG PARA REENVIAR VALOR;
-#X text 781 347 INICIALIZA MEMÓRIA COM 5 ARGUMENTO;
-#X text 441 74 ARGUMENTOS: ID GERAL (\$0) \, NOME DO PARÂMETRO \,
-ARRAY DE MEMÓRIA \, INDEX NO ARRAY \, VALOR DE INICIALIZAÇÃO \,
-SLOT DE MEMÓRIA, f 63;
-#N canvas 116 295 655 310 GATE 0;
+#X text 378 235 BANG TO SEND BACK VALUE;
+#X text 781 347 START MEMORY WITH 5 ARGUMENTS;
+#N canvas 229 215 641 308 GATE 0;
 #X obj 46 30 inlet;
 #X obj 46 197 spigot;
 #X obj 46 246 outlet;
@@ -43,9 +38,9 @@ SLOT DE MEMÓRIA, f 63;
 #X msg 371 155 1;
 #X obj 247 197 spigot;
 #X obj 103 150 == 0;
-#X text 101 89 FILTRO POR SLOT;
+#X text 101 89 FILTER BY SLOT;
 #X obj 304 68 f \$6;
-#X text 388 94 6 ARGUMENTO > 8 = IGNORA FILTRO POR SLOT, f 22;
+#X text 388 94 6 ARGUMENT > 8 = IGNORE FILTER BY SLOT, f 22;
 #X connect 0 0 1 0;
 #X connect 0 0 9 0;
 #X connect 1 0 2 0;
@@ -61,14 +56,19 @@ SLOT DE MEMÓRIA, f 63;
 #X connect 10 0 1 1;
 #X connect 12 0 5 0;
 #X restore 50 337 pd GATE;
-#X text 135 338 FILTRO PELO SLOT ATIVO;
+#X text 135 338 FILTER BY ACTIVE SLOT;
 #X obj 815 179 r \$3-reset;
 #X obj 815 207 t b b;
-#X text 928 180 REINICIA VALOR;
+#X text 928 180 RESTART VALUE;
 #X obj 194 28 inlet VALUE_SET;
 #X obj 194 62 t f f f;
-#X text 191 92 ENTRA VALOR PARA MEMÓRIA E SAÍDA LOCAL \, SEM ENVIAR
-PARA PATCH E INTERFACE, f 22;
+#X text 191 92 ENTER VALUE FOR MEMORY AND LOCAL OUTPUT \, WITHOUT SENDING
+TO PATCH AND INTERFACE, f 22;
+#X text 441 24 ** MANAGES PARAMETERS IN PATCH \, IN INTERFACE (GUI)
+AND IN A MEMORY ARRAY;
+#X text 441 74 ARGUMENTS: GENERAL ID (\$0) \, PARAMETER NAME \, MEMORY
+ARRAY \, INDEX IN ARRAY \, INITIALIZING VALUE \, MEMORY SLOT, f 63
+;
 #X connect 1 0 2 0;
 #X connect 1 1 2 1;
 #X connect 2 0 0 0;
@@ -80,19 +80,19 @@ PARA PATCH E INTERFACE, f 22;
 #X connect 8 1 4 0;
 #X connect 8 2 3 0;
 #X connect 8 3 1 0;
-#X connect 10 0 29 0;
+#X connect 10 0 27 0;
 #X connect 12 0 10 0;
 #X connect 13 0 14 0;
 #X connect 14 0 15 0;
 #X connect 15 0 16 0;
 #X connect 16 0 10 0;
-#X connect 24 0 10 0;
-#X connect 25 0 24 0;
-#X connect 29 0 8 0;
-#X connect 31 0 32 0;
-#X connect 32 0 15 0;
-#X connect 32 1 6 0;
-#X connect 34 0 35 0;
-#X connect 35 0 10 1;
-#X connect 35 1 9 0;
-#X connect 35 2 1 0;
+#X connect 23 0 10 0;
+#X connect 24 0 23 0;
+#X connect 27 0 8 0;
+#X connect 29 0 30 0;
+#X connect 30 0 15 0;
+#X connect 30 1 6 0;
+#X connect 32 0 33 0;
+#X connect 33 0 10 1;
+#X connect 33 1 9 0;
+#X connect 33 2 1 0;

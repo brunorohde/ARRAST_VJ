@@ -1,4 +1,4 @@
-#N canvas 427 84 670 456 16;
+#N canvas 212 190 654 464 16;
 #X obj 52 349 pix_film;
 #X msg 75 305 open \$1 \, auto 0;
 #X obj 75 237 symbol;
@@ -8,9 +8,7 @@
 #X obj 52 158 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 52 100 0;
-#X text 140 18 ** RENDERIZA VÍDEOS NA JANELA DE SAÍDA;
-#X text 251 272 FILTRA REPETIÇÕES;
-#N canvas 217 321 351 280 CHANGE_SYMBOL 0;
+#N canvas 0 79 1920 976 CHANGE_SYMBOL 0;
 #X obj 49 117 t s s;
 #X obj 49 154 sel s;
 #X obj 49 70 inlet;
@@ -29,19 +27,21 @@
 #X restore 75 271 pd CHANGE_SYMBOL;
 #X obj 52 403 outlet GEMLIST;
 #X obj 186 66 r VIDEO_BUS;
-#X text 310 66 RECEBE CONTROLES DA 1 INSTÂNCIA;
-#X text 290 100 ROTEIA POR CANAL;
 #X obj 186 134 route render file cursor;
-#X connect 0 0 11 0;
+#X text 126 18 ** RENDERS VIDEOS IN THE OUTPUT WINDOW;
+#X text 310 66 RECEIVE 1st INSTANCE CONTROLS;
+#X text 290 100 ROUTE BY CHANNEL;
+#X text 251 272 FILTER REPETITIONS;
+#X connect 0 0 9 0;
 #X connect 1 0 0 0;
-#X connect 2 0 10 0;
+#X connect 2 0 8 0;
 #X connect 3 0 0 0;
-#X connect 4 0 15 0;
+#X connect 4 0 11 0;
 #X connect 5 0 7 0;
 #X connect 6 0 3 0;
 #X connect 7 0 6 0;
-#X connect 10 0 1 0;
-#X connect 12 0 4 0;
-#X connect 15 0 6 0;
-#X connect 15 1 2 0;
-#X connect 15 2 0 1;
+#X connect 8 0 1 0;
+#X connect 10 0 4 0;
+#X connect 11 0 6 0;
+#X connect 11 1 2 0;
+#X connect 11 2 0 1;

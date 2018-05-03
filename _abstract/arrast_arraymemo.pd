@@ -1,4 +1,4 @@
-#N canvas 11 77 1334 506 16;
+#N canvas 76 103 1350 517 16;
 #X obj 478 332 t l b;
 #X obj 66 403 text define \$0-memory;
 #X obj 217 347 text set \$0-memory;
@@ -25,12 +25,8 @@
 #X obj 970 244 s \$0-read;
 #X obj 478 412 arrast_arrayunpack;
 #X obj 170 284 arrast_arraypack;
-#X text 42 30 ** RECEBE UMA LISTA DE ARRAYS E SALVA SEUS CONTEÚDOS
-EM ARQUIVO DE TEXTO \, E TAMBÉM CARREGA DADOS NOS ARRAYS A PARTIR
-DESSES ARQUIVOS - UTILIZA [arrast_arraypack] E [arrast_arrayunpack]
-, f 66;
 #X obj 478 451 outlet ARRAY_SIZE;
-#X text 661 452 SAÍDA DO TAMANHO DE CADA ARRAY DESEMPACOTADO;
+#X text 661 452 OUTPUT OF EACH UNPACKAGED ARRAY SIZE;
 #X obj 170 128 r \$0-writeFile;
 #X obj 207 220 r \$0-arrayList;
 #X obj 588 128 r \$0-readFile;
@@ -43,9 +39,12 @@ DESSES ARQUIVOS - UTILIZA [arrast_arraypack] E [arrast_arrayunpack]
 #X obj 40 160 t b;
 #X obj 40 228 t b s;
 #X obj 170 160 t b s;
+#X text 42 30 ** RECEIVES AN ARRAY LIST AND SAVES ITS CONTENTS IN A
+TEXT FILE. ALSO LOADS ARRAYS USING DATA FROM THESE FILES - USE [arrast_arraypack]
+AND [arrast_arrayunpack], f 64;
 #X connect 0 0 24 0;
 #X connect 0 1 10 0;
-#X connect 3 0 39 0;
+#X connect 3 0 38 0;
 #X connect 4 0 1 0;
 #X connect 5 0 7 0;
 #X connect 6 0 1 0;
@@ -59,26 +58,26 @@ DESSES ARQUIVOS - UTILIZA [arrast_arraypack] E [arrast_arrayunpack]
 #X connect 13 0 19 0;
 #X connect 13 1 21 0;
 #X connect 15 0 5 0;
-#X connect 16 0 38 0;
+#X connect 16 0 37 0;
 #X connect 17 0 18 0;
-#X connect 18 0 32 0;
+#X connect 18 0 31 0;
 #X connect 19 0 14 0;
 #X connect 19 1 20 0;
-#X connect 20 0 34 0;
+#X connect 20 0 33 0;
 #X connect 21 0 23 0;
 #X connect 21 1 22 0;
-#X connect 22 0 33 0;
-#X connect 24 0 27 0;
-#X connect 25 0 37 0;
-#X connect 29 0 40 0;
-#X connect 30 0 11 1;
-#X connect 31 0 7 0;
-#X connect 35 0 10 1;
-#X connect 36 0 4 0;
-#X connect 37 0 36 0;
-#X connect 37 1 2 0;
-#X connect 38 0 3 0;
+#X connect 22 0 32 0;
+#X connect 24 0 26 0;
+#X connect 25 0 36 0;
+#X connect 28 0 39 0;
+#X connect 29 0 11 1;
+#X connect 30 0 7 0;
+#X connect 34 0 10 1;
+#X connect 35 0 4 0;
+#X connect 36 0 35 0;
+#X connect 36 1 2 0;
+#X connect 37 0 3 0;
+#X connect 38 0 11 0;
+#X connect 38 1 35 1;
 #X connect 39 0 11 0;
-#X connect 39 1 36 1;
-#X connect 40 0 11 0;
-#X connect 40 1 36 1;
+#X connect 39 1 35 1;
