@@ -3,7 +3,7 @@
     [ARRAST_VJ] v.1.1
 
 
-    Pure Data/GEM VJ/Mapping - arrastvj.org
+    Pure Data/GEM VJ/Mapping Tool
 
     by Bruno Rohde - brunorohde.wordpress.com / github.com/brunorohde
 
@@ -13,7 +13,7 @@
 
     - Pure Data 0.48.1 (Vanilla) or later version
 
-    - GEM 0.93.3 (Pd external library)
+    - GEM 0.93.3 (Pd external library) or later version
 
     - Dual core processor 1GHz (2 GHz better)
 
@@ -33,7 +33,7 @@
 
     License:
 
-    - Copyleft 2015-2018 Bruno Rohde - GPLV3 license - http://www.gnu.org/licenses/gpl.txt
+    - Copyleft 2015-2021 Bruno Rohde - GPLV3 license - http://www.gnu.org/licenses/gpl.txt
 
 
     This program is free software; you can either redistribute or
