@@ -1,20 +1,20 @@
 #N canvas 252 227 519 220 16;
-#X obj 50 30 cnv 15 185 80 empty empty empty 20 12 0 14 -228856 -66577
+#X obj 50 30 cnv 15 185 80 empty empty empty 20 12 0 14 #dcdcdc #404040
 0;
 #X obj 52 30 hradio 20 1 0 9 \$0-enableClick \$0-enableClick_set empty
-0 -8 0 10 -262144 -1 -1 3;
+0 -8 0 10 #fcfcfc #000000 #000000 0;
 #X obj 50 30 cnv 15 185 20 \$0-enable \$0-enable_set empty 20 12 0
-14 -128992 -262144 0;
+14 #7c7c7c #fcfcfc 0;
 #X obj 61 61 hradio 18 1 0 9 \$0-openBrowser \$0-openBrowser_in empty
-0 -8 0 10 -262144 -1 -1 2;
+0 -8 0 10 #fcfcfc #000000 #000000 0;
 #X obj 60 61 cnv 15 165 18 \$0-morto \$0-fileDisplay OPEN_IMAGE 5 9
-0 12 -355 -262144 0;
+0 12 #001488 #fcfcfc 0;
 #N canvas 147 214 780 506 ENABLE_BUTTON 0;
 #X obj 50 97 t b;
 #X obj 50 188 f;
 #X obj 90 188 + 1;
 #X obj 50 216 % 2;
-#X floatatom 50 250 5 0 0 0 - - -, f 5;
+#X floatatom 50 250 5 0 0 0 - - - 0;
 #X obj 118 132 loadbang;
 #X obj 50 284 t f f;
 #X obj 207 308 sel 1;
@@ -89,8 +89,8 @@
 #X obj 48 464 scale 0.3;
 #X obj 360 80 r CH\$1_SELECT;
 #X obj 360 114 == 2;
-#X obj 48 114 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
-1;
+#X obj 48 114 tgl 25 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 668 356 list prepend file;
 #X obj 454 356 list prepend render;
 #X obj 192 298 loadbang;
@@ -617,52 +617,56 @@
 #X msg 500 53 color \$1;
 #X obj 500 21 r \$0-bgColor;
 #X obj 105 53 bng 15 250 50 0 \$0-clickSlot1 \$0-clickSlot1_set empty
-17 7 0 10 -262144 -1 -1;
+17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 125 53 bng 15 250 50 0 \$0-clickSlot2 \$0-clickSlot2_set empty
-17 7 0 10 -262144 -1 -1;
+17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 145 53 bng 15 250 50 0 \$0-clickSlot3 \$0-clickSlot3_set empty
-17 7 0 10 -262144 -1 -1;
+17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 165 53 bng 15 250 50 0 \$0-clickSlot4 \$0-clickSlot4_set empty
-17 7 0 10 -262144 -1 -1;
+17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 185 53 bng 15 250 50 0 \$0-clickSlot5 \$0-clickSlot5_set empty
-17 7 0 10 -262144 -1 -1;
+17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 205 53 bng 15 250 50 0 \$0-clickSlot6 \$0-clickSlot6_set empty
-17 7 0 10 -262144 -1 -1;
+17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 225 53 bng 15 250 50 0 \$0-clickSlot7 \$0-clickSlot7_set empty
-17 7 0 10 -262144 -1 -1;
+17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 245 53 bng 15 250 50 0 \$0-clickSlot8 \$0-clickSlot8_set empty
-17 7 0 10 -262144 -1 -1;
-#X obj 100 50 cnv 15 165 21 empty \$0-slotsBG empty 20 12 0 14 -355
--262144 0;
-#X obj 105 53 cnv 15 15 15 empty \$0-colorSlot1 1 4 8 0 12 -24198 -1
-0;
-#X obj 125 53 cnv 15 15 15 empty \$0-colorSlot2 2 4 8 0 12 -262144
--1 0;
-#X obj 145 53 cnv 15 15 15 empty \$0-colorSlot3 3 4 8 0 12 -262144
--1 0;
-#X obj 165 53 cnv 15 15 15 empty \$0-colorSlot4 4 4 8 0 12 -262144
--1 0;
-#X obj 185 53 cnv 15 15 15 empty \$0-colorSlot5 5 4 8 0 12 -262144
--1 0;
-#X obj 205 53 cnv 15 15 15 empty \$0-colorSlot6 6 4 8 0 12 -262144
--1 0;
-#X obj 225 53 cnv 15 15 15 empty \$0-colorSlot7 7 4 8 0 12 -262144
--1 0;
-#X obj 245 53 cnv 15 15 15 empty \$0-colorSlot8 8 4 8 0 12 -262144
--1 0;
-#N canvas 106 189 411 304 BROWSE_FILE 0;
-#X obj 44 121 t b;
-#X obj 44 187 openpanel;
-#X obj 44 234 s \$0-slotFileIn;
-#X obj 44 91 r \$0-openBrowser;
-#X text 210 234 SEND TO SLOTS;
-#X obj 44 155 symbol Images/;
+17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 100 50 cnv 15 165 21 empty \$0-slotsBG empty 20 12 0 14 #001488
+#fcfcfc 0;
+#X obj 105 53 cnv 15 15 15 empty \$0-colorSlot1 1 4 8 0 12 #14e814
+#000000 0;
+#X obj 125 53 cnv 15 15 15 empty \$0-colorSlot2 2 4 8 0 12 #fcfcfc
+#000000 0;
+#X obj 145 53 cnv 15 15 15 empty \$0-colorSlot3 3 4 8 0 12 #fcfcfc
+#000000 0;
+#X obj 165 53 cnv 15 15 15 empty \$0-colorSlot4 4 4 8 0 12 #fcfcfc
+#000000 0;
+#X obj 185 53 cnv 15 15 15 empty \$0-colorSlot5 5 4 8 0 12 #fcfcfc
+#000000 0;
+#X obj 205 53 cnv 15 15 15 empty \$0-colorSlot6 6 4 8 0 12 #fcfcfc
+#000000 0;
+#X obj 225 53 cnv 15 15 15 empty \$0-colorSlot7 7 4 8 0 12 #fcfcfc
+#000000 0;
+#X obj 245 53 cnv 15 15 15 empty \$0-colorSlot8 8 4 8 0 12 #fcfcfc
+#000000 0;
+#N canvas 106 189 411 349 BROWSE_FILE 0;
+#X text 210 274 SEND TO SLOTS;
 #X text 50 21 ** RECALLS WINDOW FOR FILE OPENING FROM INTERFACE, f
 30;
-#X connect 0 0 5 0;
-#X connect 1 0 2 0;
-#X connect 3 0 0 0;
-#X connect 5 0 1 0;
+#X obj 44 116 t b;
+#X obj 44 227 openpanel;
+#X obj 44 274 s \$0-slotFileIn;
+#X obj 44 91 r \$0-openBrowser;
+#X obj 44 166 pdcontrol;
+#X msg 44 141 dir;
+#X obj 44 191 makefilename %s/../Images;
+#X connect 2 0 7 0;
+#X connect 3 0 4 0;
+#X connect 5 0 2 0;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X connect 8 0 3 0;
 #X restore 304 53 pd BROWSE_FILE;
 #N canvas 218 122 663 329 FILE_DISPLAY 0;
 #X msg 221 226 label \$1;

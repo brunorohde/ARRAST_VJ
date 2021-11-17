@@ -1,6 +1,6 @@
-#N canvas 68 203 271 593 16;
+#N canvas 48 98 271 593 16;
 #X declare -path _abstract -lib Gem;
-#N canvas 64 84 427 649 INIT 0;
+#N canvas 64 84 427 689 INIT 0;
 #X obj 302 20 arrast_cpu;
 #N canvas 19 138 1351 527 MODE_SELECTOR 0;
 #X msg 438 216 0;
@@ -247,88 +247,90 @@ IN GEM OUTPUT WINDOW AND SEND TO INTERFACE, f 42;
 #X connect 31 3 7 2;
 #X restore 60 215 pd RUN_MOTOR;
 #N canvas 431 215 507 303 MAP_GUI 0;
-#X obj 1 4 cnv 15 505 297 empty empty empty 20 12 0 14 -1 -66577 0
-;
-#X obj 22 14 hradio 20 1 0 5 \$0-mapClick1_gui \$0-mapClick1_gui_set
-empty 0 0 0 15 -262144 -1 -1 3;
-#X obj 143 14 hradio 20 1 0 5 \$0-mapClick2_gui \$0-mapClick2_gui_set
-empty 0 -8 0 10 -262144 -1 -1 1;
-#X obj 264 14 hradio 20 1 0 5 \$0-mapClick3_gui \$0-mapClick3_gui_set
-empty 0 -8 0 10 -262144 -1 -1 3;
-#X obj 385 14 hradio 20 1 0 5 \$0-mapClick4_gui \$0-mapClick4_gui_set
-empty 0 -8 0 10 -262144 -1 -1 1;
-#X obj 11 35 cnv 15 485 183 empty \$0-mapBgColor empty 20 12 0 14 -258699
--262144 0;
-#X obj 72 180 hradio 30 1 0 8 \$0-maskOpen_gui \$0-maskOpen_gui_set
-empty 0 -8 0 10 -262144 -1 -1 2;
-#X obj 31 180 tgl 30 0 \$0-maskState_gui \$0-maskState_gui_set MASK
-3 -8 0 10 -1 -262144 -1 0 1;
-#X obj 21 45 cnv 15 465 112 empty empty empty 20 12 0 14 -228856 -262144
+#X obj 1 4 cnv 15 505 297 empty empty empty 20 12 0 14 #000000 #404040
 0;
-#X floatatom 44 55 8 0 0 0 X #0-tlx_gui_set #0-tlx_gui, f 8;
-#X floatatom 144 55 8 0 0 0 Y #0-tly_gui_set #0-tly_gui, f 8;
-#X floatatom 44 125 8 0 0 0 X #0-blx_gui_set #0-blx_gui, f 8;
-#X floatatom 144 125 8 0 0 0 Y #0-bly_gui_set #0-bly_gui, f 8;
-#X floatatom 294 55 8 0 0 0 X #0-trx_gui_set #0-trx_gui, f 8;
-#X floatatom 394 55 8 0 0 0 Y #0-try_gui_set #0-try_gui, f 8;
-#X floatatom 294 125 8 0 0 0 X #0-brx_gui_set #0-brx_gui, f 8;
-#X floatatom 394 125 8 0 0 0 Y #0-bry_gui_set #0-bry_gui, f 8;
+#X obj 22 14 hradio 20 1 0 5 \$0-mapClick1_gui \$0-mapClick1_gui_set
+empty 0 0 0 15 #fcfcfc #000000 #000000 0;
+#X obj 143 14 hradio 20 1 0 5 \$0-mapClick2_gui \$0-mapClick2_gui_set
+empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
+#X obj 264 14 hradio 20 1 0 5 \$0-mapClick3_gui \$0-mapClick3_gui_set
+empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
+#X obj 385 14 hradio 20 1 0 5 \$0-mapClick4_gui \$0-mapClick4_gui_set
+empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
+#X obj 11 35 cnv 15 485 183 empty \$0-mapBgColor empty 20 12 0 14 #fc2828
+#fcfcfc 0;
+#X obj 72 180 hradio 30 1 0 8 \$0-maskOpen_gui \$0-maskOpen_gui_set
+empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
+#X obj 31 180 tgl 30 0 \$0-maskState_gui \$0-maskState_gui_set MASK
+3 -8 0 10 #000000 #fcfcfc #000000 0 1;
+#X obj 21 45 cnv 15 465 112 empty empty empty 20 12 0 14 #dcdcdc #fcfcfc
+0;
+#X floatatom 44 55 8 0 0 0 X #0-tlx_gui_set #0-tlx_gui 0;
+#X floatatom 144 55 8 0 0 0 Y #0-tly_gui_set #0-tly_gui 0;
+#X floatatom 44 125 8 0 0 0 X #0-blx_gui_set #0-blx_gui 0;
+#X floatatom 144 125 8 0 0 0 Y #0-bly_gui_set #0-bly_gui 0;
+#X floatatom 294 55 8 0 0 0 X #0-trx_gui_set #0-trx_gui 0;
+#X floatatom 394 55 8 0 0 0 Y #0-try_gui_set #0-try_gui 0;
+#X floatatom 294 125 8 0 0 0 X #0-brx_gui_set #0-brx_gui 0;
+#X floatatom 394 125 8 0 0 0 Y #0-bry_gui_set #0-bry_gui 0;
 #X obj 236 84 tgl 35 0 \$0-mapEdit_gui \$0-mapEdit_gui_set MANUAL 0
--8 0 10 -1 -262144 -1 0 1;
+-8 0 10 #000000 #fcfcfc #000000 0 1;
 #X obj 344 180 bng 30 250 50 0 \$0-mapReset_gui \$0-mapReset_gui_set
-RESET 1 -8 0 10 -1 -262144 -1;
+RESET 1 -8 0 10 #000000 #fcfcfc #000000;
 #X obj 384 180 bng 30 250 50 0 \$0-mapFull_gui \$0-mapFull_gui_set
-FULL 4 -8 0 10 -1 -262144 -1;
+FULL 4 -8 0 10 #000000 #fcfcfc #000000;
 #X obj 72 180 cnv 15 240 30 empty \$0-maskDisplay OPEN_MASK 10 15 0
-14 -1 -262144 0;
+14 #000000 #fcfcfc 0;
 #X obj 446 180 bng 30 250 50 0 \$0-mapMaster_gui \$0-mapMaster_gui_set
-MASTER -2 -8 0 10 -1 -262144 -1;
+MASTER -2 -8 0 10 #000000 #fcfcfc #000000;
 #X obj 22 14 cnv 15 100 20 empty \$0-colorChannel1 empty 18 18 0 16
--258699 -1 0;
-#X obj 143 14 cnv 15 100 20 empty \$0-m2_color empty 18 18 0 16 -241291
--1 0;
-#X obj 264 14 cnv 15 100 20 empty \$0-m3_color empty 18 18 0 16 -250685
--1 0;
-#X obj 385 14 cnv 15 100 20 empty \$0-m4_color empty 18 18 0 16 -24198
--1 0;
-#X obj 10 229 cnv 15 485 62 empty empty empty 20 12 0 14 -128992 -262144
+#fc2828 #000000 0;
+#X obj 143 14 cnv 15 100 20 empty \$0-m2_color empty 18 18 0 16 #e8e828
+#000000 0;
+#X obj 264 14 cnv 15 100 20 empty \$0-m3_color empty 18 18 0 16 #f430f0
+#000000 0;
+#X obj 385 14 cnv 15 100 20 empty \$0-m4_color empty 18 18 0 16 #14e814
+#000000 0;
+#X obj 10 229 cnv 15 485 62 empty empty empty 20 12 0 14 #7c7c7c #fcfcfc
 0;
 #X obj 156 251 hradio 30 1 0 10 \$0-mapPresetOpen_gui \$0-mapPresetOpen_gui_set
-OPEN_PRESET 0 -8 0 10 -262144 -1 -1 2;
+OPEN_PRESET 0 -8 0 10 #fcfcfc #000000 #000000 0;
 #X obj 156 251 cnv 15 300 30 empty \$0-mapPresetDisplay OPEN_PRESET
-10 15 0 14 -1 -262144 0;
+10 15 0 14 #000000 #fcfcfc 0;
 #X obj 51 251 bng 30 250 50 0 \$0-mapPresetSaveAs_gui \$0-mapPresetSaveAs_gui_set
-SAVE_AS -5 -8 0 10 -1 -262144 -1;
+SAVE_AS -5 -8 0 10 #000000 #fcfcfc #000000;
 #X obj 101 251 bng 30 250 50 0 \$0-mapPresetSave_gui \$0-mapPresetSave_gui_set
-SAVE 3 -8 0 10 -1 -262144 -1;
+SAVE 3 -8 0 10 #000000 #fcfcfc #000000;
 #X restore 60 385 pd MAP_GUI;
 #N canvas 215 155 785 288 MAIN_PRESET 0;
 #X msg 278 189 label \$1;
 #X obj 386 155 loadbang;
-#N canvas 297 145 663 491 OPEN_PRESET 0;
-#X obj 72 190 openpanel;
-#X obj 101 356 textfile;
-#X msg 189 312 read \$1;
-#X obj 32 278 until;
-#X msg 32 312 bang;
-#X msg 101 312 rewind;
-#X obj 101 410 s MAIN_PRESET_SEND;
-#X obj 72 122 t b;
-#X obj 72 234 t b b s s;
-#X msg 72 156 symbol Presets/Main;
+#N canvas 171 252 738 533 OPEN_PRESET 0;
+#X obj 72 233 openpanel;
+#X obj 101 380 textfile;
+#X msg 189 336 read \$1;
+#X obj 32 302 until;
+#X msg 32 336 bang;
+#X msg 101 336 rewind;
+#X obj 101 434 s MAIN_PRESET_SEND;
+#X obj 72 113 t b;
+#X obj 72 258 t b b s s;
 #X obj 72 88 r \$0-mainPresetOpen_gui;
-#X obj 336 288 s \$0-activePreset;
+#X obj 386 312 s \$0-activePreset;
 #X text 137 17 ** LOAD TEXT FILE PRESET;
 #X text 69 60 OPEN_PRESET BUTTON;
-#X text 334 260 SEND ACTIVE PRESET TO DISPLAY;
-#X text 194 356 READ TEXT FILE;
-#X text 98 440 SEND DATA TO ALL UNITS;
-#X obj 336 88 r OSC_BUS;
-#X obj 336 117 route main;
-#X obj 336 146 route preset;
-#X obj 336 210 symbol;
-#X obj 336 175 route file;
-#X text 333 60 EXTERNAL CONTROL;
+#X text 384 284 SEND ACTIVE PRESET TO DISPLAY;
+#X text 194 380 READ TEXT FILE;
+#X text 98 464 SEND DATA TO ALL UNITS;
+#X obj 386 88 r OSC_BUS;
+#X obj 386 117 route main;
+#X obj 386 146 route preset;
+#X obj 386 234 symbol;
+#X obj 386 175 route file;
+#X text 383 60 EXTERNAL CONTROL;
+#X obj 72 163 pdcontrol;
+#X msg 72 138 dir;
+#X obj 72 188 makefilename %s/Presets/Main;
 #X connect 0 0 8 0;
 #X connect 1 0 6 0;
 #X connect 1 1 3 1;
@@ -336,28 +338,30 @@ SAVE 3 -8 0 10 -1 -262144 -1;
 #X connect 3 0 4 0;
 #X connect 4 0 1 0;
 #X connect 5 0 1 0;
-#X connect 7 0 9 0;
+#X connect 7 0 23 0;
 #X connect 8 0 3 0;
 #X connect 8 1 5 0;
 #X connect 8 2 2 0;
-#X connect 8 3 11 0;
-#X connect 9 0 0 0;
-#X connect 10 0 7 0;
+#X connect 8 3 10 0;
+#X connect 9 0 7 0;
+#X connect 16 0 17 0;
 #X connect 17 0 18 0;
-#X connect 18 0 19 0;
-#X connect 19 0 21 0;
-#X connect 20 0 8 0;
-#X connect 21 0 20 0;
+#X connect 18 0 20 0;
+#X connect 19 0 8 0;
+#X connect 20 0 19 0;
+#X connect 22 0 24 0;
+#X connect 23 0 22 0;
+#X connect 24 0 0 0;
 #X restore 64 165 pd OPEN_PRESET;
 #N canvas 64 103 1080 594 SAVE_PRESET 0;
-#X obj 144 186 savepanel;
+#X obj 144 214 savepanel;
 #X obj 223 541 textfile;
 #X msg 337 517 clear;
 #X obj 223 463 list prepend add;
 #X obj 438 244 spigot 0;
 #X msg 624 220 1;
 #X obj 438 128 t b b;
-#X obj 144 220 t b s;
+#X obj 144 239 t b s;
 #X obj 144 331 symbol;
 #X msg 47 517 write \$1;
 #X obj 57 399 t b s;
@@ -377,8 +381,7 @@ SAVE 3 -8 0 10 -1 -262144 -1;
 #X connect 5 0 4 0;
 #X restore 475 419 pd CH1;
 #X obj 223 497 list trim;
-#X obj 144 118 t b;
-#X msg 144 152 symbol Presets/Main/;
+#X obj 144 109 t b;
 #N canvas 610 198 315 336 GEMWIN 0;
 #X obj 40 81 inlet;
 #X obj 40 281 outlet;
@@ -398,7 +401,7 @@ SAVE 3 -8 0 10 -1 -262144 -1;
 #X obj 654 118 r \$0-activePreset;
 #X obj 547 152 symbol none;
 #X obj 547 186 sel none;
-#X obj 191 253 s \$0-activePreset;
+#X obj 191 272 s \$0-activePreset;
 #X obj 201 297 r \$0-activePreset;
 #X text 120 18 ** REQUEST DATA IN THE CORRECT ORDER AND SAVES PRESET
 OF CONTENTS TO TEXT FILES, f 82;
@@ -633,22 +636,26 @@ OF CONTENTS TO TEXT FILES, f 82;
 #X restore 223 419 pd CH4;
 #X text 129 429 AWAIT FOR DATA, f 7;
 #X text 315 543 WRITE TO FILE;
-#X text 540 255 IF THERE IS NO ACTIVE PRESET, f 27;
 #X obj 866 84 r OSC_BUS;
 #X obj 866 113 route main;
 #X obj 866 142 route preset;
 #X text 863 56 EXTERNAL CONTROL;
 #X obj 866 171 route save;
+#X text 540 255 IF THERE IS NO ACTIVE PRESET \, EXECUTES "SAVE_AS"
+, f 27;
+#X obj 144 164 pdcontrol;
+#X msg 144 139 dir;
+#X obj 144 189 makefilename %s/Presets/Main;
 #X connect 0 0 7 0;
 #X connect 2 0 1 0;
 #X connect 3 0 14 0;
 #X connect 4 0 8 0;
 #X connect 5 0 4 1;
 #X connect 6 0 4 0;
-#X connect 6 1 22 0;
+#X connect 6 1 21 0;
 #X connect 7 0 8 0;
-#X connect 7 1 24 0;
-#X connect 8 0 18 0;
+#X connect 7 1 23 0;
+#X connect 8 0 17 0;
 #X connect 9 0 1 0;
 #X connect 10 0 11 0;
 #X connect 10 1 12 1;
@@ -656,32 +663,34 @@ OF CONTENTS TO TEXT FILES, f 82;
 #X connect 12 0 9 0;
 #X connect 13 0 3 0;
 #X connect 14 0 1 0;
-#X connect 15 0 16 0;
-#X connect 16 0 0 0;
-#X connect 17 0 3 0;
-#X connect 18 0 10 0;
-#X connect 18 1 32 0;
-#X connect 18 2 31 0;
-#X connect 18 3 30 0;
-#X connect 18 4 13 0;
-#X connect 18 5 29 0;
-#X connect 18 6 17 0;
-#X connect 18 7 2 0;
-#X connect 19 0 15 0;
-#X connect 20 0 6 0;
-#X connect 21 0 22 1;
-#X connect 22 0 23 0;
-#X connect 23 0 15 0;
-#X connect 23 1 5 0;
-#X connect 25 0 8 1;
+#X connect 15 0 41 0;
+#X connect 16 0 3 0;
+#X connect 17 0 10 0;
+#X connect 17 1 31 0;
+#X connect 17 2 30 0;
+#X connect 17 3 29 0;
+#X connect 17 4 13 0;
+#X connect 17 5 28 0;
+#X connect 17 6 16 0;
+#X connect 17 7 2 0;
+#X connect 18 0 15 0;
+#X connect 19 0 6 0;
+#X connect 20 0 21 1;
+#X connect 21 0 22 0;
+#X connect 22 0 15 0;
+#X connect 22 1 5 0;
+#X connect 24 0 8 1;
+#X connect 28 0 3 0;
 #X connect 29 0 3 0;
 #X connect 30 0 3 0;
 #X connect 31 0 3 0;
-#X connect 32 0 3 0;
-#X connect 36 0 37 0;
-#X connect 37 0 38 0;
-#X connect 38 0 40 0;
-#X connect 40 0 6 0;
+#X connect 34 0 35 0;
+#X connect 35 0 36 0;
+#X connect 36 0 38 0;
+#X connect 38 0 6 0;
+#X connect 40 0 42 0;
+#X connect 41 0 40 0;
+#X connect 42 0 0 0;
 #X restore 64 87 pd SAVE_PRESET;
 #X msg 386 189 label OPEN_PRESET;
 #X obj 278 87 r \$0-activePreset;
@@ -704,28 +713,28 @@ GEM CONFIGURATIONS, f 75;
 #X text 37 25 ** DECLARE ABSTRACTIONS AND GEM EXTERNAL LIBRARY;
 #X restore 60 147 pd DECLARE;
 #N canvas 166 67 1016 709 AUTOMATION_GUI 0;
-#X obj 1 1 cnv 15 1013 705 empty empty empty 20 12 0 14 -1 -66577 0
-;
-#X obj 69 12 cnv 20 140 20 empty empty AUTOMATION_STATE 5 10 0 14 -1
--128992 0;
-#X obj 221 12 cnv 20 70 20 empty empty M=MANUAL 5 10 0 14 -1 -262144
+#X obj 1 1 cnv 15 1013 705 empty empty empty 20 12 0 14 #000000 #404040
 0;
-#X obj 300 12 cnv 20 60 20 empty empty R=RECORD 5 10 0 14 -1 -262144
+#X obj 69 12 cnv 20 140 20 empty empty AUTOMATION_STATE 5 10 0 14 #000000
+#7c7c7c 0;
+#X obj 221 12 cnv 20 70 20 empty empty M=MANUAL 5 10 0 14 #000000 #fcfcfc
 0;
-#X obj 379 12 cnv 20 60 20 empty empty P=PLAY 5 10 0 14 -1 -262144
+#X obj 300 12 cnv 20 60 20 empty empty R=RECORD 5 10 0 14 #000000 #fcfcfc
+0;
+#X obj 379 12 cnv 20 60 20 empty empty P=PLAY 5 10 0 14 #000000 #fcfcfc
 0;
 #X obj 764 42 arrast_automenu \$0 4;
 #X obj 883 14 hradio 15 1 0 4 \$0-autoResolution_gui \$0-autoResolution_gui_set
-empty -63 8 0 14 -262144 -1 -262144 2;
+empty -63 8 0 14 #fcfcfc #000000 #fcfcfc 0;
 #X obj 472 12 cnv 20 140 20 empty empty AUTOMATION_RESOLUTION 5 10
-0 14 -1 -128992 0;
+0 14 #000000 #7c7c7c 0;
 #X obj 664 12 cnv 20 70 20 empty empty 1/2/4/8_SAMPLES_PER_FRAME 5
-10 0 14 -1 -262144 0;
+10 0 14 #000000 #fcfcfc 0;
 #X obj 11 42 arrast_automenu \$0 1;
 #X obj 262 42 arrast_automenu \$0 2;
 #X obj 513 42 arrast_automenu \$0 3;
 #X restore 60 453 pd AUTOMATION_GUI;
-#N canvas 392 220 372 234 MAP_CONTROL 0;
+#N canvas 304 250 372 234 MAP_CONTROL 0;
 #N canvas 311 171 891 354 ACTIVE_MAP 0;
 #X msg 52 168 1;
 #X msg 256 168 2;
@@ -799,40 +808,42 @@ empty -63 8 0 14 -262144 -1 -262144 2;
 #X text 34 23 ** MAPPING ENGINE MANAGEMENT;
 #N canvas 418 192 514 246 CONTROL_MEMORY 0;
 #X obj 44 86 arrast_mapslot \$0 1;
-#N canvas 246 187 751 293 PRESET_MANAGER 0;
+#N canvas 219 177 751 293 PRESET_MANAGER 0;
 #X msg 279 189 label \$1;
-#N canvas 287 120 791 552 OPEN_PRESET 0;
-#X obj 139 182 openpanel;
-#X obj 107 322 textfile;
-#X msg 197 274 read \$1;
-#X obj 37 240 until;
-#X msg 37 274 bang;
-#X msg 107 274 rewind;
-#X obj 139 216 t b b s s;
-#X obj 139 114 t b;
-#X msg 139 148 symbol Presets/Map/;
-#X obj 184 434 s \$0-activeMapFlush;
-#X obj 217 400 s \$0-mapFlush;
+#N canvas 144 184 804 589 OPEN_PRESET 0;
+#X obj 139 205 openpanel;
+#X obj 107 336 textfile;
+#X msg 197 288 read \$1;
+#X obj 37 254 until;
+#X msg 37 288 bang;
+#X msg 107 288 rewind;
+#X obj 139 230 t b b s s;
+#X obj 139 105 t b;
+#X obj 184 448 s \$0-activeMapFlush;
+#X obj 217 414 s \$0-mapFlush;
 #X text 267 15 ** LOAD TEXT FILE PRESET;
 #X text 137 52 OPEN_PRESET BUTTON;
-#X text 296 212 SEND ACTIVE PRESET TO DISPLAY;
-#X text 201 323 READ TEXT FILE;
+#X text 296 226 SEND ACTIVE PRESET TO DISPLAY;
+#X text 201 337 READ TEXT FILE;
 #X obj 139 80 r \$0-mapPresetOpen_gui;
-#X obj 299 240 s \$0-activeMapPreset;
-#X obj 184 356 t b b b;
-#X text 362 402 SEND DATA FROM MAPS TO 2nd INSTANCE;
-#X text 387 434 UPDATE INTERFACE WITH ACTIVE MAP;
-#X obj 107 488 s \$0-slotFilePreset;
-#X text 267 359 SWITCH OFF READING LOOP IN THE END OF THE FILE;
-#X text 312 489 SEND DATA TO MEMORY SLOTS;
-#X obj 426 109 route preset;
-#X text 423 52 EXTERNAL CONTROL;
-#X obj 426 80 r \$0-mapControl;
-#X obj 426 138 route file;
-#X obj 426 167 symbol;
+#X obj 299 254 s \$0-activeMapPreset;
+#X obj 184 370 t b b b;
+#X text 362 416 SEND DATA FROM MAPS TO 2nd INSTANCE;
+#X text 387 448 UPDATE INTERFACE WITH ACTIVE MAP;
+#X obj 107 502 s \$0-slotFilePreset;
+#X text 267 373 SWITCH OFF READING LOOP IN THE END OF THE FILE;
+#X text 312 503 SEND DATA TO MEMORY SLOTS;
+#X obj 486 109 route preset;
+#X text 483 52 EXTERNAL CONTROL;
+#X obj 486 80 r \$0-mapControl;
+#X obj 486 138 route file;
+#X obj 486 167 symbol;
+#X obj 139 155 pdcontrol;
+#X msg 139 130 dir;
+#X obj 139 180 makefilename %s/Presets/Map;
 #X connect 0 0 6 0;
-#X connect 1 0 20 0;
-#X connect 1 1 17 0;
+#X connect 1 0 19 0;
+#X connect 1 1 16 0;
 #X connect 2 0 1 0;
 #X connect 3 0 4 0;
 #X connect 4 0 1 0;
@@ -840,38 +851,39 @@ empty -63 8 0 14 -262144 -1 -262144 2;
 #X connect 6 0 3 0;
 #X connect 6 1 5 0;
 #X connect 6 2 2 0;
-#X connect 6 3 16 0;
-#X connect 7 0 8 0;
-#X connect 8 0 0 0;
-#X connect 15 0 7 0;
-#X connect 17 0 9 0;
-#X connect 17 1 10 0;
-#X connect 17 2 3 1;
-#X connect 23 0 26 0;
-#X connect 25 0 23 0;
-#X connect 26 0 27 0;
-#X connect 27 0 6 0;
+#X connect 6 3 15 0;
+#X connect 7 0 28 0;
+#X connect 14 0 7 0;
+#X connect 16 0 8 0;
+#X connect 16 1 9 0;
+#X connect 16 2 3 1;
+#X connect 22 0 25 0;
+#X connect 24 0 22 0;
+#X connect 25 0 26 0;
+#X connect 26 0 6 0;
+#X connect 27 0 29 0;
+#X connect 28 0 27 0;
+#X connect 29 0 0 0;
 #X restore 64 165 pd OPEN_PRESET;
-#N canvas 146 116 1012 635 SAVE_PRESET 0;
-#X obj 56 186 savepanel;
+#N canvas 79 140 1012 635 SAVE_PRESET 0;
+#X obj 56 214 savepanel;
 #X obj 222 582 textfile;
 #X msg 334 558 clear;
 #X obj 222 489 list prepend add;
 #X obj 350 249 spigot 0;
 #X msg 427 220 1;
 #X obj 350 128 t b b;
-#X obj 56 220 t b s;
+#X obj 56 239 t b s;
 #X obj 56 333 symbol;
 #X msg 56 558 write \$1;
-#X obj 56 118 t b;
+#X obj 56 109 t b;
 #X obj 222 523 list trim;
-#X msg 56 152 symbol Presets/Map/;
 #X obj 457 152 symbol none;
 #X obj 457 186 sel none;
 #X obj 56 84 r \$0-mapPresetSaveAs_gui;
 #X obj 350 84 r \$0-mapPresetSave_gui;
 #X obj 564 118 r \$0-activeMapPreset;
-#X obj 103 255 s \$0-activeMapPreset;
+#X obj 103 274 s \$0-activeMapPreset;
 #X obj 113 299 r \$0-activeMapPreset;
 #X obj 222 411 s \$0-slotFlush;
 #X obj 222 455 r \$0-slotList;
@@ -892,38 +904,43 @@ FILE;
 #X obj 796 84 r \$0-mapControl;
 #X text 444 251 IF THERE IS NO ACTIVE PRESET, f 21;
 #X text 128 475 WAIT FOR DATA, f 4;
+#X obj 56 164 pdcontrol;
+#X msg 56 139 dir;
+#X obj 56 189 makefilename %s/Presets/Map;
 #X connect 0 0 7 0;
 #X connect 2 0 1 0;
 #X connect 3 0 11 0;
 #X connect 4 0 8 0;
 #X connect 5 0 4 1;
 #X connect 6 0 4 0;
-#X connect 6 1 13 0;
+#X connect 6 1 12 0;
 #X connect 7 0 8 0;
-#X connect 7 1 18 0;
-#X connect 8 0 24 0;
+#X connect 7 1 17 0;
+#X connect 8 0 23 0;
 #X connect 9 0 1 0;
-#X connect 10 0 12 0;
+#X connect 10 0 38 0;
 #X connect 11 0 1 0;
-#X connect 12 0 0 0;
-#X connect 13 0 14 0;
+#X connect 12 0 13 0;
+#X connect 13 0 10 0;
+#X connect 13 1 5 0;
 #X connect 14 0 10 0;
-#X connect 14 1 5 0;
-#X connect 15 0 10 0;
-#X connect 16 0 6 0;
-#X connect 17 0 13 1;
-#X connect 19 0 8 1;
-#X connect 21 0 3 0;
-#X connect 24 0 26 0;
-#X connect 24 1 20 0;
-#X connect 24 2 2 0;
-#X connect 26 0 30 0;
-#X connect 26 1 27 1;
-#X connect 27 0 9 0;
-#X connect 30 0 27 0;
-#X connect 32 0 34 0;
-#X connect 34 0 6 0;
-#X connect 35 0 32 0;
+#X connect 15 0 6 0;
+#X connect 16 0 12 1;
+#X connect 18 0 8 1;
+#X connect 20 0 3 0;
+#X connect 23 0 25 0;
+#X connect 23 1 19 0;
+#X connect 23 2 2 0;
+#X connect 25 0 29 0;
+#X connect 25 1 26 1;
+#X connect 26 0 9 0;
+#X connect 29 0 26 0;
+#X connect 31 0 33 0;
+#X connect 33 0 6 0;
+#X connect 34 0 31 0;
+#X connect 37 0 39 0;
+#X connect 38 0 37 0;
+#X connect 39 0 0 0;
 #X restore 64 88 pd SAVE_PRESET;
 #X obj 393 155 loadbang;
 #X msg 393 189 label OPEN_PRESET;
@@ -972,7 +989,7 @@ FILE;
 #X obj 44 188 arrast_mapslot \$0 4;
 #X restore 57 139 pd CONTROL_MEMORY;
 #N canvas 201 76 968 651 MANUAL_EDIT_MAP 0;
-#X floatatom 595 270 5 0 0 0 - - -, f 5;
+#X floatatom 595 270 5 0 0 0 - - - 0;
 #X obj 48 515 list prepend map1;
 #X msg 48 369 0;
 #X msg 98 369 1;
@@ -1113,7 +1130,7 @@ FILE;
 #X connect 50 0 48 0;
 #X restore 57 173 pd MANUAL_EDIT_MAP;
 #X restore 60 419 pd MAP_CONTROL;
-#N canvas 356 178 612 233 AUTOMATION_CONTROL 0;
+#N canvas 160 253 612 233 AUTOMATION_CONTROL 0;
 #N canvas 484 268 314 271 GUI_STATE 0;
 #X obj 44 148 t b;
 #X msg 44 179 vis 1;
@@ -1126,15 +1143,14 @@ INTERFACE BUTTON, f 25;
 #X connect 4 0 0 0;
 #X restore 48 70 pd GUI_STATE;
 #X text 145 24 ** AUTOMATION ENGINE MANAGEMENT;
-#N canvas 51 80 1331 747 INDEX 0;
-#X obj 945 755 moses;
-#X obj 945 653 spigot;
+#N canvas 51 80 1537 816 INDEX 0;
+#X obj 945 683 spigot;
 #X obj 347 653 spigot;
 #X obj 452 819 *;
-#X obj 342 486 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 386 486 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 342 486 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 386 486 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X text 361 482 +;
 #X text 405 482 -;
 #X text 506 386 RESOLUTION IN MSEC FOR RECORDING AND READING;
@@ -1157,7 +1173,7 @@ INTERFACE BUTTON, f 25;
 #X text 440 18 ** GLOBAL INDEX ENGINE FOR AUTOMATIONS;
 #X obj 833 86 r \$0-autoRec_gui;
 #X obj 552 86 r \$0-autoPlay_gui;
-#X floatatom 270 539 5 0 0 0 - - -, f 5;
+#X floatatom 270 539 5 0 0 0 - - - 0;
 #X text 328 540 GLOBAL INDEX;
 #X obj 452 848 / 1000;
 #X text 451 936 TIMELINE SIZE IN SECONDS;
@@ -1209,16 +1225,16 @@ INTERFACE BUTTON, f 25;
 #X obj 334 444 metro 41.6667;
 #X text 593 241 RECEIVE GLOBAL FPS RATE;
 #X obj 269 86 r \$0-autoRW_gui;
-#X obj 1052 863 r \$0-autoLoop_gui;
-#X obj 1025 892 f;
-#X text 1007 756 ACTION WHEN IT REACHES THE END OF PLAYBACK;
-#X msg 1025 950 0;
-#X obj 1025 979 s \$0-autoPlay_gui_set;
-#X text 1069 951 END OF PLAYBACK;
-#X text 1237 864 LOOP STATE;
-#X obj 1059 820 s \$0-autoRW_gui;
-#X obj 1025 921 sel 0;
-#X text 1224 820 RESTART INDEX;
+#X obj 1052 949 r \$0-autoLoop_gui;
+#X obj 1025 974 f;
+#X text 1047 756 ACTION WHEN IT REACHES THE END OF PLAYBACK;
+#X msg 1025 1024 0;
+#X obj 1025 1049 s \$0-autoPlay_gui_set;
+#X text 1069 1024 END OF PLAYBACK;
+#X text 1237 950 LOOP STATE;
+#X obj 1059 914 s \$0-autoRW_gui;
+#X obj 1025 999 sel 0;
+#X text 1224 914 RESTART INDEX;
 #X obj 96 639 r \$0-autoClear_gui;
 #X text 94 611 CLEAR AUTOMATION;
 #X msg 146 707 0;
@@ -1255,14 +1271,12 @@ INTERFACE BUTTON, f 25;
 #X text 148 178 SYNCHRONIZE RW FROM VIDEOS, f 11;
 #X obj 270 1048 pack f f;
 #X text 365 1047 INDEX AND SIZE FOR RESCALING OF ARRAYS, f 28;
-#X obj 619 149 s AUTOMATION_STATE;
-#X text 616 179 SEND INDEX STATE TO [arrast_automato], f 19;
+#X obj 610 149 s AUTOMATION_STATE;
+#X text 607 179 SEND INDEX STATE TO [arrast_automato], f 19;
 #X text 267 60 INTERFACE RESET BUTTON;
-#X obj 1022 687 == 0;
-#X obj 833 115 t f f f;
 #X text 831 60 INTERFACE REC BUTTON;
-#X obj 900 149 s AUTOMATION_REC;
-#X text 899 179 ARM RECORDING IN [arrast_automato], f 17;
+#X obj 880 149 s AUTOMATION_REC;
+#X text 879 179 ARM RECORDING IN [arrast_automato], f 17;
 #N canvas 164 140 969 490 EXTERNAL_CONTROL 0;
 #X obj 48 214 s \$0-autoRec_gui_set;
 #X obj 268 214 s \$0-autoPlay_gui_set;
@@ -1299,23 +1313,18 @@ IS OPEN, f 61;
 #X connect 17 0 18 0;
 #X restore 1093 86 pd EXTERNAL_CONTROL;
 #X text 1091 60 EXTERNAL CONTROLS OF TRANSFER;
-#X obj 552 115 t f f f;
-#X text 1018 654 ONLY DURING PLAYBACK;
-#X text 1075 688 WITH DISARMED REC;
-#X obj 945 721 spigot 1;
+#X text 1018 684 ONLY DURING PLAYBACK;
 #X msg 241 707 0;
 #X obj 121 819 s \$0-autoRec_gui_set;
 #X obj 121 849 s \$0-autoPlay_gui_set;
 #X text 119 879 TURN OFF REC AND PLAY;
 #X obj 96 917 s AUTOMATION_CLEAR;
-#X obj 96 668 t b b b b b b;
 #X text 93 947 CLEAR AUTOMATA;
 #X msg 302 149 -1;
 #X obj 347 765 + 1;
-#X obj 992 786 t b b b;
-#X obj 992 820 del 5;
-#X msg 992 849 0;
-#X obj 347 731 t f f f f;
+#X obj 992 889 t b b b;
+#X obj 992 914 del 5;
+#X msg 992 939 0;
 #X obj 347 795 t f f f;
 #X msg 194 707 -1;
 #X obj 461 385 / 1;
@@ -1362,117 +1371,130 @@ TO THE DISPLAYS, f 38;
 #X connect 14 0 1 0;
 #X restore 514 566 pd SET_DURATION;
 #X text 512 518 SET TIMELINE LENGTH FROM INTERFACE, f 19;
-#X connect 0 1 93 0;
-#X connect 1 0 83 0;
-#X connect 2 0 9 0;
-#X connect 3 0 15 0;
-#X connect 4 0 18 2;
-#X connect 5 0 18 3;
-#X connect 9 0 96 0;
-#X connect 11 0 74 0;
-#X connect 12 0 80 0;
-#X connect 13 0 55 0;
-#X connect 15 0 109 0;
-#X connect 18 0 13 0;
+#X obj 96 668 t b b b b b b;
+#X obj 945 755 moses;
+#X obj 992 864 spigot;
+#X obj 1049 839 > 0;
+#X obj 1049 789 sel 1;
+#X obj 1049 814 f;
+#X text 1116 809 ONLY IF THERE IS ALREADY AN ACTIVE TIMELINE, f 24
+;
+#X obj 552 115 t f f f f;
+#X obj 347 731 t f f f f f;
+#X obj 833 115 t f f;
+#X connect 0 0 109 0;
+#X connect 1 0 8 0;
+#X connect 2 0 14 0;
+#X connect 3 0 17 2;
+#X connect 4 0 17 3;
+#X connect 8 0 116 0;
+#X connect 10 0 117 0;
+#X connect 11 0 115 0;
+#X connect 12 0 54 0;
+#X connect 14 0 101 0;
+#X connect 17 0 12 0;
+#X connect 18 0 19 0;
 #X connect 19 0 20 0;
-#X connect 20 0 21 0;
-#X connect 21 0 99 0;
-#X connect 22 0 18 2;
-#X connect 24 0 65 0;
-#X connect 25 0 26 1;
-#X connect 26 0 33 0;
-#X connect 28 0 29 0;
-#X connect 33 0 28 0;
-#X connect 35 0 89 0;
-#X connect 37 0 68 0;
-#X connect 39 0 38 0;
-#X connect 43 0 38 0;
-#X connect 44 0 45 0;
-#X connect 44 0 43 0;
-#X connect 45 0 39 0;
-#X connect 49 0 50 0;
-#X connect 50 0 53 0;
-#X connect 51 0 49 0;
-#X connect 53 0 56 0;
-#X connect 54 0 53 1;
-#X connect 55 0 68 0;
-#X connect 55 1 2 0;
-#X connect 55 2 43 0;
-#X connect 55 3 59 0;
-#X connect 55 4 1 0;
-#X connect 56 0 18 0;
-#X connect 59 0 45 0;
-#X connect 61 0 64 0;
-#X connect 64 0 68 0;
-#X connect 64 1 9 0;
-#X connect 64 2 89 0;
-#X connect 65 0 66 0;
-#X connect 65 1 91 0;
-#X connect 65 2 44 0;
-#X connect 68 0 47 0;
-#X connect 73 0 83 1;
-#X connect 74 0 2 1;
-#X connect 74 1 73 0;
-#X connect 74 2 76 0;
-#X connect 80 0 112 0;
-#X connect 80 1 1 1;
-#X connect 80 2 70 0;
-#X connect 83 0 0 0;
-#X connect 84 0 85 0;
-#X connect 84 0 86 0;
-#X connect 89 0 88 0;
-#X connect 89 1 41 0;
-#X connect 89 2 37 0;
-#X connect 89 3 98 0;
-#X connect 89 4 9 1;
-#X connect 89 5 84 0;
-#X connect 91 0 18 1;
+#X connect 20 0 91 0;
+#X connect 21 0 17 2;
+#X connect 23 0 64 0;
+#X connect 24 0 25 1;
+#X connect 25 0 32 0;
+#X connect 27 0 28 0;
+#X connect 32 0 27 0;
+#X connect 34 0 108 0;
+#X connect 36 0 67 0;
+#X connect 38 0 37 0;
+#X connect 42 0 37 0;
+#X connect 43 0 44 0;
+#X connect 43 0 42 0;
+#X connect 44 0 38 0;
+#X connect 48 0 49 0;
+#X connect 49 0 52 0;
+#X connect 50 0 48 0;
+#X connect 52 0 55 0;
+#X connect 53 0 52 1;
+#X connect 54 0 67 0;
+#X connect 54 1 1 0;
+#X connect 54 2 42 0;
+#X connect 54 3 58 0;
+#X connect 54 4 0 0;
+#X connect 55 0 17 0;
+#X connect 58 0 44 0;
+#X connect 60 0 63 0;
+#X connect 63 0 67 0;
+#X connect 63 1 8 0;
+#X connect 63 2 108 0;
+#X connect 64 0 65 0;
+#X connect 64 1 84 0;
+#X connect 64 2 43 0;
+#X connect 67 0 46 0;
+#X connect 78 0 79 0;
+#X connect 78 0 80 0;
+#X connect 84 0 17 1;
+#X connect 85 0 89 0;
+#X connect 86 0 87 0;
+#X connect 86 1 25 0;
+#X connect 86 2 31 0;
+#X connect 87 0 88 0;
+#X connect 88 0 42 0;
+#X connect 89 0 67 1;
+#X connect 89 1 103 0;
+#X connect 89 2 2 0;
+#X connect 90 0 116 0;
+#X connect 91 0 105 0;
 #X connect 92 0 97 0;
-#X connect 93 0 94 0;
-#X connect 93 1 26 0;
-#X connect 93 2 32 0;
-#X connect 94 0 95 0;
-#X connect 95 0 43 0;
-#X connect 96 0 92 0;
-#X connect 96 1 45 1;
-#X connect 96 2 0 1;
-#X connect 96 3 49 1;
-#X connect 97 0 68 1;
-#X connect 97 1 111 0;
-#X connect 97 2 3 0;
-#X connect 98 0 96 0;
-#X connect 99 0 113 0;
-#X connect 100 0 105 0;
-#X connect 102 0 105 0;
-#X connect 103 0 105 0;
-#X connect 104 0 105 0;
-#X connect 105 0 99 0;
-#X connect 105 1 99 1;
-#X connect 106 0 100 0;
-#X connect 106 1 102 0;
-#X connect 106 2 103 0;
-#X connect 106 3 104 0;
-#X connect 107 0 106 0;
-#X connect 109 0 110 0;
-#X connect 112 0 22 0;
-#X connect 112 1 59 1;
-#X connect 112 2 54 0;
-#X connect 112 3 114 0;
-#X connect 113 0 22 1;
-#X connect 113 1 3 1;
-#X connect 113 2 114 1;
-#X connect 114 0 9 0;
+#X connect 94 0 97 0;
+#X connect 95 0 97 0;
+#X connect 96 0 97 0;
+#X connect 97 0 91 0;
+#X connect 97 1 91 1;
+#X connect 98 0 92 0;
+#X connect 98 1 94 0;
+#X connect 98 2 95 0;
+#X connect 98 3 96 0;
+#X connect 99 0 98 0;
+#X connect 101 0 102 0;
+#X connect 104 0 21 0;
+#X connect 104 1 58 1;
+#X connect 104 2 53 0;
+#X connect 104 3 106 0;
+#X connect 105 0 21 1;
+#X connect 105 1 2 1;
+#X connect 105 2 106 1;
+#X connect 106 0 8 0;
+#X connect 108 0 82 0;
+#X connect 108 1 40 0;
+#X connect 108 2 36 0;
+#X connect 108 3 90 0;
+#X connect 108 4 8 1;
+#X connect 108 5 78 0;
+#X connect 109 1 110 0;
+#X connect 110 0 86 0;
+#X connect 111 0 110 1;
+#X connect 112 0 113 0;
+#X connect 113 0 111 0;
+#X connect 115 0 104 0;
+#X connect 115 1 0 1;
+#X connect 115 2 69 0;
+#X connect 115 3 112 0;
+#X connect 116 0 85 0;
+#X connect 116 1 44 1;
+#X connect 116 2 109 1;
+#X connect 116 3 48 1;
+#X connect 116 4 113 1;
+#X connect 117 0 1 1;
+#X connect 117 1 73 0;
 #X restore 48 104 pd INDEX;
 #X text 182 71 CONFIG WINDOW MANAGEMENT;
 #X text 143 105 ENGINE OF THE GLOBAL INDEX FOR AUTOMATIONS;
-#N canvas 32 102 1318 631 AUTOMATION_PRESET 0;
-#X obj 54 200 savepanel;
+#N canvas 66 158 1394 631 AUTOMATION_PRESET 0;
+#X obj 54 215 savepanel;
 #X obj 369 279 spigot 0;
 #X msg 446 250 1;
 #X obj 54 82 r \$0-autoPresetSaveAs_gui;
 #X obj 369 82 r \$0-autoPresetSave_gui;
-#X msg 54 166 symbol Presets/Automation/;
-#X obj 87 267 s \$0-activeAutoPreset;
+#X obj 87 265 s \$0-activeAutoPreset;
 #X obj 553 152 r \$0-activeAutoPreset;
 #X obj 446 184 symbol none;
 #X obj 446 216 sel none;
@@ -1480,10 +1502,9 @@ TO THE DISPLAYS, f 38;
 #X text 470 18 ** AUTOMATION PRESETS MANAGEMENT;
 #X text 367 56 SAVE BUTTON;
 #X obj 808 82 r \$0-autoPresetOpen_gui;
-#X obj 808 198 openpanel;
+#X obj 808 223 openpanel;
 #X text 806 56 OPEN_AUTOMATION BUTTON;
 #X text 52 56 SAVE_AS BUTTON;
-#X msg 808 160 symbol Presets/Automation;
 #X msg 545 483 label \$1;
 #X obj 795 468 loadbang;
 #X obj 545 418 r \$0-activeAutoPreset;
@@ -1493,7 +1514,7 @@ TO THE DISPLAYS, f 38;
 #X text 883 329 CLEAN AUTOMATION;
 #X msg 64 389 read \$1;
 #X text 149 390 READ FILE;
-#X obj 888 262 s \$0-activeAutoPreset;
+#X obj 888 282 s \$0-activeAutoPreset;
 #X obj 54 469 arrast_arraymemo;
 #X text 229 574 SEND MEMORY SIZE TO INDEX ENGINE WHEN A PRESET IS OPEN
 ;
@@ -1568,76 +1589,86 @@ TO THE DISPLAYS, f 38;
 #X connect 29 0 22 0;
 #X restore 211 440 pd ARRAYMEMO_LIST;
 #X text 226 470 MEMORY MANAGER;
-#X obj 54 234 t s s b;
+#X obj 54 240 t s s b;
 #X obj 54 313 symbol;
 #X msg 932 424 symbol none;
 #X obj 885 390 t b b;
 #X obj 54 538 change;
-#X obj 54 126 t b b;
+#X obj 54 107 t b b;
 #X obj 369 126 t b b b;
 #X msg 136 514 set 0;
 #X obj 545 516 s \$0-autoPresetDisplay;
-#X obj 808 126 t b;
-#X obj 808 228 t s s b s b;
-#X obj 1102 82 r OSC_BUS;
-#X obj 1102 140 route preset;
-#X obj 1175 204 symbol;
-#X text 1099 54 EXTERNAL CONTROL;
-#X obj 1102 111 route automation;
-#X obj 1102 169 route save file;
+#X obj 808 107 t b;
+#X obj 808 248 t s s b s b;
+#X obj 1182 82 r OSC_BUS;
+#X obj 1182 140 route preset;
+#X obj 1255 224 symbol;
+#X text 1179 54 EXTERNAL CONTROL;
+#X obj 1182 111 route automation;
+#X obj 1182 169 route save file;
 #X text 463 279 IF THERE IS NO ACTIVE SLOT;
 #X obj 932 458 s \$0-activeAutoPreset;
 #X obj 545 451 arrast_namecut 21;
 #X text 149 348 WRITE FILE;
-#X connect 0 0 33 0;
-#X connect 1 0 34 0;
+#X obj 54 157 pdcontrol;
+#X msg 54 132 dir;
+#X obj 54 182 makefilename %s/Presets/Automation;
+#X obj 808 157 pdcontrol;
+#X msg 808 132 dir;
+#X obj 808 182 makefilename %s/Presets/Automation;
+#X connect 0 0 31 0;
+#X connect 1 0 32 0;
 #X connect 2 0 1 1;
-#X connect 3 0 38 0;
-#X connect 4 0 39 0;
-#X connect 5 0 0 0;
-#X connect 7 0 8 1;
-#X connect 8 0 9 0;
-#X connect 9 0 38 0;
-#X connect 9 1 2 0;
-#X connect 10 0 28 0;
-#X connect 13 0 42 0;
-#X connect 14 0 43 0;
-#X connect 17 0 14 0;
-#X connect 18 0 41 0;
-#X connect 19 0 21 0;
-#X connect 20 0 52 0;
-#X connect 21 0 41 0;
-#X connect 23 0 36 0;
-#X connect 25 0 28 0;
-#X connect 28 0 37 0;
-#X connect 31 0 28 1;
-#X connect 33 0 34 0;
-#X connect 33 1 6 0;
-#X connect 33 2 31 0;
-#X connect 34 0 10 0;
-#X connect 35 0 51 0;
-#X connect 36 0 21 0;
-#X connect 36 1 35 0;
-#X connect 37 0 30 0;
-#X connect 38 0 5 0;
-#X connect 38 1 40 0;
-#X connect 39 0 1 0;
-#X connect 39 1 8 0;
-#X connect 39 2 40 0;
-#X connect 40 0 37 0;
-#X connect 42 0 17 0;
-#X connect 43 0 34 1;
-#X connect 43 1 25 0;
-#X connect 43 2 31 0;
-#X connect 43 3 27 0;
-#X connect 43 4 40 0;
-#X connect 44 0 48 0;
-#X connect 45 0 49 0;
+#X connect 3 0 36 0;
+#X connect 4 0 37 0;
+#X connect 6 0 7 1;
+#X connect 7 0 8 0;
+#X connect 8 0 36 0;
+#X connect 8 1 2 0;
+#X connect 9 0 26 0;
+#X connect 12 0 40 0;
+#X connect 13 0 41 0;
+#X connect 16 0 39 0;
+#X connect 17 0 19 0;
+#X connect 18 0 50 0;
+#X connect 19 0 39 0;
+#X connect 21 0 34 0;
+#X connect 23 0 26 0;
+#X connect 26 0 35 0;
+#X connect 29 0 26 1;
+#X connect 31 0 32 0;
+#X connect 31 1 5 0;
+#X connect 31 2 29 0;
+#X connect 32 0 9 0;
+#X connect 33 0 49 0;
+#X connect 34 0 19 0;
+#X connect 34 1 33 0;
+#X connect 35 0 28 0;
+#X connect 36 0 53 0;
+#X connect 36 1 38 0;
+#X connect 37 0 1 0;
+#X connect 37 1 7 0;
+#X connect 37 2 38 0;
+#X connect 38 0 35 0;
+#X connect 40 0 56 0;
+#X connect 41 0 32 1;
+#X connect 41 1 23 0;
+#X connect 41 2 29 0;
+#X connect 41 3 25 0;
+#X connect 41 4 38 0;
+#X connect 42 0 46 0;
+#X connect 43 0 47 0;
+#X connect 44 0 41 0;
 #X connect 46 0 43 0;
-#X connect 48 0 45 0;
-#X connect 49 0 39 0;
-#X connect 49 1 46 0;
-#X connect 52 0 18 0;
+#X connect 47 0 37 0;
+#X connect 47 1 44 0;
+#X connect 50 0 16 0;
+#X connect 52 0 54 0;
+#X connect 53 0 52 0;
+#X connect 54 0 0 0;
+#X connect 55 0 57 0;
+#X connect 56 0 55 0;
+#X connect 57 0 13 0;
 #X restore 48 138 pd AUTOMATION_PRESET;
 #X text 262 139 AUTOMATION PRESETS MANAGEMENT;
 #X text 240 172 MAIN INTERFACE STATE SELECTORS;
@@ -1669,8 +1700,8 @@ CHANNEL'S AUTOMATION STATE, f 87;
 #X obj 49 42 loadbang;
 #X obj 49 181 gemhead 10;
 #X obj 49 308 pix_video;
-#X obj 49 144 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
+#X obj 49 144 tgl 25 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X msg 76 229 dimen 640 480;
 #X obj 76 264 t a;
 #X msg 227 229 colorspace RGBA;
@@ -1700,16 +1731,16 @@ AND BETWEEN BOTH INSTANCES, f 35;
 #X connect 13 0 7 0;
 #X connect 14 0 13 0;
 #X restore 60 249 pd CAMERA_IN;
-#N canvas 343 175 877 644 MAIN_GUI 1;
-#X obj 2 1 cnv 15 873 641 empty empty empty 20 12 0 14 -66577 -66577
+#N canvas 329 97 877 644 MAIN_GUI 1;
+#X obj 2 1 cnv 15 873 641 empty empty empty 20 12 0 14 #404040 #404040
 0;
-#X obj 12 11 cnv 15 205 621 empty empty empty 20 12 0 14 -1 -66577
+#X obj 12 11 cnv 15 205 621 empty empty empty 20 12 0 14 #000000 #404040
 0;
-#X obj 228 11 cnv 15 205 621 empty empty empty 20 12 0 14 -1 -66577
+#X obj 228 11 cnv 15 205 621 empty empty empty 20 12 0 14 #000000 #404040
 0;
-#X obj 444 11 cnv 15 205 621 empty empty empty 20 12 0 14 -1 -66577
+#X obj 444 11 cnv 15 205 621 empty empty empty 20 12 0 14 #000000 #404040
 0;
-#X obj 660 11 cnv 15 205 621 empty empty empty 20 12 0 14 -1 -66577
+#X obj 660 11 cnv 15 205 621 empty empty empty 20 12 0 14 #000000 #404040
 0;
 #X obj 670 232 arrast_iint 4;
 #X obj 670 323 arrast_cint 4;
@@ -1737,7 +1768,7 @@ AND BETWEEN BOTH INSTANCES, f 35;
 #X obj 43 388 s OSC_BUS;
 #X obj 43 334 list trim;
 #X obj 43 146 r ARRAST_VJ;
-#N canvas 65 70 1201 769 OSC_TO_LIST 0;
+#N canvas 65 70 1214 769 OSC_TO_LIST 0;
 #X obj 362 162 list fromsymbol;
 #X obj 582 238 list split 1;
 #X obj 640 269 list;
@@ -1881,8 +1912,8 @@ SAME INSTANCE OF [ARRAST_VJ] - e. g. /channel1/video/play 1, f 47
 #X msg 780 1073 open -bytes 3 Export/AUDIO_2.wav \, start;
 #X msg 1028 1107 open -bytes 3 Export/AUDIO_3.wav \, start;
 #X msg 1276 1141 open -bytes 3 Export/AUDIO_4.wav \, start;
-#X obj 152 773 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
+#X obj 152 773 tgl 30 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X msg 242 659 stop;
 #X obj 242 773 t a a;
 #X obj 289 807 spigot;
@@ -2180,7 +2211,7 @@ TIMELINE;
 #X restore 48 70 pd GUI_STATE;
 #X text 35 24 ** MANAGEMENT OF AUDIO AND VIDEO EXPORT ENGINE;
 #X text 182 71 EXPORT WINDOW MANAGEMENT;
-#N canvas 52 80 1312 683 EXPORT_VIDEO 0;
+#N canvas 52 80 1325 683 EXPORT_VIDEO 0;
 #X obj 131 443 s \$0-autoRW_gui_set;
 #X text 336 443 SYNCHRONIZES PLAYBACK;
 #X msg 48 59 bang;
@@ -2198,9 +2229,9 @@ TIMELINE;
 #X obj 595 497 s \$0-autoSetAll4_gui_set;
 #X msg 595 331 2;
 #X text 639 333 ALL CHANNELS IN PLAY MODE;
-#X obj 105 132 > 0;
-#X obj 48 161 spigot;
-#X text 147 133 ORKS ONLY IF THERE IS SOMETHING RECORDED IN THE TIMELINE
+#X obj 105 121 > 0;
+#X obj 48 146 spigot;
+#X text 147 122 ORKS ONLY IF THERE IS SOMETHING RECORDED IN THE TIMELINE
 ;
 #X text 535 19 ** VIDEO RECORDING SYSTEM;
 #X text 102 60 EXPORT VIDEO;
@@ -2254,10 +2285,9 @@ TIMELINE;
 #X msg 649 699 16;
 #X obj 48 797 pack f f s;
 #X text 164 798 REC / QUALITY / FILE;
-#X obj 48 229 savepanel;
-#X msg 48 195 symbol Export/;
-#X obj 48 263 t b s;
-#X text 152 230 AT FIRST CHOOSE FILENAME AND THEN FORMAT PATH;
+#X obj 48 257 savepanel;
+#X obj 48 282 t b s;
+#X text 152 258 AT FIRST CHOOSE FILENAME AND THEN FORMAT PATH;
 #X text 233 307 ARM AND TRIGGER RECORDING;
 #X obj 953 429 s pd-MAP_GUI;
 #X obj 953 365 s pd-MAIN_GUI;
@@ -2268,15 +2298,18 @@ TIMELINE;
 #X obj 953 739 t b b b b b;
 #X obj 979 773 s REFRESH_MODE;
 #X text 1132 759 REOPENS MAINA AND MAP WINDOWS, f 13;
-#X text 428 103 TIMELINE SIZE IN SAMPLES;
-#X obj 105 103 r \$0-autoSamplesDisplay_gui_set;
+#X text 428 96 TIMELINE SIZE IN SAMPLES;
+#X obj 105 96 r \$0-autoSamplesDisplay_gui_set;
+#X obj 48 207 pdcontrol;
+#X msg 48 182 dir;
+#X obj 48 232 makefilename %s/Export;
 #X connect 2 0 18 0;
 #X connect 5 0 3 0;
 #X connect 5 0 6 0;
 #X connect 10 0 8 0;
 #X connect 15 0 65 0;
 #X connect 17 0 18 1;
-#X connect 18 0 73 0;
+#X connect 18 0 88 0;
 #X connect 22 0 23 0;
 #X connect 26 0 25 0;
 #X connect 29 0 32 0;
@@ -2289,7 +2322,7 @@ TIMELINE;
 #X connect 32 4 69 0;
 #X connect 33 0 31 1;
 #X connect 34 0 39 0;
-#X connect 35 0 83 0;
+#X connect 35 0 82 0;
 #X connect 36 0 35 1;
 #X connect 36 0 54 0;
 #X connect 37 0 35 1;
@@ -2326,26 +2359,28 @@ TIMELINE;
 #X connect 68 0 31 1;
 #X connect 69 0 31 1;
 #X connect 70 0 28 0;
-#X connect 72 0 74 0;
-#X connect 73 0 72 0;
-#X connect 74 0 82 0;
-#X connect 74 1 70 2;
-#X connect 81 0 78 0;
-#X connect 81 0 77 0;
-#X connect 82 0 50 0;
-#X connect 82 1 10 0;
-#X connect 82 2 0 0;
-#X connect 82 3 5 0;
-#X connect 82 4 15 0;
-#X connect 82 5 22 0;
-#X connect 82 6 81 0;
-#X connect 82 7 36 0;
-#X connect 83 0 26 0;
-#X connect 83 1 84 0;
-#X connect 83 2 55 0;
-#X connect 83 3 58 0;
-#X connect 83 4 37 0;
-#X connect 87 0 17 0;
+#X connect 72 0 73 0;
+#X connect 73 0 81 0;
+#X connect 73 1 70 2;
+#X connect 80 0 77 0;
+#X connect 80 0 76 0;
+#X connect 81 0 50 0;
+#X connect 81 1 10 0;
+#X connect 81 2 0 0;
+#X connect 81 3 5 0;
+#X connect 81 4 15 0;
+#X connect 81 5 22 0;
+#X connect 81 6 80 0;
+#X connect 81 7 36 0;
+#X connect 82 0 26 0;
+#X connect 82 1 83 0;
+#X connect 82 2 55 0;
+#X connect 82 3 58 0;
+#X connect 82 4 37 0;
+#X connect 86 0 17 0;
+#X connect 87 0 89 0;
+#X connect 88 0 87 0;
+#X connect 89 0 72 0;
 #X restore 48 138 pd EXPORT_VIDEO;
 #X text 213 139 VIDEO RECORDING SYSTEM;
 #N canvas 270 137 784 452 EXTERNAL_CONTROL 0;
@@ -2382,130 +2417,205 @@ separateAudio, f 69;
 #X text 253 105 INPUT OF CONTROLS;
 #X restore 60 555 pd EXPORT_CONTROL;
 #N canvas 427 240 235 246 EXPORT_GUI 0;
-#X obj 2 1 cnv 15 230 241 empty empty empty 20 12 0 14 -1 -66577 0
-;
-#X obj 12 11 cnv 15 210 120 empty empty empty 20 12 0 14 -128992 -66577
+#X obj 2 1 cnv 15 230 241 empty empty empty 20 12 0 14 #000000 #404040
+0;
+#X obj 12 11 cnv 15 210 120 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
 #X obj 22 70 hradio 20 1 0 5 \$0-exportRenderSpeed_gui \$0-exportRenderSpeed_gui_set
-RENDER_SPEED 106 11 0 10 -1 -262144 -1 2;
+RENDER_SPEED 106 11 0 10 #000000 #fcfcfc #000000 0;
 #X obj 22 101 hradio 20 1 0 5 \$0-exportRenderQuality_gui \$0-exportRenderQuality_gui_set
-RENDER_QUALITY 106 11 0 10 -1 -262144 -1 4;
+RENDER_QUALITY 106 11 0 10 #000000 #fcfcfc #000000 0;
 #X obj 22 39 bng 20 250 50 0 \$0-exportVideo_gui \$0-exportVideo_gui_set
-EXPORT_VIDEO 26 10 0 10 -1 -262144 -1;
-#X obj 12 142 cnv 15 210 90 empty empty empty 20 12 0 14 -128992 -66577
+EXPORT_VIDEO 26 10 0 10 #000000 #fcfcfc #000000;
+#X obj 12 142 cnv 15 210 90 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
 #X obj 22 202 tgl 20 0 \$0-exportSeparateAudio_gui \$0-exportSeparateAudio_gui_set
-EXPORT_SEPARATE_CHANNELS 26 10 0 10 -1 -262144 -1 1 1;
+EXPORT_SEPARATE_CHANNELS 26 10 0 10 #000000 #fcfcfc #000000 0 1;
 #X obj 22 171 bng 20 250 50 0 \$0-exportAudio_gui \$0-exportAudio_gui_set
-EXPORT_AUDIO 26 10 0 10 -1 -262144 -1;
-#X obj 12 11 cnv 15 210 20 empty empty empty 20 12 0 14 -233017 -66577
+EXPORT_AUDIO 26 10 0 10 #000000 #fcfcfc #000000;
+#X obj 12 11 cnv 15 210 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
 0;
-#X obj 97 11 cnv 15 40 20 empty empty VIDEO 0 10 0 14 -228856 -1 0
-;
-#X obj 12 142 cnv 15 210 20 empty empty empty 20 12 0 14 -233017 -66577
+#X obj 97 11 cnv 15 40 20 empty empty VIDEO 0 10 0 14 #dcdcdc #000000
 0;
-#X obj 97 142 cnv 15 40 20 empty empty AUDIO 0 10 0 14 -228856 -1 0
-;
+#X obj 12 142 cnv 15 210 20 empty empty empty 20 12 0 14 #e0e0e0 #404040
+0;
+#X obj 97 142 cnv 15 40 20 empty empty AUDIO 0 10 0 14 #dcdcdc #000000
+0;
 #X restore 60 521 pd EXPORT_GUI;
 #N canvas 414 198 737 410 INFO 0;
 #X text 44 191 PERSONAL WEBSITE - brunorohde.wordpress.com;
 #X text 44 214 REPOSITORY - github.com/brunorohde;
 #X text 44 287 ABSTRACTIONS USED (MODIFIED) IN [ARRAST_VJ];
-#X text 44 81 arrastvj.org - github.com/brunorohde/ARRAST_VJ;
 #X text 42 347 [hip.mmb~] [lop.mmb~] - Mike Moser-Booth - github.com/dotmmb/mmb
 , f 64;
 #X text 42 321 [4corners] - Papatchs Party - yamatierea.org/papatchs/
 ;
-#X text 44 128 Copyleft 2015-2018 Bruno Rohde - GPLV3 License - www.gnu.org/licenses/gpl-3.0.html
+#X text 44 33 [ARRAST_VJ] 1.2 - Pd/GEM VJ/Mapping;
+#X text 44 81 github.com/brunorohde/ARRAST_VJ;
+#X text 44 128 Copyleft 2015-2021 Bruno Rohde - GPLV3 License - www.gnu.org/licenses/gpl-3.0.html
 ;
-#X text 44 33 [ARRAST_VJ] 1.1 - Pd/GEM VJ/Mapping;
 #X restore 257 147 pd INFO;
 #X text 55 98 [ARRAST_VJ];
 #X text 217 147 ---;
 #X text 338 147 ---;
+#N canvas 5 61 411 291 CTL_OUTPUT 0;
+#X obj 112 120 r CTL_OUT;
+#X obj 112 165 s ARRAST_VJ_OUT;
+#N canvas 128 118 391 555 VIC_STATE_OUT 0;
+#X obj 75 66 r V1_ST;
+#X obj 155 66 r I1_ST;
+#X obj 235 66 r C1_ST;
+#X msg 75 91 1 V \$1;
+#X msg 155 91 1 I \$1;
+#X msg 235 91 1 C \$1;
+#X obj 75 116 s \$0-VIC_OUT;
+#X obj 75 206 s \$0-VIC_OUT;
+#X obj 75 296 s \$0-VIC_OUT;
+#X obj 75 386 s \$0-VIC_OUT;
+#X obj 75 156 r V2_ST;
+#X obj 155 156 r I2_ST;
+#X obj 235 156 r C2_ST;
+#X msg 75 181 2 V \$1;
+#X msg 155 181 2 I \$1;
+#X msg 235 181 2 C \$1;
+#X msg 75 271 3 V \$1;
+#X msg 155 271 3 I \$1;
+#X msg 235 271 3 C \$1;
+#X msg 75 361 4 V \$1;
+#X msg 155 361 4 I \$1;
+#X msg 235 361 4 C \$1;
+#X obj 75 336 r V4_ST;
+#X obj 155 336 r I4_ST;
+#X obj 235 336 r C4_ST;
+#X obj 75 246 r V3_ST;
+#X obj 155 246 r I3_ST;
+#X obj 235 246 r C3_ST;
+#X obj 124 439 r \$0-VIC_OUT;
+#X obj 124 464 outlet;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 6 0;
+#X connect 4 0 6 0;
+#X connect 5 0 6 0;
+#X connect 10 0 13 0;
+#X connect 11 0 14 0;
+#X connect 12 0 15 0;
+#X connect 13 0 7 0;
+#X connect 14 0 7 0;
+#X connect 15 0 7 0;
+#X connect 16 0 8 0;
+#X connect 17 0 8 0;
+#X connect 18 0 8 0;
+#X connect 19 0 9 0;
+#X connect 20 0 9 0;
+#X connect 21 0 9 0;
+#X connect 22 0 19 0;
+#X connect 23 0 20 0;
+#X connect 24 0 21 0;
+#X connect 25 0 16 0;
+#X connect 26 0 17 0;
+#X connect 27 0 18 0;
+#X connect 28 0 29 0;
+#X restore 112 95 pd VIC_STATE_OUT;
+#X connect 0 0 1 0;
+#X connect 2 0 1 0;
+#X restore 60 623 pd CTL_OUTPUT;
 #X coords 0 -1 1 1 247 50 2 20 20;
 #X restore 12 11 pd INIT;
-#X obj 2 1 cnv 15 267 590 empty empty empty 20 12 0 14 -1 -66577 0
-;
+#X obj 2 1 cnv 15 267 590 empty empty empty 20 12 0 14 #000000 #404040
+0;
 #X obj 52 82 hradio 35 1 0 2 \$0-mixClick_gui \$0-mixClick_gui_set
-empty 0 12 0 15 -262144 -1 -1 0;
+empty 0 12 0 15 #fcfcfc #000000 #000000 0;
 #X obj 149 82 hradio 35 1 0 2 \$0-mapClick_gui \$0-mapClick_gui_set
-empty 0 12 0 15 -262144 -1 -1 0;
-#X obj 52 82 cnv 15 70 35 \$0-morto \$0-mixColor MIX 13 18 0 25 -260818
--1 0;
-#X obj 12 139 cnv 15 247 50 empty empty empty 20 12 0 14 -128992 -66577
+empty 0 12 0 15 #fcfcfc #000000 #000000 0;
+#X obj 52 82 cnv 15 70 35 \$0-morto \$0-mixColor MIX 13 18 0 25 #fcac44
+#000000 0;
+#X obj 12 139 cnv 15 247 50 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
 #X obj 88 159 hradio 20 1 0 8 \$0-mainPresetOpen_gui \$0-mainPresetOpen_gui_set
-MAIN_PRESET 0 -8 0 8 -262144 -1 -1 3;
+MAIN_PRESET 0 -8 0 8 #fcfcfc #000000 #000000 0;
 #X obj 22 159 bng 20 250 50 0 \$0-mainPresetSaveAs_gui \$0-mainPresetSaveAs_gui_set
-SAVE_AS -7 -8 0 8 -1 -262144 -1;
+SAVE_AS -7 -8 0 8 #000000 #fcfcfc #000000;
 #X obj 55 159 bng 20 250 50 0 \$0-mainPresetSave_gui \$0-mainPresetSave_gui_set
-SAVE 0 -8 0 8 -1 -262144 -1;
+SAVE 0 -8 0 8 #000000 #fcfcfc #000000;
 #X obj 88 159 cnv 15 160 20 \$0-morto \$0-mainPresetDisplay OPEN_PRESET
-7 10 0 12 -1 -262144 0;
-#X obj 12 11 cnv 15 247 50 empty empty [ARRAST_VJ] 14 24 0 34 -128992
--1 0;
-#X obj 12 200 cnv 15 247 210 empty empty empty 20 12 0 14 -128992 -66577
+7 10 0 12 #000000 #fcfcfc 0;
+#X obj 12 11 cnv 15 247 50 empty empty [ARRAST_VJ] 14 24 0 34 #7c7c7c
+#000000 0;
+#X obj 12 200 cnv 15 247 210 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
 #X obj 88 220 hradio 20 1 0 8 \$0-autoPresetOpen_gui \$0-autoPresetOpen_gui_set
-AUTOMATION_PRESET 0 -8 0 8 -262144 -1 -1 2;
+AUTOMATION_PRESET 0 -8 0 8 #fcfcfc #000000 #000000 0;
 #X obj 22 220 bng 20 250 50 0 \$0-autoPresetSaveAs_gui \$0-autoPresetSaveAs_gui_set
-SAVE_AS -7 -8 0 8 -1 -262144 -1;
+SAVE_AS -7 -8 0 8 #000000 #fcfcfc #000000;
 #X obj 55 220 bng 20 250 50 0 \$0-autoPresetSave_gui \$0-autoPresetSave_gui_set
-SAVE 0 -8 0 8 -1 -262144 -1;
+SAVE 0 -8 0 8 #000000 #fcfcfc #000000;
 #X obj 88 220 cnv 15 160 20 \$0-morto \$0-autoPresetDisplay OPEN_AUTOMATION
-7 10 0 12 -1 -262144 0;
+7 10 0 12 #000000 #fcfcfc 0;
 #X obj 88 251 bng 20 250 50 0 \$0-autoRW_gui \$0-autoRW_gui_set RW
-4 10 0 10 -1 -262144 -262144;
+4 10 0 10 #000000 #fcfcfc #fcfcfc;
 #X obj 121 251 tgl 20 0 \$0-autoLoop_gui \$0-autoLoop_gui_set L 7 11
-0 12 -1 -262144 -262144 0 1;
+0 12 #000000 #fcfcfc #fcfcfc 0 1;
 #X obj 55 251 tgl 20 0 \$0-autoPlay_gui \$0-autoPlay_gui_set P 7 11
-0 12 -1 -262144 -262144 0 1;
+0 12 #000000 #fcfcfc #fcfcfc 0 1;
 #X obj 22 251 tgl 20 0 \$0-autoRec_gui \$0-autoRec_gui_set R 7 11 0
-12 -86277 -262144 -262144 0 1;
+12 #541010 #fcfcfc #fcfcfc 0 1;
 #X obj 157 259 nbx 5 12 -1e+37 1e+37 0 0 \$0-autoSamplesDisplay_gui
-\$0-autoSamplesDisplay_gui_set SAMPLES 0 -8 0 8 -1 -262144 -1 0 256
-;
+\$0-autoSamplesDisplay_gui_set SAMPLES 0 -8 0 8 #000000 #fcfcfc #000000
+0 256;
 #X obj 212 259 nbx 4 12 -1e+37 1e+37 0 0 \$0-autoSecDisplay_gui \$0-autoSecDisplay_gui_set
-SECS 0 -8 0 8 -1 -262144 -1 0 256;
+SECS 0 -8 0 8 #000000 #fcfcfc #000000 0 256;
 #X obj 25 282 hsl 222 20 0 1 0 0 \$0-autoTimeline_gui \$0-autoTimeline_gui_set
-.0 0 11 0 12 -1 -262144 -128992 0 1;
+.0 0 11 0 12 #000000 #fcfcfc #7c7c7c 0 1;
 #X obj 35 380 hradio 20 1 0 3 \$0-autoConfig_gui \$0-autoConfig_gui_set
-CONFIG 12 10 0 10 -1 -1 -262144 1;
+CONFIG 12 10 0 10 #000000 #000000 #fcfcfc 0;
 #X obj 106 380 hradio 20 1 0 3 \$0-autoClear_gui \$0-autoClear_gui_set
-CLEAR 15 10 0 10 -1 -1 -262144 1;
-#X obj 149 82 cnv 15 70 35 \$0-morto \$0-mapColor MAP 14 18 0 25 -1
--262144 0;
+CLEAR 15 10 0 10 #000000 #000000 #fcfcfc 0;
+#X obj 149 82 cnv 15 70 35 \$0-morto \$0-mapColor MAP 14 18 0 25 #000000
+#fcfcfc 0;
 #X obj 12 421 arrast_gemwin;
-#X obj 22 313 cnv 15 227 56 empty empty empty 20 12 0 14 -1 -128992
+#X obj 22 313 cnv 15 227 56 empty empty empty 20 12 0 14 #000000 #7c7c7c
 0;
 #X obj 32 332 hradio 15 1 0 3 \$0-autoSetAll1_gui \$0-autoSetAll1_gui_set
-empty 50 8 0 10 -258699 -1 -1 0;
+empty 50 8 0 10 #fc2828 #000000 #000000 0;
 #X obj 86 332 hradio 15 1 0 3 \$0-autoSetAll2_gui \$0-autoSetAll2_gui_set
-empty 50 8 0 10 -241291 -1 -1 0;
+empty 50 8 0 10 #e8e828 #000000 #000000 0;
 #X obj 140 332 hradio 15 1 0 3 \$0-autoSetAll3_gui \$0-autoSetAll3_gui_set
-empty 50 8 0 10 -250685 -1 -1 0;
+empty 50 8 0 10 #f430f0 #000000 #000000 0;
 #X obj 194 332 hradio 15 1 0 3 \$0-autoSetAll4_gui \$0-autoSetAll4_gui_set
-empty 50 8 0 10 -24198 -1 -1 0;
-#X obj 34 318 cnv 10 12 12 empty empty M 3 7 0 10 -1 -128992 0;
-#X obj 49 318 cnv 10 12 12 empty empty R 3 7 0 10 -1 -128992 0;
-#X obj 64 318 cnv 10 12 12 empty empty P 3 7 0 10 -1 -128992 0;
-#X obj 115 352 cnv 12 45 12 empty empty M=MANUAL 5 7 0 8 -1 -262144
-0;
-#X obj 161 352 cnv 12 45 12 empty empty R=RECORD 5 7 0 8 -1 -262144
-0;
-#X obj 207 352 cnv 12 35 12 empty empty P=PLAY 5 7 0 8 -1 -262144 0
+empty 50 8 0 10 #14e814 #000000 #000000 0;
+#X obj 34 318 cnv 10 12 12 empty empty M 3 7 0 10 #000000 #7c7c7c 0
 ;
-#X obj 24 352 cnv 12 85 12 empty empty AUTOMATION_STATE 5 7 0 8 -1
--128992 0;
-#X obj 88 318 cnv 10 12 12 empty empty M 3 7 0 10 -1 -128992 0;
-#X obj 103 318 cnv 10 12 12 empty empty R 3 7 0 10 -1 -128992 0;
-#X obj 118 318 cnv 10 12 12 empty empty P 3 7 0 10 -1 -128992 0;
-#X obj 142 318 cnv 10 12 12 empty empty M 3 7 0 10 -1 -128992 0;
-#X obj 157 318 cnv 10 12 12 empty empty R 3 7 0 10 -1 -128992 0;
-#X obj 172 318 cnv 10 12 12 empty empty P 3 7 0 10 -1 -128992 0;
-#X obj 196 318 cnv 10 12 12 empty empty M 3 7 0 10 -1 -128992 0;
-#X obj 211 318 cnv 10 12 12 empty empty R 3 7 0 10 -1 -128992 0;
-#X obj 226 318 cnv 10 12 12 empty empty P 3 7 0 10 -1 -128992 0;
+#X obj 49 318 cnv 10 12 12 empty empty R 3 7 0 10 #000000 #7c7c7c 0
+;
+#X obj 64 318 cnv 10 12 12 empty empty P 3 7 0 10 #000000 #7c7c7c 0
+;
+#X obj 115 352 cnv 12 45 12 empty empty M=MANUAL 5 7 0 8 #000000 #fcfcfc
+0;
+#X obj 161 352 cnv 12 45 12 empty empty R=RECORD 5 7 0 8 #000000 #fcfcfc
+0;
+#X obj 207 352 cnv 12 35 12 empty empty P=PLAY 5 7 0 8 #000000 #fcfcfc
+0;
+#X obj 24 352 cnv 12 85 12 empty empty AUTOMATION_STATE 5 7 0 8 #000000
+#7c7c7c 0;
+#X obj 88 318 cnv 10 12 12 empty empty M 3 7 0 10 #000000 #7c7c7c 0
+;
+#X obj 103 318 cnv 10 12 12 empty empty R 3 7 0 10 #000000 #7c7c7c
+0;
+#X obj 118 318 cnv 10 12 12 empty empty P 3 7 0 10 #000000 #7c7c7c
+0;
+#X obj 142 318 cnv 10 12 12 empty empty M 3 7 0 10 #000000 #7c7c7c
+0;
+#X obj 157 318 cnv 10 12 12 empty empty R 3 7 0 10 #000000 #7c7c7c
+0;
+#X obj 172 318 cnv 10 12 12 empty empty P 3 7 0 10 #000000 #7c7c7c
+0;
+#X obj 196 318 cnv 10 12 12 empty empty M 3 7 0 10 #000000 #7c7c7c
+0;
+#X obj 211 318 cnv 10 12 12 empty empty R 3 7 0 10 #000000 #7c7c7c
+0;
+#X obj 226 318 cnv 10 12 12 empty empty P 3 7 0 10 #000000 #7c7c7c
+0;
 #X obj 177 380 hradio 20 1 0 3 \$0-autoExport_gui \$0-autoExport_gui_set
-EXPORT 13 10 0 10 -1 -1 -262144 2;
+EXPORT 13 10 0 10 #000000 #000000 #fcfcfc 0;

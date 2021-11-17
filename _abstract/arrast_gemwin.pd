@@ -1,43 +1,44 @@
 #N canvas 447 335 563 221 16;
-#X obj 50 30 cnv 15 247 160 empty empty empty 20 12 0 14 -128992 -66577
+#X obj 50 30 cnv 15 247 160 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
 #X obj 255 85 hsl 30 8 0 1 0 0 \$0-redBg_gui \$0-redBg_gui_set empty
--2 -8 0 10 -258113 -1 -1 0 1;
+-2 -8 0 10 #fc0400 #000000 #000000 0 1;
 #X obj 255 95 hsl 30 8 0 1 0 0 \$0-greenBg_gui \$0-greenBg_gui_set
-empty -2 -8 0 10 -4034 -1 -1 0 1;
+empty -2 -8 0 10 #00fc04 #000000 #000000 0 1;
 #X obj 255 105 hsl 30 8 0 1 0 0 \$0-blueBg_gui \$0-blueBg_gui_set empty
--2 -8 0 10 -4160 -1 -1 0 1;
+-2 -8 0 10 #0400fc #000000 #000000 0 1;
 #X obj 172 50 tgl 20 0 \$0-master_gui \$0-master_gui_set MASTER -4
--8 0 8 -1 -262144 -1 0 1;
+-8 0 8 #000000 #fcfcfc #000000 0 1;
 #X obj 253 50 nbx 2 20 1 99 0 0 \$0-fps_gui \$0-fps_gui_set empty 5
--8 0 12 -1 -262144 -1 24 256;
+-8 0 12 #000000 #fcfcfc #000000 0 256;
 #X obj 60 50 vradio 20 1 0 4 \$0-dimen_gui \$0-dimen_gui_set empty
-0 -8 0 10 -1 -262144 -1 1;
+0 -8 0 10 #000000 #fcfcfc #000000 0;
 #X obj 212 50 tgl 20 0 \$0-preview_gui \$0-preview_gui_set PREVIEW
--7 -8 0 8 -1 -262144 -1 0 1;
+-7 -8 0 8 #000000 #fcfcfc #000000 0 1;
 #X obj 172 93 tgl 20 0 \$0-cursor_gui \$0-cursor_gui_set CURSOR -4
--8 0 8 -99865 -1 -1 1 1;
+-8 0 8 #606060 #000000 #000000 0 1;
 #X obj 212 93 tgl 20 0 \$0-border_gui \$0-border_gui_set BORDER -4
--8 0 8 -99865 -1 -1 1 1;
-#X obj 86 53 cnv 15 65 15 empty empty 320x240 0 8 0 10 -128992 -1 0
-;
-#X obj 86 73 cnv 15 65 15 empty empty 640x480 0 8 0 10 -128992 -1 0
-;
-#X obj 86 93 cnv 15 65 15 empty empty 1024x768 0 8 0 10 -128992 -1
+-8 0 8 #606060 #000000 #000000 0 1;
+#X obj 86 53 cnv 15 65 15 empty empty 320x240 0 8 0 10 #7c7c7c #000000
 0;
-#X obj 86 113 cnv 15 65 15 empty empty 1280x720 0 8 0 10 -128992 -1
+#X obj 86 73 cnv 15 65 15 empty empty 640x480 0 8 0 10 #7c7c7c #000000
+0;
+#X obj 86 93 cnv 15 65 15 empty empty 1024x768 0 8 0 10 #7c7c7c #000000
+0;
+#X obj 86 113 cnv 15 65 15 empty empty 1280x720 0 8 0 10 #7c7c7c #000000
 0;
 #X obj 60 136 nbx 4 12 -1e+37 1e+37 0 0 \$0-dimX_gui \$0-dimX_gui_set
-empty 0 -8 0 10 -1 -262144 -1 640 256;
+empty 0 -8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 110 136 nbx 4 12 -1e+37 1e+37 0 0 \$0-dimY_gui \$0-dimY_gui_set
-empty 0 -8 0 10 -1 -262144 -1 480 256;
+empty 0 -8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 60 168 nbx 4 12 -1e+37 1e+37 0 0 \$0-offsetX_gui \$0-offsetX_gui_set
-empty 0 -8 0 10 -1 -262144 -1 0 256;
+empty 0 -8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 110 168 nbx 4 12 -1e+37 1e+37 0 0 \$0-offsetY_gui \$0-offsetY_gui_set
-empty 0 -8 0 10 -1 -262144 -1 0 256;
-#X obj 60 152 cnv 15 65 15 empty empty OFFSET_X_Y 0 8 0 8 -128992 -1
+empty 0 -8 0 10 #000000 #fcfcfc #000000 0 256;
+#X obj 60 152 cnv 15 65 15 empty empty OFFSET_X_Y 0 8 0 8 #7c7c7c #000000
 0;
-#X obj 262 34 cnv 15 15 15 empty empty FPS 0 8 0 8 -128992 -1 0;
+#X obj 262 34 cnv 15 15 15 empty empty FPS 0 8 0 8 #7c7c7c #000000
+0;
 #N canvas 268 162 631 291 PREVIEW_GEMWIN 0;
 #X msg 42 143 0 \, destroy;
 #X obj 42 109 sel 0 1;
@@ -179,7 +180,7 @@ WINDOW CONTROL DATA TO 2nd INSTANCE, f 92;
 #X connect 56 0 57 0;
 #X connect 59 0 23 0;
 #X restore 340 128 pd LINKS;
-#N canvas 112 87 1170 711 CONTROL_MEMORY 0;
+#N canvas 282 108 1170 711 CONTROL_MEMORY 0;
 #X text 488 213 LOCAL MEMORY ARRAY - 13 PARAMETERS;
 #X obj 490 241 array define \$0-memo 13;
 #X obj 51 187 arrast_param \$0 dimen \$0-memo 0 1 9;
@@ -220,7 +221,6 @@ WINDOW CONTROL DATA TO 2nd INSTANCE, f 92;
 #X text 846 654 REFRESH INTERFACE;
 #X obj 51 644 s \$0-receivePreset_gui_set;
 #X obj 51 581 loadbang;
-#X msg 51 610 1;
 #X text 95 611 START PRESET BUTTON;
 #X text 326 646 DOES NOT SAVE TO PRESET MEMORY;
 #X obj 51 55 r OSC_BUS;
@@ -235,6 +235,7 @@ WINDOW CONTROL DATA TO 2nd INSTANCE, f 92;
 blueBg offsetX offsetY debug cameraDev preset dimX dimY restart, f
 63;
 #X text 746 317 WAIT UNTIL ENGINE IS ON;
+#X msg 51 610 0;
 #X connect 15 0 18 0;
 #X connect 18 0 16 0;
 #X connect 20 0 23 0;
@@ -248,42 +249,42 @@ blueBg offsetX offsetY debug cameraDev preset dimX dimY restart, f
 #X connect 31 0 16 0;
 #X connect 32 0 26 0;
 #X connect 33 0 32 1;
-#X connect 39 0 40 0;
-#X connect 40 0 38 0;
-#X connect 43 0 44 0;
-#X connect 44 0 51 0;
-#X connect 51 0 2 0;
-#X connect 51 1 5 0;
-#X connect 51 2 6 0;
-#X connect 51 3 3 0;
-#X connect 51 4 7 0;
-#X connect 51 5 4 0;
-#X connect 51 6 8 0;
-#X connect 51 7 9 0;
-#X connect 51 8 10 0;
-#X connect 51 9 11 0;
-#X connect 51 10 12 0;
-#X connect 51 11 13 0;
-#X connect 51 12 14 0;
-#X connect 51 13 38 0;
-#X connect 51 14 47 0;
-#X connect 51 15 48 0;
-#X connect 51 16 50 0;
+#X connect 39 0 52 0;
+#X connect 42 0 43 0;
+#X connect 43 0 50 0;
+#X connect 50 0 2 0;
+#X connect 50 1 5 0;
+#X connect 50 2 6 0;
+#X connect 50 3 3 0;
+#X connect 50 4 7 0;
+#X connect 50 5 4 0;
+#X connect 50 6 8 0;
+#X connect 50 7 9 0;
+#X connect 50 8 10 0;
+#X connect 50 9 11 0;
+#X connect 50 10 12 0;
+#X connect 50 11 13 0;
+#X connect 50 12 14 0;
+#X connect 50 13 38 0;
+#X connect 50 14 46 0;
+#X connect 50 15 47 0;
+#X connect 50 16 49 0;
+#X connect 52 0 38 0;
 #X restore 340 60 pd CONTROL_MEMORY;
 #X obj 253 136 nbx 2 20 0 99 0 0 \$0-cameraDev_gui \$0-cameraDev_gui_set
-empty 5 -8 0 12 -1 -262144 -1 0 256;
-#X obj 255 120 cnv 15 15 15 empty empty CAMERA 0 8 0 8 -128992 -1 0
-;
-#X obj 172 124 cnv 15 60 56 empty empty empty 20 12 0 14 -1 -66577
+empty 5 -8 0 12 #000000 #fcfcfc #000000 0 256;
+#X obj 255 120 cnv 15 15 15 empty empty CAMERA 0 8 0 8 #7c7c7c #000000
+0;
+#X obj 172 124 cnv 15 60 56 empty empty empty 20 12 0 14 #000000 #404040
 0;
 #X obj 176 141 bng 15 250 50 0 RESTART_MOTOR RESTART_MOTOR_set RESTART
-20 8 0 8 -128992 -1 -128992;
+20 8 0 8 #7c7c7c #000000 #7c7c7c;
 #X obj 176 161 tgl 15 0 \$0-debug_gui \$0-debug_gui_set DEBUG 20 8
-0 8 -128992 -1 -128992 0 1;
-#X obj 176 124 cnv 15 15 15 empty empty 2_INSTANCE 0 8 0 8 -1 -128992
-0;
-#X obj 60 34 cnv 15 15 15 empty empty DIMENSION 0 8 0 8 -128992 -1
+0 8 #7c7c7c #000000 #7c7c7c 0 1;
+#X obj 176 124 cnv 15 15 15 empty empty 2_INSTANCE 0 8 0 8 #000000
+#7c7c7c 0;
+#X obj 60 34 cnv 15 15 15 empty empty DIMENSION 0 8 0 8 #7c7c7c #000000
 0;
 #X obj 262 165 tgl 15 0 \$0-receivePreset_gui \$0-receivePreset_gui_set
-P 5 8 0 10 -99865 -1 -1 1 1;
+P 5 8 0 10 #606060 #000000 #000000 0 1;
 #X coords 0 -1 1 1 247 160 2 50 30;

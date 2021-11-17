@@ -1,79 +1,83 @@
-#N canvas 383 299 516 274 16;
-#X obj 50 30 cnv 15 185 200 empty empty empty 20 12 0 14 -228856 -66577
+#N canvas 541 215 516 274 16;
+#X obj 50 30 cnv 15 185 200 empty empty empty 20 12 0 14 #dcdcdc #404040
 0;
 #X obj 61 61 hradio 18 1 0 9 \$0-openBrowser \$0-openBrowser_in empty
-0 -8 0 10 -262144 -1 -1 1;
-#X obj 63 153 hsl 160 8 0 0 0 0 \$0-morto \$0-timeline empty -2 -8
-0 10 -1 -262144 -1 0 1;
+0 -8 0 10 #fcfcfc #000000 #000000 0;
+#X obj 63 153 hsl 160 8 0 144 0 0 \$0-morto \$0-timeline empty -2 -8
+0 10 #000000 #fcfcfc #000000 0 1;
 #X obj 181 110 nbx 4 12 -1e+37 1e+37 0 0 \$0-morto \$0-secDisplay empty
-0 -8 0 10 -1 -262144 -1 0 256;
+0 -8 0 10 #000000 #fcfcfc #000000 0 256;
 #X obj 63 166 hsl 160 10 1 0 0 0 \$0-speed_gui \$0-speed_gui_set empty
--2 -8 0 10 -262144 -1 -1 7950 1;
+-2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 141 191 bng 25 250 50 0 \$0-stop_gui \$0-stop_gui_set S 8 13
-0 18 -143491 -258113 -262144;
+0 18 #8c0808 #fc0400 #fcfcfc;
 #X obj 210 191 vradio 12 1 0 2 \$0-loopMode_gui \$0-loopMode_gui_set
-empty 0 -8 0 10 -355 -262144 -262144 0;
+empty 0 -8 0 10 #001488 #fcfcfc #fcfcfc 0;
 #X obj 95 189 bng 12 250 50 0 \$0-rw_gui \$0-rw_gui_set RW 16 6 0 10
--13381 -4034 -1;
-#X obj 95 206 tgl 12 0 \$0-inv_gui \$0-inv_gui_set INV 16 6 0 10 -13381
--4034 -1 0 1;
+#0c4410 #00fc04 #000000;
+#X obj 95 206 tgl 12 0 \$0-inv_gui \$0-inv_gui_set INV 16 6 0 10 #0c4410
+#00fc04 #000000 0 1;
 #X obj 139 176 bng 8 250 50 0 \$0-resetSpeed \$0-resetSpeed_in empty
-17 7 0 10 -162280 -1 -1;
-#X obj 60 61 cnv 15 165 18 \$0-morto \$0-fileDisplay OPEN_VIDEO 5 9
-0 12 -355 -262144 0;
+17 7 0 10 #9c9c9c #000000 #000000;
+#X obj 60 61 cnv 15 165 18 \$0-morto \$0-fileDisplay Abertura.mov 5
+9 0 12 #001488 #fcfcfc 0;
 #X text 97 170 ';
 #X text 177 170 ';
 #N canvas 314 221 692 141 select_slot 0;
 #X obj 105 53 bng 15 250 50 0 \$0-clickSlot1 \$0-clickSlot1_set empty
-17 7 0 10 -262144 -1 -1;
+17 7 0 10 #fcfcfc #000000 #000000;
 #X msg 500 53 color \$1;
-#N canvas 112 192 411 304 BROWSE_FILE 0;
-#X obj 44 121 t b;
-#X obj 44 187 openpanel;
-#X obj 44 155 symbol Videos/;
-#X obj 44 234 s \$0-slotFileIn;
-#X obj 44 91 r \$0-openBrowser;
-#X text 210 234 SEND TO SLOTS;
+#N canvas 112 192 411 324 BROWSE_FILE 0;
+#X text 210 264 SEND TO SLOTS;
 #X text 50 21 ** CALL A WINDOW TO OPEN FILE FROM INTERFACE, f 30;
-#X connect 0 0 2 0;
-#X connect 1 0 3 0;
-#X connect 2 0 1 0;
-#X connect 4 0 0 0;
+#X obj 44 116 t b;
+#X obj 44 239 openpanel;
+#X obj 44 264 s \$0-slotFileIn;
+#X obj 44 91 r \$0-openBrowser;
+#X obj 44 166 pdcontrol;
+#X msg 44 141 dir;
+#X obj 44 191 makefilename %s/../Videos;
+#X connect 2 0 7 0;
+#X connect 3 0 4 0;
+#X connect 5 0 2 0;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X connect 8 0 3 0;
 #X restore 304 53 pd BROWSE_FILE;
 #X obj 500 21 r \$0-bgColor;
 #X obj 500 84 s \$0-slotsBG;
 #X obj 125 53 bng 15 250 50 0 \$0-clickSlot2 \$0-clickSlot2_set empty
-17 7 0 10 -262144 -1 -1;
+17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 145 53 bng 15 250 50 0 \$0-clickSlot3 \$0-clickSlot3_set empty
-17 7 0 10 -262144 -1 -1;
+17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 165 53 bng 15 250 50 0 \$0-clickSlot4 \$0-clickSlot4_set empty
-17 7 0 10 -262144 -1 -1;
+17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 185 53 bng 15 250 50 0 \$0-clickSlot5 \$0-clickSlot5_set empty
-17 7 0 10 -262144 -1 -1;
+17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 205 53 bng 15 250 50 0 \$0-clickSlot6 \$0-clickSlot6_set empty
-17 7 0 10 -262144 -1 -1;
+17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 225 53 bng 15 250 50 0 \$0-clickSlot7 \$0-clickSlot7_set empty
-17 7 0 10 -262144 -1 -1;
+17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 245 53 bng 15 250 50 0 \$0-clickSlot8 \$0-clickSlot8_set empty
-17 7 0 10 -262144 -1 -1;
-#X obj 100 50 cnv 15 165 21 empty \$0-slotsBG empty 20 12 0 14 -355
--262144 0;
-#X obj 105 53 cnv 15 15 15 empty \$0-colorSlot1 1 4 8 0 12 -24198 -1
-0;
-#X obj 125 53 cnv 15 15 15 empty \$0-colorSlot2 2 4 8 0 12 -262144
--1 0;
-#X obj 145 53 cnv 15 15 15 empty \$0-colorSlot3 3 4 8 0 12 -262144
--1 0;
-#X obj 165 53 cnv 15 15 15 empty \$0-colorSlot4 4 4 8 0 12 -262144
--1 0;
-#X obj 185 53 cnv 15 15 15 empty \$0-colorSlot5 5 4 8 0 12 -262144
--1 0;
-#X obj 205 53 cnv 15 15 15 empty \$0-colorSlot6 6 4 8 0 12 -262144
--1 0;
-#X obj 225 53 cnv 15 15 15 empty \$0-colorSlot7 7 4 8 0 12 -262144
--1 0;
-#X obj 245 53 cnv 15 15 15 empty \$0-colorSlot8 8 4 8 0 12 -262144
--1 0;
+17 7 0 10 #fcfcfc #000000 #000000;
+#X obj 100 50 cnv 15 165 21 empty \$0-slotsBG empty 20 12 0 14 #001488
+#fcfcfc 0;
+#X obj 105 53 cnv 15 15 15 empty \$0-colorSlot1 1 4 8 0 12 #f430f0
+#000000 0;
+#X obj 125 53 cnv 15 15 15 empty \$0-colorSlot2 2 4 8 0 12 #fcfcfc
+#000000 0;
+#X obj 145 53 cnv 15 15 15 empty \$0-colorSlot3 3 4 8 0 12 #fcfcfc
+#000000 0;
+#X obj 165 53 cnv 15 15 15 empty \$0-colorSlot4 4 4 8 0 12 #fcfcfc
+#000000 0;
+#X obj 185 53 cnv 15 15 15 empty \$0-colorSlot5 5 4 8 0 12 #fcfcfc
+#000000 0;
+#X obj 205 53 cnv 15 15 15 empty \$0-colorSlot6 6 4 8 0 12 #fcfcfc
+#000000 0;
+#X obj 225 53 cnv 15 15 15 empty \$0-colorSlot7 7 4 8 0 12 #fcfcfc
+#000000 0;
+#X obj 245 53 cnv 15 15 15 empty \$0-colorSlot8 8 4 8 0 12 #fcfcfc
+#000000 0;
 #N canvas 49 128 663 307 FILE_DISPLAY 0;
 #X msg 221 206 label \$1;
 #X msg 47 206 color \$1;
@@ -167,13 +171,13 @@ empty 0 -8 0 10 -355 -262144 -262144 0;
 #X coords 0 -1 1 1 165 21 2 100 50;
 #X restore 60 79 pd select_slot;
 #X obj 52 30 hradio 20 1 0 9 \$0-enableClick \$0-enableClick_set empty
-0 -8 0 10 -262144 -1 -1 4;
+0 -8 0 10 #fcfcfc #000000 #000000 0;
 #X obj 50 30 cnv 15 185 20 \$0-enable \$0-enable_set empty 20 12 0
-14 -24198 -262144 0;
+14 #f430f0 #fcfcfc 0;
 #X obj 63 128 hsl 160 10 0 1 0 0 \$0-inSet_gui \$0-inSet_gui_set empty
--2 -8 0 10 -262144 -1 -1 0 1;
+-2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #X obj 63 138 hsl 160 10 0 1 0 0 \$0-outSet_gui \$0-outSet_gui_set
-empty -2 -8 0 10 -262144 -1 -1 15900 1;
+empty -2 -8 0 10 #fcfcfc #000000 #000000 0 1;
 #N canvas 121 77 1179 714 VIDEO_UNIT 0;
 #X obj 44 570 rectangle 4 3;
 #X obj 44 292 pix_film;
@@ -186,18 +190,18 @@ empty -2 -8 0 10 -262144 -1 -1 15900 1;
 #X obj 667 198 f;
 #X obj 711 198 + 1;
 #X obj 667 232 mod 1;
-#X floatatom 794 123 8 0 0 0 - - -, f 8;
+#X floatatom 794 123 8 0 0 0 - - - 0;
 #X obj 784 208 r \$0-modulo;
 #X obj 667 154 metro 41.6667;
-#X floatatom 667 544 5 0 0 0 - - -, f 5;
-#X obj 667 119 tgl 25 0 empty empty empty 17 7 0 10 -204786 -1 -1 0
-1;
+#X floatatom 667 544 5 0 0 0 - - - 0;
+#X obj 667 119 tgl 25 0 empty empty empty 17 7 0 10 #c4fcc4 #000000
+#000000 0 1;
 #X obj 667 85 r \$0-motor;
 #X text 727 543 CURSOR;
 #X obj 689 579 s \$0-cursor;
 #X obj 667 623 list prepend cursor;
-#X obj 44 119 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
-1;
+#X obj 44 119 tgl 25 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X obj 44 154 t f f;
 #X obj 44 404 rotateXYZ 0 0 0;
 #X obj 364 577 rectangle 4 3;
@@ -685,7 +689,7 @@ OUTLET POINT, f 37;
 #N canvas 233 197 493 222 SEND_FRAMES 0;
 #X obj 48 43 inlet;
 #X obj 48 80 unpack f f f;
-#X floatatom 48 118 5 0 0 0 - - -, f 5;
+#X floatatom 48 118 5 0 0 0 - - - 0;
 #X obj 48 151 s \$0-frames;
 #X text 130 23 ** SEND VIDEO LENGTH IN FRAMES;
 #X connect 0 0 1 0;
@@ -710,17 +714,17 @@ OUTLET POINT, f 37;
 #X obj 531 140 r \$0-gotoIn;
 #N canvas 105 105 661 642 MODULO_OFFSET 0;
 #X obj 414 428 <;
-#X floatatom 414 459 5 0 0 0 - - -, f 5;
+#X floatatom 414 459 5 0 0 0 - - - 0;
 #X obj 414 397 t f f;
 #X obj 484 397 t f f;
 #X obj 504 518 f;
 #X obj 414 518 f;
 #X obj 414 487 sel 1 0;
-#X floatatom 414 548 5 0 0 0 - - -, f 5;
+#X floatatom 414 548 5 0 0 0 - - - 0;
 #X obj 414 580 s \$0-offset;
 #X obj 57 228 -;
 #X obj 95 204 t b f;
-#X floatatom 57 518 5 0 0 0 - - -, f 5;
+#X floatatom 57 518 5 0 0 0 - - - 0;
 #X obj 124 580 s \$0-modulo;
 #X obj 414 367 f;
 #X obj 484 367 f;
@@ -787,27 +791,27 @@ GLITCH) \, 1 = STRAIGHT (GLITCH), f 33;
 #X connect 32 0 23 0;
 #X connect 34 0 32 0;
 #X restore 950 197 pd MODULO_OFFSET;
-#N canvas 51 92 1043 547 PLAY_PAUSE_RW 0;
+#N canvas 116 350 1043 547 PLAY_PAUSE_RW 0;
 #X obj 177 321 s \$0-motor;
 #X msg 177 287 1;
 #X obj 58 61 r \$0-play;
 #X obj 433 172 s \$0-motor;
 #X msg 433 139 0;
-#X obj 177 115 sel 1 0;
 #X obj 177 439 list prepend render;
 #X obj 177 407 spigot;
 #X obj 58 91 t f f;
 #N canvas 521 267 402 289 COLOR 0;
 #X obj 45 41 inlet;
-#X obj 45 96 sel 0 1;
 #X msg 45 156 color 26 26 0;
 #X msg 205 156 color 16 16 22;
 #X obj 45 207 s \$0-play_gui_set;
-#X connect 0 0 1 0;
-#X connect 1 0 2 0;
-#X connect 1 1 3 0;
-#X connect 2 0 4 0;
-#X connect 3 0 4 0;
+#X obj 45 96 sel 0 1 2;
+#X connect 0 0 4 0;
+#X connect 1 0 3 0;
+#X connect 2 0 3 0;
+#X connect 4 0 1 0;
+#X connect 4 1 2 0;
+#X connect 4 2 2 0;
 #X restore 58 153 pd COLOR;
 #X obj 177 253 t b b;
 #X obj 234 374 r \$0-channelState;
@@ -836,39 +840,44 @@ GLITCH) \, 1 = STRAIGHT (GLITCH), f 33;
 #X obj 234 155 r \$0-slotState;
 #X obj 177 189 spigot;
 #X text 251 188 PREVENT COMMANDS IF THE SLOT IS EMPTY, f 15;
+#X obj 177 115 sel 1 0 2;
+#X obj 483 139 t b b;
 #X connect 1 0 0 0;
-#X connect 1 0 7 0;
-#X connect 2 0 8 0;
+#X connect 1 0 6 0;
+#X connect 2 0 7 0;
 #X connect 4 0 3 0;
-#X connect 5 0 28 0;
-#X connect 5 1 4 0;
-#X connect 6 0 24 0;
-#X connect 7 0 6 0;
-#X connect 8 0 9 0;
-#X connect 8 1 5 0;
-#X connect 10 0 1 0;
-#X connect 10 1 12 0;
-#X connect 11 0 7 1;
-#X connect 13 0 16 0;
-#X connect 16 0 14 0;
-#X connect 16 1 15 0;
-#X connect 17 0 19 0;
-#X connect 19 0 16 0;
-#X connect 20 0 16 0;
-#X connect 27 0 28 1;
-#X connect 28 0 10 0;
+#X connect 5 0 23 0;
+#X connect 6 0 5 0;
+#X connect 7 0 8 0;
+#X connect 7 1 29 0;
+#X connect 9 0 1 0;
+#X connect 9 1 11 0;
+#X connect 10 0 6 1;
+#X connect 12 0 15 0;
+#X connect 15 0 13 0;
+#X connect 15 1 14 0;
+#X connect 16 0 18 0;
+#X connect 18 0 15 0;
+#X connect 19 0 15 0;
+#X connect 26 0 27 1;
+#X connect 27 0 9 0;
+#X connect 29 0 27 0;
+#X connect 29 1 4 0;
+#X connect 29 2 30 0;
+#X connect 30 0 27 0;
+#X connect 30 1 15 0;
 #X restore 950 231 pd PLAY_PAUSE_RW;
 #N canvas 137 212 617 444 IN_OUT 0;
 #X obj 49 297 *;
 #X obj 49 327 int;
-#X floatatom 49 357 5 0 0 0 - - -, f 5;
+#X floatatom 49 357 5 0 0 0 - - - 0;
 #X obj 348 82 r \$0-ioFlush;
 #X obj 49 82 r \$0-inSet;
 #X obj 49 385 s \$0-in;
 #X obj 238 242 r \$0-frames;
 #X obj 186 297 *;
 #X obj 186 327 int;
-#X floatatom 186 357 5 0 0 0 - - -, f 5;
+#X floatatom 186 357 5 0 0 0 - - - 0;
 #X obj 186 82 r \$0-outSet;
 #X obj 186 385 s \$0-out;
 #X text 66 19 ** CALCULATE START AND END POSITION OF PLAYBACK IN FRAMES
@@ -876,8 +885,8 @@ GLITCH) \, 1 = STRAIGHT (GLITCH), f 33;
 #X obj 348 113 t b b;
 #X obj 238 273 t b f b f;
 #X text 346 142 REFRESH READING POINTS;
-#X floatatom 186 111 5 0 0 0 - - -, f 5;
-#X floatatom 49 111 5 0 0 0 - - -, f 5;
+#X floatatom 186 111 5 0 0 0 - - - 0;
+#X floatatom 49 111 5 0 0 0 - - - 0;
 #N canvas 36 169 860 631 IN_OUT_LINK 0;
 #X obj 505 461 +;
 #X obj 155 461 -;
@@ -1057,8 +1066,8 @@ GLITCH) \, 1 = STRAIGHT (GLITCH), f 33;
 #X obj 122 385 outlet;
 #X obj 255 384 outlet;
 #X msg 122 275 open \$1;
-#X obj 255 312 tgl 15 0 empty empty empty 17 7 0 10 -232576 -1 -1 1
-1;
+#X obj 255 312 tgl 15 0 empty empty empty 17 7 0 10 #e0c4fc #000000
+#000000 0 1;
 #X text 275 308 JUMP!;
 #X msg 255 267 1;
 #X obj 122 243 t s b;
@@ -1069,8 +1078,8 @@ GLITCH) \, 1 = STRAIGHT (GLITCH), f 33;
 #X obj 40 246 int;
 #X obj 114 213 del 50;
 #X obj 67 175 t f b;
-#X obj 40 75 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
-;
+#X obj 40 75 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
 #X obj 40 36 inlet;
 #X obj 40 294 outlet;
 #X obj 67 142 r \$0-frames;
@@ -1092,8 +1101,8 @@ GLITCH) \, 1 = STRAIGHT (GLITCH), f 33;
 #X msg 263 422 0.95;
 #X obj 41 475 outlet;
 #X obj 41 112 sel 1;
-#X obj 41 71 tgl 25 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
-;
+#X obj 41 71 tgl 25 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
+0 1;
 #X obj 41 36 inlet;
 #X text 128 28 ** GENERATE SPECIFIC FRAMES FOR VISUALIZATION, f 23
 ;
@@ -1331,7 +1340,7 @@ UNIT, f 42;
 #X obj 50 193 f;
 #X obj 90 193 + 1;
 #X obj 50 221 % 2;
-#X floatatom 50 255 5 0 0 0 - - -, f 5;
+#X floatatom 50 255 5 0 0 0 - - - 0;
 #X obj 117 108 loadbang;
 #X obj 327 103 sel 1;
 #X obj 217 323 sel 1;
@@ -1431,7 +1440,7 @@ UNIT, f 42;
 #X connect 11 0 7 0;
 #X connect 14 0 13 0;
 #X restore 280 200 pd CHANNEL_COLOR;
-#N canvas 40 75 1341 715 AUDIO_UNIT 0;
+#N canvas 40 75 1354 715 AUDIO_UNIT 0;
 #X obj 370 483 / 48000;
 #X obj 298 1436 *~;
 #X obj 325 1406 line~;
@@ -1446,7 +1455,7 @@ UNIT, f 42;
 #X obj 297 436 f 1;
 #X text 462 414 TRANSPOSITION;
 #X text 427 876 RESET PHASE;
-#X floatatom 404 415 5 0 0 0 - - -, f 5;
+#X floatatom 404 415 5 0 0 0 - - - 0;
 #X text 427 835 TURN OFF PHASE;
 #X text 452 484 CALCULATE PHASE FREQUENCY;
 #X text 544 1130 OFFSET IN SAMPLES;
@@ -1471,7 +1480,7 @@ UNIT, f 42;
 #X obj 104 268 pack f \$0;
 #X msg 304 353 set \$2-\$1_R;
 #X obj 304 397 outlet ARRAY_R;
-#X floatatom 57 69 5 0 0 0 - - -, f 5;
+#X floatatom 57 69 5 0 0 0 - - - 0;
 #X text 116 68 CURRENT SLOT;
 #X text 253 21 ** SET ARRAYS FOR READING ACCORDING TO ACTIVE SLOT,
 f 32;
@@ -1631,68 +1640,68 @@ f 32;
 #N canvas 14 156 572 237 AUDIO_CONFIG_GUI 0;
 #X text 197 68 AUDIO CONFIG WINDOW;
 #N canvas 538 248 209 302 \$0-audioGUI 0;
-#X obj 2 1 cnv 15 205 300 empty empty empty 20 12 0 14 -1 -66577 0
-;
-#X obj 12 11 cnv 15 185 280 empty empty empty 20 12 0 14 -228856 -66577
+#X obj 2 1 cnv 15 205 300 empty empty empty 20 12 0 14 #000000 #404040
 0;
-#X obj 52 99 cnv 15 75 20 empty empty CUT/BOOST 8 11 0 12 -233017 -66577
+#X obj 12 11 cnv 15 185 280 empty empty empty 20 12 0 14 #dcdcdc #404040
+0;
+#X obj 52 99 cnv 15 75 20 empty empty CUT/BOOST 8 11 0 12 #e0e0e0 #404040
 0;
 #X obj 34 120 hradio 20 1 0 7 \$0-boost_gui \$0-boost_gui_set empty
-0 -8 0 10 -262144 -1 -1 3;
-#X obj 122 99 cnv 15 35 20 empty empty (dB) 3 11 0 12 -228856 -66577
+0 -8 0 10 #fcfcfc #000000 #000000 0;
+#X obj 122 99 cnv 15 35 20 empty empty (dB) 3 11 0 12 #dcdcdc #404040
 0;
-#X obj 34 141 cnv 15 20 15 empty empty -12 -1 8 0 10 -228856 -66577
+#X obj 34 141 cnv 15 20 15 empty empty -12 -1 8 0 10 #dcdcdc #404040
 0;
-#X obj 57 141 cnv 15 20 15 empty empty -6 0 8 0 10 -228856 -66577 0
-;
-#X obj 74 141 cnv 15 20 15 empty empty -3 3 8 0 10 -228856 -66577 0
-;
-#X obj 94 141 cnv 15 20 15 empty empty 0 8 8 0 10 -228856 -66577 0
-;
-#X obj 114 141 cnv 15 20 15 empty empty 3 8 8 0 10 -228856 -66577 0
-;
-#X obj 137 141 cnv 15 20 15 empty empty 6 5 8 0 10 -228856 -66577 0
-;
-#X obj 154 141 cnv 15 20 15 empty empty 12 5 8 0 10 -228856 -66577
+#X obj 57 141 cnv 15 20 15 empty empty -6 0 8 0 10 #dcdcdc #404040
 0;
-#X obj 44 37 cnv 15 85 20 empty empty SAMPLERATE 8 11 0 12 -233017
--66577 0;
-#X obj 122 37 cnv 15 35 20 empty empty (kHz) 3 11 0 12 -228856 -66577
+#X obj 74 141 cnv 15 20 15 empty empty -3 3 8 0 10 #dcdcdc #404040
+0;
+#X obj 94 141 cnv 15 20 15 empty empty 0 8 8 0 10 #dcdcdc #404040 0
+;
+#X obj 114 141 cnv 15 20 15 empty empty 3 8 8 0 10 #dcdcdc #404040
+0;
+#X obj 137 141 cnv 15 20 15 empty empty 6 5 8 0 10 #dcdcdc #404040
+0;
+#X obj 154 141 cnv 15 20 15 empty empty 12 5 8 0 10 #dcdcdc #404040
+0;
+#X obj 44 37 cnv 15 85 20 empty empty SAMPLERATE 8 11 0 12 #e0e0e0
+#404040 0;
+#X obj 122 37 cnv 15 35 20 empty empty (kHz) 3 11 0 12 #dcdcdc #404040
 0;
 #X obj 63 58 hradio 20 1 0 4 \$0-samplerate_gui \$0-samplerate_gui_set
-empty 0 -8 0 10 -262144 -1 -1 2;
-#X obj 69 79 cnv 15 20 15 empty empty 22 0 8 0 10 -228856 -66577 0
+empty 0 -8 0 10 #fcfcfc #000000 #000000 0;
+#X obj 69 79 cnv 15 20 15 empty empty 22 0 8 0 10 #dcdcdc #404040 0
 ;
-#X obj 89 79 cnv 15 20 15 empty empty 44 0 8 0 10 -228856 -66577 0
+#X obj 89 79 cnv 15 20 15 empty empty 44 0 8 0 10 #dcdcdc #404040 0
 ;
-#X obj 109 79 cnv 15 20 15 empty empty 48 0 8 0 10 -228856 -66577 0
-;
-#X obj 129 79 cnv 15 20 15 empty empty 96 0 8 0 10 -228856 -66577 0
-;
+#X obj 109 79 cnv 15 20 15 empty empty 48 0 8 0 10 #dcdcdc #404040
+0;
+#X obj 129 79 cnv 15 20 15 empty empty 96 0 8 0 10 #dcdcdc #404040
+0;
 #X obj 78 200 vradio 20 1 0 4 \$0-avAmp_gui \$0-avAmp_gui_set empty
-0 -8 0 10 -262144 -1 -1 1;
-#X obj 64 161 cnv 15 80 20 empty empty AV_MATRIX 8 11 0 12 -228856
--66577 0;
-#X obj 80 182 cnv 15 20 15 empty empty AMP 0 8 0 10 -228856 -66577
+0 -8 0 10 #fcfcfc #000000 #000000 0;
+#X obj 64 161 cnv 15 80 20 empty empty AV_MATRIX 8 11 0 12 #dcdcdc
+#404040 0;
+#X obj 80 182 cnv 15 20 15 empty empty AMP 0 8 0 10 #dcdcdc #404040
 0;
 #X obj 104 200 vradio 20 1 0 4 \$0-avLop_gui \$0-avLop_gui_set empty
-0 -8 0 10 -262144 -1 -1 2;
-#X obj 106 182 cnv 15 20 15 empty empty LOP 0 8 0 10 -228856 -66577
+0 -8 0 10 #fcfcfc #000000 #000000 0;
+#X obj 106 182 cnv 15 20 15 empty empty LOP 0 8 0 10 #dcdcdc #404040
 0;
 #X obj 130 200 vradio 20 1 0 4 \$0-avHip_gui \$0-avHip_gui_set empty
-0 -8 0 10 -262144 -1 -1 3;
-#X obj 132 182 cnv 15 20 15 empty empty HIP 0 8 0 10 -228856 -66577
+0 -8 0 10 #fcfcfc #000000 #000000 0;
+#X obj 132 182 cnv 15 20 15 empty empty HIP 0 8 0 10 #dcdcdc #404040
 0;
-#X obj 55 202 cnv 15 20 15 empty empty OFF 0 8 0 10 -228856 -66577
+#X obj 55 202 cnv 15 20 15 empty empty OFF 0 8 0 10 #dcdcdc #404040
 0;
-#X obj 37 222 cnv 15 20 15 empty empty TRANSP 0 8 0 10 -228856 -66577
+#X obj 37 222 cnv 15 20 15 empty empty TRANSP 0 8 0 10 #dcdcdc #404040
 0;
-#X obj 31 242 cnv 15 20 15 empty empty WHT_THR 0 8 0 10 -228856 -66577
+#X obj 31 242 cnv 15 20 15 empty empty WHT_THR 0 8 0 10 #dcdcdc #404040
 0;
-#X obj 31 262 cnv 15 20 15 empty empty BLK_THR 0 8 0 10 -228856 -66577
+#X obj 31 262 cnv 15 20 15 empty empty BLK_THR 0 8 0 10 #dcdcdc #404040
 0;
 #X obj 12 11 cnv 15 185 20 empty \$0-audioWinBar AUDIO_CONFIG 43 10
-0 14 -24198 -1 0;
+0 14 #f430f0 #000000 0;
 #X restore 46 67 pd \$0-audioGUI;
 #X obj 46 117 r \$0-click_audioGUI;
 #X obj 46 175 s pd-\$0-audioGUI;
@@ -2413,8 +2422,8 @@ THAN THE OUTLET POINT, f 40;
 #X obj 298 1655 throw~ \$1-L;
 #X obj 415 1655 throw~ \$1-R;
 #X text 541 1656 SEND AUDIO TO MASTER PATCH;
-#X obj 264 109 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 264 109 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #N canvas 224 53 686 755 CUTOFF 0;
 #X obj 44 944 outlet~;
 #X obj 193 944 outlet~;
@@ -2652,7 +2661,6 @@ ACTION, f 48;
 #X connect 96 1 11 0;
 #X connect 97 0 9 0;
 #X connect 98 0 112 0;
-#X connect 98 0 112 0;
 #X connect 98 1 90 0;
 #X connect 99 0 29 0;
 #X connect 99 1 0 1;
@@ -2672,15 +2680,15 @@ ACTION, f 48;
 #X connect 118 2 7 0;
 #X restore 280 132 pd AUDIO_UNIT;
 #X obj 60 110 hradio 12 1 0 2 \$0-ioMode_gui \$0-ioMode_gui_set empty
-28 6 0 10 -262144 -1 -1 0;
+28 6 0 10 #fcfcfc #000000 #000000 0;
 #X obj 143 110 tgl 12 0 \$0-audio_gui \$0-audio_gui_set AUDIO -33 6
-0 10 -228856 -1 -1 1 1;
+0 10 #dcdcdc #000000 #000000 0 1;
 #X obj 161 110 bng 12 250 50 0 \$0-click_audioGUI morto empty 16 6
-0 10 -228856 -1 -1;
-#X obj 178 191 tgl 25 0 \$0-loop_gui \$0-loop_gui_set L 8 13 0 18 -62784
--62784 -1 1 1;
-#X obj 63 191 tgl 25 0 \$0-play_gui \$0-play_gui_set P 8 13 0 18 -42246
--42246 -262144 0 1;
+0 10 #dcdcdc #000000 #000000;
+#X obj 178 191 tgl 25 0 \$0-loop_gui \$0-loop_gui_set L 8 13 0 18 #001488
+#001488 #fcfcfc 0 1;
+#X obj 63 191 tgl 25 0 \$0-play_gui \$0-play_gui_set P 8 13 0 18 #285014
+#285014 #fcfcfc 0 1;
 #N canvas 397 174 517 299 EXTERNAL_CONTROL 0;
 #X text 213 137 FILTER BY CHANNEL;
 #X text 174 170 FILTER BY MODULE;
@@ -2695,7 +2703,7 @@ ACTION, f 48;
 #X connect 5 0 4 0;
 #X connect 8 0 2 0;
 #X restore 280 30 pd EXTERNAL_CONTROL;
-#N canvas 148 283 604 387 CONTROL_MEMORY 0;
+#N canvas 148 283 604 399 CONTROL_MEMORY 0;
 #N canvas 127 153 974 472 PRESET_MANAGER 0;
 #X obj 42 310 list prepend video;
 #X obj 42 343 list trim;
@@ -2801,10 +2809,10 @@ AND EFFECTS MODULE, f 40;
 #X connect 10 0 1 0;
 #X connect 11 0 6 0;
 #X restore 329 118 pd AUTOMATION_MANAGER;
-#X obj 328 288 s \$0-resetSlot;
-#X floatatom 328 259 5 0 0 0 - - -, f 5;
-#X msg 329 226 1 \, 2 \, 3 \, 4 \, 5 \, 6 \, 7 \, 8;
-#X text 382 200 RESET SLOTS;
+#X obj 328 322 s \$0-resetSlot;
+#X floatatom 328 293 5 0 0 0 - - - 0;
+#X msg 329 260 1 \, 2 \, 3 \, 4 \, 5 \, 6 \, 7 \, 8;
+#X text 382 234 RESET SLOTS;
 #X obj 48 84 arrast_videoslot \$0 \$1 1;
 #X text 145 17 ** LOCAL MEMORY MANAGEMENT;
 #X obj 48 118 arrast_videoslot \$0 \$1 2;
@@ -2814,9 +2822,76 @@ AND EFFECTS MODULE, f 40;
 #X obj 48 254 arrast_videoslot \$0 \$1 6;
 #X obj 48 288 arrast_videoslot \$0 \$1 7;
 #X obj 48 322 arrast_videoslot \$0 \$1 8;
+#N canvas 830 272 637 637 CONTROL_OUTPUT 0;
+#X obj 73 85 list prepend 0;
+#X obj 73 110 list trim;
+#X obj 73 135 s \$0-ctlOut;
+#X obj 243 110 list trim;
+#X obj 243 135 s \$0-ctlOut;
+#X obj 243 85 list prepend 1;
+#X obj 413 110 list trim;
+#X obj 413 135 s \$0-ctlOut;
+#X obj 413 85 list prepend 2;
+#X obj 73 370 list trim;
+#X obj 73 395 s \$0-ctlOut;
+#X obj 243 370 list trim;
+#X obj 243 395 s \$0-ctlOut;
+#X obj 243 450 r \$0-ctlOut;
+#X obj 243 500 list prepend \$1;
+#X obj 243 525 list trim;
+#X obj 243 550 s CTL_OUT;
+#X obj 73 240 list trim;
+#X obj 73 265 s \$0-ctlOut;
+#X obj 73 215 list prepend 3;
+#X obj 243 240 list trim;
+#X obj 243 265 s \$0-ctlOut;
+#X obj 243 215 list prepend 4;
+#X obj 73 345 list prepend 5;
+#X obj 243 345 list prepend 6;
+#X obj 73 60 r \$0-inSet;
+#X obj 243 60 r \$0-outSet;
+#X obj 413 60 r \$0-speed;
+#X obj 73 190 r \$0-play;
+#X obj 243 190 r \$0-inv;
+#X obj 73 320 r \$0-loop;
+#X obj 243 320 r \$0-loopMode;
+#X obj 243 475 list prepend video;
+#X obj 413 370 list trim;
+#X obj 413 395 s \$0-ctlOut;
+#X obj 413 320 r \$0-activeSlot;
+#X obj 413 345 list prepend 7;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;
+#X connect 5 0 3 0;
+#X connect 6 0 7 0;
+#X connect 8 0 6 0;
+#X connect 9 0 10 0;
+#X connect 11 0 12 0;
+#X connect 13 0 32 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 17 0 18 0;
+#X connect 19 0 17 0;
+#X connect 20 0 21 0;
+#X connect 22 0 20 0;
+#X connect 23 0 9 0;
+#X connect 24 0 11 0;
+#X connect 25 0 0 0;
+#X connect 26 0 5 0;
+#X connect 27 0 8 0;
+#X connect 28 0 19 0;
+#X connect 29 0 22 0;
+#X connect 30 0 23 0;
+#X connect 31 0 24 0;
+#X connect 32 0 14 0;
+#X connect 33 0 34 0;
+#X connect 35 0 36 0;
+#X connect 36 0 33 0;
+#X restore 329 186 pd CONTROL_OUTPUT;
 #X connect 5 0 4 0;
 #X connect 6 0 4 0;
 #X restore 280 64 pd CONTROL_MEMORY;
 #X obj 90 110 tgl 12 0 \$0-ioLink_gui \$0-ioLink_gui_set empty 17 7
-0 10 -262144 -1 -1 0 1;
+0 10 #fcfcfc #000000 #000000 0 1;
 #X coords 0 -1 1 1 185 200 2 50 30;

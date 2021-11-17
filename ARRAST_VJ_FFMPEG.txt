@@ -1,0 +1,38 @@
+[ARRAST_VJ] 1.0 - FFMpeg e ImageMagick
+
+
+[Converte todos os arquivos de vídeo de uma pasta para formato indicado para [ARRAST_VJ], com vídeo em duas resoluções e áudio separado]
+
+mkdir CONVERTIDOS/ && find -type f -name "*.*" | xargs -d '\n' -n 1 bash -c 'ffmpeg -i "$0" -c:v mjpeg -q:v 5 -an -r 24 -filter:v scale=-1:600 -pix_fmt yuvj420p "CONVERTIDOS/${0%.*}.mov" -c:v mjpeg -q:v 5 -an -r 24 -pix_fmt yuvj420p "CONVERTIDOS/${0%.*}-BIG.mov" -vn -c:a pcm_s16le -af aresample=resampler=soxr -ar 48000 "CONVERTIDOS/${0%.*}.wav"'
+
+
+[Converte todos os arquivos na pasta para formato de vídeo correto - sem áudio e apenas uma resolução]
+
+mkdir CONVERTIDOS/ && find -type f -name "*.*" | xargs -d '\n' -n 1 bash -c 'ffmpeg -i "$0" -c:v mjpeg -q:v 5 -an -r 24 -filter:v scale=-1:600 -pix_fmt yuvj420p "CONVERTIDOS/${0%.*}.mov"'
+
+
+------------
+
+
+[Cria vídeo .mov com áudio e FPS 24 a partir de sequência de imagens "FRAMEXXXXX.jpg" e áudio AUDIO_MIX.wav - executar na pasta /Export]
+
+ffmpeg -r 24 -i "FRAME%05d.jpg" -i AUDIO_MIX.wav -c:a copy -c:v mjpeg -q:v 5 Video.mov
+
+
+[Cria vídeo .mov sem áudio]
+
+ffmpeg -r 24 -i "FRAME%05d.jpg" -c:v mjpeg -q:v 5 Video.mov
+
+
+
+
+[Cria vídeo .mp4 com áudio e FPS 24 a partir de sequência de imagens "FRAMEXXXXX.jpg" e áudio AUDIO_MIX.wav - executar na pasta /Export]
+
+ffmpeg -r 24 -i "FRAME%05d.jpg" -i AUDIO_MIX.wav -c:a aac -c:v libx264 -crf 18 -r 24 Video.mp4
+
+
+[Cria vídeo .mp4 sem áudio]
+
+ffmpeg -r 24 -i "FRAME%05d.jpg" -c:v libx264 -crf 18 -an -r 24 Video.mp4
+
+

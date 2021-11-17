@@ -1,32 +1,32 @@
 #N canvas 406 345 517 191 16;
-#X obj 50 30 cnv 15 185 98 empty empty empty 20 12 0 14 -128992 -66577
+#X obj 50 30 cnv 15 185 98 empty empty empty 20 12 0 14 #7c7c7c #404040
 0;
 #X obj 60 55 vsl 12 60 0 1 0 0 \$0-red_gui \$0-red_gui_set empty 0
--9 0 10 -258113 -1 -1 5900 1;
+-9 0 10 #fc0400 #000000 #000000 0 1;
 #X obj 73 55 vsl 12 60 0 1 0 0 \$0-green_gui \$0-green_gui_set COLOR
--8 -10 0 10 -4034 -1 -262144 5900 1;
+-8 -10 0 10 #00fc04 #000000 #fcfcfc 0 1;
 #X obj 86 55 vsl 12 60 0 1 0 0 \$0-blue_gui \$0-blue_gui_set empty
-0 -9 0 10 -4160 -1 -1 5900 1;
+0 -9 0 10 #0400fc #000000 #000000 0 1;
 #X obj 137 54 vsl 12 60 0 1 0 0 \$0-gain_gui \$0-gain_gui_set G 4 -10
-0 10 -1 -262144 -262144 1180 1;
+0 10 #000000 #fcfcfc #fcfcfc 0 1;
 #X obj 159 54 vsl 12 60 0 1 0 0 \$0-contrast_gui \$0-contrast_gui_set
-C 4 -10 0 10 -1 -262144 -262144 1180 1;
+C 4 -10 0 10 #000000 #fcfcfc #fcfcfc 0 1;
 #X obj 181 54 vsl 12 60 0 1 0 0 \$0-saturation_gui \$0-saturation_gui_set
-S 4 -10 0 10 -1 -262144 -262144 1180 1;
+S 4 -10 0 10 #000000 #fcfcfc #fcfcfc 0 1;
 #X obj 213 54 vsl 12 60 0 1 0 0 \$0-motionBlur_gui \$0-motionBlur_gui_set
-MB 1 -10 0 10 -1 -262144 -262144 0 1;
+MB 1 -10 0 10 #000000 #fcfcfc #fcfcfc 0 1;
 #X obj 102 53 bng 12 250 50 0 \$0-resetRGB_gui \$0-resetRGB_gui_set
-empty 17 7 0 10 -262144 -1 -1;
+empty 17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 150 98 bng 8 250 50 0 \$0-resetG_gui \$0-resetG_gui_set empty
-17 7 0 10 -262144 -1 -1;
+17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 172 98 bng 8 250 50 0 \$0-resetC_gui \$0-resetC_gui_set empty
-17 7 0 10 -262144 -1 -1;
+17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 194 98 bng 8 250 50 0 \$0-resetS_gui \$0-resetS_gui_set empty
-17 7 0 10 -262144 -1 -1;
+17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 197 53 bng 12 250 50 0 \$0-resetFX_gui \$0-resetFX_gui_set empty
-17 7 0 10 -262144 -1 -1;
+17 7 0 10 #fcfcfc #000000 #000000;
 #X obj 108 99 tgl 18 0 \$0-colorInv_gui \$0-colorInv_gui_set INV 1
--7 0 10 -1 -262144 -262144 0 1;
+-7 0 10 #000000 #fcfcfc #fcfcfc 0 1;
 #N canvas 179 222 1197 270 RESET 0;
 #X msg 52 113 1;
 #X msg 251 113 0.2;
@@ -195,5 +195,72 @@ OF PRESETS, f 68;
 #X obj 48 254 arrast_fxslot \$0 \$1 6;
 #X obj 48 288 arrast_fxslot \$0 \$1 7;
 #X obj 48 322 arrast_fxslot \$0 \$1 8;
+#N canvas 5 61 637 767 CONTROL_OUTPUT 0;
+#X obj 73 85 list prepend 0;
+#X obj 73 110 list trim;
+#X obj 73 135 s \$0-ctlOut;
+#X obj 243 110 list trim;
+#X obj 243 135 s \$0-ctlOut;
+#X obj 243 85 list prepend 1;
+#X obj 413 110 list trim;
+#X obj 413 135 s \$0-ctlOut;
+#X obj 413 85 list prepend 2;
+#X obj 73 370 list trim;
+#X obj 73 395 s \$0-ctlOut;
+#X obj 243 370 list trim;
+#X obj 243 395 s \$0-ctlOut;
+#X obj 413 370 list trim;
+#X obj 413 395 s \$0-ctlOut;
+#X obj 243 585 r \$0-ctlOut;
+#X obj 243 635 list prepend \$1;
+#X obj 243 660 list trim;
+#X obj 243 685 s CTL_OUT;
+#X obj 73 240 list trim;
+#X obj 73 265 s \$0-ctlOut;
+#X obj 73 215 list prepend 3;
+#X obj 73 60 r \$0-red;
+#X obj 243 60 r \$0-green;
+#X obj 413 60 r \$0-blue;
+#X obj 73 190 r \$0-colorInv;
+#X obj 73 320 r \$0-gain;
+#X obj 243 320 r \$0-contrast;
+#X obj 413 320 r \$0-saturation;
+#X obj 73 500 list trim;
+#X obj 73 525 s \$0-ctlOut;
+#X obj 73 475 list prepend 7;
+#X obj 72 450 r \$0-motionBlur;
+#X obj 243 610 list prepend fx;
+#X obj 73 345 list prepend 4;
+#X obj 243 345 list prepend 5;
+#X obj 413 345 list prepend 6;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 4 0;
+#X connect 5 0 3 0;
+#X connect 6 0 7 0;
+#X connect 8 0 6 0;
+#X connect 9 0 10 0;
+#X connect 11 0 12 0;
+#X connect 13 0 14 0;
+#X connect 15 0 33 0;
+#X connect 16 0 17 0;
+#X connect 17 0 18 0;
+#X connect 19 0 20 0;
+#X connect 21 0 19 0;
+#X connect 22 0 0 0;
+#X connect 23 0 5 0;
+#X connect 24 0 8 0;
+#X connect 25 0 21 0;
+#X connect 26 0 34 0;
+#X connect 27 0 35 0;
+#X connect 28 0 36 0;
+#X connect 29 0 30 0;
+#X connect 31 0 29 0;
+#X connect 32 0 31 0;
+#X connect 33 0 16 0;
+#X connect 34 0 9 0;
+#X connect 35 0 11 0;
+#X connect 36 0 13 0;
+#X restore 299 220 pd CONTROL_OUTPUT;
 #X restore 280 64 pd CONTROL_MEMORY;
 #X coords 0 -1 1 1 185 98 2 50 30;

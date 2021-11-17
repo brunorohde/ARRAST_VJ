@@ -1,17 +1,17 @@
 
 
-    [ARRAST_VJ] v.1.1
+    [ARRAST_VJ] v.1.2
 
 
     Pure Data/GEM VJ/Mapping Tool
 
-    by Bruno Rohde - brunorohde.wordpress.com / github.com/brunorohde
+    by Bruno Faria Rohde - brunorohde.wordpress.com / github.com/brunorohde
 
 
 
     Hardware and software minimum requirements:
 
-    - Pure Data 0.48.1 (Vanilla) or later version
+    - Pure Data 0.50 (Vanilla) or later version
 
     - GEM 0.93.3 (Pd external library) or later version
 
@@ -23,6 +23,8 @@
     
     
     Version history:
+    
+    - [ARRAST_VJ] v.1.2 (2021) - Bug fixes; Main interface controls are now output to [r ARRAST_VJ_OUT]; Included a "play 2" method for external control that works as a trigger; 
     
     - [ARRAST_VJ] v.1.1 (2018) - Minor bug fixes
         
